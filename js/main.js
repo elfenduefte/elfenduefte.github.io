@@ -15,7 +15,7 @@
   });
 
   // local scroll
-  jQuery('.navbar').localScroll({
+  jQuery('.navbar, .get-started').localScroll({
     hash: true,
     offset: {
       top: 0

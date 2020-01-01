@@ -137,7 +137,7 @@
                     </v-card-title>
                     <v-card-text>
                       <p>Es darf an Lieblingsdüften geschnuppert und neue Duftrichtungen kennengelernt werden. Kontraindikationen und Vorsichtsgebote werden dabei berücksichtigt. Je nach Duftvorliebe und anstehenden persönlichen Themen entsteht eine Rezeptur, die gemischt wird. Um diese Komposition in den Alltag integrieren zu können, gibt es unterschiedliche Anwendungsmöglichkeiten, die besprochen werden.</p>
-                      <div class="text-center"><img src="assets/beratung.jpg"></div>
+                      <div class="text-center"><img class="fill-width" src="assets/beratung.jpg"></div>
                       <p>Nach ca. 3 Wochen gibt es eine kurze Nachbesprechung (Feedback), wo bewährte Mischungen nachproduziert oder bei Bedarf abgeändert werden können.</p>
                       <v-simple-table>
                         <template v-slot:default>
@@ -180,6 +180,7 @@
                     <v-card-text>
                       <p><b>Aromastreichung</b> und <b>rhythmisches Körperbalancing</b> (Arme, Beine oder Rücken) führe ich nach dem <a class="text-no-wrap" target="_blank" href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO durch. Die Anwendung erfolgt auf der Haut (materielle Ebene) mit einer Mischung aus ähterischem Öl und Basisöl.
                         Die Wirkung zeigt sich auf der energetisch-feinstofflichen Ebene, dem eigentlichen Tätigkeitsbereich eines Humanenergetikers. Selbstheilungskräfte werden aktiviert, Blockaden können gelöst und Wohlbefinden erlangt werden.</p>
+                      <div class="text-center"><img class="fill-width" src="assets/streichung.jpg"></div>
                       <p><b>Wickel und Auflagen</b> biete ich ebenfalls an. Diese werden als unterstützende Maßnahme bei Entgiftungskuren oder einfach nur zum Entspannen angewendet.</p>
                       <v-simple-table>
                         <template v-slot:default>
@@ -268,38 +269,46 @@
           class="my-12"
           align-center
         >
-          <v-flex xs12 sm4 class="my-4">
-            <div class="text-center">
-              <h2 class="headline">Über mich</h2>
-              <span class="subheading">
-                Hinter dem Namen Elfendüfte stecke ich, Sabine Krenn
-              </span>
-            </div>
-          </v-flex>
           <v-flex xs12>
             <v-container grid-list-xl>
-              <v-layout row wrap align-center>
-                <v-flex xs12 md12>
+              <v-layout row wrap>
+                <v-flex xs12 md6>
                   <v-card flat class="transparent">
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-center">Hinter dem Namen Elfendüfte stecke ich, Sabine Krenn</div>
+                    </v-card-title>
                     <v-card-text>
                       <p>Seit vielen Jahren als Dipl. Gesundheits- und Krankenpflegerin in den verschiedensten Einrichtungen und Richtungen tätig.</p>
                       <p>Erst das Verfassen einer Fachbereichsarbeit im Rahmen der Ausbildung zur Dipl. Aromapraktikerin / Aromapflege veranlasste mich zu reflektieren, wann ich den ersten „Kontakt“ mit ätherischen Ölen hatte und was sich daraus entwickelte:</p>
-                      <p>Wie bei vielen anderen auch, war mein erster Zugang vor über 20 Jahren „NUR“ über den Duft. Ein Fläschchen wurde angeschafft, damals eine Duftmischung. Das erste Eintauchen ins Reich der naturreinen Düfte begann, indem ich immer neugieriger wurde und nachlas, was da denn alles so drin sei und warum es so duftet wie es duftet. Bücher um Bücher folgten &ndash; nicht nur Neuerscheinungen. Auch vergangenes Wissen, nachzulesen in Büchern aus Antiquariaten, finde ich spannend. Eine zusätzliche Liebe! 💚</p>
+                      <p><img class="float-half" src="assets/buch.jpg">Wie bei vielen anderen auch, war mein erster Zugang vor über 20 Jahren „NUR“ über den Duft. Ein Fläschchen wurde angeschafft, damals eine Duftmischung. Das erste Eintauchen ins Reich der naturreinen Düfte begann, indem ich immer neugieriger wurde und nachlas, was da denn alles so drin sei und warum es so duftet wie es duftet. Bücher um Bücher folgten &ndash; nicht nur Neuerscheinungen. Auch vergangenes Wissen, nachzulesen in Büchern aus Antiquariaten, finde ich spannend. Eine zusätzliche Liebe! 💚</p>
                       <p>Das Erlernen der Biochemie öffnete bei mir ganz neue Perspektiven. Nun steht nicht nur mehr der Duft im Vordergrund, auch die psychische und körperliche Wirkung der ätherischen Öle gewinnt bei der Auswahl zunehmend an Bedeutung.</p>
-                      <br>
-                      <div class="subheading text-center">Mit großer Leidenschaft mische ich Öle, Extrakte und Enfleurage miteinander, um eine neue Kreation zu erstellen.</div>
-                      <br>
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 md6>
+                  <v-card flat class="transparent">
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-center">Mit großer Leidenschaft mische ich Öle, Extrakte und Enfleurage miteinander, um eine neue Kreation zu erstellen</div>
+                    </v-card-title>
+                    <v-card-text>
+                      <div class="text-center"><img class="fill-width" src="assets/praxis.jpg"></div>
                       <p>Private Umstände ermöglichen mir das Arbeiten in meiner Praxis, in der ich Ihnen dieses wunderbar wirkende und duftende Reich näherbringen kann.</p>
-                      <br>
-                      <div class="subheading text-center">Entspannen, ausspannen, eine Auszeit vom Alltag nehmen. 
-                      Und gleichzeitig auch etwas für die eigene Gesundheit tun.</div>
-                      <br>
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 md12>
+                  <v-card flat class="transparent">
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-center">Entspannen, ausspannen, eine Auszeit vom Alltag nehmen. 
+                        Und gleichzeitig auch etwas für die eigene Gesundheit tun</div>
+                    </v-card-title>
+                    <v-card-text>
                       <p>Fort- und Weiterbildungen, u.a. bei aromapflege.com (Evelyn Deutsch) und aromainfo.at (Ingrid Karner), befähigen mich als Dipl. Aromapraktikerin und in der komplementären Pflege &ndash; Aromapflege tätig zu sein.</p>
                       <p>Vereinsmitglied der <a target="_blank" href="https://www.aromapraktiker.eu">VAGA &ndash; Vereinigung für Aromapflege und gewerbliche AromapraktikerInnen</a></p>
                     </v-card-text>
                   </v-card>
                 </v-flex>
-              </v-layout>
+                    </v-layout>
             </v-container>
           </v-flex>
         </v-layout>

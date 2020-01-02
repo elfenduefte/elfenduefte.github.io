@@ -37,3 +37,8 @@
 .v-card__title {
   word-break: normal;
 }
+.impressum h1, .impressum h2, .impressum h3 {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+}

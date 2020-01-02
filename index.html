@@ -23,7 +23,7 @@
     </v-navigation-drawer>
     <v-app-bar app dark color="rgb(68,0,72)" elevate-on-scroll>
       <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
-      <v-toolbar-title class="button" @click="$vuetify.goTo('#intro')"><img src="assets/elfenduefte.svg" style="position:relative;top:5px;left:-10px;" height="25" alt="Elfendüfte"></v-toolbar-title>
+      <v-toolbar-title class="button" @click="$vuetify.goTo('#intro')"><img src="assets/elfenduefte.svg" style="position:relative;top:7px;left:-10px;" height="25" alt="Elfendüfte"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn text v-for="item in menuItems" :key="item.title" @click="$vuetify.goTo(item.path)">{{ item.title }}</v-btn>

@@ -1,5 +1,5 @@
 .ci {
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
 .button {
@@ -15,6 +15,9 @@
   background-position: center center;
   border: 1px solid #ebebeb;
   cursor: pointer;
+}
+.v-application .headline, .subheading {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif !important;
 }
 .subheading {
   font-size: 1.25rem;

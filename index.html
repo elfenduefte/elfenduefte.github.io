@@ -23,7 +23,7 @@
     </v-navigation-drawer>
     <v-app-bar app dark color="rgb(68,0,72)" elevate-on-scroll>
       <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
-      <v-toolbar-title class="button" @click="$vuetify.goTo('#intro')">Elfendüfte&nbsp;<img src="assets/flask.svg" height="20" alt="Flasche"></v-toolbar-title>
+      <v-toolbar-title class="button" @click="$vuetify.goTo('#intro')"><img src="assets/elfenduefte.svg" style="position:relative;top:5px;left:-10px;" height="25" alt="Elfendüfte"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn text v-for="item in menuItems" :key="item.title" @click="$vuetify.goTo(item.path)">{{ item.title }}</v-btn>
@@ -275,10 +275,10 @@
                 <v-flex xs12 md6>
                   <v-card flat class="transparent">
                     <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">?</div>
+                      <div class="headline text-center">Faszination Duftpflanzen</div>
                     </v-card-title>
                     <v-card-text>
-                      <img class="float-half" src="assets/sabine.jpg">
+                      <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%" src="assets/sabine.jpg">Sabine Krenn</div>
                       <p>Seit vielen Jahren als Dipl. Gesundheits- und Krankenpflegerin in den verschiedensten Einrichtungen und Richtungen tätig.</p>
                       <p>Erst das Verfassen einer Fachbereichsarbeit im Rahmen der Ausbildung zur Dipl. Aromapraktikerin / Aromapflege veranlasste mich zu reflektieren, wann ich den ersten „Kontakt“ mit ätherischen Ölen hatte und was sich daraus entwickelte:</p>
                       <p>Wie bei vielen anderen auch, war mein erster Zugang vor über 20 Jahren „NUR“ über den Duft. Ein Fläschchen wurde angeschafft, damals eine Duftmischung. Das erste Eintauchen ins Reich der naturreinen Düfte begann, indem ich immer neugieriger wurde und nachlas, was da denn alles so drin sei und warum es so duftet wie es duftet. Bücher um Bücher folgten &ndash; nicht nur Neuerscheinungen. Auch vergangenes Wissen, nachzulesen in Büchern aus Antiquariaten, finde ich spannend. Eine zusätzliche Liebe! 💚</p>

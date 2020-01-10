@@ -348,7 +348,9 @@
                       <v-card-text
                         class="text-center image"
                         @click="index = imageIndex"
-                        :style="{ backgroundImage: 'url(' + image + ')' }"
+                        :style="{ backgroundImage: 'url(' + image.href + ')' }"
+                        :title="image.title"
+                        :alt="image.title"
                       ></v-card-text>
                     </v-card>
                   </v-flex>
@@ -519,24 +521,21 @@
           path: '#kontakt'
         }],
         images: [
-          
-          
-          'assets/lightbox/Geranium.jpg',
-          'assets/lightbox/Lavendel.jpg',
-          'assets/lightbox/Melisse.jpg',
-          'assets/lightbox/Muskatellersalbei.jpg',
-          
-          'assets/lightbox/Neroli.jpg',
-          'assets/lightbox/Orange.jpg',
-          'assets/lightbox/Ringelblume.jpg',
-          'assets/lightbox/Rosmarin.jpg',
-          'assets/lightbox/Salbei.jpg',
-          'assets/lightbox/Schopflavendel.jpg',
-          'assets/lightbox/Speiklavendel.jpg',
-          'assets/lightbox/Thymian.jpg',
-          'assets/lightbox/Vetiver.jpg',
-          'assets/lightbox/Wacholderbeere.jpg',
-          'assets/lightbox/Zeder.jpg',
+          {title: 'Geranium', href: 'assets/lightbox/Geranium.jpg'},
+          {title: 'Lavendel', href: 'assets/lightbox/Lavendel.jpg'},
+          {title: 'Melisse', href: 'assets/lightbox/Melisse.jpg'},
+          {title: 'Muskatellersalbei', href: 'assets/lightbox/Muskatellersalbei.jpg'},
+          {title: 'Neroli', href: 'assets/lightbox/Neroli.jpg'},
+          {title: 'Orange', href: 'assets/lightbox/Orange.jpg'},
+          {title: 'Ringelblume', href: 'assets/lightbox/Ringelblume.jpg'},
+          {title: 'Rosmarin', href: 'assets/lightbox/Rosmarin.jpg'},
+          {title: 'Salbei', href: 'assets/lightbox/Salbei.jpg'},
+          {title: 'Schopflavendel', href: 'assets/lightbox/Schopflavendel.jpg'},
+          {title: 'Speiklavendel', href: 'assets/lightbox/Speiklavendel.jpg'},
+          {title: 'Thymian', href: 'assets/lightbox/Thymian.jpg'},
+          {title: 'Vetiver', href: 'assets/lightbox/Vetiver.jpg'},
+          {title: 'Wacholderbeere', href: 'assets/lightbox/Wacholderbeere.jpg'},
+          {title: 'Zeder', href: 'assets/lightbox/Zeder.jpg'},
         ],
         index: null,
         sidebar: false,

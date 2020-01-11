@@ -45,3 +45,8 @@
 .impressum h1 {
   font-size: 1.75em;
 }
+.blueimp-gallery>p.description {
+  top: 37px;
+  font-style: italic;
+  padding-right: 5px;
+} 

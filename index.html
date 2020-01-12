@@ -10,10 +10,16 @@
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/blueimp-gallery@2.27.0/css/blueimp-gallery.min.css">
   <link href="assets/style.css" rel="stylesheet">
+  <script>
+    // Preload intro image
+    introSrc = innerWidth > 1560 ? 'assets/intro-large.jpg' : 'assets/intro.jpg';
+    const image = new Image();
+    image.src = introSrc;
+  </script>
 </head>
 <body>
  <div id="app">
-   <v-app light fill-height>
+   <v-app v-cloak light fill-height>
     <v-navigation-drawer disable-resize-watcher v-model="sidebar" app>
       <v-list>
         <v-list-item v-for="item in menuItems" :key="item.title" @click="$vuetify.goTo(item.path); sidebar = false">
@@ -540,7 +546,7 @@
         index: null,
         sidebar: false,
         ceomnatial: ('ta.etfeudnefle' + karlklammer + 'liam').split('').reverse().join(''),
-        introSrc: innerWidth > 1560 ? 'assets/intro-large.jpg' : 'assets/intro.jpg',
+        introSrc: introSrc,
         introHeight: innerHeight - 64,
         impressum: false
       }

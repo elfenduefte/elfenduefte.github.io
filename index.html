@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title >Elfendüfte Sabine Krenn</title >
+  <title>Elfendüfte Sabine Krenn – Aromafachberatung, Körperanwendungen, Duftmarketing & AirDesign</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ätherische Öle & Co. zur Steigerung des Wohlbefindens, als Duftmischung für zu Hause oder bei einer Körperandwndung in meiner Praxis in Graz. Düfte als wiedererkennbare Note für Ihr Unternehmen oder zur Konzentrationssteigerung">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
@@ -16,17 +17,29 @@
    <v-app v-cloak light fill-height>
     <v-navigation-drawer disable-resize-watcher v-model="sidebar" app>
       <v-list>
-        <v-list-item v-for="item in menuItems" :key="item.title" @click="$vuetify.goTo(item.path); sidebar = false">
-          <v-list-item-content>{{ item.title }}</v-list-item-content>
+        <v-list-item href="#aetherische-oele" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+          <v-list-item-content>Ätherische Öle & Co.</v-list-item-content>
+        </v-list-item>
+        <v-list-item href="#leistungen" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+          <v-list-item-content>Leistungen</v-list-item-content>
+        </v-list-item>
+        <v-list-item href="#ueber-mich" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+          <v-list-item-content>Über mich</v-list-item-content>
+        </v-list-item>
+        <v-list-item href="#galerie" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+          <v-list-item-content>Galerie</v-list-item-content>
+        </v-list-item>
+        <v-list-item href="#kontakt" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+          <v-list-item-content>Kontakt</v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar app dark color="rgb(68,0,72)" elevate-on-scroll>
       <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
-      <v-toolbar-title class="button" @click="$vuetify.goTo('#intro')"><span class="subheading">Elfendüfte</span></v-toolbar-title>
+      <v-toolbar-title class="button" @click="$vuetify.goTo('#intro').then(function() {this.location.href='#'});"><span class="subheading">Elfendüfte</span></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn text v-for="item in menuItems" :key="item.title" @click="$vuetify.goTo(item.path)">{{ item.title }}</v-btn>
+        <v-btn text v-for="item in menuItems" :key="item.title" :href="item.path" @click="$vuetify.goTo(item.path)">{{ item.title }}</v-btn>
       </v-toolbar-items>
     </v-app-bar>
     <v-content>
@@ -281,7 +294,7 @@
                       <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%" src="assets/sabine.jpg">Sabine Krenn</div>
                       <p>Seit vielen Jahren bin ich als Dipl. Gesundheits- und Krankenpflegerin in verschiedensten Einrichtungen und Richtungen tätig.</p>
                       <p>Erst das Verfassen einer Fachbereichsarbeit im Rahmen der Ausbildung zur Dipl. Aromapraktikerin/Aromapflege veranlasste mich zu reflektieren, wann ich den ersten „Kontakt“ mit ätherischen Ölen hatte und was sich daraus entwickelte:</p>
-                      <p>Wie bei vielen anderen auch, war mein erster Zugang vor über 20 Jahren „NUR“ über den Duft. Ein Fläschchen wurde angeschafft, damals eine Duftmischung. Das erste Eintauchen ins Reich der naturreinen Düfte begann, indem ich immer neugieriger wurde und nachlas, was da denn alles so drin sei und warum es so duftet wie es duftet. Bücher um Bücher folgten &ndash; nicht nur Neuerscheinungen. Auch vergangenes Wissen, nachzulesen in Büchern aus Antiquariaten, finde ich sehr spannend. Eine zusätzliche Liebe! 💜</p>
+                      <p>Wie bei vielen anderen auch, war mein erster Zugang vor über 20 Jahren „NUR“ über den Duft. Ein Fläschchen wurde angeschafft, damals eine Duftmischung. Das erste Eintauchen ins Reich der naturreinen Düfte begann, indem ich immer neugieriger wurde und nachlas, was da denn alles so drin sei und warum es so duftet wie es duftet. Bücher um Bücher folgten – nicht nur Neuerscheinungen. Auch vergangenes Wissen, nachzulesen in Büchern aus Antiquariaten, finde ich sehr spannend. Eine zusätzliche Liebe! 💜</p>
                       <img class="float-half" src="assets/buch.jpg">
                       <p>Da ätherische Öle aus einer Vielzahl an Inhaltsstoffen bestehen, öffnete bei mir das Erlernen der Biochemie ganz neue Perspektiven. Mit dem Wissen kann ich in Aromafachberatungen die psychische und physische Wirkung gezielt einsetzten und gleichzeitig Duftvorlieben berücksichtigen.
                        </p>Bei meinen Körperpflegeprodukten achte ich sehr auf die verwendeten Inhaltsstoffe. Parfums, Körperöle und Gesichtspflege, sowie Mazerate mische und rühre ich selbst zusammen. Damit kann ich bei den Zutaten bestimmen, was rein soll und was nicht.
@@ -305,8 +318,8 @@
                 <v-flex xs12 md12>
                   <v-card flat class="transparent">
                     <v-card-text>
-                      <p>Der Lehrgang zur "Dipl. Aromapraktikerin" und "Komplementäre Pflege &ndash; Aromapflege", sowie Seminare für "Rhythmisches Körperbalancing" und Duftmarkting & AirDesign bei aromainfo.at (Ingrid Karner) befähigen mich in diesem Bereich tätig zu sein. Weitere Fortbildungen, "Palliative care" und "Niemand riecht so gut wie du" (Prof. Hatt) bei aromapflege.com (Evelyn Deutsch), bereichern meine Tätigkeit.</p>
-                      <p>Vereinsmitglied der <a target="_blank" href="https://www.aromapraktiker.eu">VAGA &ndash; Vereinigung für Aromapflege und gewerbliche AromapraktikerInnen</a></p>
+                      <p>Der Lehrgang zur "Dipl. Aromapraktikerin" und "Komplementäre Pflege – Aromapflege", sowie Seminare für "Rhythmisches Körperbalancing" und Duftmarkting & AirDesign bei aromainfo.at (Ingrid Karner) befähigen mich in diesem Bereich tätig zu sein. Weitere Fortbildungen, "Palliative care" und "Niemand riecht so gut wie du" (Prof. Hatt) bei aromapflege.com (Evelyn Deutsch), bereichern meine Tätigkeit.</p>
+                      <p>Vereinsmitglied der <a target="_blank" href="https://www.aromapraktiker.eu">VAGA – Vereinigung für Aromapflege und gewerbliche AromapraktikerInnen</a></p>
                     </v-card-text>
                   </v-card>
                 </v-flex>
@@ -390,7 +403,7 @@
                       <v-list-item-title>+43 650 8095272</v-list-item-title>
                     </v-list-item-content>
                   </v-list-item>
-                  <v-list-item href="https://goo.gl/maps/bCyMhC6k39sUBMXn8" target="_blank">
+                  <v-list-item href="https://goo.gl/maps/SqSsNc1ebDep6Gsf8" target="_blank">
                     <v-list-item-action>
                       <v-icon class="deep-purple--text text--lighten-2">mdi-map-marker</v-icon>
                     </v-list-item-action>
@@ -432,7 +445,7 @@
         <v-layout row wrap align-center>
           <v-flex xs12>
             <div class="small white--text ml-4">
-              &copy; 2019-present Elfendüfte Sabine Krenn &ndash; <a class="white--text" @click="impressum = !impressum">Impressum, Datenschutzerklärung</a>
+              &copy; 2019-present Elfendüfte Sabine Krenn – <a class="white--text" @click="impressum = !impressum">Impressum, Datenschutzerklärung</a>
             </div>
           </v-flex>
         </v-layout>
@@ -496,7 +509,15 @@
  <script src="https://cdn.jsdelivr.net/npm/vue-gallery@2.x"></script>
  <script>
    const karlklammer = '@';
-   new Vue({
+   const menu = document.querySelectorAll('v-navigation-drawer v-list-item-content');
+   const menuItems = [];
+   menu.forEach(function(item) {
+     menuItems.push({
+       title: item.innerText,
+       path: item.parentElement.getAttribute('href')
+     })
+   });
+   const app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     components: {
@@ -504,22 +525,7 @@
     },
     data () {
       return {
-        menuItems: [{
-          title: 'Ätherische Öle & Co.',
-          path: '#aetherische-oele'
-        }, {
-          title: 'Leistungen',
-          path: '#leistungen'
-        }, {
-          title: 'Über mich',
-          path: '#ueber-mich'
-        }, {
-          title: 'Galerie',
-          path: '#galerie'
-        }, {
-          title: 'Kontakt',
-          path: '#kontakt'
-        }],
+        menuItems: menuItems,
         images: [
           {title: 'Neroli – stimmungsaufhellend', description: '(Citrus aurantium flos.)', href: 'assets/lightbox/Neroli.jpeg'},
           {title: 'Orange – erheiternd', description: '(Citrus sinensis)', href: 'assets/lightbox/Orange.jpeg'},
@@ -545,7 +551,10 @@
         impressum: false
       }
     }
-  })
+  });
+  if (location.hash) {
+    app.$vuetify.goTo(location.hash);
+  }
  </script>
 </body>
 </html>

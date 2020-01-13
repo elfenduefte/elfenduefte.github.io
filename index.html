@@ -356,6 +356,7 @@
                 <v-layout row wrap align-center>
                   <v-flex xs12 md4
                     v-for="image, imageIndex in images"
+                    :key="image.href"
                   >
                     <v-card flat>
                       <v-card-text
@@ -500,10 +501,18 @@
       </v-card>
     </v-bottom-sheet>  
   </v-app>
- </div>
- <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
- <script src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-helper.js"></script> 
+</div>
+<script>
+  const suffix = location.host === 'elfenduefte.at' ? '.min.js' : '.js';
+  const scripts = [
+    'https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue' + suffix,
+    'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify' + suffix
+  ];
+  for (let i = 0, ii = scripts.length; i < ii; ++i) {
+    document.write('<script src="' + scripts[i] + '"><\/script>');
+  }
+</script>    
+<script src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-helper.js"></script> 
  <script src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery.js"></script> 
  <script src="https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery-fullscreen.js"></script> 
  <script src="https://cdn.jsdelivr.net/npm/vue-gallery@2.x"></script>

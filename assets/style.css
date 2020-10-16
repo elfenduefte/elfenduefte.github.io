@@ -42,6 +42,12 @@
   width: calc(50% - 10px);
   padding-right: 10px;
 }
+.float-half.right {
+  padding-left: 10px;
+  padding-right: 0;
+  float: inherit;
+  clear: right;
+}
 .v-card__title {
   word-break: normal;
 }

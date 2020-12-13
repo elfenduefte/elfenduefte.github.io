@@ -1,674 +1,839 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Elfendüfte Sabine Krenn – Aromafachberatung, Körperanwendungen, Duftmarketing & AirDesign</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ätherische Öle & Co. zur Steigerung des Wohlbefindens, als Duftmischung für zu Hause oder bei einer Körperanwendung in meiner Praxis in Graz. Düfte als wiedererkennbare Note für Ihr Unternehmen oder zur Konzentrationssteigerung">
+  <meta name="description"
+    content="Ätherische Öle & Co. zur Steigerung des Wohlbefindens, als Duftmischung für zu Hause oder bei einer Körperanwendung in meiner Praxis in Graz. Düfte als wiedererkennbare Note für Ihr Unternehmen oder zur Konzentrationssteigerung">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/blueimp-gallery@2.27.0/css/blueimp-gallery.min.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/blueimp-gallery@2.44.0/css/blueimp-gallery.min.css">
   <link href="assets/style.css" rel="stylesheet">
 </head>
+
 <body>
- <div id="app">
-   <v-app v-cloak light fill-height>
-    <v-navigation-drawer disable-resize-watcher v-model="sidebar" app>
-      <v-list>
-        <v-list-item href="#aetherische-oele" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
-          <v-list-item-content>Ätherische Öle & Co.</v-list-item-content>
-        </v-list-item>
-        <v-list-item href="#leistungen" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
-          <v-list-item-content>Leistungen</v-list-item-content>
-        </v-list-item>
-        <v-list-item href="#ueber-mich" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
-          <v-list-item-content>Über mich</v-list-item-content>
-        </v-list-item>
-        <v-list-item href="#zeitqualitaet" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
-          <v-list-item-content>Zeitqualität</v-list-item-content>
-        </v-list-item>
-        <v-list-item href="#galerie" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
-          <v-list-item-content>Galerie</v-list-item-content>
-        </v-list-item>
-        <v-list-item href="#kontakt" @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
-          <v-list-item-content>Kontakt</v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar app dark color="rgb(68,0,72)" elevate-on-scroll>
-      <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
-      <v-toolbar-title class="button" @click="$vuetify.goTo('#intro').then(function() {this.location.href='#'});"><span class="subheading">Elfendüfte</span></v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
-        <v-btn text v-for="item in menuItems" :key="item.title" :href="item.path" @click="$vuetify.goTo(item.path)">{{ item.title }}</v-btn>
-      </v-toolbar-items>
-    </v-app-bar>
-    <v-content>
-      <section id="intro">
-        <v-parallax :src="introSrc" :height="introHeight">
-          <v-layout
-            column
-            align-center
-            justify-center
-            class="white--text"
-          >
-            <img src="assets/logo-white.svg" alt="Elfe" height="125">
-            <img src="assets/elfenduefte.svg" alt="Elfendüfte" height="36">
-            <div class="shadow subheading mb-4 text-center ci">Sabine Krenn</div>
-            <v-btn
-              class="mt-12"
-              color="rgb(68,0,72)"
-              dark
-              large
-              @click="$vuetify.goTo('#aetherische-oele')"
-            >
-              Willkommen
-            </v-btn>
-          </v-layout>
-        </v-parallax>
-      </section>
+  <div id="app">
+    <v-app v-cloak light fill-height>
+      <v-navigation-drawer disable-resize-watcher v-model="sidebar" app>
+        <v-list>
+          <v-list-item href="#aetherische-oele"
+            @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+            <v-list-item-content>Ätherische Öle & Co.</v-list-item-content>
+          </v-list-item>
+          <v-list-item href="#leistungen"
+            @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+            <v-list-item-content>Leistungen</v-list-item-content>
+          </v-list-item>
+          <v-list-item href="#ueber-mich"
+            @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+            <v-list-item-content>Über mich</v-list-item-content>
+          </v-list-item>
+          <v-list-item href="#zeitqualitaet"
+            @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+            <v-list-item-content>Zeitqualität</v-list-item-content>
+          </v-list-item>
+          <v-list-item href="#galerie"
+            @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+            <v-list-item-content>Galerie</v-list-item-content>
+          </v-list-item>
+          <v-list-item href="#kontakt"
+            @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+            <v-list-item-content>Kontakt</v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+      <v-app-bar app dark color="rgb(68,0,72)" elevate-on-scroll>
+        <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
+        <v-toolbar-title class="button" @click="$vuetify.goTo('#intro').then(function() {this.location.href='#'});">
+          <span class="subheading">Elfendüfte</span>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="hidden-xs-only">
+          <v-btn text v-for="item in menuItems" :key="item.title" :href="item.path" @click="$vuetify.goTo(item.path)">{{
+            item.title }}</v-btn>
+        </v-toolbar-items>
+      </v-app-bar>
+      <v-content>
+        <section id="intro">
+          <v-parallax :src="introSrc" :height="introHeight">
+            <v-layout column align-center justify-center class="white--text">
+              <img src="assets/logo-white.svg" alt="Elfe" height="125">
+              <img src="assets/elfenduefte.svg" alt="Elfendüfte" height="36">
+              <div class="shadow subheading mb-4 text-center ci">Sabine Krenn</div>
+              <v-btn class="mt-12" color="rgb(68,0,72)" dark large @click="$vuetify.goTo('#aetherische-oele')">
+                Willkommen
+              </v-btn>
+            </v-layout>
+          </v-parallax>
+        </section>
 
-      <section id="aetherische-oele">
-        <v-layout
-          column
-          wrap
-          class="my-12"
-          align-center
-        >
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout row wrap>
-                <v-flex xs12 md12>
-                  <v-card flat class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Ätherische Öle, Absolues, <span style="white-space: nowrap;">CO<sub>2</sub></span> Extrakte,...</div>
-                    </v-card-title>
-                    <v-card-text>
-                      <p>Schon lange beschäftigt sich der Mensch mit dem Duft und der Wirkung von Früchten, Harzen, Hölzern, Pflanzen, Samen und Wurzeln. Unterschiedliche Methoden (Destillation, Extraktion, Pressung,...) ermöglichen die Gewinnung ätherischer Öle, Absolues und Extrakte. Die geballte Kraft an unzähligen Inhaltsstoffen in jedem Tropfen kann eingesetzt werden, um Gesundheit zu unterstützen, Krankheiten zu lindern und Wohlbefinden zu erlangen.</p>
-                      <br>
-                      <div class="subheading text-center">Unterschiedliche Anwendungsmöglichkeiten, zahlreiche Wirkungen</div>
-                      <br>
-                      <p>Atmet man einen Duft aus der Raumluft durch die Nase ein, gelangt dieser direkt ins Limbische System. Das Zentrum, wo u.a. Gefühle gesteuert und verarbeitet werden. Verschiedene Erinnerungen und Emotionen, die man mit dem Duft verbindet, werden ausgelöst. Ein bekanntes Beispiel ist wohl der Lavendel. Die einen lieben ihn, die anderen überhaupt nicht. In die Atemluft gelangt das ätherische Öl z.B. mittels Aromalampe, Diffusor, Spray, oder beim Sauna-Aufguss.
-                       </p>
-                      <p>Aufgetragen auf die Haut entfalten ätherische Öle ihre Wirkung, indem sie in den Stoffwechselvorgang des Menschen gelangen. Dies kann ein Körperöl, Duschgel oder Badeöl sein. Aber auch eine Anwendung mit Wickel und Kompresse ist möglich.</p>
-                      <p>Das Wirkungsspektrum der ätherischen Öle reicht von A wie aufmunternd, aphrodisierend über E wie entspannend, erfrischend, entzündungshemmend, hin zum H wie harmonisierend bis schließlich zum Z wie zentrierend.
-                      Fast zu jedem Buchstaben findet man ein Wort, mit dem man ätherische Öle beschreiben kann. So vielfältig wie die unzähligen Inhaltsstoffe.</p>
-                      <p>Um die Wirkung auf Körper, Geist und Seele in vollen Zügen genießen zu können, ist bei der Menge an benötigtem Pflanzenmaterial (für 1 kg Melissenöl werden bis zu 8000 kg Blätter destilliert) auch an Kontraindikationen und Vorsichtsgebote zu denken, damit es zu keinen unerwünschten Nebenwirkungen kommt.</p>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md6>
-                  <v-card flat class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Pflanzliche Öle, Fette und Wachse</div>
-                    </v-card-title>
-                    <v-card-text>
-                      <p>Aus Früchten, Kernen, Nüssen, Pflanzen und Samen kann man mittels Pressung oder Mazeration fette Öle (z.B. Johanniskraut- Mohnblütenmazerat, Hanfsamen-, Kokos-, Mandel-, Sanddorn-, Schwarzkümmel-, Sesam-, Wildrosenöl) und Wachse (Jojoba) gewinnen. Diese finden Anwendung in verschiedenen Bereichen:  bei der Gesichts- und Körperpflege, zur inneren Einnahme bei einer Ölkur oder in der Küche.</p>
-                      <p>Zu beachten sind Empfehlungen und Anwendungsmöglichkeiten, da sich nicht jedes Öl/Wachs für alle Bereiche eignet!</p>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md6>
-                  <v-card flat class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Hydrolate</div>
-                    </v-card-title>
-                    <v-card-text>
-                     <p>Eine wundervolle Wirkung haben Hydrolate. Lange als "Nebenprodukt" bei der Herstellung von ätherischen Ölen bezeichnet, gewinnen diese immer mehr an Bedeutung. 
-                     <p>Die in den Destillaten enthaltenen wasserlöslichen Substanzen von Lavendel, Melisse, Orangenblüte, Pfefferminze, Rose, Rosmarin und vielen weiteren, kommen in Körperpflegeprodukten, als zarte Raumbeduftung oder direkt auf die Haut gesprüht zur Anwendung.
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-flex>
-        </v-layout>
-      </section>
-
-      <section>
-        <v-parallax src="assets/muskatellersalbei-marienkaefer.jpg" height="380">
-          <v-layout column align-center justify-center>
-            <div class="shadow headline white--text mb-4 text-center">„Wer die Kostbarkeit des Augenblicks entdeckt, findet das Glück im Alltag“</div>
-            <em class="shadow">Adalbert Stifter</em>
-          </v-layout>
-        </v-parallax>
-      </section>
-
-      <section id="leistungen">
-        <v-layout
-          column
-          wrap
-          class="my-12"
-          align-center
-        >
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout row wrap>
-                <v-flex xs12 md4>
-                  <v-card flat class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Aromafachberatung</div>
-                    </v-card-title>
-                    <v-card-text>
-                      <p>Im Beratungsgespräch können Sie an Lieblingsdüften schnuppern und neue Duftrichtungen kennenlernen. Ebenso werden passende Hydrolate und Pflanzenöle vorgestellt. Um Kontraindikationen und Vorsichtsgebote berücksichtigen zu können, findet bei der Erstberatung eine Annamneseerhebung statt. Je nach Duftvorliebe und anstehenden persönlichen Themen entsteht eine Rezeptur, die für Sie gemischt wird.</p>
-                      <p>Um diese Wohlfühlmischung in den Alltag integrieren können, werden Anwendungsmöglichkeiten besprochen und eigens erstellte Unterlagen zum Nachlesen mitgegeben.</p>
-                      <div class="text-center"><img class="fill-width" src="assets/beratung.jpg"></div>
-                      <p>Nach ca. 3 Wochen erfolgt eine Nachbesprechung, wo bewährte Mischungen nachproduziert oder bei Bedarf abgeändert werden.</p>
-                      <v-simple-table>
-                        <template v-slot:default>
-                          <tbody>
-                            <tr>
-                              <td>Aromafachberatung</td>
-                              <td>
-                                67 €                      
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Dauer: 60 bis 90 Minuten</td>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td colspan="2">
-                                <div>Preis inklusiv 3 ml Wohlfühlmischung und Feedback</div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td colspan="2"><div class="small">Leistung auch als Gutschein erhältlich</div></td>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </template>
-                      </v-simple-table>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md4>
-                  <v-card flat class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Körperanwendungen</div>
-                    </v-card-title>
-                    <v-card-text>
-                      <p>Wohlfühlanwendungen wie <b>Aromastreichung</b> und <b>rhythmisches Körperbalancing</b> an Armen, Beinen oder Rücken können Selbstheilungskräfte aktivieren, Blockaden lösen, Wohlbefinden steigern.</p>
-                      <p>Diese führe ich nach dem <a class="text-no-wrap" target="_blank" href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO durch. Die Anwendung erfolgt mit einer Mischung aus ätherischem Öl und Basisöl auf der Haut (materielle Ebene).
-                        Die Wirkung zeigt sich auf der energetisch-feinstofflichen Ebene, dem eigentlichen Tätigkeitsbereich eines Humanenergetikers.</p>
-                      <div class="text-center"><img class="fill-width" src="assets/streichung.jpg"></div>
-                      <p><b>Wickel und Auflagen</b> können ebenfalls, als unterstützende Maßnahme bei Entgiftungskuren oder einfach nur zum Entspannen, in der Praxis genutzt werden.</p>
-                      <p>Nach einem kurzem Vorgespräch wird eine, für den Moment passende Ölmischung gewählt, die auf Wunsch zur Anwendung kommt.</p>
-                      <v-simple-table>
-                        <template v-slot:default>
-                          <tbody>
-                            <tr>
-                              <td>
-                                25 Minuten
-                              </td>
-                              <td>
-                                37 € 
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>50 Minuten</td>
-                              <td>
-                                57 €
-                              </td>
-                            </tr>
-                            <tr>
-                              <td colspan="2">Eine Nachruhzeit von ca. 10 Minuten ist einzuplanen</td>
-                            </tr>
-                            <tr>
-                              <td colspan="2"><div class="small">Leistung auch als Gutschein erhältlich</div></td>
-                            </tr>
-                          </tbody>
-                        </template>
-                      </v-simple-table>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md4>
-                  <v-card flat class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Individuelle Duftkompositionen</div>
-                    </v-card-title>
-                    <v-card-text>
-                      <p>Sobald Düfte in unsere Nase gelangen, lösen diese in unserem Unterbewusstsein eine bestimmte Reaktion aus, auch wenn sie kaum wahrnehmbar sind. Umso angenehmer ein Duft erscheint, desto länger wird man sich in diesem Umfeld aufhalten.</p>
-                      <div class="subheading text-center">Naturparfum</div><br>
-                      <p>Mit einem individuell erstelltem Naturparfum wird die Einzigartigkeit einer Person unterstrichen.
-                        Ich unterstütze Sie beim Wählen und Zusammenstellen aus einer Vielzahl von Essenzen.</p>
-                      <div class="text-center"><img class="fill-width" src="assets/parfums.jpg"></div>
-                      <p>Düfte sollten zu Menschen, deren Umgebung und Stimmung passen.<p>
-                      <div class="subheading text-center">Duftmarketing & AirDesign</div><br>
-                      <p>Um den Wiedererkennnungswert Ihrer Firma zu steigern, empfehle ich die Unterstützung mittels Corporate Scent.</p> 
-                      <p>In Warteräumen und Praxen kann mit raumluftreinigenden und -harmonisierenden Duftmischungen eine angenehme Atmosphäre geschaffen werden. Mitarbeiter in Büros können zusätzlich von konzentrationssteigernden ätherischen Ölen profitieren.</p>
-                      <p>Gemeinsam wird eine passende Komposition für Ihr Unternehmen kreiert, Einsatzmöglichkeiten besprochen und auf Wunsch ein Beduftungskonzept umgesetzt.</p>
-                      <v-simple-table>
-                        <template v-slot:default>
-                          <tbody>
-                            <tr>
-                            <tr>
-                              <td>Kosten</td>
-                              <td>
-                                auf Anfrage
-                              </td>
-                            </tr>
-                          </tbody>
-                        </template>
-                      </v-simple-table>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md12>
-                  <v-card flat class="transparent">
-                    <v-card-text>
-                      <p>Zur Anwendung kommen nur naturreine ätherische Öle, Pflanzenöle und Hydrolate. Vorzugsweise in Bio Qualität (nach Verfügbarkeit) von Firmen in und um Österreich, z.B. von <a href="https://www.feeling.at/shop?acc=375">feeling</a> oder <a href="https://www.bergila.com/de/">bergila</a>. Über den Link gelangen Sie direkt zum Shop, um aus einer Vielzahl von Produkten wählen zu können.</p>
-                      <p>In meiner Praxis ist nur Barzahlung möglich. <b>Tipp:</b> Eventuell ist gegen Vorlage der Rechnung eine Kostenrückerstattung für ganzheitsmedizinische Behandlungsmethoden über Ihre Zusatzversicherung möglich. Informieren Sie sich!</p>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-flex>
-        </v-layout>
-      </section>
-
-      <section>
-        <v-parallax src="assets/mohnklatschhummel.jpg" height="380">
-          <v-layout column align-center justify-center>
-            <div class="shadow headline white--text mb-4 text-center">„Wenn es einen Glauben gibt, der Berge versetzen kann, dann ist es der Glaube an die eigene Kraft.“</div>
-            <em class="shadow">Marie von Ebner-Eschenbach</em>
-          </v-layout>
-        </v-parallax>
-      </section>
-
-      <section id="ueber-mich">
-        <v-layout
-          column
-          wrap
-          class="my-12"
-          align-center
-        >
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout row wrap>
-                <v-flex xs12 md6>
-                  <v-card flat class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Faszination Duftpflanzen</div>
-                    </v-card-title>
-                    <v-card-text>
-                      <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%" src="assets/sabine.jpg">Sabine Krenn</div>
-                      <p>Seit vielen Jahren bin ich als Dipl. Gesundheits- und Krankenpflegerin in verschiedensten Einrichtungen und Richtungen tätig.</p>
-                      <p>Erst das Verfassen einer Fachbereichsarbeit im Rahmen der Ausbildung zur Dipl. Aromapraktikerin/Aromapflege veranlasste mich zu reflektieren, wann ich den ersten „Kontakt“ mit ätherischen Ölen hatte und was sich daraus entwickelte:</p>
-                      <p>Wie bei vielen anderen auch, war mein erster Zugang vor über 20 Jahren „NUR“ über den Duft. Ein Fläschchen wurde angeschafft, damals eine Duftmischung. Das erste Eintauchen ins Reich der naturreinen Düfte begann, indem ich immer neugieriger wurde und nachlas, was da denn alles so drin sei und warum es so duftet wie es duftet. Bücher um Bücher folgten – nicht nur Neuerscheinungen. Auch vergangenes Wissen, nachzulesen in Büchern aus Antiquariaten, finde ich sehr spannend. Eine zusätzliche Liebe! 💜</p>
-                      <img class="float-half" src="assets/buch.jpg">
-                      <p>Da ätherische Öle aus einer Vielzahl an Inhaltsstoffen bestehen, öffnete bei mir das Erlernen der Biochemie ganz neue Perspektiven. Mit dem Wissen kann ich in Aromafachberatungen die psychische und physische Wirkung gezielt einsetzten und gleichzeitig Duftvorlieben berücksichtigen.
-                       </p>Bei meinen Körperpflegeprodukten achte ich sehr auf die verwendeten Inhaltsstoffe. Parfums, Körperöle und Gesichtspflege, sowie Mazerate mische und rühre ich selbst zusammen. Damit kann ich bei den Zutaten bestimmen, was rein soll und was nicht.
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md6>
-                  <v-card flat class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Mit großer Leidenschaft mische und kreiere ich Essenzen, um eine neue Komposition zu erstellen</div>
-                    </v-card-title>
-                    <v-card-text>
-                      <div class="text-center"><img class="fill-width" src="assets/praxis.jpg"></div>
-                      <p>Private Umstände ermöglichen mir das Arbeiten in meiner Praxis, in der ich Ihnen dieses wunderbar duftende und wirkende Reich näherbringen kann.</p>
-                    </v-card-text>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Entspannen, ausspannen, eine Auszeit vom Alltag nehmen und gleichzeitig etwas für die eigene Gesundheit tun</div>
-                    </v-card-title>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md12>
-                  <v-card flat class="transparent">
-                    <v-card-text>
-                      <p>Der Lehrgang zur "Dipl. Aromapraktikerin" und "Komplementäre Pflege – Aromapflege", sowie Seminare für "Rhythmisches Körperbalancing" und Duftmarkting & AirDesign bei aromainfo.at (Ingrid Karner) befähigen mich in diesem Bereich tätig zu sein. Weitere Fortbildungen, "Palliative care" und "Niemand riecht so gut wie du" (Prof. Hatt) bei aromapflege.com (Evelyn Deutsch), bereichern meine Tätigkeit.</p>
-                      <p>Vereinsmitglied der <a target="_blank" href="https://www.aromapraktiker.eu">VAGA – Vereinigung für Aromapflege und gewerbliche AromapraktikerInnen</a></p>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                    </v-layout>
-            </v-container>
-          </v-flex>
-        </v-layout>
-      </section>
-      
-      <section>
-        <v-parallax src="assets/rosenbluete.jpg" height="380">
-          <v-layout column align-center justify-center>
-            <div class="shadow headline white--text mb-4 text-center">„Der Rose süßer Duft genügt, man braucht sie nicht zu brechen, und wer sich mit dem Duft begnügt, den wird ihr Dorn nicht stechen.“</div>
-            <em class="shadow">Friedrich von Bodenstedt</em>
-          </v-layout>
-        </v-parallax>
-      </section>
-
-      <section id="zeitqualitaet">
-        <v-layout
-          column
-          wrap
-          class="my-12"
-          align-center
-        >
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout row wrap>
-                <v-flex xs12 md12>
-                  <v-card flat class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-center">Zeitqualität</div>
-                    </v-card-title>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-flex>
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout row wrap>
-                <v-flex xs12 md6>
-                  <v-card flat class="transparent">
-                    <v-card-text>
-                      <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%" src="assets/neue-destille.jpg"></div>
-                      <p><b>Zeitqualität beinhaltet Tätigkeiten, die ich im Zusammenhang mit meiner Herzensarbeit im Rhythmus der Jahreszeiten ausführe.</b>
-                      </p>
-                      <p>Der Herbst 🍂, wenn die Ernte für so manches von statten geht und der Spätsommer ins Land zieht. Eine meiner Lieblingszeiten.
-                        Die Hitze ist großteils vorbei, die Blätter beginnen sich langsam zurückzuziehen und verfärben sich. 
-                        Für mich heuer besonders spannend, da ich seit kurzem stolze Besitzerin einer Leonardo Destille bin! 💚💜
-                      </p>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md6>
-                  <v-card flat class="transparent">
-                    <v-card-text>
-                      <p>Salbei, Schafgarbe, Zaubernuss und ein Kieferngewächs 🍃 sind erste Befüllungen.
-                      </p>
-                      <img class="float-half" src="assets/salbei-destillieren.jpg">
-                      <img class="float-half right" src="assets/schafgarbe-leonardo.jpg">
-                      <br>
-                      <img class="float-half" src="assets/hamamelis-destillieren.jpg">
-                      <img class="float-half right" src="assets/douglasie-destillieren.jpg">
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md6>
-                  <v-card flat class="transparent">
-                    <v-card-text>
-                      <img class="float-half" src="assets/leonardo.gif">
-                      <p>Mit geeignetem Pflanzenmaterial kann ich Destillate herstellen, die im Privatbereich zur Anwendung kommen. 
-                      </p>
-                      <p>Die Blüten- und Kräuterwässerchen sind für ihre Sanftheit bekannt, haben aber trotzdem eine starke Wirkung. Geeignet auch in der Babypflege, für Kinder, Schwangere und ältere Personen. Einige Ausnahmen sind bei der Anwendung, trotz guter Verträglichkeit, im Einzelfall zu beachten. 
-                      </p>
-                      <p>Ich verwende sie gerne für Parfum und Raumsprays, pur als Tonik oder als Wasserphase bei selbstgerührten Cremen.
-                      </p>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md6>
-                  <v-card flat class="transparent">
-                    <v-card-text>
-                      <img class="float-half" src="assets/fertig-destilliert.jpg">
-                      <p>Diese Pflanzenwässerchen werden nach einer Zeit der Reifung, in kleine Chargen abgefüllt. Der geringe Anteil an gewonnenem ätherischem Öl (im Bild in der vordersten Flasche erkennbar 🤓)darf als leichte Konservierung bleiben. Eine Ausnahme ist die Zaubernuss, auch bekannt als Hamamelis. Aus ihr kann ausschließlich ein Hydrolat gewonnen werden.
-                      </p>
-                      <p>Nicht alle Hydrolate ähneln dem Duft der Pflanze die destilliert wurde. Mein Hauptaugenmerk liegt bei den Anwendungsmöglichkeiten deshalb auch bei der Wirkung.
-                      </p>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-flex>
-        </v-layout>
-      </section>
-
-      <section>
-        <v-parallax src="assets/leonardo-tropfen.jpg" height="380">
-          <v-layout column align-center justify-center>
-            <div class="shadow headline white--text mb-4 text-center">„Das Äußere einer Pflanze ist nur die Hälfte ihrer Wirklichkeit“</div>
-            <em class="shadow">Johann Wolfgang von Goethe</em>
-          </v-layout>
-        </v-parallax>
-      </section>
-
-      <section id="galerie">
-        <v-layout
-          column
-          wrap
-          class="my-12"
-          align-center
-        >
-          <v-flex xs12 sm4 class="my-4">
-            <div class="text-center">
-              <h2 class="headline">Galerie</h2>
-              <span class="subheading">
-                Bilder einiger Pflanzen, deren Düfte und Wirkungen ich verwende
-              </span>
-              <gallery :images="images" :index="index" @close="index = null"></gallery>
+        <section id="aetherische-oele">
+          <v-layout column wrap class="my-12" align-center>
+            <v-flex xs12>
               <v-container grid-list-xl>
-                <v-layout row wrap align-center>
-                  <v-flex xs12 md4
-                    v-for="image, imageIndex in images"
-                    :key="image.href"
-                  >
-                    <v-card flat>
-                      <v-card-text
-                        class="text-center image"
-                        @click="index = imageIndex"
-                        :style="{ backgroundImage: 'url(' + image.href + ')' }"
-                        :title="image.title"
-                        :alt="image.title"
-                      ></v-card-text>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Ätherische Öle, Absolues, <span
+                            style="white-space: nowrap;">CO<sub>2</sub></span> Extrakte,...</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <p>Schon lange beschäftigt sich der Mensch mit dem Duft und der Wirkung von Früchten, Harzen,
+                          Hölzern, Pflanzen, Samen und Wurzeln. Unterschiedliche Methoden (Destillation, Extraktion,
+                          Pressung,...) ermöglichen die Gewinnung ätherischer Öle, Absolues und Extrakte. Die geballte
+                          Kraft an unzähligen Inhaltsstoffen in jedem Tropfen kann eingesetzt werden, um Gesundheit zu
+                          unterstützen, Krankheiten zu lindern und Wohlbefinden zu erlangen.</p>
+                        <br>
+                        <div class="subheading text-center">Unterschiedliche Anwendungsmöglichkeiten, zahlreiche
+                          Wirkungen</div>
+                        <br>
+                        <p>Atmet man einen Duft aus der Raumluft durch die Nase ein, gelangt dieser direkt ins Limbische
+                          System. Das Zentrum, wo u.a. Gefühle gesteuert und verarbeitet werden. Verschiedene
+                          Erinnerungen und Emotionen, die man mit dem Duft verbindet, werden ausgelöst. Ein bekanntes
+                          Beispiel ist wohl der Lavendel. Die einen lieben ihn, die anderen überhaupt nicht. In die
+                          Atemluft gelangt das ätherische Öl z.B. mittels Aromalampe, Diffusor, Spray, oder beim
+                          Sauna-Aufguss.
+                        </p>
+                        <p>Aufgetragen auf die Haut entfalten ätherische Öle ihre Wirkung, indem sie in den
+                          Stoffwechselvorgang des Menschen gelangen. Dies kann ein Körperöl, Duschgel oder Badeöl sein.
+                          Aber auch eine Anwendung mit Wickel und Kompresse ist möglich.</p>
+                        <p>Das Wirkungsspektrum der ätherischen Öle reicht von A wie aufmunternd, aphrodisierend über E
+                          wie entspannend, erfrischend, entzündungshemmend, hin zum H wie harmonisierend bis schließlich
+                          zum Z wie zentrierend.
+                          Fast zu jedem Buchstaben findet man ein Wort, mit dem man ätherische Öle beschreiben kann. So
+                          vielfältig wie die unzähligen Inhaltsstoffe.</p>
+                        <p>Um die Wirkung auf Körper, Geist und Seele in vollen Zügen genießen zu können, ist bei der
+                          Menge an benötigtem Pflanzenmaterial (für 1 kg Melissenöl werden bis zu 8000 kg Blätter
+                          destilliert) auch an Kontraindikationen und Vorsichtsgebote zu denken, damit es zu keinen
+                          unerwünschten Nebenwirkungen kommt.</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Pflanzliche Öle, Fette und Wachse</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <p>Aus Früchten, Kernen, Nüssen, Pflanzen und Samen kann man mittels Pressung oder Mazeration
+                          fette Öle (z.B. Johanniskraut- Mohnblütenmazerat, Hanfsamen-, Kokos-, Mandel-, Sanddorn-,
+                          Schwarzkümmel-, Sesam-, Wildrosenöl) und Wachse (Jojoba) gewinnen. Diese finden Anwendung in
+                          verschiedenen Bereichen: bei der Gesichts- und Körperpflege, zur inneren Einnahme bei einer
+                          Ölkur oder in der Küche.</p>
+                        <p>Zu beachten sind Empfehlungen und Anwendungsmöglichkeiten, da sich nicht jedes Öl/Wachs für
+                          alle Bereiche eignet!</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Hydrolate</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <p>Eine wundervolle Wirkung haben Hydrolate. Lange als "Nebenprodukt" bei der Herstellung von
+                          ätherischen Ölen bezeichnet, gewinnen diese immer mehr an Bedeutung.
+                        <p>Die in den Destillaten enthaltenen wasserlöslichen Substanzen von Lavendel, Melisse,
+                          Orangenblüte, Pfefferminze, Rose, Rosmarin und vielen weiteren, kommen in
+                          Körperpflegeprodukten, als zarte Raumbeduftung oder direkt auf die Haut gesprüht zur
+                          Anwendung.
+                      </v-card-text>
                     </v-card>
                   </v-flex>
                 </v-layout>
               </v-container>
-            </div>
-          </v-flex>
-        </v-layout>
-      </section>
-
-      <section>
-        <v-parallax src="assets/regenbogen.jpg" height="380">
-          <v-layout column align-center justify-center>
-            <div class="shadow headline white--text mb-4 text-center">„Und plötzlich weißt du: Es ist Zeit, etwas Neues zu beginnen und dem Zauber des Anfangs zu vertrauen“</div>
-            <em class="shadow">Meister Eckhart</em>
-          </v-layout>
-        </v-parallax>
-      </section>
-
-      <section id="kontakt">
-        <v-container grid-list-xl>
-          <v-layout row wrap justify-center class="my-12">
-            <v-flex xs12 sm6>
-              <v-card flat class="transparent">
-                <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Sabine Krenn</div>
-                </v-card-title>
-                <v-card-text>
-                  <div class="subheading text-center">Dipl. Aromapraktikerin</div>
-                  <p class="text-center">DGKP-Aromapflege</p>
-                </v-card-text>
-                <v-list class="transparent">
-                  <v-list-item href="tel:+436508095272">
-                    <v-list-item-action>
-                      <v-icon class="deep-purple--text text--lighten-2">mdi-phone</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                      <v-list-item-title>+43 650 8095272</v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                  <v-list-item href="https://goo.gl/maps/u9xd5mnbRxsD4LFx7" target="_blank">
-                    <v-list-item-action>
-                      <v-icon class="deep-purple--text text--lighten-2">mdi-map-marker</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                      <v-list-item-title>8020 Graz, Grüne Gasse 21d</v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                  <v-list-item :href="'mailto:' + ceomnatial">
-                    <v-list-item-action>
-                      <v-icon class="deep-purple--text text--lighten-2">mdi-email</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                      <v-list-item-title>{{ ceomnatial }}</v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
-                <v-card-text>
-                  Termin nach Vereinbarung, telefonisch oder per e-mail. Ich freue mich über Ihre Anfrage!
-                </v-card-text>
-              </v-card>
-            </v-flex>
-            <v-flex xs12 sm6>
-              <v-card flat class="transparent">
-                <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Haftungsausschluss</div>
-                </v-card-title>
-                <v-card-text>
-                  Meine, auf dieser Webseite und in der Praxis angebotenen Behandlungen, Beratungen und Empfehlungen
-                  unterstützen Sie um in Balance zu kommen und Ihr Wohlbefinden zu steigern. Es werden weder Diagnosen
-                  erstellt noch Krankheiten behandelt. Eine laufende Therapie und/oder Medikation soll nicht unterbrochen werden. Gerne arbeite ich auf Wunsch mit Ärzten und Therapeuten zusammen, da sich die Schulmedizin mit diesen Methoden sehr gut ergänzen lässt.
-                </v-card-text>
-                 <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Zur Information</div>
-                </v-card-title>
-                <v-card-text>
-                  <p>Ich freue mich bestehenden, sowie neuen Kundinnen und Kunden in meinen Praxisräumlichkeiten wieder begrüßen zu können.<p/>
-                  <p>Aufgrund der aktuellen Situation wird ersucht, bei einem Termin die Praxis mit geeignetem Mund/Nasenschutz zu betreten.</p>
-                  <p>Anfragen bezüglich einer Beratung via Skype muss ich leider immer wieder ablehnen, da mir der persönliche Kontakt und die mit der Duftwahrnehmung einhergehende Reaktion des Kunden sehr wichtig ist. Individuelle Duftkompositionen, die bereits nach einer Beratung angewendet wurden, mische ich auf Wunsch auch weiterhin nach.<p/>
-                  <p>Ich ersuche des weiteren um Verständnis, dass ich Körperanwendungen derzeit nicht durchführe.<p/>
-                  <p>Viel Kraft und Ausdauer für diese Tage! Bleiben Sie gesund! 💚</p>    
-                </v-card-text>
-              </v-card>
             </v-flex>
           </v-layout>
-        </v-container>
-      </section id="kontakt">
+        </section>
 
-      <v-footer color="purple darken-4">
-        <v-layout row wrap align-center>
-          <v-flex xs12>
-            <div class="small white--text ml-4">
-              &copy; 2019-present Elfendüfte Sabine Krenn – <a class="white--text" @click="impressum = !impressum">Impressum, Datenschutzerklärung</a>
-            </div>
-          </v-flex>
-        </v-layout>
-      </v-footer>
+        <section>
+          <v-parallax src="assets/muskatellersalbei-marienkaefer.jpg" height="380">
+            <v-layout column align-center justify-center>
+              <div class="shadow headline white--text mb-4 text-center">„Wer die Kostbarkeit des Augenblicks entdeckt,
+                findet das Glück im Alltag“</div>
+              <em class="shadow">Adalbert Stifter</em>
+            </v-layout>
+          </v-parallax>
+        </section>
 
-    </v-content>
-    <v-bottom-sheet scrollable inset v-model="impressum">
-      <v-card tile style="height: 250px;">
-        <v-card-text class="impressum">
-          <h1>Impressum</h1>
-          <img src="assets/ecg.png" style="border:0px" alt="Informationen zu E-Commerce und Mediengesetz">
-          <h1>Datenschutzerklärung</h1>
-          <h2>Datenschutz</h2>
-          <p>Wir haben diese Datenschutzerklärung (Fassung 02.01.2020-111237060) verfasst, um Ihnen gemäß der Vorgaben der <a href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=111237060" target="_blank" rel="noopener">Datenschutz-Grundverordnung (EU) 2016/679</a> zu erklären, welche Informationen wir sammeln, wie wir Daten verwenden und welche Entscheidungsmöglichkeiten Sie als Besucher dieser Webseite haben.</p>
-          <p>Leider liegt es in der Natur der Sache, dass diese Erklärungen sehr technisch klingen, wir haben uns bei der Erstellung jedoch bemüht die wichtigsten Dinge so einfach und klar wie möglich zu beschreiben.</p>
-          <h2>Rechte laut Datenschutzgrundverordnung</h2>
-          <p>Ihnen stehen laut den Bestimmungen der DSGVO und des österreichischen <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&tid=111237060" target="_blank" rel="noopener">Datenschutzgesetzes (DSG)</a> grundsätzlich die folgende Rechte zu:</p>
-          <ul>
-          <li>Recht auf Berichtigung (Artikel 16 DSGVO)</li>
-          <li>Recht auf Löschung („Recht auf Vergessenwerden“) (Artikel 17 DSGVO)</li>
-          <li>Recht auf Einschränkung der Verarbeitung (Artikel 18 DSGVO)</li>
-          <li>Recht auf Benachrichtigung – Mitteilungspflicht im Zusammenhang mit der Berichtigung oder Löschung personenbezogener Daten oder der Einschränkung der Verarbeitung (Artikel 19 DSGVO)</li>
-          <li>Recht auf Datenübertragbarkeit (Artikel 20 DSGVO)</li>
-          <li>Widerspruchsrecht (Artikel 21 DSGVO)</li>
-          <li>Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung — einschließlich Profiling — beruhenden Entscheidung unterworfen zu werden (Artikel 22 DSGVO)</li>
-          </ul>
-          <p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren, welche in Österreich die Datenschutzbehörde ist, deren Webseite Sie unter <a href="https://www.dsb.gv.at/?tid=111237060">https://www.dsb.gv.at/</a> finden.</p>
-          <h2>TLS-Verschlüsselung mit https</h2>
-          <p>Wir verwenden https um Daten abhörsicher im Internet zu übertragen (Datenschutz durch Technikgestaltung <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=111237060" target="_blank" rel="noopener">Artikel 25 Absatz 1 DSGVO</a>). Durch den Einsatz von TLS (Transport Layer Security), einem Verschlüsselungsprotokoll zur sicheren Datenübertragung im Internet können wir den Schutz vertraulicher Daten sicherstellen. Sie erkennen die Benutzung dieser Absicherung der Datenübertragung am kleinen Schlosssymbol links oben im Browser und der Verwendung des Schemas https (anstatt http) als Teil unserer Internetadresse.</p>
-          <h2>Google Fonts Datenschutzerklärung</h2>
-          <p>Auf unserer Webseite verwenden wir Google Fonts. Das sind die “Google-Schriften” der Firma Google Inc. (1600 Amphitheatre Parkway Mountain View, CA 94043, USA).</p>
-          <p>Für die Verwendung von Google-Schriftarten müssen Sie sich nicht anmelden bzw. ein Passwort hinterlegen. Weiters werden auch keine Cookies in Ihrem Browser gespeichert. Die Dateien (CSS, Schriftarten/Fonts) werden über die Google-Domains fonts.googleapis.com und fonts.gstatic.com angefordert. Laut Google sind die Anfragen nach CSS und Schriften vollkommen getrennt von allen anderen Google-Diensten. Wenn Sie ein Google-Konto haben, brauchen Sie keine Sorge haben, dass Ihre Google-Kontodaten, während der Verwendung von Google Fonts, an Google übermittelt werden. Google erfasst die Nutzung von CSS (Cascading Style Sheets) und der verwendeten Schriftarten und speichert diese Daten sicher. Wie die Datenspeicherung genau aussieht, werden wir uns noch im Detail ansehen.</p>
-          <h3>Was sind Google Fonts?</h3>
-          <p>Google Fonts (früher Google Web Fonts) ist ein Verzeichnis mit über 800 Schriftarten, die die <a href="https://de.wikipedia.org/wiki/Google_LLC?tid=111237060">Google LLC</a> Ihren Nutzern kostenlos zu Verfügung stellen.</p>
-          <p>Viele dieser Schriftarten sind unter der SIL Open Font License veröffentlicht, während andere unter der Apache-Lizenz veröffentlicht wurden. Beides sind freie Software-Lizenzen.</p>
-          <h3>Warum verwenden wir Google Fonts auf unserer Webseite?</h3>
-          <p>Mit Google Fonts können wir auf der eigenen Webseite Schriften nutzen, und müssen sie nicht auf unserem eigenen Server hochladen. Google Fonts ist ein wichtiger Baustein, um die Qualität unserer Webseite hoch zu halten. Alle Google-Schriften sind automatisch für das Web optimiert und dies spart Datenvolumen und ist speziell für die Verwendung bei mobilen Endgeräten ein großer Vorteil. Wenn Sie unsere Seite besuchen, sorgt die niedrige Dateigröße für eine schnelle Ladezeit. Des Weiteren sind Google Fonts sichere Web Fonts. Unterschiedliche Bildsynthese-Systeme (Rendering) in verschiedenen Browsern, Betriebssystemen und mobilen Endgeräten können zu Fehlern führen. Solche Fehler können teilweise Texte bzw. ganze Webseiten optisch verzerren. Dank des schnellen Content Delivery Network (CDN) gibt es mit Google Fonts keine plattformübergreifenden Probleme. Google Fonts unterstützt alle gängigen Browser (Google Chrome, Mozilla Firefox, Apple Safari, Opera) und funktioniert zuverlässig auf den meisten modernen mobilen Betriebssystemen, einschließlich Android 2.2+ und iOS 4.2+ (iPhone, iPad, iPod). Wir verwenden die Google Fonts also, damit wir unser gesamtes Online-Service so schön und einheitlich wie möglich darstellen können.</p>
-          <h3>Welche Daten werden von Google gespeichert?</h3>
-          <p>Wenn Sie unsere Webseite besuchen, werden die Schriften über einen Google-Server nachgeladen. Durch diesen externen Aufruf werden Daten an die Google-Server übermittelt. So erkennt Google auch, dass Sie bzw. Ihre IP-Adresse unsere Webseite besucht. Die Google Fonts API wurde entwickelt, um Verwendung, Speicherung und Erfassung von Endnutzerdaten auf das zu reduzieren, was für eine ordentliche Bereitstellung von Schriften nötig ist. API steht übrigens für „Application Programming Interface“ und dient unter anderem als Datenübermittler im Softwarebereich.</p>
-          <p>Google Fonts speichert CSS- und Schrift-Anfragen sicher bei Google und ist somit geschützt. Durch die gesammelten Nutzungszahlen kann Google feststellen, wie gut die einzelnen Schriften ankommen. Die Ergebnisse veröffentlicht Google auf internen Analyseseiten, wie beispielsweise Google Analytics. Zudem verwendet Google auch Daten des eigenen Web-Crawlers, um festzustellen, welche Webseiten Google-Schriften verwenden. Diese Daten werden in der BigQuery-Datenbank von Google Fonts veröffentlicht. Unternehmer und Entwickler nützen das Google-Webservice BigQuery, um große Datenmengen untersuchen und bewegen zu können.</p>
-          <p>Zu bedenken gilt allerdings noch, dass durch jede Google Font Anfrage auch Informationen wie Spracheinstellungen, IP-Adresse, Version des Browsers, Bildschirmauflösung des Browsers und Name des Browsers automatisch an die Google-Server übertragen werden. Ob diese Daten auch gespeichert werden, ist nicht klar feststellbar bzw. wird von Google nicht eindeutig kommuniziert.</p>
-          <h3>Wie lange und wo werden die Daten gespeichert?</h3>
-          <p>Anfragen für CSS-Assets speichert Google einen Tag lang auf Ihren Servern, die hauptsächlich außerhalb der EU angesiedelt sind. Das ermöglicht uns, mithilfe eines Google-Stylesheets die Schriftarten zu nutzen. Ein Stylesheet ist eine Formatvorlage, über die man einfach und schnell z.B. das Design bzw. die Schriftart einer Webseite ändern kann.</p>
-          <p>Die Font-Dateien werden bei Google ein Jahr gespeichert. Google verfolgt damit das Ziel, die Ladezeit von Webseiten grundsätzlich zu verbessern. Wenn Millionen von Webseiten auf die gleichen Schriften verweisen, werden sie nach dem ersten Besuch zwischengespeichert und erscheinen sofort auf allen anderen später besuchten Webseiten wieder. Manchmal aktualisiert Google Schriftdateien, um die Dateigröße zu reduzieren, die Abdeckung von Sprache zu erhöhen und das Design zu verbessern.</p>
-          <h3>Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h3>
-          <p>Jene Daten, die Google für einen Tag bzw. ein Jahr speichert können nicht einfach gelöscht werden. Die Daten werden beim Seitenaufruf automatisch an Google übermittelt. Um diese Daten vorzeitig löschen zu können, müssen Sie den Google-Support auf <a href="https://support.google.com/?hl=de&tid=111237060">https://support.google.com/?hl=de&tid=111237060</a> kontaktieren. Datenspeicherung verhindern Sie in diesem Fall nur, wenn Sie unsere Seite nicht besuchen.</p>
-          <p>Anders als andere Web-Schriften erlaubt uns Google uneingeschränkten Zugriff auf alle Schriftarten. Wir können also unlimitiert auf ein Meer an Schriftarten zugreifen und so das Optimum für unsere Webseite rausholen. Mehr zu Google Fonts und weiteren Fragen finden Sie auf <a href="https://developers.google.com/fonts/faq?tid=111237060">https://developers.google.com/fonts/faq?tid=111237060</a>. Dort geht zwar Google auf datenschutzrelevante Angelegenheiten ein, doch wirklich detaillierte Informationen über Datenspeicherung sind nicht enthalten. Es ist relativ schwierig, von Google wirklich präzise Informationen über gespeicherten Daten zu bekommen.</p>
-          <p>Welche Daten grundsätzlich von Google erfasst werden und wofür diese Daten verwendet werden, können Sie auch auf <a href="https://policies.google.com/privacy?hl=de&tid=111237060">https://www.google.com/intl/de/policies/privacy/</a> nachlesen.</p>
-          <p style="margin-top:15px;">Quelle: Erstellt mit dem Datenschutz Generator von <a title="Datenschutz Generator von www.adsimple.at" href="https://www.adsimple.at" target="_blank" rel="follow">Content Marketing AdSimple</a> in Kooperation mit <a href="https://www.limegreen.at" target="_blank" rel="follow" title="">limegreen.at</a>
-          </p>
-        </v-card-text>
-      </v-card>
-    </v-bottom-sheet>  
-  </v-app>
-</div>
-<script>
-  const suffix = location.host === 'elfenduefte.at' ? '.min.js' : '.js';
-  const scripts = [
-    'https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue' + suffix,
-    'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify' + suffix,
-    'https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-helper.js',
-    'https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery' + suffix,
-    'https://unpkg.com/blueimp-gallery@2.27.0/js/blueimp-gallery-fullscreen.js',
-    'https://cdn.jsdelivr.net/npm/vue-gallery@2.x'
-  ];
-  for (let i = 0, ii = scripts.length; i < ii; ++i) {
-    document.write('<script src="' + scripts[i] + '"><\/script>');
-  }
-</script>
-<script>
-  const karlklammer = '@';
-  const menu = document.querySelectorAll('v-navigation-drawer v-list-item-content');
-  const menuItems = [];
-  menu.forEach(function(item) {
-    menuItems.push({
-      title: item.innerText,
-      path: item.parentElement.getAttribute('href')
-    })
-  });
+        <section id="leistungen">
+          <v-layout column wrap class="my-12" align-center>
+            <v-flex xs12>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md4>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Aromafachberatung</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <p>Im Beratungsgespräch können Sie an Lieblingsdüften schnuppern und neue Duftrichtungen
+                          kennenlernen. Ebenso werden passende Hydrolate und Pflanzenöle vorgestellt. Um
+                          Kontraindikationen und Vorsichtsgebote berücksichtigen zu können, findet bei der Erstberatung
+                          eine Annamneseerhebung statt. Je nach Duftvorliebe und anstehenden persönlichen Themen
+                          entsteht eine Rezeptur, die für Sie gemischt wird.</p>
+                        <p>Um diese Wohlfühlmischung in den Alltag integrieren können, werden Anwendungsmöglichkeiten
+                          besprochen und eigens erstellte Unterlagen zum Nachlesen mitgegeben.</p>
+                        <div class="text-center"><img class="fill-width" src="assets/beratung.jpg"></div>
+                        <p>Nach ca. 3 Wochen erfolgt eine Nachbesprechung, wo bewährte Mischungen nachproduziert oder
+                          bei Bedarf abgeändert werden.</p>
+                        <v-simple-table>
+                          <template v-slot:default>
+                            <tbody>
+                              <tr>
+                                <td>Aromafachberatung</td>
+                                <td>
+                                  67 €
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Dauer: 60 bis 90 Minuten</td>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                  <div>Preis inklusiv 3 ml Wohlfühlmischung und Feedback</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                  <div class="small">Leistung auch als Gutschein erhältlich</div>
+                                </td>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </template>
+                        </v-simple-table>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md4>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Körperanwendungen</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <p>Wohlfühlanwendungen wie <b>Aromastreichung</b> und <b>rhythmisches Körperbalancing</b> an
+                          Armen, Beinen oder Rücken können Selbstheilungskräfte aktivieren, Blockaden lösen,
+                          Wohlbefinden steigern.</p>
+                        <p>Diese führe ich nach dem <a class="text-no-wrap" target="_blank"
+                            href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a>
+                          der WKO durch. Die Anwendung erfolgt mit einer Mischung aus ätherischem Öl und Basisöl auf der
+                          Haut (materielle Ebene).
+                          Die Wirkung zeigt sich auf der energetisch-feinstofflichen Ebene, dem eigentlichen
+                          Tätigkeitsbereich eines Humanenergetikers.</p>
+                        <div class="text-center"><img class="fill-width" src="assets/streichung.jpg"></div>
+                        <p><b>Wickel und Auflagen</b> können ebenfalls, als unterstützende Maßnahme bei Entgiftungskuren
+                          oder einfach nur zum Entspannen, in der Praxis genutzt werden.</p>
+                        <p>Nach einem kurzem Vorgespräch wird eine, für den Moment passende Ölmischung gewählt, die auf
+                          Wunsch zur Anwendung kommt.</p>
+                        <v-simple-table>
+                          <template v-slot:default>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  25 Minuten
+                                </td>
+                                <td>
+                                  37 €
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>50 Minuten</td>
+                                <td>
+                                  57 €
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2">Eine Nachruhzeit von ca. 10 Minuten ist einzuplanen</td>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                  <div class="small">Leistung auch als Gutschein erhältlich</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </template>
+                        </v-simple-table>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md4>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Individuelle Duftkompositionen</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <p>Sobald Düfte in unsere Nase gelangen, lösen diese in unserem Unterbewusstsein eine bestimmte
+                          Reaktion aus, auch wenn sie kaum wahrnehmbar sind. Umso angenehmer ein Duft erscheint, desto
+                          länger wird man sich in diesem Umfeld aufhalten.</p>
+                        <div class="subheading text-center">Naturparfum</div><br>
+                        <p>Mit einem individuell erstelltem Naturparfum wird die Einzigartigkeit einer Person
+                          unterstrichen.
+                          Ich unterstütze Sie beim Wählen und Zusammenstellen aus einer Vielzahl von Essenzen.</p>
+                        <div class="text-center"><img class="fill-width" src="assets/parfums.jpg"></div>
+                        <p>Düfte sollten zu Menschen, deren Umgebung und Stimmung passen.
+                        <p>
+                        <div class="subheading text-center">Duftmarketing & AirDesign</div><br>
+                        <p>Um den Wiedererkennnungswert Ihrer Firma zu steigern, empfehle ich die Unterstützung mittels
+                          Corporate Scent.</p>
+                        <p>In Warteräumen und Praxen kann mit raumluftreinigenden und -harmonisierenden Duftmischungen
+                          eine angenehme Atmosphäre geschaffen werden. Mitarbeiter in Büros können zusätzlich von
+                          konzentrationssteigernden ätherischen Ölen profitieren.</p>
+                        <p>Gemeinsam wird eine passende Komposition für Ihr Unternehmen kreiert, Einsatzmöglichkeiten
+                          besprochen und auf Wunsch ein Beduftungskonzept umgesetzt.</p>
+                        <v-simple-table>
+                          <template v-slot:default>
+                            <tbody>
+                              <tr>
+                              <tr>
+                                <td>Kosten</td>
+                                <td>
+                                  auf Anfrage
+                                </td>
+                              </tr>
+                            </tbody>
+                          </template>
+                        </v-simple-table>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <p>Zur Anwendung kommen nur naturreine ätherische Öle, Pflanzenöle und Hydrolate. Vorzugsweise
+                          in Bio Qualität (nach Verfügbarkeit) von Firmen in und um Österreich, z.B. von <a
+                            href="https://shop.feeling.at/#375">feeling</a> oder <a
+                            href="https://www.bergila.com/de/">bergila</a>. Über den Link gelangen Sie direkt zum Shop,
+                          um aus einer Vielzahl von Produkten wählen zu können.</p>
+                        <p>In meiner Praxis ist nur Barzahlung möglich. <b>Tipp:</b> Eventuell ist gegen Vorlage der
+                          Rechnung eine Kostenrückerstattung für ganzheitsmedizinische Behandlungsmethoden über Ihre
+                          Zusatzversicherung möglich. Informieren Sie sich!</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-flex>
+          </v-layout>
+        </section>
 
-  const app = new Vue({
-    el: '#app',
-    vuetify: new Vuetify(),
-    components: {
-      'gallery': VueGallery
-    },
-    data () {
-      return {
-        menuItems: menuItems,
-        images: [
-          {title: 'Neroli – stimmungsaufhellend', description: '(Citrus aurantium flos.)', href: 'assets/lightbox/Neroli.jpeg'},
-          {title: 'Orange – erheiternd', description: '(Citrus sinensis)', href: 'assets/lightbox/Orange.jpeg'},
-          {title: 'Jasmin – berauschend', description: '(Jasminum grandiflorum)', href: 'assets/lightbox/Jasmin.jpeg'},
-          {title: 'Muskatellersalbei – entspannend', description: '(Salvia sclarea)', href: 'assets/lightbox/Muskatellersalbei.jpg'},
-          {title: 'Melisse – beruhigend', description: '(Melissa officinalis)', href: 'assets/lightbox/Melisse.jpg'},
-          {title: 'Geranium – ausgleichend', description: '(Pelargonium graveolens)', href: 'assets/lightbox/Geranium.jpg'},
-          {title: 'Lavendel – schlaffördernd', description: '(Lavandula angustifolia)', href: 'assets/lightbox/Lavendel.jpg'},
-          {title: 'Schopflavendel – anregend', description: '(Lavandula stoechas)', href: 'assets/lightbox/Schopflavendel.jpg'},
-          {title: 'Speiklavendel – konzentrationsfördernd', description: '(Lavandula spica)', href: 'assets/lightbox/Speiklavendel.jpg'},
-          {title: 'Rosmarin – kreislaufanregend', description: '(Salvia rosmarinus)', href: 'assets/lightbox/Rosmarin.jpg'},
-          {title: 'Salbei – stärkend', description: '(Salvia officinalis)', href: 'assets/lightbox/Salbei.jpg'},
-          {title: 'Thymian Ct.linalool – verdauungsfördernd', description: '(Thymus vulgaris)', href: 'assets/lightbox/Thymian.jpg'},
-          {title: 'Vetiver – erdend', description: '(Vetiveria zizanoides)', href: 'assets/lightbox/Vetiver.jpg'},
-          {title: 'Wacholderbeere – reinigend', description: '(Juniperus communis)', href: 'assets/lightbox/Wacholderbeere.jpg'},
-          {title: 'Zeder – hautpflegend', description: '(Cedrus atlantica)', href: 'assets/lightbox/Zeder.jpg'}
-        ],
-        index: null,
-        sidebar: false,
-        ceomnatial: ('ta.etfeudnefle' + karlklammer + 'liam').split('').reverse().join(''),
-        introSrc: innerWidth > 1560 ? 'assets/intro-large.jpg' : 'assets/intro.jpg',
-        introHeight: innerHeight - 64,
-        impressum: false
-      }
+        <section>
+          <v-parallax src="assets/mohnklatschhummel.jpg" height="380">
+            <v-layout column align-center justify-center>
+              <div class="shadow headline white--text mb-4 text-center">„Wenn es einen Glauben gibt, der Berge versetzen
+                kann, dann ist es der Glaube an die eigene Kraft.“</div>
+              <em class="shadow">Marie von Ebner-Eschenbach</em>
+            </v-layout>
+          </v-parallax>
+        </section>
+
+        <section id="ueber-mich">
+          <v-layout column wrap class="my-12" align-center>
+            <v-flex xs12>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Faszination Duftpflanzen</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%"
+                            src="assets/sabine.jpg">Sabine Krenn</div>
+                        <p>Seit vielen Jahren bin ich als Dipl. Gesundheits- und Krankenpflegerin in verschiedensten
+                          Einrichtungen und Richtungen tätig.</p>
+                        <p>Erst das Verfassen einer Fachbereichsarbeit im Rahmen der Ausbildung zur Dipl.
+                          Aromapraktikerin/Aromapflege veranlasste mich zu reflektieren, wann ich den ersten „Kontakt“
+                          mit ätherischen Ölen hatte und was sich daraus entwickelte:</p>
+                        <p>Wie bei vielen anderen auch, war mein erster Zugang vor über 20 Jahren „NUR“ über den Duft.
+                          Ein Fläschchen wurde angeschafft, damals eine Duftmischung. Das erste Eintauchen ins Reich der
+                          naturreinen Düfte begann, indem ich immer neugieriger wurde und nachlas, was da denn alles so
+                          drin sei und warum es so duftet wie es duftet. Bücher um Bücher folgten – nicht nur
+                          Neuerscheinungen. Auch vergangenes Wissen, nachzulesen in Büchern aus Antiquariaten, finde ich
+                          sehr spannend. Eine zusätzliche Liebe! 💜</p>
+                        <img class="float-half" src="assets/buch.jpg">
+                        <p>Da ätherische Öle aus einer Vielzahl an Inhaltsstoffen bestehen, öffnete bei mir das Erlernen
+                          der Biochemie ganz neue Perspektiven. Mit dem Wissen kann ich in Aromafachberatungen die
+                          psychische und physische Wirkung gezielt einsetzten und gleichzeitig Duftvorlieben
+                          berücksichtigen.
+                        </p>Bei meinen Körperpflegeprodukten achte ich sehr auf die verwendeten Inhaltsstoffe. Parfums,
+                        Körperöle und Gesichtspflege, sowie Mazerate mische und rühre ich selbst zusammen. Damit kann
+                        ich bei den Zutaten bestimmen, was rein soll und was nicht.
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Mit großer Leidenschaft mische und kreiere ich Essenzen, um
+                          eine neue Komposition zu erstellen</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <div class="text-center"><img class="fill-width" src="assets/praxis.jpg"></div>
+                        <p>Private Umstände ermöglichen mir das Arbeiten in meiner Praxis, in der ich Ihnen dieses
+                          wunderbar duftende und wirkende Reich näherbringen kann.</p>
+                      </v-card-text>
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Entspannen, ausspannen, eine Auszeit vom Alltag nehmen und
+                          gleichzeitig etwas für die eigene Gesundheit tun</div>
+                      </v-card-title>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <p>Der Lehrgang zur "Dipl. Aromapraktikerin" und "Komplementäre Pflege – Aromapflege", sowie
+                          Seminare für "Rhythmisches Körperbalancing" und Duftmarkting & AirDesign bei aromainfo.at
+                          (Ingrid Karner) befähigen mich in diesem Bereich tätig zu sein. Weitere Fortbildungen,
+                          "Palliative care" und "Niemand riecht so gut wie du" (Prof. Hatt) bei aromapflege.com (Evelyn
+                          Deutsch), bereichern meine Tätigkeit.</p>
+                        <p>Vereinsmitglied der <a target="_blank" href="https://www.aromapraktiker.eu">VAGA –
+                            Vereinigung für Aromapflege und gewerbliche AromapraktikerInnen</a></p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-flex>
+          </v-layout>
+        </section>
+
+        <section>
+          <v-parallax src="assets/rosenbluete.jpg" height="380">
+            <v-layout column align-center justify-center>
+              <div class="shadow headline white--text mb-4 text-center">„Der Rose süßer Duft genügt, man braucht sie
+                nicht zu brechen, und wer sich mit dem Duft begnügt, den wird ihr Dorn nicht stechen.“</div>
+              <em class="shadow">Friedrich von Bodenstedt</em>
+            </v-layout>
+          </v-parallax>
+        </section>
+
+        <section id="zeitqualitaet">
+          <v-layout column wrap class="my-12" align-center>
+            <v-flex xs12>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Zeitqualität</div>
+                      </v-card-title>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-flex>
+            <v-flex xs12>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%"
+                            src="assets/neue-destille.jpg"></div>
+                        <p><b>Zeitqualität beinhaltet Tätigkeiten, die ich im Zusammenhang mit meiner Herzensarbeit im
+                            Rhythmus der Jahreszeiten ausführe.</b>
+                        </p>
+                        <p>Der Herbst 🍂, wenn die Ernte für so manches von statten geht und der Spätsommer ins Land
+                          zieht. Eine meiner Lieblingszeiten.
+                          Die Hitze ist großteils vorbei, die Blätter beginnen sich langsam zurückzuziehen und verfärben
+                          sich.
+                          Für mich heuer besonders spannend, da ich seit kurzem stolze Besitzerin einer Leonardo
+                          Destille bin! 💚💜
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <p>Salbei, Schafgarbe, Zaubernuss und ein Kieferngewächs 🍃 sind erste Befüllungen.
+                        </p>
+                        <img class="float-half" src="assets/salbei-destillieren.jpg">
+                        <img class="float-half right" src="assets/schafgarbe-leonardo.jpg">
+                        <br>
+                        <img class="float-half" src="assets/hamamelis-destillieren.jpg">
+                        <img class="float-half right" src="assets/douglasie-destillieren.jpg">
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half" src="assets/leonardo.gif">
+                        <p>Mit geeignetem Pflanzenmaterial kann ich Destillate herstellen, die im Privatbereich zur
+                          Anwendung kommen.
+                        </p>
+                        <p>Die Blüten- und Kräuterwässerchen sind für ihre Sanftheit bekannt, haben aber trotzdem eine
+                          starke Wirkung. Geeignet auch in der Babypflege, für Kinder, Schwangere und ältere Personen.
+                          Einige Ausnahmen sind bei der Anwendung, trotz guter Verträglichkeit, im Einzelfall zu
+                          beachten.
+                        </p>
+                        <p>Ich verwende sie gerne für Parfum und Raumsprays, pur als Tonik oder als Wasserphase bei
+                          selbstgerührten Cremen.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half" src="assets/fertig-destilliert.jpg">
+                        <p>Diese Pflanzenwässerchen werden nach einer Zeit der Reifung, in kleine Chargen abgefüllt. Der
+                          geringe Anteil an gewonnenem ätherischem Öl (im Bild in der vordersten Flasche erkennbar
+                          🤓)darf als leichte Konservierung bleiben. Eine Ausnahme ist die Zaubernuss, auch bekannt als
+                          Hamamelis. Aus ihr kann ausschließlich ein Hydrolat gewonnen werden.
+                        </p>
+                        <p>Nicht alle Hydrolate ähneln dem Duft der Pflanze die destilliert wurde. Mein Hauptaugenmerk
+                          liegt bei den Anwendungsmöglichkeiten deshalb auch bei der Wirkung.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-flex>
+          </v-layout>
+        </section>
+
+        <section>
+          <v-parallax src="assets/leonardo-tropfen.jpg" height="380">
+            <v-layout column align-center justify-center>
+              <div class="shadow headline white--text mb-4 text-center">„Das Äußere einer Pflanze ist nur die Hälfte
+                ihrer Wirklichkeit“</div>
+              <em class="shadow">Johann Wolfgang von Goethe</em>
+            </v-layout>
+          </v-parallax>
+        </section>
+
+        <section id="galerie">
+          <v-layout column wrap class="my-12" align-center>
+            <v-flex xs12 sm4 class="my-4">
+              <div class="text-center">
+                <h2 class="headline">Galerie</h2>
+                <span class="subheading">
+                  Bilder einiger Pflanzen, deren Düfte und Wirkungen ich verwende
+                </span>
+                <gallery :images="images" :index="index" @close="index = null"></gallery>
+                <v-container grid-list-xl>
+                  <v-layout row wrap align-center>
+                    <v-flex xs12 md4 v-for="image, imageIndex in images" :key="image.href">
+                      <v-card flat>
+                        <v-card-text class="text-center image" @click="index = imageIndex"
+                          :style="{ backgroundImage: 'url(' + image.href + ')' }" :title="image.title"
+                          :alt="image.title"></v-card-text>
+                        <v-card-actions class="justify-center">
+                          <v-btn text :href="image.shop">{{image.description}}</v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </div>
+            </v-flex>
+          </v-layout>
+        </section>
+
+        <section>
+          <v-parallax src="assets/regenbogen.jpg" height="380">
+            <v-layout column align-center justify-center>
+              <div class="shadow headline white--text mb-4 text-center">„Und plötzlich weißt du: Es ist Zeit, etwas
+                Neues zu beginnen und dem Zauber des Anfangs zu vertrauen“</div>
+              <em class="shadow">Meister Eckhart</em>
+            </v-layout>
+          </v-parallax>
+        </section>
+
+        <section id="kontakt">
+          <v-container grid-list-xl>
+            <v-layout row wrap justify-center class="my-12">
+              <v-flex xs12 sm6>
+                <v-card flat class="transparent">
+                  <v-card-title primary-title class="layout justify-center">
+                    <div class="headline">Sabine Krenn</div>
+                  </v-card-title>
+                  <v-card-text>
+                    <div class="subheading text-center">Dipl. Aromapraktikerin</div>
+                    <p class="text-center">DGKP-Aromapflege</p>
+                  </v-card-text>
+                  <v-list class="transparent">
+                    <v-list-item href="tel:+436508095272">
+                      <v-list-item-action>
+                        <v-icon class="deep-purple--text text--lighten-2">mdi-phone</v-icon>
+                      </v-list-item-action>
+                      <v-list-item-content>
+                        <v-list-item-title>+43 650 8095272</v-list-item-title>
+                      </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item href="https://goo.gl/maps/u9xd5mnbRxsD4LFx7" target="_blank">
+                      <v-list-item-action>
+                        <v-icon class="deep-purple--text text--lighten-2">mdi-map-marker</v-icon>
+                      </v-list-item-action>
+                      <v-list-item-content>
+                        <v-list-item-title>8020 Graz, Grüne Gasse 21d</v-list-item-title>
+                      </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item :href="'mailto:' + ceomnatial">
+                      <v-list-item-action>
+                        <v-icon class="deep-purple--text text--lighten-2">mdi-email</v-icon>
+                      </v-list-item-action>
+                      <v-list-item-content>
+                        <v-list-item-title>{{ ceomnatial }}</v-list-item-title>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-list>
+                  <v-card-text>
+                    Termin nach Vereinbarung, telefonisch oder per e-mail. Ich freue mich über Ihre Anfrage!
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+              <v-flex xs12 sm6>
+                <v-card flat class="transparent">
+                  <v-card-title primary-title class="layout justify-center">
+                    <div class="headline">Haftungsausschluss</div>
+                  </v-card-title>
+                  <v-card-text>
+                    Meine, auf dieser Webseite und in der Praxis angebotenen Behandlungen, Beratungen und Empfehlungen
+                    unterstützen Sie um in Balance zu kommen und Ihr Wohlbefinden zu steigern. Es werden weder Diagnosen
+                    erstellt noch Krankheiten behandelt. Eine laufende Therapie und/oder Medikation soll nicht
+                    unterbrochen werden. Gerne arbeite ich auf Wunsch mit Ärzten und Therapeuten zusammen, da sich die
+                    Schulmedizin mit diesen Methoden sehr gut ergänzen lässt.
+                  </v-card-text>
+                  <v-card-title primary-title class="layout justify-center">
+                    <div class="headline">Zur Information</div>
+                  </v-card-title>
+                  <v-card-text>
+                    <p>Ich freue mich bestehenden, sowie neuen Kundinnen und Kunden in meinen Praxisräumlichkeiten
+                      wieder begrüßen zu können.
+                      <p />
+                    <p>Aufgrund der aktuellen Situation wird ersucht, bei einem Termin die Praxis mit geeignetem
+                      Mund/Nasenschutz zu betreten.</p>
+                    <p>Anfragen bezüglich einer Beratung via Skype muss ich leider immer wieder ablehnen, da mir der
+                      persönliche Kontakt und die mit der Duftwahrnehmung einhergehende Reaktion des Kunden sehr wichtig
+                      ist. Individuelle Duftkompositionen, die bereits nach einer Beratung angewendet wurden, mische ich
+                      auf Wunsch auch weiterhin nach.
+                      <p />
+                    <p>Ich ersuche des weiteren um Verständnis, dass ich Körperanwendungen derzeit nicht durchführe.
+                      <p />
+                    <p>Viel Kraft und Ausdauer für diese Tage! Bleiben Sie gesund! 💚</p>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </section id="kontakt">
+
+        <v-footer color="purple darken-4">
+          <v-layout row wrap align-center>
+            <v-flex xs12>
+              <div class="small white--text ml-4">
+                &copy; 2019-present Elfendüfte Sabine Krenn – <a class="white--text"
+                  @click="impressum = !impressum">Impressum, Datenschutzerklärung</a>
+              </div>
+            </v-flex>
+          </v-layout>
+        </v-footer>
+
+      </v-content>
+      <v-bottom-sheet scrollable inset v-model="impressum">
+        <v-card tile style="height: 250px;">
+          <v-card-text class="impressum">
+            <h1>Impressum</h1>
+            <img src="assets/ecg.png" style="border:0px" alt="Informationen zu E-Commerce und Mediengesetz">
+            <h1>Datenschutzerklärung</h1>
+            <h2>Datenschutz</h2>
+            <p>Wir haben diese Datenschutzerklärung (Fassung 02.01.2020-111237060) verfasst, um Ihnen gemäß der Vorgaben
+              der <a href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=111237060"
+                target="_blank" rel="noopener">Datenschutz-Grundverordnung (EU) 2016/679</a> zu erklären, welche
+              Informationen wir sammeln, wie wir Daten verwenden und welche Entscheidungsmöglichkeiten Sie als Besucher
+              dieser Webseite haben.</p>
+            <p>Leider liegt es in der Natur der Sache, dass diese Erklärungen sehr technisch klingen, wir haben uns bei
+              der Erstellung jedoch bemüht die wichtigsten Dinge so einfach und klar wie möglich zu beschreiben.</p>
+            <h2>Rechte laut Datenschutzgrundverordnung</h2>
+            <p>Ihnen stehen laut den Bestimmungen der DSGVO und des österreichischen <a
+                href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&tid=111237060"
+                target="_blank" rel="noopener">Datenschutzgesetzes (DSG)</a> grundsätzlich die folgende Rechte zu:</p>
+            <ul>
+              <li>Recht auf Berichtigung (Artikel 16 DSGVO)</li>
+              <li>Recht auf Löschung („Recht auf Vergessenwerden“) (Artikel 17 DSGVO)</li>
+              <li>Recht auf Einschränkung der Verarbeitung (Artikel 18 DSGVO)</li>
+              <li>Recht auf Benachrichtigung – Mitteilungspflicht im Zusammenhang mit der Berichtigung oder Löschung
+                personenbezogener Daten oder der Einschränkung der Verarbeitung (Artikel 19 DSGVO)</li>
+              <li>Recht auf Datenübertragbarkeit (Artikel 20 DSGVO)</li>
+              <li>Widerspruchsrecht (Artikel 21 DSGVO)</li>
+              <li>Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung — einschließlich Profiling —
+                beruhenden Entscheidung unterworfen zu werden (Artikel 22 DSGVO)</li>
+            </ul>
+            <p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre
+              datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der
+              Aufsichtsbehörde beschweren, welche in Österreich die Datenschutzbehörde ist, deren Webseite Sie unter <a
+                href="https://www.dsb.gv.at/?tid=111237060">https://www.dsb.gv.at/</a> finden.</p>
+            <h2>TLS-Verschlüsselung mit https</h2>
+            <p>Wir verwenden https um Daten abhörsicher im Internet zu übertragen (Datenschutz durch Technikgestaltung
+              <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=111237060"
+                target="_blank" rel="noopener">Artikel 25 Absatz 1 DSGVO</a>). Durch den Einsatz von TLS (Transport
+              Layer Security), einem Verschlüsselungsprotokoll zur sicheren Datenübertragung im Internet können wir den
+              Schutz vertraulicher Daten sicherstellen. Sie erkennen die Benutzung dieser Absicherung der
+              Datenübertragung am kleinen Schlosssymbol links oben im Browser und der Verwendung des Schemas https
+              (anstatt http) als Teil unserer Internetadresse.
+            </p>
+            <h2>Google Fonts Datenschutzerklärung</h2>
+            <p>Auf unserer Webseite verwenden wir Google Fonts. Das sind die “Google-Schriften” der Firma Google Inc.
+              (1600 Amphitheatre Parkway Mountain View, CA 94043, USA).</p>
+            <p>Für die Verwendung von Google-Schriftarten müssen Sie sich nicht anmelden bzw. ein Passwort hinterlegen.
+              Weiters werden auch keine Cookies in Ihrem Browser gespeichert. Die Dateien (CSS, Schriftarten/Fonts)
+              werden über die Google-Domains fonts.googleapis.com und fonts.gstatic.com angefordert. Laut Google sind
+              die Anfragen nach CSS und Schriften vollkommen getrennt von allen anderen Google-Diensten. Wenn Sie ein
+              Google-Konto haben, brauchen Sie keine Sorge haben, dass Ihre Google-Kontodaten, während der Verwendung
+              von Google Fonts, an Google übermittelt werden. Google erfasst die Nutzung von CSS (Cascading Style
+              Sheets) und der verwendeten Schriftarten und speichert diese Daten sicher. Wie die Datenspeicherung genau
+              aussieht, werden wir uns noch im Detail ansehen.</p>
+            <h3>Was sind Google Fonts?</h3>
+            <p>Google Fonts (früher Google Web Fonts) ist ein Verzeichnis mit über 800 Schriftarten, die die <a
+                href="https://de.wikipedia.org/wiki/Google_LLC?tid=111237060">Google LLC</a> Ihren Nutzern kostenlos zu
+              Verfügung stellen.</p>
+            <p>Viele dieser Schriftarten sind unter der SIL Open Font License veröffentlicht, während andere unter
+              der Apache-Lizenz veröffentlicht wurden. Beides sind freie Software-Lizenzen.</p>
+            <h3>Warum verwenden wir Google Fonts auf unserer Webseite?</h3>
+            <p>Mit Google Fonts können wir auf der eigenen Webseite Schriften nutzen, und müssen sie nicht auf unserem
+              eigenen Server hochladen. Google Fonts ist ein wichtiger Baustein, um die Qualität unserer Webseite hoch
+              zu halten. Alle Google-Schriften sind automatisch für das Web optimiert und dies spart Datenvolumen und
+              ist speziell für die Verwendung bei mobilen Endgeräten ein großer Vorteil. Wenn Sie unsere Seite besuchen,
+              sorgt die niedrige Dateigröße für eine schnelle Ladezeit. Des Weiteren sind Google Fonts sichere Web
+              Fonts. Unterschiedliche Bildsynthese-Systeme (Rendering) in verschiedenen Browsern, Betriebssystemen und
+              mobilen Endgeräten können zu Fehlern führen. Solche Fehler können teilweise Texte bzw. ganze Webseiten
+              optisch verzerren. Dank des schnellen Content Delivery Network (CDN) gibt es mit Google Fonts keine
+              plattformübergreifenden Probleme. Google Fonts unterstützt alle gängigen Browser (Google Chrome, Mozilla
+              Firefox, Apple Safari, Opera) und funktioniert zuverlässig auf den meisten modernen mobilen
+              Betriebssystemen, einschließlich Android 2.2+ und iOS 4.2+ (iPhone, iPad, iPod). Wir verwenden die Google
+              Fonts also, damit wir unser gesamtes Online-Service so schön und einheitlich wie möglich darstellen
+              können.</p>
+            <h3>Welche Daten werden von Google gespeichert?</h3>
+            <p>Wenn Sie unsere Webseite besuchen, werden die Schriften über einen Google-Server nachgeladen. Durch
+              diesen externen Aufruf werden Daten an die Google-Server übermittelt. So erkennt Google auch, dass Sie
+              bzw. Ihre IP-Adresse unsere Webseite besucht. Die Google Fonts API wurde entwickelt, um Verwendung,
+              Speicherung und Erfassung von Endnutzerdaten auf das zu reduzieren, was für eine ordentliche
+              Bereitstellung von Schriften nötig ist. API steht übrigens für „Application Programming Interface“ und
+              dient unter anderem als Datenübermittler im Softwarebereich.</p>
+            <p>Google Fonts speichert CSS- und Schrift-Anfragen sicher bei Google und ist somit geschützt. Durch die
+              gesammelten Nutzungszahlen kann Google feststellen, wie gut die einzelnen Schriften ankommen. Die
+              Ergebnisse veröffentlicht Google auf internen Analyseseiten, wie beispielsweise Google Analytics. Zudem
+              verwendet Google auch Daten des eigenen Web-Crawlers, um festzustellen, welche Webseiten Google-Schriften
+              verwenden. Diese Daten werden in der BigQuery-Datenbank von Google Fonts veröffentlicht. Unternehmer und
+              Entwickler nützen das Google-Webservice BigQuery, um große Datenmengen untersuchen und bewegen zu können.
+            </p>
+            <p>Zu bedenken gilt allerdings noch, dass durch jede Google Font Anfrage auch Informationen
+              wie Spracheinstellungen, IP-Adresse, Version des Browsers, Bildschirmauflösung des Browsers und Name des
+              Browsers automatisch an die Google-Server übertragen werden. Ob diese Daten auch gespeichert werden, ist
+              nicht klar feststellbar bzw. wird von Google nicht eindeutig kommuniziert.</p>
+            <h3>Wie lange und wo werden die Daten gespeichert?</h3>
+            <p>Anfragen für CSS-Assets speichert Google einen Tag lang auf Ihren Servern, die hauptsächlich außerhalb
+              der EU angesiedelt sind. Das ermöglicht uns, mithilfe eines Google-Stylesheets die Schriftarten zu
+              nutzen. Ein Stylesheet ist eine Formatvorlage, über die man einfach und schnell z.B. das Design bzw. die
+              Schriftart einer Webseite ändern kann.</p>
+            <p>Die Font-Dateien werden bei Google ein Jahr gespeichert. Google verfolgt damit das Ziel, die Ladezeit von
+              Webseiten grundsätzlich zu verbessern. Wenn Millionen von Webseiten auf die gleichen Schriften verweisen,
+              werden sie nach dem ersten Besuch zwischengespeichert und erscheinen sofort auf allen anderen später
+              besuchten Webseiten wieder. Manchmal aktualisiert Google Schriftdateien, um die Dateigröße zu reduzieren,
+              die Abdeckung von Sprache zu erhöhen und das Design zu verbessern.</p>
+            <h3>Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h3>
+            <p>Jene Daten, die Google für einen Tag bzw. ein Jahr speichert können nicht einfach gelöscht werden. Die
+              Daten werden beim Seitenaufruf automatisch an Google übermittelt. Um diese Daten vorzeitig löschen zu
+              können, müssen Sie den Google-Support auf <a
+                href="https://support.google.com/?hl=de&tid=111237060">https://support.google.com/?hl=de&tid=111237060</a>
+              kontaktieren. Datenspeicherung verhindern Sie in diesem Fall nur, wenn Sie unsere Seite nicht besuchen.
+            </p>
+            <p>Anders als andere Web-Schriften erlaubt uns Google uneingeschränkten Zugriff auf alle Schriftarten. Wir
+              können also unlimitiert auf ein Meer an Schriftarten zugreifen und so das Optimum für unsere Webseite
+              rausholen. Mehr zu Google Fonts und weiteren Fragen finden Sie auf <a
+                href="https://developers.google.com/fonts/faq?tid=111237060">https://developers.google.com/fonts/faq?tid=111237060</a>.
+              Dort geht zwar Google auf datenschutzrelevante Angelegenheiten ein, doch wirklich detaillierte
+              Informationen über Datenspeicherung sind nicht enthalten. Es ist relativ schwierig, von Google wirklich
+              präzise Informationen über gespeicherten Daten zu bekommen.</p>
+            <p>Welche Daten grundsätzlich von Google erfasst werden und wofür diese Daten verwendet werden, können Sie
+              auch auf <a
+                href="https://policies.google.com/privacy?hl=de&tid=111237060">https://www.google.com/intl/de/policies/privacy/</a>
+              nachlesen.</p>
+            <p style="margin-top:15px;">Quelle: Erstellt mit dem Datenschutz Generator von <a
+                title="Datenschutz Generator von www.adsimple.at" href="https://www.adsimple.at" target="_blank"
+                rel="follow">Content Marketing AdSimple</a> in Kooperation mit <a href="https://www.limegreen.at"
+                target="_blank" rel="follow" title="">limegreen.at</a>
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-bottom-sheet>
+    </v-app>
+  </div>
+  <script>
+    const suffix = location.host === 'elfenduefte.at' ? '.min.js' : '.js';
+    const scripts = [
+      'https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue' + suffix,
+      'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify' + suffix,
+      'https://unpkg.com/blueimp-gallery@2.44.0/js/blueimp-helper.js',
+      'https://unpkg.com/blueimp-gallery@2.44.0/js/blueimp-gallery' + suffix,
+      'https://unpkg.com/blueimp-gallery@2.44.0/js/blueimp-gallery-fullscreen.js',
+      'https://cdn.jsdelivr.net/npm/vue-gallery@2.x'
+    ];
+    for (let i = 0, ii = scripts.length; i < ii; ++i) {
+      document.write('<script src="' + scripts[i] + '"><\/script>');
     }
-  });
-  if (location.hash) {
-    app.$vuetify.goTo(location.hash);
-  }
-</script>
+  </script>
+  <script>
+    const karlklammer = '@';
+    const menu = document.querySelectorAll('v-navigation-drawer v-list-item-content');
+    const menuItems = [];
+    menu.forEach(function (item) {
+      menuItems.push({
+        title: item.innerText,
+        path: item.parentElement.getAttribute('href')
+      })
+    });
+
+    const app = new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      components: {
+        'gallery': VueGallery
+      },
+      data() {
+        return {
+          menuItems: menuItems,
+          images: [
+            { title: 'Neroli – stimmungsaufhellend', description: '(Citrus aurantium flos.)', href: 'assets/lightbox/Neroli.jpeg', shop: 'https://shop.feeling.at/products/nerolioel-in-jojoba-citrus-aurantium-flos#375' },
+            { title: 'Orange – erheiternd', description: '(Citrus sinensis)', href: 'assets/lightbox/Orange.jpeg' },
+            { title: 'Jasmin – berauschend', description: '(Jasminum grandiflorum)', href: 'assets/lightbox/Jasmin.jpeg' },
+            { title: 'Muskatellersalbei – entspannend', description: '(Salvia sclarea)', href: 'assets/lightbox/Muskatellersalbei.jpg' },
+            { title: 'Melisse – beruhigend', description: '(Melissa officinalis)', href: 'assets/lightbox/Melisse.jpg' },
+            { title: 'Geranium – ausgleichend', description: '(Pelargonium graveolens)', href: 'assets/lightbox/Geranium.jpg' },
+            { title: 'Lavendel – schlaffördernd', description: '(Lavandula angustifolia)', href: 'assets/lightbox/Lavendel.jpg' },
+            { title: 'Schopflavendel – anregend', description: '(Lavandula stoechas)', href: 'assets/lightbox/Schopflavendel.jpg' },
+            { title: 'Speiklavendel – konzentrationsfördernd', description: '(Lavandula spica)', href: 'assets/lightbox/Speiklavendel.jpg' },
+            { title: 'Rosmarin – kreislaufanregend', description: '(Salvia rosmarinus)', href: 'assets/lightbox/Rosmarin.jpg' },
+            { title: 'Salbei – stärkend', description: '(Salvia officinalis)', href: 'assets/lightbox/Salbei.jpg' },
+            { title: 'Thymian Ct.linalool – verdauungsfördernd', description: '(Thymus vulgaris)', href: 'assets/lightbox/Thymian.jpg' },
+            { title: 'Vetiver – erdend', description: '(Vetiveria zizanoides)', href: 'assets/lightbox/Vetiver.jpg' },
+            { title: 'Wacholderbeere – reinigend', description: '(Juniperus communis)', href: 'assets/lightbox/Wacholderbeere.jpg' },
+            { title: 'Zeder – hautpflegend', description: '(Cedrus atlantica)', href: 'assets/lightbox/Zeder.jpg' }
+          ],
+          index: null,
+          sidebar: false,
+          ceomnatial: ('ta.etfeudnefle' + karlklammer + 'liam').split('').reverse().join(''),
+          introSrc: innerWidth > 1560 ? 'assets/intro-large.jpg' : 'assets/intro.jpg',
+          introHeight: innerHeight - 64,
+          impressum: false
+        }
+      }
+    });
+    if (location.hash) {
+      app.$vuetify.goTo(location.hash);
+    }
+  </script>
 </body>
+
 </html>

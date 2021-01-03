@@ -311,7 +311,8 @@
                             href="https://shop.feeling.at/#375">feeling</a> oder <a
                             href="https://www.bergila.com/de/">bergila</a>. Über den Link gelangen Sie direkt zum Shop,
                           um aus einer Vielzahl von Produkten wählen zu können.</p>
-                        <p>In meiner Praxis ist nur Barzahlung möglich. <b>Tipp:</b> Viele Zusatzversicherungen gewähren eine Kostenrückerstattung für ganzheitsmedizinische Behandlungsmethoden gegen Vorlage der
+                        <p>In meiner Praxis ist nur Barzahlung möglich. <b>Tipp:</b> Viele Zusatzversicherungen gewähren
+                          eine Kostenrückerstattung für ganzheitsmedizinische Behandlungsmethoden gegen Vorlage der
                           Rechnung. Informieren Sie sich!</p>
                       </v-card-text>
                     </v-card>
@@ -423,81 +424,185 @@
                       <v-card-title primary-title class="layout justify-center">
                         <div class="headline text-center">Zeitqualität</div>
                       </v-card-title>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-flex>
-            <v-flex xs12>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
                       <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%"
-                            src="assets/neue-destille.jpg"></div>
                         <p><b>Zeitqualität beinhaltet Tätigkeiten, die ich im Zusammenhang mit meiner Herzensarbeit im
                             Rhythmus der Jahreszeiten ausführe.</b>
                         </p>
-                        <p>Der Herbst 🍂, wenn die Ernte für so manches von statten geht und der Spätsommer ins Land
-                          zieht. Eine meiner Lieblingszeiten.
-                          Die Hitze ist großteils vorbei, die Blätter beginnen sich langsam zurückzuziehen und verfärben
-                          sich.
-                          Für mich heuer besonders spannend, da ich seit kurzem stolze Besitzerin einer Leonardo
-                          Destille bin! 💚💜
-                        </p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <p>Salbei, Schafgarbe, Zaubernuss und ein Kieferngewächs 🍃 sind erste Befüllungen.
-                        </p>
-                        <img class="float-half" src="assets/salbei-destillieren.jpg">
-                        <img class="float-half right" src="assets/schafgarbe-leonardo.jpg">
-                        <br>
-                        <img class="float-half" src="assets/hamamelis-destillieren.jpg">
-                        <img class="float-half right" src="assets/douglasie-destillieren.jpg">
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <img class="float-half" src="assets/leonardo.gif">
-                        <p>Mit geeignetem Pflanzenmaterial kann ich Destillate herstellen, die im Privatbereich zur
-                          Anwendung kommen.
-                        </p>
-                        <p>Die Blüten- und Kräuterwässerchen sind für ihre Sanftheit bekannt, haben aber trotzdem eine
-                          starke Wirkung. Geeignet auch in der Babypflege, für Kinder, Schwangere und ältere Personen.
-                          Einige Ausnahmen sind bei der Anwendung, trotz guter Verträglichkeit, im Einzelfall zu
-                          beachten.
-                        </p>
-                        <p>Ich verwende sie gerne für Parfum und Raumsprays, pur als Tonik oder als Wasserphase bei
-                          selbstgerührten Cremen.
-                        </p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <img class="float-half" src="assets/fertig-destilliert.jpg">
-                        <p>Diese Pflanzenwässerchen werden nach einer Zeit der Reifung, in kleine Chargen abgefüllt. Der
-                          geringe Anteil an gewonnenem ätherischem Öl (im Bild in der vordersten Flasche erkennbar
-                          🤓)darf als leichte Konservierung bleiben. Eine Ausnahme ist die Zaubernuss, auch bekannt als
-                          Hamamelis. Aus ihr kann ausschließlich ein Hydrolat gewonnen werden.
-                        </p>
-                        <p>Nicht alle Hydrolate ähneln dem Duft der Pflanze die destilliert wurde. Mein Hauptaugenmerk
-                          liegt bei den Anwendungsmöglichkeiten deshalb auch bei der Wirkung.
-                        </p>
                       </v-card-text>
                     </v-card>
                   </v-flex>
                 </v-layout>
               </v-container>
             </v-flex>
+            <v-card>
+              <v-card-actions class="justify-space-between">
+                <v-btn text @click="prev">
+                  <v-icon>mdi-chevron-left</v-icon>
+                </v-btn>
+                <v-item-group v-model="zeiten" class="text-center" mandatory>
+                  <v-item v-for="n in zeitenCount" :key="`btn-${n}`" v-slot="{ active, toggle }">
+                    <v-btn :input-value="active" icon @click="toggle">
+                      <v-icon>mdi-record</v-icon>
+                    </v-btn>
+                  </v-item>
+                </v-item-group>
+                <v-btn text @click="next">
+                  <v-icon>mdi-chevron-right</v-icon>
+                </v-btn>
+              </v-card-actions>
+              <v-window v-model="zeiten">
+
+                <v-window-item>
+                  <!-- HERBST -->
+                  <v-container grid-list-xl>
+                    <v-layout row wrap>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%"
+                                src="assets/neue-destille.jpg"></div>
+                            <p>Der Herbst 🍂, wenn die Ernte für so manches von statten geht und der Spätsommer ins Land
+                              zieht. Eine meiner Lieblingszeiten.
+                              Die Hitze ist großteils vorbei, die Blätter beginnen sich langsam zurückzuziehen und
+                              verfärben
+                              sich.
+                              Für mich heuer besonders spannend, da ich seit kurzem stolze Besitzerin einer Leonardo
+                              Destille bin! 💚💜
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <p>Salbei, Schafgarbe, Zaubernuss und ein Kieferngewächs 🍃 sind erste Befüllungen.
+                            </p>
+                            <img class="float-half" src="assets/salbei-destillieren.jpg">
+                            <img class="float-half right" src="assets/schafgarbe-leonardo.jpg">
+                            <br>
+                            <img class="float-half" src="assets/hamamelis-destillieren.jpg">
+                            <img class="float-half right" src="assets/douglasie-destillieren.jpg">
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <img class="float-half" src="assets/leonardo.gif">
+                            <p>Mit geeignetem Pflanzenmaterial kann ich Destillate herstellen, die im Privatbereich zur
+                              Anwendung kommen.
+                            </p>
+                            <p>Die Blüten- und Kräuterwässerchen sind für ihre Sanftheit bekannt, haben aber trotzdem
+                              eine
+                              starke Wirkung. Geeignet auch in der Babypflege, für Kinder, Schwangere und ältere
+                              Personen.
+                              Einige Ausnahmen sind bei der Anwendung, trotz guter Verträglichkeit, im Einzelfall zu
+                              beachten.
+                            </p>
+                            <p>Ich verwende sie gerne für Parfum und Raumsprays, pur als Tonik oder als Wasserphase bei
+                              selbstgerührten Cremen.
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <img class="float-half" src="assets/fertig-destilliert.jpg">
+                            <p>Diese Pflanzenwässerchen werden nach einer Zeit der Reifung, in kleine Chargen abgefüllt.
+                              Der
+                              geringe Anteil an gewonnenem ätherischem Öl (im Bild in der vordersten Flasche erkennbar
+                              🤓)darf als leichte Konservierung bleiben. Eine Ausnahme ist die Zaubernuss, auch bekannt
+                              als
+                              Hamamelis. Aus ihr kann ausschließlich ein Hydrolat gewonnen werden.
+                            </p>
+                            <p>Nicht alle Hydrolate ähneln dem Duft der Pflanze die destilliert wurde. Mein
+                              Hauptaugenmerk
+                              liegt bei den Anwendungsmöglichkeiten deshalb auch bei der Wirkung.
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-window-item>
+
+                <v-window-item>
+                  <!-- WINTER -->
+                  <v-container grid-list-xl>
+                    <v-layout row wrap>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%"
+                                src="assets/neue-destille.jpg"></div>
+                            <p>Der WINTER 🍂, wenn die Ernte für so manches von statten geht und der Spätsommer ins Land
+                              zieht. Eine meiner Lieblingszeiten.
+                              Die Hitze ist großteils vorbei, die Blätter beginnen sich langsam zurückzuziehen und
+                              verfärben
+                              sich.
+                              Für mich heuer besonders spannend, da ich seit kurzem stolze Besitzerin einer Leonardo
+                              Destille bin! 💚💜
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <p>Salbei, Schafgarbe, Zaubernuss und ein Kieferngewächs 🍃 sind erste Befüllungen.
+                            </p>
+                            <img class="float-half" src="assets/salbei-destillieren.jpg">
+                            <img class="float-half right" src="assets/schafgarbe-leonardo.jpg">
+                            <br>
+                            <img class="float-half" src="assets/hamamelis-destillieren.jpg">
+                            <img class="float-half right" src="assets/douglasie-destillieren.jpg">
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <img class="float-half" src="assets/leonardo.gif">
+                            <p>Mit geeignetem Pflanzenmaterial kann ich Destillate herstellen, die im Privatbereich zur
+                              Anwendung kommen.
+                            </p>
+                            <p>Die Blüten- und Kräuterwässerchen sind für ihre Sanftheit bekannt, haben aber trotzdem
+                              eine
+                              starke Wirkung. Geeignet auch in der Babypflege, für Kinder, Schwangere und ältere
+                              Personen.
+                              Einige Ausnahmen sind bei der Anwendung, trotz guter Verträglichkeit, im Einzelfall zu
+                              beachten.
+                            </p>
+                            <p>Ich verwende sie gerne für Parfum und Raumsprays, pur als Tonik oder als Wasserphase bei
+                              selbstgerührten Cremen.
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <img class="float-half" src="assets/fertig-destilliert.jpg">
+                            <p>Diese Pflanzenwässerchen werden nach einer Zeit der Reifung, in kleine Chargen abgefüllt.
+                              Der
+                              geringe Anteil an gewonnenem ätherischem Öl (im Bild in der vordersten Flasche erkennbar
+                              🤓)darf als leichte Konservierung bleiben. Eine Ausnahme ist die Zaubernuss, auch bekannt
+                              als
+                              Hamamelis. Aus ihr kann ausschließlich ein Hydrolat gewonnen werden.
+                            </p>
+                            <p>Nicht alle Hydrolate ähneln dem Duft der Pflanze die destilliert wurde. Mein
+                              Hauptaugenmerk
+                              liegt bei den Anwendungsmöglichkeiten deshalb auch bei der Wirkung.
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-window-item>
+              </v-window>
+            </v-card>
           </v-layout>
         </section>
 
@@ -588,7 +693,8 @@
                     </v-list-item>
                   </v-list>
                   <v-card-text>
-                    Anfragen für Termine und Gutscheine können persönlich, telefonisch oder per e-mail getätigt werden. Ich freue mich über Ihr Interesse!
+                    Anfragen für Termine und Gutscheine können persönlich, telefonisch oder per e-mail getätigt werden.
+                    Ich freue mich über Ihr Interesse!
                   </v-card-text>
                 </v-card>
               </v-flex>
@@ -608,11 +714,20 @@
                     <div class="headline">Zur Information</div>
                   </v-card-title>
                   <v-card-text>
-                    <p>Da meine angebotenen Leistungen unter „körpernahe“ Dienstleistungen fallen, muss ich meine Praxis bis voraussichtlich 18.01.2021 schließen.</p>
-                     <p>Anfragen bezüglich einer Beratung via Skype muss ich leider immer wieder ablehnen, da mir der persönliche Kontakt und die mit der Duftwahrnehmung einhergehende Reaktion des Kunden sehr wichtig ist.<p/> 
-                      <p>Individuelle Duftkompositionen, die bereits nach einer Beratung angewendet wurden, mische ich auf Wunsch auch weiterhin nach.<p/>
-                     <p>Das Erwerben von Gutscheinen ist ebenfalls möglich, um sich etwas Gutes nach dieser herausfordernden Zeit zu gönnen. 
-                      Diese sind mit keinem Ablaufdatum versehen und werden nach Anfrage an Sie selbst oder auch als Geschenk 💝 an eine andere Person versendet.<p/>
+                    <p>Da meine angebotenen Leistungen unter „körpernahe“ Dienstleistungen fallen, muss ich meine Praxis
+                      bis voraussichtlich 18.01.2021 schließen.</p>
+                    <p>Anfragen bezüglich einer Beratung via Skype muss ich leider immer wieder ablehnen, da mir der
+                      persönliche Kontakt und die mit der Duftwahrnehmung einhergehende Reaktion des Kunden sehr wichtig
+                      ist.
+                      <p />
+                    <p>Individuelle Duftkompositionen, die bereits nach einer Beratung angewendet wurden, mische ich auf
+                      Wunsch auch weiterhin nach.
+                      <p />
+                    <p>Das Erwerben von Gutscheinen ist ebenfalls möglich, um sich etwas Gutes nach dieser
+                      herausfordernden Zeit zu gönnen.
+                      Diese sind mit keinem Ablaufdatum versehen und werden nach Anfrage an Sie selbst oder auch als
+                      Geschenk 💝 an eine andere Person versendet.
+                      <p />
                     <p>Viel Kraft und Ausdauer für diese Tage! Bleiben Sie gesund! 💚</p>
                   </v-card-text>
                 </v-card>
@@ -795,6 +910,8 @@
       },
       data() {
         return {
+          zeitenCount: 1,
+          zeiten: 0,
           menuItems: menuItems,
           images: [
             { title: 'Neroli – stimmungsaufhellend', description: '(Citrus aurantium flos.)', href: 'assets/lightbox/Neroli.jpeg', shop: 'https://shop.feeling.at/products/nerolioel-in-jojoba-citrus-aurantium-flos#375' },
@@ -819,6 +936,18 @@
           introSrc: innerWidth > 1560 ? 'assets/intro-large.jpg' : 'assets/intro.jpg',
           introHeight: innerHeight - 64,
           impressum: false
+        }
+      },
+      methods: {
+        next() {
+          this.zeiten = this.zeiten + 1 === this.zeitenCount
+            ? 0
+            : this.zeiten + 1
+        },
+        prev() {
+          this.zeiten = this.zeiten - 1 < 0
+            ? this.zeitenCount - 1
+            : this.zeiten - 1
         }
       }
     });

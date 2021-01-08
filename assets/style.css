@@ -42,6 +42,11 @@
   width: calc(50% - 10px);
   padding-right: 10px;
 }
+.float-half-right {
+  float: right;
+  width: calc(50% - 10px);
+  padding-left: 10px;
+}
 .float-half.right {
   padding-left: 10px;
   padding-right: 0;
@@ -63,4 +68,4 @@
   top: 37px;
   font-style: italic;
   padding-right: 5px;
-} 
+}

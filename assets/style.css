@@ -24,7 +24,7 @@
 .v-application .headline, .subheading {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif !important;
 }
-.v-application a {
+div.v-application a {
   color: #800080;
 }
 .subheading {

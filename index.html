@@ -170,154 +170,245 @@
             <v-flex xs12>
               <v-container grid-list-xl>
                 <v-layout row wrap>
-                  <v-flex xs12 md4>
+                  <v-flex xs12 md12>
                     <v-card flat class="transparent">
                       <v-card-title primary-title class="layout justify-center">
-                        <div class="headline text-center">Aromafachberatung</div>
+                        <div class="headline text-center">Leistungen</div>
                       </v-card-title>
-                      <v-card-text>
-                        <p>Im Beratungsgespräch können Sie an Lieblingsdüften schnuppern und neue Duftrichtungen
-                          kennenlernen.
-                          Ebenso werden passende Hydrolate und Pflanzenöle vorgestellt.
-                          Um Kontraindikationen und Vorsichtsgebote berücksichtigen zu können, findet bei der
-                          Erstberatung eine Annamneseerhebung statt.
-                          Je nach Duftvorliebe und anstehenden persönlichen Themen entsteht eine Rezeptur, die für Sie
-                          zum Mitnehmen gemischt wird.</p>
-                        <p><b>Mögliche Themenbereiche:</b> Steigerung des Wohlbefindens, Förderung der Gesundheit und
-                          Hautpflege, sowie Unterstützendes für Lern- und Prüfungssituationen,
-                          bei Wandlungsprozessen (Pupertät, Klimakterium), zur Schlafförderung, bei Sterbebegleitung und
-                          Trauerbewältigung,...</p>
-                        <p>Um diese Wohlfühlmischung in den Alltag zu integrieren, werden Anwendungsmöglichkeiten
-                          besprochen und eigens erstellte Unterlagen zum Nachlesen mitgegeben.</p>
-                        <div class="text-center"><img class="fill-width" src="assets/beratung.jpg"></div>
-                        <p>Nach ca. 3 Wochen erfolgt eine Nachbesprechung, wo bewährte Mischungen nachproduziert oder
-                          bei Bedarf abgeändert werden.</p>
-                        <v-simple-table>
-                          <template v-slot:default>
-                            <tbody>
-                              <tr>
-                                <td>Aromafachberatung</td>
-                                <td>
-                                  70 €
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>Dauer: 60 bis 90 Minuten</td>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td colspan="2">
-                                  <div>Preis inklusiv 3 ml Wohlfühlmischung und Feedback</div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td colspan="2">
-                                  <div class="small">Leistung auch als Gutschein erhältlich</div>
-                                </td>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </template>
-                        </v-simple-table>
+                      <v-card-text class="text-center">
+                        <p><a @click="leistungen=0">Aromafachberatung</a> - <a @click="leistungen=1">Körperanwendungen</a> - <a @click="leistungen=2">Individuelle Duftkompositionen</a></p>
                       </v-card-text>
                     </v-card>
                   </v-flex>
-                  <v-flex xs12 md4>
-                    <v-card flat class="transparent">
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline text-center">Körperanwendungen</div>
-                      </v-card-title>
-                      <v-card-text>
-                        <p>Das <b>rhythmisches Körperbalancing</b> an
-                          Armen, Beinen oder Rücken durchgeführt, kann Selbstheilungskräfte aktivieren, Blockaden lösen und das Wohlbefinden steigern.</p>
-                        <p>Dieses führe ich nach dem <a class="text-no-wrap" target="_blank"
-                            href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a>
-                          der WKO durch. Die Anwendung erfolgt mit einer Mischung aus ätherischem Öl und Basisöl auf der
-                          Haut (materielle Ebene).
-                          Die Wirkung zeigt sich auf der energetisch-feinstofflichen Ebene, dem eigentlichen
-                          Tätigkeitsbereich eines Humanenergetikers.</p>
-                        <p><b>Wickel und Auflagen</b> können ebenfalls in der Praxis durchgeführt werden.
-                          Anwendbar als unterstützende Maßnahme bei Entgiftungskuren oder einfach nur zum Entspannen.
-                        </p>
-                        <p>Nach einem kurzem Vorgespräch wird eine, für den Moment passende Ölmischung gewählt, die auf
-                          Wunsch zur Anwendung kommt.</p>
-                        <div class="text-center"><img class="fill-width" src="assets/streichung.jpg"></div>
-                        <p><b>Wichtig:</b> Die Durchführung einer Körperanwendung erfolgt ausschließlich auf intakter,
-                          gesunder Haut.</p>
-                        <v-simple-table>
-                          <template v-slot:default>
-                            <tbody>
-                              <tr>
-                                <td>25 Minuten</td>
-                                <td>40 €</td>
-                              </tr>
-                              <tr>
-                                <td>5er Block</td>
-                                <td>170 €</td>
-                              </tr>
-                              <tr>
-                                <td>50 Minuten</td>
-                                <td>60 €</td>
-                              </tr>
-                              <tr>
-                                <td>5er Block</td>
-                                <td>260 €</td>
-                              </tr>
-                              <tr>
-                                <td colspan="2">Eine Nachruhzeit von ca. 10 Minuten ist einzuplanen</td>
-                              </tr>
-                              <tr>
-                                <td colspan="2">
-                                  <div class="small">Leistung auch als Gutschein erhältlich</div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </template>
-                        </v-simple-table>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                  <v-flex xs12 md4>
-                    <v-card flat class="transparent">
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline text-center">Individuelle Duftkompositionen</div>
-                      </v-card-title>
-                      <v-card-text>
-                        <p>Sobald Düfte in unsere Nase gelangen, lösen diese in unserem Unterbewusstsein eine bestimmte
-                          Reaktion aus, auch wenn sie kaum wahrnehmbar sind.
-                          Umso angenehmer ein Duft erscheint, desto länger wird man sich in diesem Umfeld aufhalten.</p>
-                        <div class="subheading text-center">Naturparfum</div><br>
-                        <p>Mit einem individuell erstelltem Naturparfum wird die Einzigartigkeit einer Person
-                          unterstrichen.
-                          Ich unterstütze Sie beim Wählen und Zusammenstellen aus einer Vielzahl von Essenzen.</p>
-                        <div class="text-center"><img class="fill-width" src="assets/parfums.jpg"></div>
-                        <p>Düfte sollten zu Menschen, deren Umgebung und Stimmung passen.
-                        <p>
-                        <div class="subheading text-center">Duftmarketing & AirDesign</div><br>
-                        <p>Um den Wiedererkennnungswert Ihrer Firma zu steigern, empfehle ich die Unterstützung mittels
-                          Corporate Scent.</p>
-                        <p>In Warteräumen und Praxen kann mit raumluftreinigenden und -harmonisierenden Duftmischungen
-                          eine angenehme Atmosphäre geschaffen werden.
-                          Mitarbeiter in Büros können zusätzlich von konzentrationssteigernden ätherischen Ölen
-                          profitieren.</p>
-                        <p>Gemeinsam wird eine passende Komposition für Ihr Unternehmen kreiert, Einsatzmöglichkeiten
-                          besprochen und auf Wunsch ein Beduftungskonzept umgesetzt.</p>
-                        <v-simple-table>
-                          <template v-slot:default>
-                            <tbody>
-                              <tr>
-                              <tr>
-                                <td>Kosten</td>
-                                <td>
-                                  auf Anfrage
-                                </td>
-                              </tr>
-                            </tbody>
-                          </template>
-                        </v-simple-table>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-flex>
+            <v-card>
+              <v-card-actions class="justify-space-between">
+                <v-btn text @click="prevLeistungen">
+                  <v-icon>mdi-chevron-left</v-icon>
+                </v-btn>
+                <v-item-group v-model="leistungen" class="text-center" mandatory>
+                  <v-item v-for="n in leistungenCount" :key="`btn-${n}`" v-slot="{ active, toggle }">
+                    <v-btn :input-value="active" icon @click="toggle">
+                      <v-icon>mdi-record</v-icon>
+                    </v-btn>
+                  </v-item>
+                </v-item-group>
+                <v-btn text @click="nextLeistungen">
+                  <v-icon>mdi-chevron-right</v-icon>
+                </v-btn>
+              </v-card-actions>
+              <v-window v-model="leistungen">
+                <v-window-item>
+                  <!-- AROMAFACHBERATUNG -->
+                  <v-container grid-list-xl>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div class="headline text-center">Aromafachberatung</div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center"><img class="float-half-right max300" src="assets/beratung.jpg"></div>
+                            <p>Im Beratungsgespräch können Sie an Lieblingsdüften schnuppern und neue Duftrichtungen
+                              kennenlernen.
+                              Ebenso werden passende Hydrolate und Pflanzenöle vorgestellt.
+                              Um Kontraindikationen und Vorsichtsgebote berücksichtigen zu können, findet bei der
+                              Erstberatung eine Annamneseerhebung statt.
+                              Je nach Duftvorliebe und anstehenden persönlichen Themen entsteht eine Rezeptur, die für Sie
+                              zum Mitnehmen gemischt wird.</p>
+                            <p><b>Mögliche Themenbereiche:</b> Steigerung des Wohlbefindens, Förderung der Gesundheit und
+                              Hautpflege, sowie Unterstützendes für Lern- und Prüfungssituationen,
+                              bei Wandlungsprozessen (Pupertät, Klimakterium), zur Schlafförderung, bei Sterbebegleitung und
+                              Trauerbewältigung,...</p>
+                            <p>Um diese Wohlfühlmischung in den Alltag zu integrieren, werden Anwendungsmöglichkeiten
+                              besprochen und eigens erstellte Unterlagen zum Nachlesen mitgegeben.</p>
+                            <p>Nach ca. 3 Wochen erfolgt eine Nachbesprechung, wo bewährte Mischungen nachproduziert oder
+                              bei Bedarf abgeändert werden.</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Aromafachberatung</td>
+                                    <td align="right">
+                                      70 €
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Dauer: 60 bis 90 Minuten</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      Preis inklusiv 3 ml Wohlfühlmischung und Feedback
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <div class="small">Leistung auch als Gutschein erhältlich</div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-window-item>
+                <v-window-item>
+                  <!-- RHYTHMISCHES KÖRPERBALANCING -->
+                  <v-container grid-list-xl>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div class="headline text-center">Körperanwendungen</div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <img class="float-half-right max300" src="assets/streichung.jpg">
+                            <p>Das <b>rhythmisches Körperbalancing</b> an
+                              Armen, Beinen oder Rücken durchgeführt, kann Selbstheilungskräfte aktivieren, Blockaden lösen und das Wohlbefinden steigern.</p>
+                            <p>Dieses führe ich nach dem <a class="text-no-wrap" target="_blank"
+                                href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a>
+                              der WKO durch. Die Anwendung erfolgt mit einer Mischung aus ätherischem Öl und Basisöl auf der
+                              Haut (materielle Ebene).
+                              Die Wirkung zeigt sich auf der energetisch-feinstofflichen Ebene, dem eigentlichen
+                              Tätigkeitsbereich eines Humanenergetikers.</p>
+                            <p><b>Wickel und Auflagen</b> können ebenfalls in der Praxis durchgeführt werden.
+                              Anwendbar als unterstützende Maßnahme bei Entgiftungskuren oder einfach nur zum Entspannen.
+                            </p>
+                            <p>Nach einem kurzem Vorgespräch wird eine, für den Moment passende Ölmischung gewählt, die auf
+                              Wunsch zur Anwendung kommt.</p>
+                            <p><b>Wichtig:</b> Die Durchführung einer Körperanwendung erfolgt ausschließlich auf intakter,
+                              gesunder Haut.</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>25 Minuten</td>
+                                    <td align="right">40 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5er Block</td>
+                                    <td align="right">170 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>50 Minuten</td>
+                                    <td align="right">60 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5er Block</td>
+                                    <td align="right">260 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Eine Nachruhzeit von ca. 10 Minuten ist einzuplanen</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <div class="small">Leistung auch als Gutschein erhältlich</div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-window-item>
+                <v-window-item>
+                  <!-- INDIVIDUELLE DUFTKOMPOSITION -->
+                  <v-container grid-list-xl>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div class="headline text-center">Individuelle Duftkompositionen</div>
+                          </v-card-title>
+                          <v-card-text>
+                            Sobald Düfte in unsere Nase gelangen, lösen diese in unserem Unterbewusstsein eine bestimmte
+                              Reaktion aus, auch wenn sie kaum wahrnehmbar sind.
+                              Umso angenehmer ein Duft erscheint, desto länger wird man sich in diesem Umfeld aufhalten.
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-title secondary-title class="layout justify-center">
+                            <div class="subheading text-center">Naturparfum</div>
+                          </v-card-title>
+                          <v-card-text>
+                            <img class="float-half-right max300" src="assets/parfums.jpg">
+                            <p>Mit einem individuell erstelltem Naturparfum wird die Einzigartigkeit einer Person
+                              unterstrichen.
+                              Ich unterstütze Sie beim Wählen und Zusammenstellen aus einer Vielzahl von Essenzen.</p>
+                            <p>Düfte sollten zu Menschen, deren Umgebung und Stimmung passen.</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md6>
+                        <v-card flat class="transparent">
+                          <v-card-title secondary-title class="layout justify-center">
+                            <div class="subheading text-center">Duftmarketing & AirDesign</div>
+                          </v-card-title>
+                          <v-card-text>
+                            <p>Um den Wiedererkennnungswert Ihrer Firma zu steigern, empfehle ich die Unterstützung mittels
+                              Corporate Scent.</p>
+                            <p>In Warteräumen und Praxen kann mit raumluftreinigenden und -harmonisierenden Duftmischungen
+                              eine angenehme Atmosphäre geschaffen werden.
+                              Mitarbeiter in Büros können zusätzlich von konzentrationssteigernden ätherischen Ölen
+                              profitieren.</p>
+                            <p>Gemeinsam wird eine passende Komposition für Ihr Unternehmen kreiert, Einsatzmöglichkeiten
+                              besprochen und auf Wunsch ein Beduftungskonzept umgesetzt.</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td align="center" colspan="2">Kosten auf Anfrage</td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-window-item>
+              </v-window>
+            </v-card>
+            <v-flex xs12>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
                   <v-flex xs12 md12>
                     <v-card flat class="transparent">
                       <v-card-text>
@@ -459,7 +550,7 @@
             </v-flex>
             <v-card>
               <v-card-actions class="justify-space-between">
-                <v-btn text @click="prev">
+                <v-btn text @click="prevZeiten">
                   <v-icon>mdi-chevron-left</v-icon>
                 </v-btn>
                 <v-item-group v-model="zeiten" class="text-center" mandatory>
@@ -469,7 +560,7 @@
                     </v-btn>
                   </v-item>
                 </v-item-group>
-                <v-btn text @click="next">
+                <v-btn text @click="nextZeiten">
                   <v-icon>mdi-chevron-right</v-icon>
                 </v-btn>
               </v-card-actions>
@@ -1040,6 +1131,8 @@
       },
       data() {
         return {
+          leistungenCount: 3,
+          leistungen: 0,
           zeitenCount: 3,
           zeiten: 2,
           menuItems: menuItems,
@@ -1066,15 +1159,25 @@
         }
       },
       methods: {
-        next() {
+        nextZeiten() {
           this.zeiten = this.zeiten + 1 === this.zeitenCount
             ? 0
             : this.zeiten + 1
         },
-        prev() {
+        prevZeiten() {
           this.zeiten = this.zeiten - 1 < 0
             ? this.zeitenCount - 1
             : this.zeiten - 1
+        },
+        nextLeistungen() {
+          this.leistungen = this.leistungen + 1 === this.leistungenCount
+            ? 0
+            : this.leistungen + 1
+        },
+        prevLeistungen() {
+          this.leistungen = this.leistungen - 1 < 0
+            ? this.leistungenCount - 1
+            : this.leistungen - 1
         }
       }
     });

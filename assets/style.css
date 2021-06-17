@@ -37,6 +37,9 @@
 .fill-width {
   width: 100%;
 }
+.max300 {
+  max-width: 300px;
+}
 .float-half {
   float: left;
   width: calc(50% - 10px);

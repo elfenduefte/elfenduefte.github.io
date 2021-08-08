@@ -1005,13 +1005,10 @@
                       </v-list-item-content>
                     </v-list-item>
                   </v-list>
+                 <v-card-title primary-title class="layout justify-center">
+                    <div class="headline">Kontaktformular</div>
+                  </v-card-title>
                   <v-card-text>
-                    Anfragen für Termine, Gutscheine oder 5er Blöcke sind persönlich, telefonisch oder per e-mail
-                    möglich.</p>
-                    <p>Mit einem Gutschein können Sie auch liebe Menschen überraschen. Den Betrag wählen Sie und ich
-                      versende dieses Geschenk auf Wunsch
-                      an eine von Ihnen gewählte Person.</p>
-                    <p>Ich freue mich über Ihr Interesse! 🌸</p>
                     <v-form ref="anfrage" v-model="valid">
                       <v-text-field v-model="email"
                         :rules="[v => !!v || 'Bitte geben Sie Ihre e-mail Adresse an.',v => /.+@.+\..+/.test(v) || 'Bitte geben Sie eine gültige e-mail Adresse an.']"
@@ -1032,6 +1029,13 @@
               <v-flex xs12 sm6>
                 <v-card flat class="transparent">
                   <v-card-title primary-title class="layout justify-center">
+                    <div class="headline">Zur Information</div>
+                  </v-card-title>
+                  <v-card-text>
+                    Mit einem Gutschein können Sie auch liebe Menschen überraschen. Den Betrag wählen Sie und ich
+                      versende dieses Geschenk auf Wunsch an eine von Ihnen gewählte Person.
+                  </v-card-text>
+                  <v-card-title primary-title class="layout justify-center">
                     <div class="headline">Haftungsausschluss</div>
                   </v-card-title>
                   <v-card-text>
@@ -1043,10 +1047,10 @@
                     diesen Methoden sehr gut ergänzen lässt.
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
-                    <div class="headline">Zur Information</div>
+                    <div class="headline">Aktuelle Covid-19 Verordnung</div>
                   </v-card-title>
                   <v-card-text>
-                    <p>Aktuelle Covid-19 Verordnung: "Die Verpflichtung zum Tragen eines Mund-Nasen-Schutzes in
+                    <p>"Die Verpflichtung zum Tragen eines Mund-Nasen-Schutzes in
                       geschlossenen Räumen gilt nicht,
                       wenn ein Nachweis einer geringen epidemiologischen Gefahr vorgewiesen wird."
                       Bei körpernahen Dienstleistungen wie Aromastreichung, rhythmisches Körperbalancing sowie das

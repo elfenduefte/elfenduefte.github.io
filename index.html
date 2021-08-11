@@ -1018,7 +1018,7 @@
                       <v-textarea v-model="message" label="Ihre Anfrage" filled required rows="3" auto-grow dense></v-textarea>
                       <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
                         <template v-slot:label>
-                          Ich stimme zu, dass meine Anfrage über Server in Drittländern verschickt wird.
+                          Ich habe die Datenschutzverordnung gelesen und erkenne diese an.
                         </template>
                       </v-checkbox>
                       <v-btn @click="submitAnfrage" :disabled="!valid" depressed>Anfrage senden</v-btn>

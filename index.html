@@ -38,7 +38,7 @@
           </v-list-item>
           <v-list-item href="#galerie"
             @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
-            <v-list-item-content>Galerie</v-list-item-content>
+            <v-list-item-content>Galerie<!--/Referenzen--></v-list-item-content>
           </v-list-item>
           <v-list-item href="#kontakt"
             @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
@@ -946,7 +946,37 @@
                     </v-flex>
                   </v-layout>
                 </v-container>
+<!--
+                <h2 class="headline">Referenzen</h2>
+                <span class="subheading">
+                  Was Kundinnen und Kunden sagen</span>
+                <v-container grid-list-xl>
+                  <v-layout row wrap align-center>
+                    <v-flex xs12 md6>
+                      <v-card>
+                        <v-card-text><p><i>Also ich find das super, was die Sabine macht.</i></p>Andreas, Graz</v-card-text>
+                      </v-card>
+                    </v-flex>
+                    <v-flex xs12 md6>
+                      <v-card>
+                        <v-card-text><p><i>Mit mir durch ganz Wien geradelt. Sehr überzeugend!</i></p>Bella, Wien</v-card-text>
+                      </v-card>
+                    </v-flex>
+                    <v-flex xs12 md6>
+                      <v-card>
+                        <v-card-text><p><i>Also ich find das super, was die Sabine macht.</i></p>Andreas, Graz</v-card-text>
+                      </v-card>
+                    </v-flex>
+                    <v-flex xs12 md6>
+                      <v-card>
+                        <v-card-text><p><i>Mit mir durch ganz Wien geradelt. Sehr überzeugend!</i></p>Bella, Wien</v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+-->
               </div>
+
             </v-flex>
           </v-layout>
         </section>

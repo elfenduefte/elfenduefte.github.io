@@ -1005,7 +1005,7 @@
                       </v-list-item-content>
                     </v-list-item>
                   </v-list>
-                 <v-card-title primary-title class="layout justify-center">
+                  <v-card-title primary-title class="layout justify-center">
                     <div class="headline">Kontaktformular</div>
                   </v-card-title>
                   <v-card-text>
@@ -1015,11 +1015,13 @@
                         label="Ihre e-mail" filled required dense></v-text-field>
                       <v-text-field v-model="name" :rules="[v => !!v || 'Bitte geben Sie Ihren Namen an.']"
                         label="Ihr Name" filled required dense></v-text-field>
-                      <v-textarea v-model="message" label="Ihre Anfrage" filled required rows="3" auto-grow dense></v-textarea>
+                      <v-textarea v-model="message" label="Ihre Anfrage" filled required rows="3" auto-grow dense>
+                      </v-textarea>
                       <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
-                        <template v-slot:label>
-                          Ich habe die Datenschutzverordnung gelesen und erkenne diese an.
-                        </template>
+                        <label slot="label">
+                          Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> gelesen und erkenne
+                          diese an.
+                        </label>
                       </v-checkbox>
                       <v-btn @click="submitAnfrage" :disabled="!valid" depressed>Anfrage senden</v-btn>
                       </form>
@@ -1033,7 +1035,7 @@
                   </v-card-title>
                   <v-card-text>
                     Mit einem Gutschein können Sie auch liebe Menschen überraschen. Den Betrag wählen Sie und ich
-                      versende dieses Geschenk auf Wunsch an eine von Ihnen gewählte Person.
+                    versende dieses Geschenk auf Wunsch an eine von Ihnen gewählte Person.
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="headline">Haftungsausschluss</div>
@@ -1081,25 +1083,25 @@
             <a href="https://www.wkoecg.at/Ecg.aspx?FirmaID=509d63b1-1e81-4e37-8f9c-ecef2f24899c" target="_blank">
               <img src="assets/ecg.png" style="border:0px" alt="Informationen zu E-Commerce und Mediengesetz">
             </a>
-            <h1 class="adsimple-111794813">Datenschutzerklärung</h1>
-            <h2 id="einleitung-ueberblick" class="adsimple-111794813">Einleitung und Überblick</h2>
-            <p>Wir haben diese Datenschutzerklärung (Fassung 07.08.2021-111794813) verfasst, um Ihnen gemäß der Vorgaben
-              der <a class="adsimple-111794813"
-                href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=111794813"
+            <h1 class="adsimple-111795802">Datenschutzerklärung</h1>
+            <h2 id="einleitung-ueberblick" class="adsimple-111795802">Einleitung und Überblick</h2>
+            <p>Wir haben diese Datenschutzerklärung (Fassung 11.08.2021-111795802) verfasst, um Ihnen gemäß der Vorgaben
+              der <a class="adsimple-111795802"
+                href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=111795802"
                 target="_blank" rel="noopener">Datenschutz-Grundverordnung (EU) 2016/679</a> und anwendbaren nationalen
               Gesetzen zu erklären, welche personenbezogenen Daten (kurz Daten) wir als Verantwortliche – und die von
               uns beauftragten Auftragsverarbeiter (z. B. Provider) – verarbeiten, zukünftig verarbeiten werden und
               welche rechtmäßigen Möglichkeiten Sie haben. Die verwendeten Begriffe sind geschlechtsneutral zu
               verstehen.<br />
-              <strong class="adsimple-111794813">Kurz gesagt:</strong> Wir informieren Sie umfassend über Daten, die wir
+              <strong class="adsimple-111795802">Kurz gesagt:</strong> Wir informieren Sie umfassend über Daten, die wir
               über Sie verarbeiten.
             </p>
             <p>Datenschutzerklärungen klingen für gewöhnlich sehr technisch und verwenden juristische Fachbegriffe.
               Diese Datenschutzerklärung soll Ihnen hingegen die wichtigsten Dinge so einfach und transparent wie
               möglich beschreiben. Soweit es der Transparenz förderlich ist, werden technische <strong
-                class="adsimple-111794813">Begriffe leserfreundlich erklärt</strong>, <strong
-                class="adsimple-111794813">Links</strong> zu weiterführenden Informationen geboten und <strong
-                class="adsimple-111794813">Grafiken</strong> zum Einsatz gebracht. Wir informieren damit in klarer und
+                class="adsimple-111795802">Begriffe leserfreundlich erklärt</strong>, <strong
+                class="adsimple-111795802">Links</strong> zu weiterführenden Informationen geboten und <strong
+                class="adsimple-111795802">Grafiken</strong> zum Einsatz gebracht. Wir informieren damit in klarer und
               einfacher Sprache, dass wir im Rahmen unserer Geschäftstätigkeiten nur dann personenbezogene Daten
               verarbeiten, wenn eine entsprechende gesetzliche Grundlage gegeben ist. Das ist sicher nicht möglich, wenn
               man möglichst knappe, unklare und juristisch-technische Erklärungen abgibt, so wie sie im Internet oft
@@ -1109,54 +1111,54 @@
               Wenn trotzdem Fragen bleiben, möchten wir Sie bitten, sich an die unten bzw. im Impressum genannte
               verantwortliche Stelle zu wenden, den vorhandenen Links zu folgen und sich weitere Informationen auf
               Drittseiten anzusehen. Unsere Kontaktdaten finden Sie selbstverständlich auch im Impressum.</p>
-            <h2 id="anwendungsbereich" class="adsimple-111794813">Anwendungsbereich</h2>
+            <h2 id="anwendungsbereich" class="adsimple-111795802">Anwendungsbereich</h2>
             <p>Diese Datenschutzerklärung gilt für alle von uns im Unternehmen verarbeiteten personenbezogenen Daten und
               für alle personenbezogenen Daten, die von uns beauftragte Firmen (Auftragsverarbeiter) verarbeiten. Mit
               personenbezogenen Daten meinen wir Informationen im Sinne des Art. 4 Nr. 1 DSGVO wie zum Beispiel Name,
               E-Mail-Adresse und postalische Anschrift einer Person. Die Verarbeitung personenbezogener Daten sorgt
               dafür, dass wir unsere Dienstleistungen und Produkte anbieten und abrechnen können, sei es online oder
               offline. Der Anwendungsbereich dieser Datenschutzerklärung umfasst:</p>
-            <ul class="adsimple-111794813">
-              <li class="adsimple-111794813">alle Onlineauftritte (Websites, Onlineshops), die wir betreiben</li>
-              <li class="adsimple-111794813">Social Media Auftritte und E-Mail-Kommunikation</li>
-              <li class="adsimple-111794813">mobile Apps für Smartphones und andere Geräte</li>
+            <ul class="adsimple-111795802">
+              <li class="adsimple-111795802">alle Onlineauftritte (Websites, Onlineshops), die wir betreiben</li>
+              <li class="adsimple-111795802">Social Media Auftritte und E-Mail-Kommunikation</li>
+              <li class="adsimple-111795802">mobile Apps für Smartphones und andere Geräte</li>
             </ul>
             <p>
-              <strong class="adsimple-111794813">Kurz gesagt:</strong> Die Datenschutzerklärung gilt für alle Bereiche,
+              <strong class="adsimple-111795802">Kurz gesagt:</strong> Die Datenschutzerklärung gilt für alle Bereiche,
               in denen personenbezogene Daten im Unternehmen über die genannten Kanäle strukturiert verarbeitet werden.
               Sollten wir außerhalb dieser Kanäle mit Ihnen in Rechtsbeziehungen eintreten, werden wir Sie
               gegebenenfalls gesondert informieren.
             </p>
-            <h2 id="rechtsgrundlagen" class="adsimple-111794813">Rechtsgrundlagen</h2>
+            <h2 id="rechtsgrundlagen" class="adsimple-111795802">Rechtsgrundlagen</h2>
             <p>In der folgenden Datenschutzerklärung geben wir Ihnen transparente Informationen zu den rechtlichen
               Grundsätzen und Vorschriften, also den Rechtsgrundlagen der Datenschutz-Grundverordnung, die uns
               ermöglichen, personenbezogene Daten zu verarbeiten.<br />
               Was das EU-Recht betrifft, beziehen wir uns auf die VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS
               UND DES RATES vom 27. April 2016. Diese Datenschutz-Grundverordnung der EU können Sie selbstverständlich
-              online auf EUR-Lex, dem Zugang zum EU-Recht, unter <a class="adsimple-111794813"
-                href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=111794813"
+              online auf EUR-Lex, dem Zugang zum EU-Recht, unter <a class="adsimple-111795802"
+                href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=111795802"
                 target="_blank"
                 rel="noopener">https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=celex%3A32016R0679</a> nachlesen.</p>
             <p>Wir verarbeiten Ihre Daten nur, wenn mindestens eine der folgenden Bedingungen zutrifft:</p>
             <ol>
-              <li class="adsimple-111794813">
-                <strong class="adsimple-111794813">Einwilligung</strong> (Artikel 6 Absatz 1 lit. a DSGVO): Sie haben
+              <li class="adsimple-111795802">
+                <strong class="adsimple-111795802">Einwilligung</strong> (Artikel 6 Absatz 1 lit. a DSGVO): Sie haben
                 uns Ihre Einwilligung gegeben, Daten zu einem bestimmten Zweck zu verarbeiten. Ein Beispiel wäre die
                 Speicherung Ihrer eingegebenen Daten eines Kontaktformulars.
               </li>
-              <li class="adsimple-111794813">
-                <strong class="adsimple-111794813">Vertrag</strong> (Artikel 6 Absatz 1 lit. b DSGVO): Um einen Vertrag
+              <li class="adsimple-111795802">
+                <strong class="adsimple-111795802">Vertrag</strong> (Artikel 6 Absatz 1 lit. b DSGVO): Um einen Vertrag
                 oder vorvertragliche Verpflichtungen mit Ihnen zu erfüllen, verarbeiten wir Ihre Daten. Wenn wir zum
                 Beispiel einen Kaufvertrag mit Ihnen abschließen, benötigen wir vorab personenbezogene Informationen.
               </li>
-              <li class="adsimple-111794813">
-                <strong class="adsimple-111794813">Rechtliche Verpflichtung</strong> (Artikel 6 Absatz 1 lit. c DSGVO):
+              <li class="adsimple-111795802">
+                <strong class="adsimple-111795802">Rechtliche Verpflichtung</strong> (Artikel 6 Absatz 1 lit. c DSGVO):
                 Wenn wir einer rechtlichen Verpflichtung unterliegen, verarbeiten wir Ihre Daten. Zum Beispiel sind wir
                 gesetzlich verpflichtet Rechnungen für die Buchhaltung aufzuheben. Diese enthalten in der Regel
                 personenbezogene Daten.
               </li>
-              <li class="adsimple-111794813">
-                <strong class="adsimple-111794813">Berechtigte Interessen</strong> (Artikel 6 Absatz 1 lit. f DSGVO): Im
+              <li class="adsimple-111795802">
+                <strong class="adsimple-111795802">Berechtigte Interessen</strong> (Artikel 6 Absatz 1 lit. f DSGVO): Im
                 Falle berechtigter Interessen, die Ihre Grundrechte nicht einschränken, behalten wir uns die
                 Verarbeitung personenbezogener Daten vor. Wir müssen zum Beispiel gewisse Daten verarbeiten, um unsere
                 Website sicher und wirtschaftlich effizient betreiben zu können. Diese Verarbeitung ist somit ein
@@ -1168,33 +1170,31 @@
               solche Rechtsgrundlage doch einschlägig sein sollte, wird diese an der entsprechenden Stelle ausgewiesen.
             </p>
             <p>Zusätzlich zu der EU-Verordnung gelten auch noch nationale Gesetze:</p>
-            <ul class="adsimple-111794813">
-              <li class="adsimple-111794813">In <strong class="adsimple-111794813">Österreich</strong> ist dies das
+            <ul class="adsimple-111795802">
+              <li class="adsimple-111795802">In <strong class="adsimple-111795802">Österreich</strong> ist dies das
                 Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten (<strong
-                  class="adsimple-111794813">Datenschutzgesetz</strong>), kurz <strong
-                  class="adsimple-111794813">DSG</strong>.</li>
-              <li class="adsimple-111794813">In <strong class="adsimple-111794813">Deutschland</strong> gilt das <strong
-                  class="adsimple-111794813">Bundesdatenschutzgesetz</strong>, kurz<strong class="adsimple-111794813">
+                  class="adsimple-111795802">Datenschutzgesetz</strong>), kurz <strong
+                  class="adsimple-111795802">DSG</strong>.</li>
+              <li class="adsimple-111795802">In <strong class="adsimple-111795802">Deutschland</strong> gilt das <strong
+                  class="adsimple-111795802">Bundesdatenschutzgesetz</strong>, kurz<strong class="adsimple-111795802">
                   BDSG</strong>.</li>
             </ul>
             <p>Sofern weitere regionale oder nationale Gesetze zur Anwendung kommen, informieren wir Sie in den
               folgenden Abschnitten darüber.</p>
-            <h2 id="kontaktdaten-verantwortliche" class="adsimple-111794813">Kontaktdaten des Verantwortlichen</h2>
+            <h2 id="kontaktdaten-verantwortliche" class="adsimple-111795802">Kontaktdaten des Verantwortlichen</h2>
             <p>Sollten Sie Fragen zum Datenschutz haben, finden Sie nachfolgend die Kontaktdaten der verantwortlichen
               Person bzw. Stelle:<br />
               Sabine Krenn<br />
               Grüne Gasse 21d, 8020 Graz<br />
-              <span class="adsimple-111794813" style="font-weight: 400">Vertretungsberechtigt: Markus Mustermann</span>
+              E-Mail: <a class="adsimple-111795802" :href="'mailto:' + ceomnatial">{{ ceomnatial }}</a>
               <br />
-              E-Mail: <a class="adsimple-111794813" :href="'mailto:' + ceomnatial">{{ ceomnatial }}</a>
+              Telefon: <span class="adsimple-111795802" style="font-weight: 400">+43 650 8095272</span>
               <br />
-              Telefon: <span class="adsimple-111794813" style="font-weight: 400">+43 650 8095272</span>
-              <br />
-              Impressum: <a class="adsimple-111794813"
+              Impressum: <a class="adsimple-111795802"
                 href="https://www.wkoecg.at/Ecg.aspx?FirmaID=509d63b1-1e81-4e37-8f9c-ecef2f24899c" target="_blank"
                 rel="noopener">https://www.wkoecg.at/Ecg.aspx?FirmaID=509d63b1-1e81-4e37-8f9c-ecef2f24899c</a>
             </p>
-            <h2 id="speicherdauer" class="adsimple-111794813">Speicherdauer</h2>
+            <h2 id="speicherdauer" class="adsimple-111795802">Speicherdauer</h2>
             <p>Dass wir personenbezogene Daten nur so lange speichern, wie es für die Bereitstellung unserer
               Dienstleistungen und Produkte unbedingt notwendig ist, gilt als generelles Kriterium bei uns. Das
               bedeutet, dass wir personenbezogene Daten löschen, sobald der Grund für die Datenverarbeitung nicht mehr
@@ -1204,214 +1204,163 @@
               werden die Daten so rasch wie möglich und soweit keine Pflicht zur Speicherung besteht, gelöscht.</p>
             <p>Über die konkrete Dauer der jeweiligen Datenverarbeitung informieren wir Sie weiter unten, sofern wir
               weitere Informationen dazu haben.</p>
-            <h2 id="rechte-dsgvo" class="adsimple-111794813">Rechte laut Datenschutz-Grundverordnung</h2>
+            <h2 id="rechte-dsgvo" class="adsimple-111795802">Rechte laut Datenschutz-Grundverordnung</h2>
             <p>Laut Artikel 13 DSGVO stehen Ihnen die folgenden Rechte zu, damit es zu einer fairen und transparenten
               Verarbeitung von Daten kommt:</p>
-            <ul class="adsimple-111794813">
-              <li class="adsimple-111794813">Sie haben laut Artikel 15 DSGVO ein Auskunftsrecht darüber, ob wir Daten
+            <ul class="adsimple-111795802">
+              <li class="adsimple-111795802">Sie haben laut Artikel 15 DSGVO ein Auskunftsrecht darüber, ob wir Daten
                 von Ihnen verarbeiten. Sollte das zutreffen, haben Sie Recht darauf eine Kopie der Daten zu erhalten und
                 die folgenden Informationen zu erfahren:
-                <ul class="adsimple-111794813">
-                  <li class="adsimple-111794813">zu welchem Zweck wir die Verarbeitung durchführen;</li>
-                  <li class="adsimple-111794813">die Kategorien, also die Arten von Daten, die verarbeitet werden;</li>
-                  <li class="adsimple-111794813">wer diese Daten erhält und wenn die Daten an Drittländer übermittelt
+                <ul class="adsimple-111795802">
+                  <li class="adsimple-111795802">zu welchem Zweck wir die Verarbeitung durchführen;</li>
+                  <li class="adsimple-111795802">die Kategorien, also die Arten von Daten, die verarbeitet werden;</li>
+                  <li class="adsimple-111795802">wer diese Daten erhält und wenn die Daten an Drittländer übermittelt
                     werden, wie die Sicherheit garantiert werden kann;</li>
-                  <li class="adsimple-111794813">wie lange die Daten gespeichert werden;</li>
-                  <li class="adsimple-111794813">das Bestehen des Rechts auf Berichtigung, Löschung oder Einschränkung
+                  <li class="adsimple-111795802">wie lange die Daten gespeichert werden;</li>
+                  <li class="adsimple-111795802">das Bestehen des Rechts auf Berichtigung, Löschung oder Einschränkung
                     der Verarbeitung und dem Widerspruchsrecht gegen die Verarbeitung;</li>
-                  <li class="adsimple-111794813">dass Sie sich bei einer Aufsichtsbehörde beschweren können (Links zu
+                  <li class="adsimple-111795802">dass Sie sich bei einer Aufsichtsbehörde beschweren können (Links zu
                     diesen Behörden finden Sie weiter unten);</li>
-                  <li class="adsimple-111794813">die Herkunft der Daten, wenn wir sie nicht bei Ihnen erhoben haben;
+                  <li class="adsimple-111795802">die Herkunft der Daten, wenn wir sie nicht bei Ihnen erhoben haben;
                   </li>
-                  <li class="adsimple-111794813">ob Profiling durchgeführt wird, ob also Daten automatisch ausgewertet
+                  <li class="adsimple-111795802">ob Profiling durchgeführt wird, ob also Daten automatisch ausgewertet
                     werden, um zu einem persönlichen Profil von Ihnen zu gelangen.</li>
                 </ul>
               </li>
-              <li class="adsimple-111794813">Sie haben laut Artikel 16 DSGVO ein Recht auf Berichtigung der Daten, was
+              <li class="adsimple-111795802">Sie haben laut Artikel 16 DSGVO ein Recht auf Berichtigung der Daten, was
                 bedeutet, dass wir Daten richtig stellen müssen, falls Sie Fehler finden.</li>
-              <li class="adsimple-111794813">Sie haben laut Artikel 17 DSGVO das Recht auf Löschung („Recht auf
+              <li class="adsimple-111795802">Sie haben laut Artikel 17 DSGVO das Recht auf Löschung („Recht auf
                 Vergessenwerden“), was konkret bedeutet, dass Sie die Löschung Ihrer Daten verlangen dürfen.</li>
-              <li class="adsimple-111794813">Sie haben laut Artikel 18 DSGVO das Recht auf Einschränkung der
+              <li class="adsimple-111795802">Sie haben laut Artikel 18 DSGVO das Recht auf Einschränkung der
                 Verarbeitung, was bedeutet, dass wir die Daten nur mehr speichern dürfen aber nicht weiter verwenden.
               </li>
-              <li class="adsimple-111794813">Sie haben laut Artikel 19 DSGVO das Recht auf Datenübertragbarkeit, was
+              <li class="adsimple-111795802">Sie haben laut Artikel 19 DSGVO das Recht auf Datenübertragbarkeit, was
                 bedeutet, dass wir Ihnen auf Anfrage Ihre Daten in einem gängigen Format zur Verfügung stellen.</li>
-              <li class="adsimple-111794813">Sie haben laut Artikel 21 DSGVO ein Widerspruchsrecht, welches nach
+              <li class="adsimple-111795802">Sie haben laut Artikel 21 DSGVO ein Widerspruchsrecht, welches nach
                 Durchsetzung eine Änderung der Verarbeitung mit sich bringt.
-                <ul class="adsimple-111794813">
-                  <li class="adsimple-111794813">Wenn die Verarbeitung Ihrer Daten auf Artikel 6 Abs. 1 lit. e
+                <ul class="adsimple-111795802">
+                  <li class="adsimple-111795802">Wenn die Verarbeitung Ihrer Daten auf Artikel 6 Abs. 1 lit. e
                     (öffentliches Interesse, Ausübung öffentlicher Gewalt) oder Artikel 6 Abs. 1 lit. f (berechtigtes
                     Interesse) basiert, können Sie gegen die Verarbeitung Widerspruch einlegen. Wir prüfen danach so
                     rasch wie möglich, ob wir diesem Widerspruch rechtlich nachkommen können.</li>
-                  <li class="adsimple-111794813">Werden Daten verwendet, um Direktwerbung zu betreiben, können Sie
+                  <li class="adsimple-111795802">Werden Daten verwendet, um Direktwerbung zu betreiben, können Sie
                     jederzeit gegen diese Art der Datenverarbeitung widersprechen. Wir dürfen Ihre Daten danach nicht
                     mehr für Direktmarketing verwenden.</li>
-                  <li class="adsimple-111794813">Werden Daten verwendet, um Profiling zu betreiben, können Sie jederzeit
+                  <li class="adsimple-111795802">Werden Daten verwendet, um Profiling zu betreiben, können Sie jederzeit
                     gegen diese Art der Datenverarbeitung widersprechen. Wir dürfen Ihre Daten danach nicht mehr für
                     Profiling verwenden.</li>
                 </ul>
               </li>
-              <li class="adsimple-111794813">Sie haben laut Artikel 22 DSGVO unter Umständen das Recht, nicht einer
+              <li class="adsimple-111795802">Sie haben laut Artikel 22 DSGVO unter Umständen das Recht, nicht einer
                 ausschließlich auf einer automatisierten Verarbeitung (zum Beispiel Profiling) beruhenden Entscheidung
                 unterworfen zu werden.</li>
             </ul>
             <p>
-              <strong class="adsimple-111794813">Kurz gesagt:</strong> Sie haben Rechte – zögern Sie nicht, die oben
+              <strong class="adsimple-111795802">Kurz gesagt:</strong> Sie haben Rechte – zögern Sie nicht, die oben
               gelistete verantwortliche Stelle bei uns zu kontaktieren!
             </p>
             <p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre
               datenschutzrechtlichen Ansprüche in sonst einer Weise verletzt worden sind, können Sie sich bei der
               Aufsichtsbehörde beschweren. Diese ist für Österreich die Datenschutzbehörde, deren Website Sie unter <a
-                class="adsimple-111794813" href="https://www.dsb.gv.at/?tid=111794813" target="_blank"
+                class="adsimple-111795802" href="https://www.dsb.gv.at/?tid=111795802" target="_blank"
                 rel="noopener">https://www.dsb.gv.at/</a> finden. In Deutschland gibt es für jedes Bundesland einen
-              Datenschutzbeauftragten. Für nähere Informationen können Sie sich an die <a class="adsimple-111794813"
+              Datenschutzbeauftragten. Für nähere Informationen können Sie sich an die <a class="adsimple-111795802"
                 href="https://www.bfdi.bund.de" target="_blank" rel="noopener">Bundesbeauftragte für den Datenschutz und
                 die Informationsfreiheit (BfDI)</a> wenden. Für unser Unternehmen ist die folgende lokale
               Datenschutzbehörde zuständig:</p>
-            <h2 id="oesterreich-datenschutzbehoerde" class="adsimple-111794813">Österreich Datenschutzbehörde</h2>
+            <h2 id="oesterreich-datenschutzbehoerde" class="adsimple-111795802">Österreich Datenschutzbehörde</h2>
             <p>
-              <strong class="adsimple-111794813">Leiterin: </strong>Mag. Dr. Andrea Jelinek<strong
-                class="adsimple-111794813">
+              <strong class="adsimple-111795802">Leiterin: </strong>Mag. Dr. Andrea Jelinek<strong
+                class="adsimple-111795802">
                 <br />
-                Adresse: </strong>Barichgasse 40-42, 1030 Wien<strong class="adsimple-111794813">
+                Adresse: </strong>Barichgasse 40-42, 1030 Wien<strong class="adsimple-111795802">
                 <br />
-                Telefonnr.: </strong>+43 1 52 152-0<strong class="adsimple-111794813">
+                Telefonnr.: </strong>+43 1 52 152-0<strong class="adsimple-111795802">
                 <br />
                 E-Mail-Adresse: </strong>
-              <a class="adsimple-111794813" href="mailto:dsb@dsb.gv.at" target="_blank" rel="noopener">dsb@dsb.gv.at</a>
-              <strong class="adsimple-111794813">
+              <a class="adsimple-111795802" href="mailto:dsb@dsb.gv.at" target="_blank" rel="noopener">dsb@dsb.gv.at</a>
+              <strong class="adsimple-111795802">
                 <br />
                 Website: </strong>
-              <a class="adsimple-111794813" href="https://www.dsb.gv.at/" target="_blank"
+              <a class="adsimple-111795802" href="https://www.dsb.gv.at/" target="_blank"
                 rel="noopener">https://www.dsb.gv.at/</a>
             </p>
-            <h2 id="datenuebertragung-drittlaender" class="adsimple-111794813">Datenübertragung in Drittländer</h2>
-            <p>Wir übertragen oder verarbeiten Daten nur dann in Länder außerhalb der EU (Drittländer), wenn Sie dieser
-              Verarbeitung zustimmen, dies gesetzlich vorgeschrieben ist oder vertraglich notwendig und in jedem Fall
-              nur soweit dies generell erlaubt ist. Ihre Zustimmung ist in den meisten Fällen der wichtigste Grund, dass
-              wir Daten in Drittländern verarbeiten lassen. Die Verarbeitung personenbezogener Daten in Drittländern wie
-              den USA, wo viele Softwarehersteller Dienstleistungen anbieten und Ihre Serverstandorte haben, kann
-              bedeuten, dass personenbezogene Daten auf unerwartete Weise verarbeitet und gespeichert werden.</p>
-            <p>Wir weisen ausdrücklich darauf hin, dass nach Meinung des Europäischen Gerichtshofs derzeit kein
-              angemessenes Schutzniveau für den Datentransfer in die USA besteht. Die Datenverarbeitung durch US-Dienste
-              (wie beispielsweise Google Analytics) kann dazu führen, dass gegebenenfalls Daten nicht anonymisiert
-              verarbeitet und gespeichert werden. Ferner können gegebenenfalls US-amerikanische staatliche Behörden
-              Zugriff auf einzelne Daten nehmen. Zudem kann es vorkommen, dass erhobene Daten mit Daten aus anderen
-              Diensten desselben Anbieters, sofern Sie ein entsprechendes Nutzerkonto haben, verknüpft werden. Nach
-              Möglichkeit versuchen wir Serverstandorte innerhalb der EU zu nutzen, sofern das angeboten wird.</p>
-            <p>Wir informieren Sie an den passenden Stellen dieser Datenschutzerklärung genauer über Datenübertragung in
-              Drittländer, sofern diese zutrifft.</p>
-            <h2 id="sicherheit-datenverarbeitung" class="adsimple-111794813">Sicherheit der Datenverarbeitung</h2>
-            <p>Um personenbezogene Daten zu schützen, haben wir sowohl technische als auch organisatorische Maßnahmen
-              umgesetzt. Wo es uns möglich ist, verschlüsseln oder pseudonymisieren wir personenbezogene Daten. Dadurch
-              machen wir es im Rahmen unserer Möglichkeiten so schwer wie möglich, dass Dritte aus unseren Daten auf
-              persönliche Informationen schließen können.</p>
-            <p>Art. 25 DSGVO spricht hier von “Datenschutz durch Technikgestaltung und durch datenschutzfreundliche
-              Voreinstellungen” und meint damit, dass man sowohl bei Software (z. B. Formularen) also auch Hardware (z.
-              B. Zugang zum Serverraum) immer an Sicherheit denkt und entsprechende Maßnahmen setzt. Im Folgenden gehen
-              wir, falls erforderlich, noch auf konkrete Maßnahmen ein.</p>
-            <h2 id="tls-verschluesselung-https" class="adsimple-111794813">TLS-Verschlüsselung mit https</h2>
-            <p>TLS, Verschlüsselung und https klingen sehr technisch und sind es auch. Wir verwenden HTTPS (das
-              Hypertext Transfer Protocol Secure steht für „sicheres Hypertext-Übertragungsprotokoll“), um Daten
-              abhörsicher im Internet zu übertragen.<br />
-              Das bedeutet, dass die komplette Übertragung aller Daten von Ihrem Browser zu unserem Webserver
-              abgesichert ist – niemand kann “mithören”.</p>
-            <p>Damit haben wir eine zusätzliche Sicherheitsschicht eingeführt und erfüllen Datenschutz durch
-              Technikgestaltung <a class="adsimple-111794813"
-                href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=111794813"
-                target="_blank" rel="noopener">Artikel 25 Absatz 1 DSGVO</a>). Durch den Einsatz von TLS (Transport
-              Layer Security), einem Verschlüsselungsprotokoll zur sicheren Datenübertragung im Internet, können wir den
-              Schutz vertraulicher Daten sicherstellen.<br />
-              Sie erkennen die Benutzung dieser Absicherung der Datenübertragung am kleinen Schlosssymbol <img
-                role="img" src="https://www.adsimple.at/wp-content/uploads/2018/03/schlosssymbol-https.svg" width="17"
-                height="18" /> links oben im Browser, links von der Internetadresse (z. B. beispielseite.de) und der
-              Verwendung des Schemas https (anstatt http) als Teil unserer Internetadresse.<br />
-              Wenn Sie mehr zum Thema Verschlüsselung wissen möchten, empfehlen wir die Google Suche nach “Hypertext
-              Transfer Protocol Secure wiki” um gute Links zu weiterführenden Informationen zu erhalten.</p>
-            <h2 id="webhosting" class="adsimple-111794813">Webhosting</h2>
+            <h2 id="content-delivery-networks" class="adsimple-111795802">Content Delivery Networks</h2>
             <table border="1" cellpadding="15">
               <tbody>
                 <tr>
                   <td>
-                    <strong class="adsimple-111794813">Webhosting Zusammenfassung</strong>
+                    <strong class="adsimple-111795802">Content Delivery Networks Datenschutzerklärung
+                      Zusammenfassung</strong>
                     <br />
                     👥 Betroffene: Besucher der Website<br />
-                    🤝 Zweck: professionelles Hosting der Website und Absicherung des Betriebs<br />
-                    📓 Verarbeitete Daten: IP-Adresse, Zeitpunkt des Websitebesuchs, verwendeter Browser und weitere
-                    Daten. Mehr Details dazu finden Sie weiter unten bzw. beim jeweils eingesetzten Webhosting
-                    Provider.<br />
-                    📅 Speicherdauer: abhängig vom jeweiligen Provider, aber in der Regel 2 Wochen<br />
-                    ⚖️ Rechtsgrundlagen: Art. 6 Abs. 1 lit.f DSGVO (Berechtigte Interessen)
+                    🤝 Zweck: Optimierung unserer Serviceleistung (um die Website schneller laden zu können)<br />
+                    📓 Verarbeitete Daten: Daten wie etwa Ihre IP-Adresse<br />
+                    Mehr Details dazu finden Sie weiter unten und den einzelnen Datenschutztexten.<br />
+                    📅 Speicherdauer: meisten werden die Daten solange gespeichert, bis sie zur Erfüllung der
+                    Dienstleistung nicht mehr benötigt werden<br />
+                    ⚖️ Rechtsgrundlagen: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), Art. 6 Abs. 1 lit. f DSGVO
+                    (Berechtigte Interessen)
                   </td>
                 </tr>
               </tbody>
             </table>
-            <h3 class="adsimple-111794813">Was ist Webhosting?</h3>
-            <p>Wenn Sie heutzutage Websites besuchen, werden gewisse Informationen – auch personenbezogene Daten –
-              automatisch erstellt und gespeichert, so auch auf dieser Website. Diese Daten sollten möglichst sparsam
-              und nur mit Begründung verarbeitet werden. Mit Website meinen wir übrigens die Gesamtheit aller Webseiten
-              auf einer Domain, d.h. alles von der Startseite (Homepage) bis hin zur aller letzten Unterseite (wie
-              dieser hier). Mit Domain meinen wir zum Beispiel beispiel.de oder musterbeispiel.com.</p>
-            <p>Wenn Sie eine Website auf einem Bildschirm ansehen möchten, verwenden Sie dafür ein Programm, das sich
-              Webbrowser nennt. Sie kennen vermutlich einige Webbrowser beim Namen: Google Chrome, Microsoft Edge,
-              Mozilla Firefox und Apple Safari.</p>
-            <p>Dieser Webbrowser muss sich zu einem anderen Computer verbinden, wo der Code der Website gespeichert ist:
-              dem Webserver. Der Betrieb eines Webservers ist eine komplizierte und aufwendige Aufgabe, weswegen dies in
-              der Regel von professionellen Anbietern, den Providern, übernommen wird. Diese bieten Webhosting an und
-              sorgen damit für eine verlässliche und fehlerfreie Speicherung der Daten von Websites.</p>
-            <p>Bei der Verbindungsaufnahme des Browsers auf Ihrem Computer (Desktop, Laptop, Smartphone) und während der
-              Datenübertragung zu und vom Webserver kann es zu einer Verarbeitung personenbezogener Daten kommen.
-              Einerseits speichert Ihr Computer Daten, andererseits muss auch der Webserver Daten eine Zeit lang
-              speichern, um einen ordentlichen Betrieb zu gewährleisten.</p>
-            <p>Zur Veranschaulichung:</p>
-            <p>
-              <img role="img" src="https://www.adsimple.at/wp-content/uploads/2018/03/browser-und-webserver.svg"
-                alt="Browser und Webserver" width="100%" />
-            </p>
-            <h3 class="adsimple-111794813">Warum verarbeiten wir personenbezogene Daten?</h3>
-            <p>Die Zwecke der Datenverarbeitung sind:</p>
-            <ol>
-              <li class="adsimple-111794813">Professionelles Hosting der Website und Absicherung des Betriebs</li>
-              <li class="adsimple-111794813">zur Aufrechterhaltung der Betriebs- und IT-Sicherheit</li>
-              <li class="adsimple-111794813">Anonyme Auswertung des Zugriffsverhaltens zur Verbesserung unseres Angebots
-                und ggf. zur Strafverfolgung bzw. Verfolgung von Ansprüchen</li>
-            </ol>
-            <h3 class="adsimple-111794813">Welche Daten werden verarbeitet?</h3>
-            <p>Auch während Sie unsere Website jetzt gerade besuchen, speichert unser Webserver, das ist der Computer
-              auf dem diese Webseite gespeichert ist, in der Regel automatisch Daten wie</p>
-            <ul class="adsimple-111794813">
-              <li class="adsimple-111794813">die komplette Internetadresse (URL) der aufgerufenen Webseite (z. B.
-                https://www.beispielwebsite.de/beispielunterseite.html?tid=111794813)</li>
-              <li class="adsimple-111794813">Browser und Browserversion (z. B. Chrome 87)</li>
-              <li class="adsimple-111794813">das verwendete Betriebssystem (z. B. Windows 10)</li>
-              <li class="adsimple-111794813">die Adresse (URL) der zuvor besuchten Seite (Referrer URL) (z. B.
-                https://www.beispielquellsite.de/vondabinichgekommen.html/)</li>
-              <li class="adsimple-111794813">den Hostnamen und die IP-Adresse des Geräts von welchem aus zugegriffen
-                wird (z. B. COMPUTERNAME und 194.23.43.121)</li>
-              <li class="adsimple-111794813">Datum und Uhrzeit</li>
-              <li class="adsimple-111794813">in Dateien, den sogenannten Webserver-Logfiles</li>
-            </ul>
-            <h3 class="adsimple-111794813">Wie lange werden Daten gespeichert?</h3>
-            <p>In der Regel werden die oben genannten Daten zwei Wochen gespeichert und danach automatisch gelöscht. Wir
-              geben diese Daten nicht weiter, können jedoch nicht ausschließen, dass diese Daten beim Vorliegen von
-              rechtswidrigem Verhalten von Behörden eingesehen werden.</p>
-            <p>
-              <strong class="adsimple-111794813">Kurz gesagt:</strong> Ihr Besuch wird durch unseren Provider (Firma,
-              die unsere Website auf speziellen Computern (Servern) laufen lässt), protokolliert, aber wir geben Ihre
-              Daten nicht ohne Zustimmung weiter!
-            </p>
-            <h3 class="adsimple-111794813">Rechtsgrundlage</h3>
-            <p>Die Rechtmäßigkeit der Verarbeitung personenbezogener Daten im Rahmen des Webhosting ergibt sich aus Art.
-              6 Abs. 1 lit. f DSGVO (Wahrung der berechtigten Interessen), denn die Nutzung von professionellem Hosting
-              bei einem Provider ist notwendig, um das Unternehmen im Internet sicher und nutzerfreundlich präsentieren
-              und Angriffe und Forderungen hieraus gegebenenfalls verfolgen zu können.</p>
-            <h2 id="jsdelivr-com-cdn-datenschutzerklaerung" class="adsimple-111794813">jsdelivr.com-CDN
+            <h3 class="adsimple-111795802">Was ist ein Content Delivery Network?</h3>
+            <p>Wir nutzen auf unserer Website ein sogenanntes Content Delivery Network. Meistens wird ein solchen
+              Netzwerk nur CDN genannt. Ein CDN hilft uns, unsere Website, unabhängig von Ihrem Standort, schnell und
+              problemlos zu laden. Dabei werden auch personenbezogene Daten von Ihnen auf den Servern des eingesetzten
+              CDN-Anbieters gespeichert, verwaltet und verarbeitet. Nachfolgend gehen wir allgemein näher auf den Dienst
+              und dessen Datenverarbeitung ein. Genaue Informationen über den Umgang mit Ihren Daten finden Sie in der
+              jeweiligen Datenschutzerklärung des Anbieters.</p>
+            <p>Jedes Content Delivery Network (CDN) ist ein Netzwerk regional verteilter Server, die alle über das
+              Internet miteinander verbunden sind. Über dieses Netzwerk können Inhalte von Websites (speziell auch sehr
+              große Dateien) auch bei großen Lastspitzen schnell und reibungslos ausgeliefert werden. Das CDN legt dafür
+              eine Kopie unserer Website auf Ihren Servern an. Da diese Server weltweit verteilt sind, kann die Website
+              schnell ausgeliefert werden. Die Datenübertragung zu Ihrem Browser wird folglich durch das CDN deutlich
+              verkürzt.</p>
+            <h3 class="adsimple-111795802">Warum verwenden wir ein Content Delivery Network für unsere Website?</h3>
+            <p>Eine schnell ladende Website ist Teil unserer Dienstleistung. Wir wissen natürlich, wie nervig es ist,
+              wenn eine Website im Schneckentempo lädt. Meist verliert man sogar die Geduld und sucht das Weite, bevor
+              die Website vollständig geladen ist. Das wollen wir natürlich vermeiden. Daher gehört eine schnell ladende
+              Website ganz selbstverständlich zu unserem Websiteangebot. Mit einem Content Delivery Network wird in
+              Ihrem Browser unsere Website deutlich schneller geladen. Besonders hilfreich ist der Einsatz des CDNs wenn
+              Sie im Ausland sind, weil die Website von einem Server in Ihrer Nähe ausgeliefert wird.</p>
+            <h3 class="adsimple-111795802">Welche Daten werden verarbeitet?</h3>
+            <p>Wenn Sie eine Website bzw. die Inhalte einer Website anfordern und diese in einem CDN zwischengespeichert
+              sind, leitet das CDN die Anforderung an den von Ihnen am nächsten gelegenen Server und dieser liefert die
+              Inhalte aus. Content Delivery Networks sind so aufgebaut, dass JavaScript-Bibliotheken heruntergeladen
+              werden können und auf npm- und Github-Servern gehostet werden. Alternativ können bei den meisten CDNs auch
+              WordPress-Plugins geladen werden, wenn diese auf <a class="adsimple-111795802"
+                href="https://wordpress.org/" target="_blank" rel="noopener">WordPress.org</a> gehostet werden. Ihr
+              Browser kann personenbezogene Daten an das von uns eingesetzte Content Delivery Network senden. Dabei
+              handelt es sich etwa um Daten wie IP-Adresse, Browsertyp, Browserversion, welche Webseite geladen wird
+              oder Uhrzeit und Datum des Seitenbesuchs. Diese Daten werden vom CDN gesammelt und auch gespeichert. Ob
+              zur Datenspeicherung Cookies verwendet werden, hängt von dem eingesetzten Network ab. Bitte lesen Sie sich
+              dafür die Datenschutztexte des jeweiligen Dienstes durch.</p>
+            <h3 class="adsimple-111795802">Widerspruchsrecht</h3>
+            <p>Falls Sie diese Datenübertragung vollkommen unterbinden wollen, können Sie einen JavaScript-Blocker
+              (siehe beispielsweise <a class="adsimple-111795802" href="https://noscript.net/" target="_blank"
+                rel="noopener">https://noscript.net/</a>) auf Ihrem PC installieren. Natürlich kann dann unsere Website
+              nicht mehr das gewohnte Service (wie beispielsweise eine schnelle Ladegeschwindigkeit) bieten.</p>
+            <h3 class="adsimple-111795802">Rechtsgrundlage</h3>
+            <p>Wenn Sie eingewilligt haben, dass ein Content Delivery Network eingesetzt werden darf, ist die
+              Rechtsgrundlage der entsprechenden Datenverarbeitung diese Einwilligung. Diese Einwilligung stellt laut
+              <strong class="adsimple-111795802">Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</strong> die Rechtsgrundlage
+              für die Verarbeitung personenbezogener Daten, wie sie bei der Erfassung durch ein Content Delivery Network
+              vorkommen kann, dar.</p>
+            <p>Von unserer Seite besteht zudem ein berechtigtes Interesse, ein Content Delivery Network zu verwenden, um
+              unser Online-Service zu optimieren und sicherer zu machen. Die dafür entsprechende Rechtsgrundlage ist
+              <strong class="adsimple-111795802">Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen)</strong>. Wir
+              setzen das Tool gleichwohl nur ein, soweit Sie eine Einwilligung erteilt haben.</p>
+            <p>Informationen zu speziellen Content Delivery Network erhalten Sie – sofern vorhanden – in den folgenden
+              Abschnitten.</p>
+            <h2 id="jsdelivr-com-cdn-datenschutzerklaerung" class="adsimple-111795802">jsdelivr.com-CDN
               Datenschutzerklärung</h2>
             <table border="1" cellpadding="15">
               <tbody>
                 <tr>
                   <td>
-                    <strong class="adsimple-111794813">jsdelivr.com-CDN Datenschutzerklärung Zusammenfassung</strong>
+                    <strong class="adsimple-111795802">jsdelivr.com-CDN Datenschutzerklärung Zusammenfassung</strong>
                     <br />
                     👥 Betroffene: Besucher der Website<br />
                     🤝 Zweck: Optimierung unserer Serviceleistung (um die Website schneller laden zu können)<br />
@@ -1426,66 +1375,66 @@
                 </tr>
               </tbody>
             </table>
-            <h3 class="adsimple-111794813">Was ist jsdelivr.com-CDN?</h3>
+            <h3 class="adsimple-111795802">Was ist jsdelivr.com-CDN?</h3>
             <p>Damit wir Ihnen unsere einzelnen Webseiten schnell und auf allen unterschiedlichen Geräten einwandfrei
-              ausliefern können, verwenden wir die Open-Source-Dienste von <a class="adsimple-111794813"
+              ausliefern können, verwenden wir die Open-Source-Dienste von <a class="adsimple-111795802"
                 href="https://www.jsdelivr.com/" target="_blank" rel="follow noopener noreferrer">jsdelivr.com</a> des
               polnischen Software-Unternehmens ProspectOne, Królewska 65A/1, 30-081, Kraków, Polen. Dabei handelt es
               sich um ein Content Delivery Network (CDN). Das ist ein Netzwerk regional verteilter Server, die über das
               Internet verbunden sind. Dadurch können Inhalte, speziell große Dateien, auch bei großen Lastspitzen
               schnell und optimal ausgeliefert werden.</p>
-            <h3 class="adsimple-111794813">Warum verwenden wir jsdelivr.com-CDN?</h3>
+            <h3 class="adsimple-111795802">Warum verwenden wir jsdelivr.com-CDN?</h3>
             <p>Selbstverständlich wollen wir Ihnen mit unserer Website einen umfassenden und gut funktionierenden
               Service bieten. Dazu zählt auch eine schnelle Website. Mit jsdelivr.com-CDN kann unsere Website bei Ihnen
               viel schneller geladen werden. Besonders hilfreich wird der Einsatz von jsdelivr.com-CDN für User aus dem
               Ausland, da hier die Seite von einem Server in der Nähe ausgeliefert werden kann.</p>
-            <h3 class="adsimple-111794813">Welche Daten werden durch jsdelivr.com-CDN verarbeitet?</h3>
+            <h3 class="adsimple-111795802">Welche Daten werden durch jsdelivr.com-CDN verarbeitet?</h3>
             <p>jsDelivr ist so aufgebaut, dass JavaScript-Bibliotheken heruntergeladen werden können, die auf npm- und
               Github-Servern gehostet werden. Es können aber auch WordPress-Plugins geladen werden, sofern diese auf <a
-                class="adsimple-111794813" href="https://wordpress.org/" target="_blank"
+                class="adsimple-111795802" href="https://wordpress.org/" target="_blank"
                 rel="follow noopener noreferrer">WordPress.org</a> gehostet werden. Um diesen Dienst bereitstellen zu
-              können, kann Ihr Browser personenbezogene Daten an <a class="adsimple-111794813"
-                href="https://www.jsdelivr.com/?tid=111794813" target="_blank"
+              können, kann Ihr Browser personenbezogene Daten an <a class="adsimple-111795802"
+                href="https://www.jsdelivr.com/?tid=111795802" target="_blank"
                 rel="noopener noreferrer">jsdelivr.com</a> senden. jsDelivr kann somit Userdaten wie IP-Adresse,
               Browsertyp, Browserversion, welche Webseite geladen wird oder Uhrzeit und Datum des Seitenbesuchs sammeln
-              und speichern. In der Datenschutzerklärung von <a class="adsimple-111794813"
+              und speichern. In der Datenschutzerklärung von <a class="adsimple-111795802"
                 href="https://www.jsdelivr.com/" target="_blank" rel="follow noopener noreferrer">jsdelivr.com</a> wird
               ausdrücklich darauf hingewiesen, dass das Unternehmen keine Cookies oder andere Tracking-Services
               verwendet.</p>
-            <h3 class="adsimple-111794813">Wie lange und wo werden die Daten gespeichert?</h3>
+            <h3 class="adsimple-111795802">Wie lange und wo werden die Daten gespeichert?</h3>
             <p>jsDelivr hat Server in verschiedenen Ländern verteilt und Ihre Daten können auch außerhalb des
               Europäischen Wirtschaftsraums gespeichert werden. jsDelivr bewahrt personenbezogene Daten, die in unserem
               Auftrag verarbeitet werden, so lange auf, wie es für die Erbringung angebotener Dienstleistungen
               erforderlich ist, wie es für die Erfüllung rechtlichen Verpflichtungen, die Beilegung von Streitigkeiten
               und die Durchsetzung der Vereinbarungen notwendig ist.</p>
-            <h3 class="adsimple-111794813">Widerspruchsrecht</h3>
+            <h3 class="adsimple-111795802">Widerspruchsrecht</h3>
             <p>Sie haben immer das Recht auf Auskunft, Berichtigung und Löschung Ihrer personenbezogenen Daten. Bei
               Fragen können Sie auch jederzeit Verantwortliche von jsdelivr.com-CDN kontaktieren.</p>
             <p>Wenn Sie diese Datenübertragung unterbinden wollen, können Sie einen JavaScript-Blocker (siehe
-              beispielsweise <a class="adsimple-111794813" href="https://noscript.net/" target="_blank"
+              beispielsweise <a class="adsimple-111795802" href="https://noscript.net/" target="_blank"
                 rel="noopener noreferrer">https://noscript.net/</a>) installieren. Bitte beachten Sie aber, dass dadurch
               die Website nicht mehr das gewohnte Service (wie etwa schnelle Ladegeschwindigkeit) bieten kann.</p>
-            <h3 class="adsimple-111794813">Rechtsgrundlage</h3>
+            <h3 class="adsimple-111795802">Rechtsgrundlage</h3>
             <p>Wenn Sie eingewilligt haben, dass jsdelivr.com-CDN eingesetzt werden darf, ist die Rechtsgrundlage der
               entsprechenden Datenverarbeitung diese Einwilligung. Diese Einwilligung stellt laut<strong
-                class="adsimple-111794813"> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</strong> die Rechtsgrundlage für
+                class="adsimple-111795802"> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</strong> die Rechtsgrundlage für
               die Verarbeitung personenbezogener Daten, wie sie bei der Erfassung durch jsdelivr.com-CDN vorkommen kann,
               dar.</p>
             <p>Von unserer Seite besteht zudem ein berechtigtes Interesse, jsdelivr.com-CDN zu verwenden, um unser
               Online-Service zu optimieren und sicherer zu machen. Die dafür entsprechende Rechtsgrundlage ist <strong
-                class="adsimple-111794813">Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen)</strong>. Wir setzen das
+                class="adsimple-111795802">Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen)</strong>. Wir setzen das
               Tool gleichwohl nur ein, soweit Sie eine Einwilligung erteilt haben.</p>
             <p>Nähere Informationen zur Datenverarbeitung durch den Softwaredienst jsDelivr finden Sie in der
-              Datenschutzerklärung des Unternehmens unter <a class="adsimple-111794813"
-                href="https://www.jsdelivr.com/privacy-policy-jsdelivr-net?tid=111794813" target="_blank"
+              Datenschutzerklärung des Unternehmens unter <a class="adsimple-111795802"
+                href="https://www.jsdelivr.com/privacy-policy-jsdelivr-net?tid=111795802" target="_blank"
                 rel="noopener noreferrer">https://www.jsdelivr.com/privacy-policy-jsdelivr-net</a>.</p>
-            <h2 id="google-fonts-datenschutzerklaerung" class="adsimple-111794813">Google Fonts Datenschutzerklärung
+            <h2 id="google-fonts-datenschutzerklaerung" class="adsimple-111795802">Google Fonts Datenschutzerklärung
             </h2>
             <table border="1" cellpadding="15">
               <tbody>
                 <tr>
                   <td>
-                    <strong class="adsimple-111794813">Google Fonts Datenschutzerklärung Zusammenfassung</strong>
+                    <strong class="adsimple-111795802">Google Fonts Datenschutzerklärung Zusammenfassung</strong>
                     <br />
                     👥 Betroffene: Besucher der Website<br />
                     🤝 Zweck: Optimierung unserer Serviceleistung<br />
@@ -1498,7 +1447,7 @@
                 </tr>
               </tbody>
             </table>
-            <h3 class="adsimple-111794813">Was sind Google Fonts?</h3>
+            <h3 class="adsimple-111795802">Was sind Google Fonts?</h3>
             <p>Auf unserer Website verwenden wir Google Fonts. Das sind die “Google-Schriften” der Firma Google Inc. Für
               den europäischen Raum ist das Unternehmen Google Ireland Limited (Gordon House, Barrow Street Dublin 4,
               Irland) für alle Google-Dienste verantwortlich.</p>
@@ -1511,12 +1460,12 @@
               Sheets) und der verwendeten Schriftarten und speichert diese Daten sicher. Wie die Datenspeicherung genau
               aussieht, werden wir uns noch im Detail ansehen.</p>
             <p>Google Fonts (früher Google Web Fonts) ist ein Verzeichnis mit über 800 Schriftarten, die <a
-                class="adsimple-111794813"
-                href="https://de.wikipedia.org/wiki/Google_LLC?tid=111794813">Google</a> Ihren Nutzern kostenlos zu
+                class="adsimple-111795802"
+                href="https://de.wikipedia.org/wiki/Google_LLC?tid=111795802">Google</a> Ihren Nutzern kostenlos zu
               Verfügung stellen.</p>
             <p>Viele dieser Schriftarten sind unter der SIL Open Font License veröffentlicht, während andere unter
               der Apache-Lizenz veröffentlicht wurden. Beides sind freie Software-Lizenzen.</p>
-            <h3 class="adsimple-111794813">Warum verwenden wir Google Fonts auf unserer Website?</h3>
+            <h3 class="adsimple-111795802">Warum verwenden wir Google Fonts auf unserer Website?</h3>
             <p>Mit Google Fonts können wir auf der eigenen Webseite Schriften nutzen, und müssen sie nicht auf unserem
               eigenen Server hochladen. Google Fonts ist ein wichtiger Baustein, um die Qualität unserer Webseite hoch
               zu halten. Alle Google-Schriften sind automatisch für das Web optimiert und dies spart Datenvolumen und
@@ -1530,7 +1479,7 @@
               Betriebssystemen, einschließlich Android 2.2+ und iOS 4.2+ (iPhone, iPad, iPod). Wir verwenden die Google
               Fonts also, damit wir unser gesamtes Online-Service so schön und einheitlich wie möglich darstellen
               können.</p>
-            <h3 class="adsimple-111794813">Welche Daten werden von Google gespeichert?</h3>
+            <h3 class="adsimple-111795802">Welche Daten werden von Google gespeichert?</h3>
             <p>Wenn Sie unsere Webseite besuchen, werden die Schriften über einen Google-Server nachgeladen. Durch
               diesen externen Aufruf werden Daten an die Google-Server übermittelt. So erkennt Google auch, dass Sie
               bzw. Ihre IP-Adresse unsere Webseite besucht. Die Google Fonts API wurde entwickelt, um Verwendung,
@@ -1548,7 +1497,7 @@
               wie Spracheinstellungen, IP-Adresse, Version des Browsers, Bildschirmauflösung des Browsers und Name des
               Browsers automatisch an die Google-Server übertragen werden. Ob diese Daten auch gespeichert werden, ist
               nicht klar feststellbar bzw. wird von Google nicht eindeutig kommuniziert.</p>
-            <h3 class="adsimple-111794813">Wie lange und wo werden die Daten gespeichert?</h3>
+            <h3 class="adsimple-111795802">Wie lange und wo werden die Daten gespeichert?</h3>
             <p>Anfragen für CSS-Assets speichert Google einen Tag lang auf seinen Servern, die hauptsächlich außerhalb
               der EU angesiedelt sind. Das ermöglicht uns, mithilfe eines Google-Stylesheets die Schriftarten zu nutzen.
               Ein Stylesheet ist eine Formatvorlage, über die man einfach und schnell z.B. das Design bzw. die
@@ -1558,29 +1507,29 @@
               werden sie nach dem ersten Besuch zwischengespeichert und erscheinen sofort auf allen anderen später
               besuchten Webseiten wieder. Manchmal aktualisiert Google Schriftdateien, um die Dateigröße zu reduzieren,
               die Abdeckung von Sprache zu erhöhen und das Design zu verbessern.</p>
-            <h3 class="adsimple-111794813">Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h3>
+            <h3 class="adsimple-111795802">Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h3>
             <p>Jene Daten, die Google für einen Tag bzw. ein Jahr speichert können nicht einfach gelöscht werden. Die
               Daten werden beim Seitenaufruf automatisch an Google übermittelt. Um diese Daten vorzeitig löschen zu
-              können, müssen Sie den Google-Support auf <a class="adsimple-111794813"
-                href="https://support.google.com/?hl=de&tid=111794813">https://support.google.com/?hl=de&tid=111794813</a>
+              können, müssen Sie den Google-Support auf <a class="adsimple-111795802"
+                href="https://support.google.com/?hl=de&tid=111795802">https://support.google.com/?hl=de&tid=111795802</a>
               kontaktieren. Datenspeicherung verhindern Sie in diesem Fall nur, wenn Sie unsere Seite nicht besuchen.
             </p>
             <p>Anders als andere Web-Schriften erlaubt uns Google uneingeschränkten Zugriff auf alle Schriftarten. Wir
               können also unlimitiert auf ein Meer an Schriftarten zugreifen und so das Optimum für unsere Webseite
-              rausholen. Mehr zu Google Fonts und weiteren Fragen finden Sie auf <a class="adsimple-111794813"
-                href="https://developers.google.com/fonts/faq?tid=111794813">https://developers.google.com/fonts/faq?tid=111794813</a>.
+              rausholen. Mehr zu Google Fonts und weiteren Fragen finden Sie auf <a class="adsimple-111795802"
+                href="https://developers.google.com/fonts/faq?tid=111795802">https://developers.google.com/fonts/faq?tid=111795802</a>.
               Dort geht zwar Google auf datenschutzrelevante Angelegenheiten ein, doch wirklich detaillierte
               Informationen über Datenspeicherung sind nicht enthalten. Es ist relativ schwierig, von Google wirklich
               präzise Informationen über gespeicherten Daten zu bekommen.</p>
-            <h3 class="adsimple-111794813">Rechtsgrundlage</h3>
+            <h3 class="adsimple-111795802">Rechtsgrundlage</h3>
             <p>Wenn Sie eingewilligt haben, dass Google Fonts eingesetzt werden darf, ist die Rechtsgrundlage der
               entsprechenden Datenverarbeitung diese Einwilligung. Diese Einwilligung stellt laut<strong
-                class="adsimple-111794813"> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</strong> die Rechtsgrundlage für
+                class="adsimple-111795802"> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</strong> die Rechtsgrundlage für
               die Verarbeitung personenbezogener Daten, wie sie bei der Erfassung durch Google Fonts vorkommen kann,
               dar.</p>
             <p>Von unserer Seite besteht zudem ein berechtigtes Interesse, Google Font zu verwenden, um unser
               Online-Service zu optimieren. Die dafür entsprechende Rechtsgrundlage ist <strong
-                class="adsimple-111794813">Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen)</strong>. Wir setzen
+                class="adsimple-111795802">Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen)</strong>. Wir setzen
               Google Font gleichwohl nur ein, soweit Sie eine Einwilligung erteilt haben.</p>
             <p>Google verarbeitet Daten u.a. auch in den USA. Wir weisen darauf hin, dass nach Meinung des Europäischen
               Gerichtshofs derzeit kein angemessenes Schutzniveau für den Datentransfer in die USA besteht. Dies kann
@@ -1590,12 +1539,12 @@
               verwendet Google von der EU-Kommission genehmigte Standardvertragsklauseln (= Art. 46. Abs. 2 und 3
               DSGVO). Diese Klauseln verpflichten Google, das EU-Datenschutzniveau bei der Verarbeitung relevanter Daten
               auch außerhalb der EU einzuhalten. Diese Klauseln basieren auf einem Durchführungsbeschluss der
-              EU-Kommission. Sie finden den Beschluss sowie die Klauseln u.a. hier: <a class="adsimple-111794813"
+              EU-Kommission. Sie finden den Beschluss sowie die Klauseln u.a. hier: <a class="adsimple-111795802"
                 href="https://ec.europa.eu/germany/news/20210604-datentransfers-eu_de" target="_blank"
                 rel="follow noopener">https://ec.europa.eu/germany/news/20210604-datentransfers-eu_de</a>.</p>
             <p>Welche Daten grundsätzlich von Google erfasst werden und wofür diese Daten verwendet werden, können Sie
-              auch auf <a class="adsimple-111794813"
-                href="https://policies.google.com/privacy?hl=de&tid=111794813">https://www.google.com/intl/de/policies/privacy/</a>
+              auch auf <a class="adsimple-111795802"
+                href="https://policies.google.com/privacy?hl=de&tid=111795802">https://www.google.com/intl/de/policies/privacy/</a>
               nachlesen.</p>
             Alle Texte sind urheberrechtlich geschützt.<p style="margin-top:15px">Quelle: Erstellt mit dem <a
                 href="https://www.adsimple.at/datenschutz-generator/"

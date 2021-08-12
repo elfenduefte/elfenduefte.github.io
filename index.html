@@ -38,7 +38,9 @@
           </v-list-item>
           <v-list-item href="#galerie"
             @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
-            <v-list-item-content>Galerie<!--/Referenzen--></v-list-item-content>
+            <v-list-item-content>Galerie
+              <!--/Referenzen-->
+            </v-list-item-content>
           </v-list-item>
           <v-list-item href="#kontakt"
             @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
@@ -416,7 +418,7 @@
                     </v-layout>
                   </v-container>
                 </v-window-item>
-              <v-window-item>
+                <v-window-item>
                   <!-- WORKSHOP -->
                   <v-container grid-list-xl>
                     <v-layout row wrap>
@@ -435,7 +437,7 @@
                             </div>
                             <p>In Bearbeitung</p>
                             <p>Neuigkeiten folgen in Kürze.</p>
-                            <p><b>Anfragen bereits möglich.</p>
+                            <p><b>Anfragen bereits möglich.</b></p>
                             <p>Ab September 2021.
                             </p>
                           </v-card-text>
@@ -465,6 +467,7 @@
                                 </tbody>
                               </template>
                             </v-simple-table>
+                          </v-card-text>
                         </v-card>
                       </v-flex>
                     </v-layout>
@@ -506,9 +509,11 @@
                                 <tbody>
                                   <tr>
                                     <td>Kosten auf Anfrage</td>
-                                   </tr>
-                                  <tr><td>
-                                    </td></tr>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                    </td>
+                                  </tr>
                                 </tbody>
                               </template>
                             </v-simple-table>
@@ -1043,7 +1048,7 @@
                     </v-flex>
                   </v-layout>
                 </v-container>
-<!--
+                <!--
                 <h2 class="headline">Referenzen</h2>
                 <span class="subheading">
                   Was KundInnen sagen</span>
@@ -1146,7 +1151,8 @@
                       </v-textarea>
                       <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
                         <label slot="label">
-                          Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> gelesen und erkenne
+                          Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> gelesen und
+                          erkenne
                           diese an.
                         </label>
                       </v-checkbox>
@@ -1474,11 +1480,13 @@
               Rechtsgrundlage der entsprechenden Datenverarbeitung diese Einwilligung. Diese Einwilligung stellt laut
               <strong class="adsimple-111795802">Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</strong> die Rechtsgrundlage
               für die Verarbeitung personenbezogener Daten, wie sie bei der Erfassung durch ein Content Delivery Network
-              vorkommen kann, dar.</p>
+              vorkommen kann, dar.
+            </p>
             <p>Von unserer Seite besteht zudem ein berechtigtes Interesse, ein Content Delivery Network zu verwenden, um
               unser Online-Service zu optimieren und sicherer zu machen. Die dafür entsprechende Rechtsgrundlage ist
               <strong class="adsimple-111795802">Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen)</strong>. Wir
-              setzen das Tool gleichwohl nur ein, soweit Sie eine Einwilligung erteilt haben.</p>
+              setzen das Tool gleichwohl nur ein, soweit Sie eine Einwilligung erteilt haben.
+            </p>
             <p>Informationen zu speziellen Content Delivery Network erhalten Sie – sofern vorhanden – in den folgenden
               Abschnitten.</p>
             <h2 id="jsdelivr-com-cdn-datenschutzerklaerung" class="adsimple-111795802">jsdelivr.com-CDN

@@ -487,7 +487,64 @@
                   </v-container>
                 </v-window-item>
               <v-window-item>
-                  <!-- GUTSCHEINE -->
+                  <!-- ELFENDÜFTE-COACHING -->
+                  <v-container grid-list-xl>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div class="headline text-center">Elfendüfte-Coaching</div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center"><img class="float-half-right max300"
+                                src="assets/Gutscheine.jpeg">
+                            </div>
+                            <p>In Vorbereitung</p>
+                            <p><b>🧳</b></p>
+                            <p>🌿</p>
+                            <p>🍀</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Kosten</td>
+                                    <td align="right">
+                                      💰 €
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Dauer: ⏰</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br><p>Preis inklusiv Riechstift und Feedback nach ca 3 Wochen, welches in der Praxis oder telefonisch stattfindet.</p> 
+                                      <p>Auf Wunsch können dann bewährte Mischungen nachproduziert oder abgeändert werden.</p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-window-item>
+              <!-- GUTSCHEINE -->
                   <v-container grid-list-xl>
                     <v-layout row wrap>
                       <v-flex xs12 md12>
@@ -1819,7 +1876,7 @@
           email: '',
           message: '',
           agreement: false,
-          leistungenCount: 6,
+          leistungenCount: 7,
           leistungen: 0,
           zeitenCount: 5,
           zeiten: 4,

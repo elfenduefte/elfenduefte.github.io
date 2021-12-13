@@ -28,10 +28,11 @@
             @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
             <v-list-item-content>Leistungen</v-list-item-content>
           </v-list-item>
-          <v-list-item href="#leistungen"
-            @click="leistungen=5; sidebar = false">
+          <v-list-item href="#leistungen-content" data-leistungen="5"
+            @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); leistungen = 5; sidebar = false">
             <v-list-item-content>Shop</v-list-item-content>
-          </v-list-item><v-list-item href="#ueber-mich"
+          </v-list-item>
+          <v-list-item href="#ueber-mich"
             @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
             <v-list-item-content>Über mich</v-list-item-content>
           </v-list-item>
@@ -57,7 +58,7 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-xs-only">
-          <v-btn text v-for="item in menuItems" :key="item.title" :href="item.path" @click="$vuetify.goTo(item.path)">{{
+          <v-btn text v-for="item in menuItems" :key="item.title" :href="item.path" @click="$vuetify.goTo(item.path); leistungen=item.leistungen">{{
             item.title }}</v-btn>
         </v-toolbar-items>
       </v-app-bar>
@@ -174,7 +175,7 @@
                 </v-layout>
               </v-container>
             </v-flex>
-            <v-card>
+            <v-card id="leistungen-content">
               <v-card-actions class="justify-space-between">
                 <v-btn text @click="prevLeistungen">
                   <v-icon>mdi-chevron-left</v-icon>
@@ -545,7 +546,7 @@
                   </v-container>
                 </v-window-item>
                 <v-window-item>
-              <!-- GUTSCHEINE -->
+                  <!-- GUTSCHEINE -->
                   <v-container grid-list-xl>
                     <v-layout row wrap>
                       <v-flex xs12 md12>
@@ -1853,11 +1854,13 @@
     const menu = document.querySelectorAll('v-navigation-drawer v-list-item-content');
     const menuItems = [];
     menu.forEach(function (item) {
+      const leistung = item.parentElement.getAttribute('data-leistungen');
       menuItems.push({
         title: item.innerText,
-        path: item.parentElement.getAttribute('href')
-      })
-    });
+        path: item.parentElement.getAttribute('href'),
+        leistungen: leistung ? Number(leistung) : 0
+      });
+      });
 
     const app = new Vue({
       el: '#app',
@@ -1922,6 +1925,12 @@
           this.leistungen = this.leistungen - 1 < 0
             ? this.leistungenCount - 1
             : this.leistungen - 1
+        },
+        gotoLeistung(index) {
+          alert(index)
+          setTimeout(function() {
+            this.leistungen = index;
+          }.bind(this), 500);
         },
         submitAnfrage() {
           const data = `?name=${encodeURIComponent(this.name)}&email=${encodeURIComponent(this.email)}&message=${encodeURIComponent(this.message)}`;

@@ -28,7 +28,7 @@
             @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
             <v-list-item-content>Leistungen</v-list-item-content>
           </v-list-item>
-          <v-list-item href="#Gutscheine"
+          <v-list-item href="#Shop"
             @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
             <v-list-item-content>Shop</v-list-item-content>
           </v-list-item><v-list-item href="#ueber-mich"
@@ -451,6 +451,57 @@
                           <v-card-text>
                             <div class="text-center"><img class="float-half-right max300"
                                 src="assets/Duftmarketing.jpeg">
+                            </div>
+                            <p>Sobald Düfte in unsere Nase gelangen, lösen diese in unserem Unterbewusstsein eine bestimmte
+                            Reaktion aus, auch wenn sie kaum wahrnehmbar sind.
+                            Umso angenehmer ein Duft erscheint, desto länger wird man sich in diesem Umfeld aufhalten.</p>
+                            <p><b>Um den Wiedererkennnungswert Ihrer Firma zu steigern, empfehle ich die Unterstützung mittels Corporate Scent.</b></p>
+                            <p>In Warteräumen und Praxen kann mit raumluftreinigenden und -harmonisierenden
+                              Duftmischungen eine angenehme Atmosphäre geschaffen werden.
+                              Mitarbeiter in Büros können zusätzlich von ätherischen Ölen profitieren, welche die Aufmerksamkeit erhöhen.</p>
+                            <p>Gemeinsam wird eine passende Komposition für Ihr Unternehmen kreiert,
+                              Einsatzmöglichkeiten besprochen und auf Wunsch ein Beduftungskonzept umgesetzt.</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Kosten auf Anfrage</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-window-item>
+              <v-window-item>
+                  <!-- GUTSCHEINE -->
+                  <v-container grid-list-xl>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div class="headline text-center">Gutscheine</div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center"><img class="float-half-right max300"
+                                src="assets/Gutscheine.jpeg">
                             </div>
                             <p>Sobald Düfte in unsere Nase gelangen, lösen diese in unserem Unterbewusstsein eine bestimmte
                             Reaktion aus, auch wenn sie kaum wahrnehmbar sind.

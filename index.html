@@ -591,6 +591,12 @@
                               </template>
                             </v-simple-table>
                           </v-card-text>
+                          <v-card-actions class="justify-center">
+                            <v-btn color="rgb(68,0,72)" dark @click="gutschein_dialog = true">
+                              <v-icon left>mdi-cash-multiple</v-icon>
+                              <span>Jetzt bestellen</span>
+                            </v-btn>
+                          </v-card-actions>
                         </v-card>
                       </v-flex>
                     </v-layout>
@@ -1807,6 +1813,54 @@
           </v-card-text>
         </v-card>
       </v-bottom-sheet>
+      <v-dialog
+        v-model="gutschein_dialog"
+        scrollable
+        max-width="600px"
+      >
+      <v-card>
+        <v-card-title>Gutscheinbestellung</v-card-title>
+        <v-divider></v-divider>
+        <v-card-text style="max-height: 600px;">
+          <v-form ref="gutschein" v-model="validgutschein">
+            <v-container>
+              <v-row no-gutters>
+                <v-col cols="6" class="pr-2">
+                  <v-text-field v-model="gutschein_email"
+                    :rules="[v => !!v || 'Bitte geben Sie Ihre e-mail Adresse an.',v => /.+@.+\..+/.test(v) || 'Bitte geben Sie eine gültige e-mail Adresse an.']"
+                    hint="Ihre e-mail" persistent-hint filled required dense></v-text-field>
+                </v-col>
+                <v-col cols="6" class="pl-2">
+                  <v-text-field v-model="gutschein_rname" :rules="[v => !!v || 'Bitte geben Sie Ihren Namen an.']"
+                    hint="Ihr Name" persistent-hint filled required dense></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field v-model="gutschein_radresse"  :rules="[v => !!v || 'Bitte geben Sie die Rechnungsadresse an.']" hint="Rechnungsadresse" persistent-hint filled required dense></v-text-field>
+                </v-col>
+                <v-col cols="3" class="pr-2">
+                  <v-text-field type="number" v-model="gutschein_amount" :rules="[v => !!v || 'Bitte geben Sie den Gutscheinbetrag an.']"hint="Gutscheinbetrag (ab 50 € versandkostenfrei)" persistent-hint filled required dense></v-text-field>
+                </v-col>
+                <v-col cols="9" class="pl-2">
+                  <v-text-field v-model="gutschein_ename" :rules="[v => !!v || 'Bitte geben Sie den Empfängernamen an.']" hint="Name des Empfängers" persistent-hint filled required dense></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field v-model="gutschein_eadresse" :rules="[v => !!v || 'Bitte geben Sie die Empfängeradresse an.']" hint="Empfängeradresse" persistent-hint filled required dense></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field v-model="gutschein_widmung" hint="Presönliche Widmung (optional)" persistent-hint filled dense></v-text-field>
+                </v-col>
+              </v-row>
+            </v-container>
+            <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
+              <label slot="label">
+                Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> und die <a href="assets/Widerrufsrecht.pdf" target="_blank">Widerrufsbelehrung</a> gelesen und erkenne diese an.
+              </label>
+            </v-checkbox>
+            <v-btn @click="submitBestellung" :disabled="!validgutschein" depressed>Zahlungspflichtig bestellen</v-btn>
+            </form>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
     </v-app>
   </div>
   <script>
@@ -1844,6 +1898,7 @@
       data() {
         return {
           valid: true,
+          validgutschein: true,
           name: '',
           email: '',
           message: '',
@@ -1875,7 +1930,15 @@
           ceomnatial: ('ta.etfeudnefle' + karlklammer + 'liam').split('').reverse().join(''),
           introSrc: innerWidth > 1560 ? 'assets/intro-large.jpg' : 'assets/intro.jpg',
           introHeight: innerHeight - 64,
-          impressum: false
+          impressum: false,
+          gutschein_dialog: false,
+          gutschein_rname: '',
+          gutschein_radresse: '',
+          gutschein_email: '',
+          gutschein_ename: '',
+          gutschein_eadresse: '',
+          gutschein_amount: 50,
+          gutschein_widmung: ''
         }
       },
       methods: {
@@ -1908,11 +1971,18 @@
         submitAnfrage() {
           const data = `?name=${encodeURIComponent(this.name)}&email=${encodeURIComponent(this.email)}&message=${encodeURIComponent(this.message)}`;
           const script = document.createElement('script');
-          const key = new Date();
           script.async = true;
           script.src = 'https://script.google.com/macros/s/AKfycbwx-ETuDaMYYCFZGQqBJqE0WOdwraansEwFTJqVlmaN-uQyt0E/exec' + data;
           document.getElementsByTagName('head')[0].appendChild(script);
           this.$refs.anfrage.reset();
+        },
+        submitBestellung() {
+          const data = `?rname=${encodeURIComponent(this.gutschein_rname)}&email=${encodeURIComponent(this.gutschein_email)}&radresse=${encodeURIComponent(this.gutschein_radresse)}&ename=${encodeURIComponent(this.gutschein_ename)}&eadresse=${encodeURIComponent(this.gutschein_eadresse)}&amount=${encodeURIComponent(this.gutschein_amount)}&widmung=${encodeURIComponent(this.gutschein_widmung)}`;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://script.google.com/macros/s/AKfycbyG4ALkK-WOaUJvtRZ2qG5W6z1Ti0_zrHDcz_BK07Et8Y3OJGX-JmQoVpL3FJrcU9-W/exec' + data;
+          document.getElementsByTagName('head')[0].appendChild(script);
+          this.gutschein_dialog = false;
         }
       }
     });

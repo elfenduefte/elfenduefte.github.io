@@ -1972,7 +1972,7 @@
           const data = `?name=${encodeURIComponent(this.name)}&email=${encodeURIComponent(this.email)}&message=${encodeURIComponent(this.message)}`;
           const script = document.createElement('script');
           script.async = true;
-          script.src = 'https://script.google.com/macros/s/AKfycbwWaPcOI3vaSpX_tIWx8CuW_26_Hce-Py1M6GfeE-MfWOqMcb94qn3a4yihm_Rw2Es/exec' + data;
+          script.src = 'https://script.google.com/macros/s/AKfycbwx-ETuDaMYYCFZGQqBJqE0WOdwraansEwFTJqVlmaN-uQyt0E/exec' + data;
           document.getElementsByTagName('head')[0].appendChild(script);
           this.$refs.anfrage.reset();
         },
@@ -1980,7 +1980,7 @@
           const data = `?rname=${encodeURIComponent(this.gutschein_rname)}&email=${encodeURIComponent(this.gutschein_email)}&radresse=${encodeURIComponent(this.gutschein_radresse)}&ename=${encodeURIComponent(this.gutschein_ename)}&eadresse=${encodeURIComponent(this.gutschein_eadresse)}&amount=${encodeURIComponent(this.gutschein_amount)}&widmung=${encodeURIComponent(this.gutschein_widmung)}`;
           const script = document.createElement('script');
           script.async = true;
-          script.src = 'https://script.google.com/macros/s/AKfycbyG4ALkK-WOaUJvtRZ2qG5W6z1Ti0_zrHDcz_BK07Et8Y3OJGX-JmQoVpL3FJrcU9-W/exec' + data;
+          script.src = 'https://script.google.com/macros/s/AKfycbwWaPcOI3vaSpX_tIWx8CuW_26_Hce-Py1M6GfeE-MfWOqMcb94qn3a4yihm_Rw2Es/exec' + data;
           document.getElementsByTagName('head')[0].appendChild(script);
           this.gutschein_dialog = false;
         }

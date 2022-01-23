@@ -21,44 +21,44 @@
         <v-navigation-drawer disable-resize-watcher v-model="sidebar" app>
           <v-list>
             <v-list-item href="#aetherische-oele"
-              @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
               <v-list-item-content>Ätherische Öle & Co.</v-list-item-content>
             </v-list-item>
             <v-list-item href="#leistungen"
-              @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
               <v-list-item-content>Leistungen</v-list-item-content>
             </v-list-item>
-            <v-list-item href="#leistungen-content" data-leistungen="6"
-              @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); leistungen = 6; sidebar = false">
+            <v-list-item href="#gutschein_dialog" data-leistungen="6"
+              @click="goto($event.target.parentElement.getAttribute('href')); leistungen = 6; sidebar = false">
               <v-list-item-content>Shop</v-list-item-content>
             </v-list-item>
             <v-list-item href="#ueber-mich"
-              @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
               <v-list-item-content>Über mich</v-list-item-content>
             </v-list-item>
             <v-list-item href="#zeitqualitaet"
-              @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
               <v-list-item-content>Zeitqualität</v-list-item-content>
             </v-list-item>
             <v-list-item href="#galerie"
-              @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
               <v-list-item-content>Galerie/Referenz
               </v-list-item-content>
             </v-list-item>
             <v-list-item href="#kontakt"
-              @click="$vuetify.goTo($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
               <v-list-item-content>Kontakt</v-list-item-content>
             </v-list-item>
           </v-list>
         </v-navigation-drawer>
         <v-app-bar app dark color="rgb(68,0,72)" elevate-on-scroll>
           <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
-          <v-toolbar-title class="button" @click="$vuetify.goTo('#intro').then(function() {this.location.href='#'});">
+          <v-toolbar-title class="button" @click="goto('#intro').then(function() {this.location.href='#'});">
             <span class="subheading">Elfendüfte</span>
           </v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items class="hidden-xs-only">
-            <v-btn text v-for="item in menuItems" :key="item.title" :href="item.path" @click="$vuetify.goTo(item.path); leistungen=item.leistungen">{{
+            <v-btn text v-for="item in menuItems" :key="item.title" :href="item.path" @click="goto(item.path); leistungen=item.leistungen">{{
               item.title }}</v-btn>
           </v-toolbar-items>
         </v-app-bar>
@@ -68,7 +68,7 @@
               <v-layout column align-center justify-center class="white--text">
                 <img src="assets/WebElfe.svg" alt="Elfe" height="161">
                 <div class="shadow subheading mb-4 text-center ci">Sabine Krenn</div>
-                <v-btn class="mt-12" color="rgb(68,0,72)" dark large @click="$vuetify.goTo('#aetherische-oele')">
+                <v-btn class="mt-12" color="rgb(68,0,72)" dark large @click="goto('#aetherische-oele')">
                   Willkommen
                 </v-btn>
               </v-layout>
@@ -2071,7 +2071,7 @@
                       <v-text-field v-model="gutschein_radresse" :rules="[v => !!v || 'Bitte geben Sie die Rechnungsadresse an.']" hint="Rechnungsadresse" persistent-hint filled required dense></v-text-field>
                     </v-col>
                     <v-col cols="4" class="pr-2">
-                      <v-text-field type="number" v-model="gutschein_amount" persistent-hint filled required dense></v-text-field>
+                      <v-text-field type="number" v-model="gutschein_amount" hint="€ Betrag" persistent-hint filled required dense></v-text-field>
                     </v-col>
                     <v-col cols="8" class="pl-2">
                       <v-text-field v-model="gutschein_ename" :rules="[v => !!v || 'Bitte geben Sie den Empfängernamen an.']" hint="Empfänger" persistent-hint filled required dense></v-text-field>
@@ -2175,7 +2175,19 @@
           gutschein_widmung: ''
         }
       },
+      mounted() {
+        if (location.hash) {
+          this.goto(location.hash);
+        }
+      },
       methods: {
+        goto(target) {
+          if (this[target.substr(1)] !== undefined) {
+            this[target.substr(1)] = true;
+          } else {
+            this.$vuetify.goTo(target);
+          }
+        },
         nextZeiten() {
           this.zeiten = this.zeiten + 1 === this.zeitenCount
             ? 0
@@ -2220,9 +2232,19 @@
         }
       }
     });
-    if (location.hash) {
-      app.$vuetify.goTo(location.hash);
-    }
+    window.addEventListener('popstate', function(e) {
+      const target = window.location.hash;
+      if (target && target.endsWith('_dialog')) {
+        app.goto(target);
+      } else {
+        for (const key in app) {
+          if (key.endsWith('_dialog')) {
+            app[key] = false;
+            break;
+          }
+        }
+      }
+    });
     </script>
   </body>
 </html>

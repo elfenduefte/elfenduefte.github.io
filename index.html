@@ -865,510 +865,18 @@
                   </v-layout>
                 </v-container>
               </v-flex>
-              <v-card>
-                <v-card-actions class="justify-space-between">
-                  <v-btn text @click="prevZeiten">
-                    <v-icon>mdi-chevron-left</v-icon>
-                  </v-btn>
-                  <v-item-group v-model="zeiten" class="text-center" mandatory>
-                    <v-item v-for="n in zeitenCount" :key="`btn-${n}`" v-slot="{ active, toggle }">
-                      <v-btn :input-value="active" icon @click="toggle">
-                        <v-icon>mdi-record</v-icon>
-                      </v-btn>
-                    </v-item>
-                  </v-item-group>
-                  <v-btn text @click="nextZeiten">
-                    <v-icon>mdi-chevron-right</v-icon>
-                  </v-btn>
-                </v-card-actions>
-                <v-window v-model="zeiten">
-                  <!-- HERBST 2020-->
-                  <v-window-item>
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div style="line-height: 0.8rem" class="small float-half">
-                                <img style="width: 100%"
-                                  src="assets/neue-destille.jpg"></div>
-                              <p>HERBST 2020 🍂 ...wenn die Ernte für so manches von statten geht und der Spätsommer ins Land zieht, beginnt eine meiner Lieblingszeiten.
-                                Die Hitze ist Großteils vorbei, die Blätter beginnen sich langsam zurückzuziehen und verfärben sich.
-                                <br>Für mich heuer besonders spannend, da ich seit kurzem stolze Besitzerin einer Leonardo Destille bin! 🧡
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <p>Salbei, Schafgarbe, Hamamelis und ein Kieferngewächs 🍃 sind erste Befüllungen.</p>
-                              <img class="float-half" src="assets/salbei-destillieren.jpg">
-                              <img class="float-half right" src="assets/schafgarbe-leonardo.jpg">
-                              <br>
-                              <img class="float-half" src="assets/hamamelis-destillieren.jpg">
-                              <img class="float-half right" src="assets/douglasie-destillieren.jpg">
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half" src="assets/leonardo.gif">
-                              <p>Mit geeignetem Pflanzenmaterial kann ich Destillate herstellen, die im Privatbereich zur Anwendung kommen.
-                                <br>
-                                <br>Die Blüten- und Kräuterwässerchen sind für ihre Sanftheit bekannt, haben aber trotzdem eine starke Wirkung.
-                                Geeignet auch in der Babypflege, für Kinder, Schwangere und ältere Personen.
-                                Einige Ausnahmen sind bei der Anwendung, trotz guter Verträglichkeit, im Einzelfall zu beachten.
-                                <br>
-                                <br>Ich verwende sie gerne für Parfum und Raumsprays, pur als Tonik oder als Wasserphase bei selbstgerührten Cremen.
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half" src="assets/fertig-destilliert.jpg">
-                              <p>Diese Pflanzenwässerchen werden nach einer Zeit der Reifung, in kleine Chargen abgefüllt.
-                                Der geringe Anteil an gewonnenem ätherischem Öl (im Bild in der vordersten Flasche
-                                erkennbar 🤓) darf als leichte Konservierung bleiben.
-                                Eine Ausnahme ist die Zaubernuss, auch bekannt als Hamamelis. Aus ihr kann ausschließlich ein Hydrolat gewonnen werden.
-                                <br>
-                                <br>Nicht alle Hydrolate ähneln dem Duft der Pflanze die destilliert wurde.
-                                Mein Hauptaugenmerk liegt bei den Anwendungsmöglichkeiten deshalb auch bei der Wirkung.
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <!-- WINTER 2020-->
-                  <v-window-item>
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div style="line-height: 0.8rem" class="small float-half">
-                                <img style="width: 100%"
-                                  src="assets/Räucherzeug.jpeg"></div>
-                              <p>WINTER 2020 ❄️ ...wenn am 21. Dezember mit der Wintersonnwende die Tage langsam länger
-                                werden und mit der Thomasnacht vielerorts die Rau(h)nächte ♨ beginnen!
-                                <br>Eine Zeit, in der auch ich dieses Brauchtum pflege, dabei das vergangene Jahr reflektiere und Neues willkommen heiße.
-                                Zum Einsatz kommt, was mir gerade "in die Hände fällt". Räucherwerk aus Bestand und zusammengetragene Kräuter und Harze
-                                von meinen Wanderungen in diesem Jahr. 
-                                <br>Besonders kraftvolle Tage, wenn man entschleunigt in die nächsten Tage blicken kann,
-                                weil Weihnachtsgeschenke bereits zum Verschenken bereitstehen! 🎁</p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <p>Verschneite Latschenkiefer, Eisrose, Achtsamkeitszauber und Wunscherfüllung! 🌟</p>
-                              <img class="float-half" src="assets/Latschenschnee.jpeg">
-                              <img class="float-half right" src="assets/Schneerose.jpeg">
-                              <img class="float-half" src="assets/Winterzauber.jpeg">
-                              <img class="float-half right" src="assets/Elfenmasken.jpeg">
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half-right" src="assets/DIY Winter.jpeg">
-                              <p>Selbstgemachtes für liebe Menschen, die mich das ganze Jahr begleitet haben 🤩</p>
-                              <ul>
-                                <li>Zirbenhydrolat verwandelt schlaflose Nächte in süße Träume</li>
-                                <li>Badesalz macht müde Füße standhafter</li>
-                                <li>Körperbutter für streichelweiche, samtige Haut</li>
-                                <li>Johanniskrautmazerat, wohltuend bei körperliche und seelischen Wehwehchen 🤕</li>
-                                <li>Raumspray, versprüht weihnachtliche Atmosphäre 🎄</li>
-                              </ul>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half" src="assets/Elfenpunsch.jpeg">
-                              <p>Selbstproduziert wurde aber noch mehr, da die Vorweihnachtszeit so viel anders war, als die Jahre davor.
-                                <br>
-                                <br>Weihnachtsmärkte gibt es keine und so schien ein liebgewonnener Brauch der vergangen
-                                Jahre nicht durchführbar: Elfenpunsch trinken am Grazer Hauptplatz!
-                                <br>
-                                <br>"Aus der Not wurde Tugend" 💡 und so wurden Gewürze gebrüht, Eierlikör selbst
-                                hergestellt, verrührt, verziert und schließlich bei erstem Schneefall verkostet! 😋</p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <!-- FRÜHLING 2021-->
-                  <v-window-item>
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div style="line-height: 0.8rem" class="small float-half">
-                                <img style="width: 100%"
-                                  src="assets/Frühling.jpeg"></div>
-                              <p>FRÜHLINGsduft 2021 🌿 liegt in der Luft. Die dunkle, träge, gemächliche Zeit
-                                liegt hinter uns. Länger werdende Tage stärken unsere Gedanken und Achtsamkeit.
-                                Überall beginnt es zu sprießen, sich zu bewegen. Ein Frühjahrsputz eignet sich nicht nur für die 4 Wände.
-                                Auch unserem Körper täte es gut sich einem zu unterziehen, um sich vom Ballast der vergangenen Monate zu befreien.
-                                <br>
-                                <br>Einfache und effektive Methoden warten nur auf deren Umsetzung. Gerne begleite ich Sie in dieser Zeit. 💚
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <p>Blütenpracht, Hamamelis Blüte, Gänseblümchen Mazerat, Korkenzieherhasel 🍃</p>
-                              <img class="float-half" src="assets/ApfelBlüten.jpeg">
-                              <img class="float-half right" src="assets/Hamamelis.jpeg">
-                              <img class="float-half" src="assets/Gänseblümchen.jpeg">
-                              <img class="float-half right" src="assets/Korkenzieherhaselhasel.jpeg">
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half-right" src="assets/DIY Frühling.jpeg">
-                              <p>Dufte Ideen für ein befreiendes, straffendes Frühlingserwachen 😃</p>
-                              <ul>
-                                <li>Hydrolate zum Befeuchten der Haut vor der Anwendung von Körperölen oder als Frischekick zwischendurch</li>
-                                <li>Mit einem eigens kreiertem Duft, der aus einer Vielzahl von ätherischen Ölen bei einer Beratung zusammengestellt wird,
-                                  kann man einen Raumspray herstellen, sowie eine Duschgelbasis oder ein Körperöl aufpeppen</li>
-                                <li>Um den Hunger nach Süßem zu bremsen, eignet sich der Duft von Vanille.
-                                  In einem Riechstift jederzeit bei der Hand, wenn der Guster in uns geweckt wird! 💡“Fasten“ fürs Köpfchen</li>
-                                <li>Als Geschenk für diverse Anlässe sind „Gutscheine für einen Kurzurlaub in meiner
-                                  Praxis!“ etwas ganz Individuelles 🤩</li>
-                              </ul>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half" src="assets/Wickl.jpeg">
-                              <p>Um unser Entgiftungsorgan durch einen Reiz von außen zu unterstützen, sind Leberwickel und Kompressen
-                                mit geeigneten fetten Ölen und ätherischen Ölen eine wertvolle Hilfe.
-                                <br>
-                                <br>Der frühe Nachmittag oder der Abend eignen sich am besten. Zum Kennenlernen dieser
-                                Methode lege ich Wickel erstmalig in meiner Praxis an.
-                                <br>
-                                <br>Für weiterführende Anwendungen im Privatbereich gebe ich anschließend Tipps, denn die Handgriffe sollten geübt werden,
-                                um einen ungestörten Ablauf zu gewährleisten. 😉 Geeignete Materialien können vor Ort erworben werden.
-                                <br>
-                                <br>Auch fette Pflanzenölkuren eignen sich besonders in dieser Jahreszeit. Entweder um die Haut mit Sanddornfruchtfleisch Öl
-                                auf die immer stärker werdende Sonne vorzubereiten oder mit Schwarzkümmelöl die Darmzotten zu reinigen.
-                                Schwarzkümmelöl ist aber auch geeignet, um die Reaktionen von Allergien 🤧 zu mildern.</p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <!-- SOMMER 2021-->
-                  <v-window-item>
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div style="line-height: 0.8rem" class="small float-half">
-                                <img style="width: 100%"
-                                  src="assets/So 2021 1.jpeg"></div>
-                              <p>
-                                <b>SOMMER</b> 2021 ☀️ Sonne, Sonnenschein! Ab dem 21. Juni, zur Sommersonnenwende, werden die Tage langsam wieder kürzer.
-                                Viele Traditionen und Brauchtümer schwingen dieser Tage mit. Viele Pflanzen sind in Hochblüte.
-                                <br>
-                                <br>Die zahlreiche Sonnenstunden begünstigen das Freisetzen von Duftstoffen.
-                                Unzählige Bienen 🐝🐝 Hummeln 🐝 Insekten werden dadurch angelockt um Blütenpollen
-                                weiterzutragen, damit es anderswo zur Befruchtung kommen kann.</p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <p>Borretsch, Arnika, Nachtkerze Ringelblume - Blühendes für fette Öle und Mazerat 💛</p>
-                              <img class="float-half" src="assets/So 2021 2.jpeg">
-                              <img class="float-half right" src="assets/So 2021 3.jpeg">
-                              <img class="float-half" src="assets/So 2021 4.jpeg">
-                              <img class="float-half right" src="assets/So 2021 5.jpeg">
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half-right" src="assets/So 2021 6.jpeg">
-                              <ul>
-                                <li>Bestimmte ätherische Öle sind bei lästigen Plagegeistern 🦟 🪰 nicht so beliebt. Diese können, in DIY Produkte verarbeitet,
-                                  beim Waldbaden 🌳, an lauwarmen Abenden 🍻 oder nächtens 😴 einen guten Dienst leisten</li>
-                                <li>Zur Vorsicht sei jedoch bei ätherischem Öl geboten, denen photosensibilisierende Eigenschaften zugeschrieben werden 💡</li>
-                                <li>Einen geringen Lichtschutzfaktor und/oder Pflege nach dem Sonnenbaden weisen laut
-                                  Literatur einige Pflanzenöle und Wachse auf, u.a. Jojobawachs, Sheabutter, Sanddornfruchtfleischöl</li>
-                                <li>Aus frischen Rosen- und Holunderblüten werden wohlriechende, vielseitige anwendbare Hydrolate erzeugt</li>
-                                <li>Getrocknete Blüten eignen sich hervorragend für harmonisierende, angenehme Räucherungen
-                                </li>
-                              </ul>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half" src="assets/So 2021 7.jpeg">
-                              <p>Die meist trockenen Tage um den 24. Juni (Johannistag) sind seit jeher als guter
-                                Erntezeitpunkt von Kräutern und <b>Johanniskraut</b> bekannt.
-                                Die kleinen feinen gelben Blüten dieser Pflanze scheinen die Sonne ☀️ eingefangen zu haben.
-                                Mit den zarten roten Punkten (= Wirkstoff Hypericin), färben sie das angesetzte Öl wunderbar.
-                                <br>
-                                <br>Bereits eine Handvoll Blüten mit Ölivenöl reichen aus, um ein paar
-                                Sonnenstrahlen ins Gemüt bringen, wenn die Tage wieder kürzer und dunkler sind.
-                                <br>
-                                <br>Äußerlich angewendet tut dieses Rotöl Körper & Seele gut. 😌
-                                <br>
-                                <br>Trotz der guter Verträglichkeit bitte die Vorsichtsmaßnahmen im Einzelfall beachten!
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <!-- HERBST 2021 -->     
-                  <v-window-item>
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div style="line-height: 0.8rem" class="small float-half">
-                                <img style="width: 100%"
-                                  src="assets/He 2021 1.jpeg"></div>
-                              <p>
-                                Um den 21. September findet die Tag- und Nachtgleiche statt, der <b>HERBST</b> 2021 ist da! Erste bunte Blätter 🍁 säumen den Weg - 
-                                die Natur beginnt sich zurückzuziehen, um sich auf den Winter vorzubereiten.
-                                <br>
-                                <br>Viele Pflanzen tragen nun Früchte, die nun geerntet werden können. 🍎🍐🍇🍅 Ein Lebenszyklus schließt sich.
-                                <br>
-                                <br>Auch ich entschleunige, indem ich die ersten kälteren Tage nutze, um Rückschau zu halten.
-                                <br>Bei ausgedehnten Wanderungen 🥾 tanke ich Vitamin D, genieße Vollbäder 🛁 mit ätherischen Ölen und beginne eine Hanfölkur.
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <p>Holunderblüten, Karottensamen, Rosen und Lavendel für meine Destillen 🧡</p>
-                              <img class="float-half" src="assets/He 2021 2.jpeg">
-                              <img class="float-half right" src="assets/He 2021 3.jpeg">
-                              <img class="float-half" src="assets/He 2021 5.jpeg">
-                              <img class="float-half right" src="assets/He 2021 4.jpeg">
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half-right" src="assets/He 2021 6.jpeg">
-                              <ul>
-                                <li>
-                                  <b>Hydrolate</b>, die ich in der großen Destille "Leonardo" sowie in meiner neuen kleineren Destille „Valentina“ hergestellt habe.
-                                  In vielen besinnliche Stunden wurde Pflanzenmaterial gepflückt.
-                                  <br>
-                                  <b>Rose</b>: wunderbar duftend harmonisiert es in stürmischen Zeiten
-                                  <br>
-                                  <b>Karottensamen</b>: würzig-erdiges für die gereizte Männerhaut nach der Rasur
-                                  <br>
-                                  <b>Holunder</b>: der zart blumige Duft besänftigt stressige Situationen 
-                                  <br>
-                                  <b>Lavendelblüten</b>: pur oder gemeinsam mit anderen Pflanzenwässerchen und ätherischen Ölen, 
-                                  wenn die Unruhe zu unruhig scheint</li>
-                                <li>
-                                  Eine <b>Individuelle Mischung</b>, die mich besonders in dieser Zeit "spicig" begleitet.
-                                  Sie duftet wunderbar würzig/warm/wärmend und stimmt auf eine herbstliche Gemütlichkeit ein</li>
-                                <li>
-                                  <b>Kürbisvariationen</b>, 🎃 die im eigenen Garten gewachsen sind
-                                </li>
-                              </ul>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half" src="assets/He 2021 7.jpeg">
-                              <p>Aus einer zarten Knospe im Frühjahr und der Hochblüte im Sommer, bildet die Wildrose im Herbst eine Frucht aus, die Hagebutte. 
-                                Daraus kann ein besonderes Öl gewonnen werden: das <b>Hagebuttenkernöl</b>
-                                , besser bekannt als <b>Wildrosenöl</b>
-                                <i>- Rosa rubiginosa</i>.
-                                <br>
-                                <br>Es duftet NICHT wie oft angenommen nach Rosen, sondern eher nussig. 
-                                Viele kleine Samen werden kalt gepresset und sind besonders wertvoll in deren Zusammensetzung.
-                                <br>Dieses Pflanzenöl zeigt bereits in kleinen Mengen große Wirkung und wird in meinen DIY-Produkten sparsam eingesetzt.
-                                <br>
-                                <br>Durch die hautpflegende und -regenerierender Eigenschaft findet es Verwendung 
-                                bei schuppender/trockener/anspruchsvoller Haut, ist besonders zur Narbenpflege 🩹 geeignet und zieht außerdem rasch ein. 
-                                <br>Auch reife Gesichtshaut profitiert von diesem wunderbaren goldgelben Öl.
-                                <br>
-                                <br>Nach Anbruch sollte es, kühl und dunkel gelagert, innerhalb von 4 Wochen verbraucht werden, 
-                                da es aufgrund seiner Zusammensetzung (hoher Gehalt an mehrfach ungesättigten Fettsäuren) rasch oxidiert.</p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>    
-                  <!-- WINTER 2021 -->
-                  <v-window-item>
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div style="line-height: 0.8rem" class="small float-half">
-                                <img style="width: 100%"
-                                  src="assets/Wi 2021 1.jpeg"></div>
-                              <p>
-                                Der erste Schnee war heuer früh dran, noch vor <b>WINTER</b>beginn 2021 ❄️ 
-                                Mittlerweile hat sich aber das Wetter wieder den Vorjahren angepasst, derzeit besteht keine Hoffnung auf weiße Weihnachten - 
-                                zumindest nicht in unseren Breitengraden.
-                                <br>
-                                <br>Nach den mühsamen Zeiten Anfang Dezember mit öffnen, schließen und wieder öffnen der Praxistüren, ziehe ich mich für dieses Jahr zurück. 
-                                <br>Ich kehre ein, bereite mich auf Räucherungen ♨︎ vor und vielleicht kommt noch die eine oder andere Komposition zustande. 😇
-                                <br>Auf meinen Weihnachtsduft 2021 durfte ich mich ja schon Anfang Dezember einstimmen, 
-                                da sich Weihnachtsgeschenke bereits auf dem Weg gemacht haben, um stressfrei und rechtzeitig ankommen.🎄</p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <p>Sun meets Ice, Waldkristalle, Spuren im Schnee und vorweihnachtliche Murinsel! </p>
-                              <img class="float-half" src="assets/Wi 2021 2.jpeg">
-                              <img class="float-half right" src="assets/Wi 2021 3.jpeg">
-                              <img class="float-half" src="assets/Wi 2021 4.jpeg">
-                              <img class="float-half right" src="assets/Wi 2021 5.jpeg">  
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half-right" src="assets/Wi 2021 6.jpeg">
-                              <p>
-                                <b>Sonnenstrahlen für die Seele</b>
-                                <br>Wenn es draußen immer finsterer wird, sehnen wir uns nach Lichtbringern für unser Inneres. 
-                                Sei es auf räumlicher oder körperlicher Ebene - erleuchten soll es. ✨
-                                <br>Unterstützend sind dabei Düfte mit stimmungsaufhellenden und -erheiternden Eigenschaften, die damit positiv auf unser Gemüt wirken können:
-                              </p>
-                              <ul>
-                                <li>
-                                  Ätherischen Öle von Grapefruit 🍊 Mandarine 🍋 Orange 🍈 Zitrone und <b>Bergamotte</b>. 
-                                  Besonders dieses gilt als „Spot“ unter den ätherischen Ölen</li>
-                                <li>
-                                  <b>Muskatellersalbeihydrolat</b> wirkt im seelischen Bereich ebenfalls leicht stimmungsaufhellend
-                                </li>
-                                <li>
-                                  <b>Johanniskrautmazerat</b> als "Wirkstofföl" in einer Mischung zur „Verdauung seelischer Angelegenheiten“ im Bereich des Sonnengeflechts verteilen
-                                </li>
-                                <li>
-                                  <b>Räucherstoffe:</b> Dammar, Zimt, Nelke, Fichtenharz, Weihrauch, Gewürze
-                                </li>
-                              </ul>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md6>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half" src="assets/Wi 2021 7.jpeg">
-                              <p>Als Dankeschön habe ich kleine Überraschungspakete für Kunden, Bekannte und Freunde zusammengestellt, die mich in diesem Jahr mit Ihrer Treue beschenkt haben. 💫 
-                                <br>Es gab viele wertvolle Gespräche und Kompositionen, die ich nur mit Ihnen zusammenstellen konnte, mit den Erfahrungen und Erlebnissen, 
-                                die Sie zu Beratungen mitgebracht haben.
-                                <br>
-                                <br>Viele beglückwünschten mich auch zur bestandenen Prüfung Mitte November. Düfte mit der "ältesten Sprache der Welt" meiner Kunden näher zu bringen,
-                                bereichtert meine Herzensarbeit.💚
-                                <br>
-                                <br>Ich schätze das Arbeiten mit Menschen, welche sich die Kostbarkeit der Duftwahrnehmung zunutze machen, um sich rundum wohler zu fühlen. 
-                                <b>DANKE</b> für das entgegengebrachte Vertrauen!
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>           
-              
-                  <!-- FRÜHLING 2022 
-                    <v-window-item>
-                    <v-container grid-list-xl>
-                    <v-layout row wrap>
-                    <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                    <v-card-text>
-                    <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%"
-                    src="assets/Wi 2021 1.jpeg"></div>
-                    <p>Herbst 2021, wenn .......</p>
-                    </v-card-text>
-                    </v-card>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap align-center>
+                    <v-flex xs12 md4 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
+                      <v-card flat @click="goto('#' + diaryItem.dialog)">
+                        <v-img :src="diaryItem.titelbild"></v-img>
+                        <v-card-title class="justify-center">{{diaryItem.titel}}</v-card-title>
+                      </v-card>
                     </v-flex>
-                    <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                    <v-card-text>
-                    <p>.......</p>
-                    <img class="float-half" src="assets/Wi 2021 2.jpeg">
-                    <img class="float-half right" src="assets/Wi 2021 3.jpeg">
-                    <img class="float-half" src="assets/Wi 2021 4.jpeg">
-                    <img class="float-half right" src="assets/Wi 2021 5.jpeg">  
-                    </v-card-text>
-                    </v-card>
-                    </v-flex>
-                    <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                    <v-card-text>
-                    <img class="float-half-right" src="assets/Wi 2021 6.jpeg">
-                    <p>.......</p>
-                    <ul>
-                    <li>.......</li>
-                    <li>.......</li>
-                    <li>.......</li>
-                    <li>.......</li>
-                    <li>.......</li>
-                    </ul>
-                    </v-card-text>
-                    </v-card>
-                    </v-flex>
-                    <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                    <v-card-text>
-                    <img class="float-half" src="assets/Wi 2021 7.jpeg">
-                    <p>.......<b>fett</b>.......</p> 
-                    <p>.......</p>
-                    <p>.......</p>
-                    <p>.......</p>
-                    </v-card-text>
-                    </v-card>
-                    </v-flex>
-                    </v-layout>
-                    </v-container>
-                    </v-window-item>           -->
-              
-                </v-window>
-              </v-card>
+                  </v-layout>
+                </v-container>
+              </v-flex>
               <v-flex xs12>
                 <v-container grid-list-xl>
                   <v-layout row wrap>
@@ -2046,6 +1554,594 @@
             </v-card-text>
           </v-card>
         </v-bottom-sheet>
+        <!-- FRÜHLING 2022 
+          <v-dialog>
+          <v-container grid-list-xl>
+          <v-layout row wrap>
+          <v-flex xs12 md6>
+          <v-card flat class="transparent">
+          <v-card-text>
+          <div style="line-height: 0.8rem" class="small float-half"><img style="width: 100%"
+          src="assets/Wi 2021 1.jpeg"></div>
+          <p>Herbst 2021, wenn .......</p>
+          </v-card-text>
+          </v-card>
+          </v-flex>
+          <v-flex xs12 md6>
+          <v-card flat class="transparent">
+          <v-card-text>
+          <p>.......</p>
+          <img class="float-half" src="assets/Wi 2021 2.jpeg">
+          <img class="float-half right" src="assets/Wi 2021 3.jpeg">
+          <img class="float-half" src="assets/Wi 2021 4.jpeg">
+          <img class="float-half right" src="assets/Wi 2021 5.jpeg">  
+          </v-card-text>
+          </v-card>
+          </v-flex>
+          <v-flex xs12 md6>
+          <v-card flat class="transparent">
+          <v-card-text>
+          <img class="float-half-right" src="assets/Wi 2021 6.jpeg">
+          <p>.......</p>
+          <ul>
+          <li>.......</li>
+          <li>.......</li>
+          <li>.......</li>
+          <li>.......</li>
+          <li>.......</li>
+          </ul>
+          </v-card-text>
+          </v-card>
+          </v-flex>
+          <v-flex xs12 md6>
+          <v-card flat class="transparent">
+          <v-card-text>
+          <img class="float-half" src="assets/Wi 2021 7.jpeg">
+          <p>.......<b>fett</b>.......</p> 
+          <p>.......</p>
+          <p>.......</p>
+          <p>.......</p>
+          </v-card-text>
+          </v-card>
+          </v-flex>
+          </v-layout>
+          </v-container>
+          </v-dialog>           -->
+        <!-- WINTER 2021 -->
+        <v-dialog
+          class="diary"
+          data-titelbild="assets/Wi 2021 1.jpeg"
+          v-model="diary_winter2021"
+          fullscreen
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('zeitqualitaet')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Winter 2021</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/Wi 2021 1.jpeg"></div>
+                        <p>
+                          Der erste Schnee war heuer früh dran, noch vor <b>WINTER</b>beginn 2021 ❄️ 
+                          Mittlerweile hat sich aber das Wetter wieder den Vorjahren angepasst, derzeit besteht keine Hoffnung auf weiße Weihnachten - 
+                          zumindest nicht in unseren Breitengraden.
+                          <br>
+                          <br>Nach den mühsamen Zeiten Anfang Dezember mit öffnen, schließen und wieder öffnen der Praxistüren, ziehe ich mich für dieses Jahr zurück. 
+                          <br>Ich kehre ein, bereite mich auf Räucherungen ♨︎ vor und vielleicht kommt noch die eine oder andere Komposition zustande. 😇
+                          <br>Auf meinen Weihnachtsduft 2021 durfte ich mich ja schon Anfang Dezember einstimmen, 
+                          da sich Weihnachtsgeschenke bereits auf dem Weg gemacht haben, um stressfrei und rechtzeitig ankommen.🎄</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <p>Sun meets Ice, Waldkristalle, Spuren im Schnee und vorweihnachtliche Murinsel! </p>
+                        <img class="float-half" src="assets/Wi 2021 2.jpeg">
+                        <img class="float-half right" src="assets/Wi 2021 3.jpeg">
+                        <img class="float-half" src="assets/Wi 2021 4.jpeg">
+                        <img class="float-half right" src="assets/Wi 2021 5.jpeg">  
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half-right" src="assets/Wi 2021 6.jpeg">
+                        <p>
+                          <b>Sonnenstrahlen für die Seele</b>
+                          <br>Wenn es draußen immer finsterer wird, sehnen wir uns nach Lichtbringern für unser Inneres. 
+                          Sei es auf räumlicher oder körperlicher Ebene - erleuchten soll es. ✨
+                          <br>Unterstützend sind dabei Düfte mit stimmungsaufhellenden und -erheiternden Eigenschaften, die damit positiv auf unser Gemüt wirken können:
+                        </p>
+                        <ul>
+                          <li>
+                            Ätherischen Öle von Grapefruit 🍊 Mandarine 🍋 Orange 🍈 Zitrone und <b>Bergamotte</b>. 
+                            Besonders dieses gilt als „Spot“ unter den ätherischen Ölen</li>
+                          <li>
+                            <b>Muskatellersalbeihydrolat</b> wirkt im seelischen Bereich ebenfalls leicht stimmungsaufhellend
+                          </li>
+                          <li>
+                            <b>Johanniskrautmazerat</b> als "Wirkstofföl" in einer Mischung zur „Verdauung seelischer Angelegenheiten“ im Bereich des Sonnengeflechts verteilen
+                          </li>
+                          <li>
+                            <b>Räucherstoffe:</b> Dammar, Zimt, Nelke, Fichtenharz, Weihrauch, Gewürze
+                          </li>
+                        </ul>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half" src="assets/Wi 2021 7.jpeg">
+                        <p>Als Dankeschön habe ich kleine Überraschungspakete für Kunden, Bekannte und Freunde zusammengestellt, die mich in diesem Jahr mit Ihrer Treue beschenkt haben. 💫 
+                          <br>Es gab viele wertvolle Gespräche und Kompositionen, die ich nur mit Ihnen zusammenstellen konnte, mit den Erfahrungen und Erlebnissen, 
+                          die Sie zu Beratungen mitgebracht haben.
+                          <br>
+                          <br>Viele beglückwünschten mich auch zur bestandenen Prüfung Mitte November. Düfte mit der "ältesten Sprache der Welt" meiner Kunden näher zu bringen,
+                          bereichtert meine Herzensarbeit.💚
+                          <br>
+                          <br>Ich schätze das Arbeiten mit Menschen, welche sich die Kostbarkeit der Duftwahrnehmung zunutze machen, um sich rundum wohler zu fühlen. 
+                          <b>DANKE</b> für das entgegengebrachte Vertrauen!
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+        <!-- HERBST 2021 -->     
+        <v-dialog
+          class="diary"
+          data-titelbild="assets/He 2021 1.jpeg"
+          v-model="diary_herbst2021"
+          fullscreen
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('zeitqualitaet')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Herbst 2021</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/He 2021 1.jpeg"></div>
+                        <p>
+                          Um den 21. September findet die Tag- und Nachtgleiche statt, der <b>HERBST</b> 2021 ist da! Erste bunte Blätter 🍁 säumen den Weg - 
+                          die Natur beginnt sich zurückzuziehen, um sich auf den Winter vorzubereiten.
+                          <br>
+                          <br>Viele Pflanzen tragen nun Früchte, die nun geerntet werden können. 🍎🍐🍇🍅 Ein Lebenszyklus schließt sich.
+                          <br>
+                          <br>Auch ich entschleunige, indem ich die ersten kälteren Tage nutze, um Rückschau zu halten.
+                          <br>Bei ausgedehnten Wanderungen 🥾 tanke ich Vitamin D, genieße Vollbäder 🛁 mit ätherischen Ölen und beginne eine Hanfölkur.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <p>Holunderblüten, Karottensamen, Rosen und Lavendel für meine Destillen 🧡</p>
+                        <img class="float-half" src="assets/He 2021 2.jpeg">
+                        <img class="float-half right" src="assets/He 2021 3.jpeg">
+                        <img class="float-half" src="assets/He 2021 5.jpeg">
+                        <img class="float-half right" src="assets/He 2021 4.jpeg">
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half-right" src="assets/He 2021 6.jpeg">
+                        <ul>
+                          <li>
+                            <b>Hydrolate</b>, die ich in der großen Destille "Leonardo" sowie in meiner neuen kleineren Destille „Valentina“ hergestellt habe.
+                            In vielen besinnliche Stunden wurde Pflanzenmaterial gepflückt.
+                            <br>
+                            <b>Rose</b>: wunderbar duftend harmonisiert es in stürmischen Zeiten
+                            <br>
+                            <b>Karottensamen</b>: würzig-erdiges für die gereizte Männerhaut nach der Rasur
+                            <br>
+                            <b>Holunder</b>: der zart blumige Duft besänftigt stressige Situationen 
+                            <br>
+                            <b>Lavendelblüten</b>: pur oder gemeinsam mit anderen Pflanzenwässerchen und ätherischen Ölen, 
+                            wenn die Unruhe zu unruhig scheint</li>
+                          <li>
+                            Eine <b>Individuelle Mischung</b>, die mich besonders in dieser Zeit "spicig" begleitet.
+                            Sie duftet wunderbar würzig/warm/wärmend und stimmt auf eine herbstliche Gemütlichkeit ein</li>
+                          <li>
+                            <b>Kürbisvariationen</b>, 🎃 die im eigenen Garten gewachsen sind
+                          </li>
+                        </ul>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half" src="assets/He 2021 7.jpeg">
+                        <p>Aus einer zarten Knospe im Frühjahr und der Hochblüte im Sommer, bildet die Wildrose im Herbst eine Frucht aus, die Hagebutte. 
+                          Daraus kann ein besonderes Öl gewonnen werden: das <b>Hagebuttenkernöl</b>
+                          , besser bekannt als <b>Wildrosenöl</b>
+                          <i>- Rosa rubiginosa</i>.
+                          <br>
+                          <br>Es duftet NICHT wie oft angenommen nach Rosen, sondern eher nussig. 
+                          Viele kleine Samen werden kalt gepresset und sind besonders wertvoll in deren Zusammensetzung.
+                          <br>Dieses Pflanzenöl zeigt bereits in kleinen Mengen große Wirkung und wird in meinen DIY-Produkten sparsam eingesetzt.
+                          <br>
+                          <br>Durch die hautpflegende und -regenerierender Eigenschaft findet es Verwendung 
+                          bei schuppender/trockener/anspruchsvoller Haut, ist besonders zur Narbenpflege 🩹 geeignet und zieht außerdem rasch ein. 
+                          <br>Auch reife Gesichtshaut profitiert von diesem wunderbaren goldgelben Öl.
+                          <br>
+                          <br>Nach Anbruch sollte es, kühl und dunkel gelagert, innerhalb von 4 Wochen verbraucht werden, 
+                          da es aufgrund seiner Zusammensetzung (hoher Gehalt an mehrfach ungesättigten Fettsäuren) rasch oxidiert.</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+        <!-- SOMMER 2021-->
+        <v-dialog
+          class="diary"
+          data-titelbild="assets/So 2021 1.jpeg"
+          v-model="diary_sommer2021"
+          fullscreen
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('zeitqualitaet')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Sommer 2021</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/So 2021 1.jpeg"></div>
+                        <p>
+                          <b>SOMMER</b> 2021 ☀️ Sonne, Sonnenschein! Ab dem 21. Juni, zur Sommersonnenwende, werden die Tage langsam wieder kürzer.
+                          Viele Traditionen und Brauchtümer schwingen dieser Tage mit. Viele Pflanzen sind in Hochblüte.
+                          <br>
+                          <br>Die zahlreiche Sonnenstunden begünstigen das Freisetzen von Duftstoffen.
+                          Unzählige Bienen 🐝🐝 Hummeln 🐝 Insekten werden dadurch angelockt um Blütenpollen
+                          weiterzutragen, damit es anderswo zur Befruchtung kommen kann.</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <p>Borretsch, Arnika, Nachtkerze Ringelblume - Blühendes für fette Öle und Mazerat 💛</p>
+                        <img class="float-half" src="assets/So 2021 2.jpeg">
+                        <img class="float-half right" src="assets/So 2021 3.jpeg">
+                        <img class="float-half" src="assets/So 2021 4.jpeg">
+                        <img class="float-half right" src="assets/So 2021 5.jpeg">
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half-right" src="assets/So 2021 6.jpeg">
+                        <ul>
+                          <li>Bestimmte ätherische Öle sind bei lästigen Plagegeistern 🦟 🪰 nicht so beliebt. Diese können, in DIY Produkte verarbeitet,
+                            beim Waldbaden 🌳, an lauwarmen Abenden 🍻 oder nächtens 😴 einen guten Dienst leisten</li>
+                          <li>Zur Vorsicht sei jedoch bei ätherischem Öl geboten, denen photosensibilisierende Eigenschaften zugeschrieben werden 💡</li>
+                          <li>Einen geringen Lichtschutzfaktor und/oder Pflege nach dem Sonnenbaden weisen laut
+                            Literatur einige Pflanzenöle und Wachse auf, u.a. Jojobawachs, Sheabutter, Sanddornfruchtfleischöl</li>
+                          <li>Aus frischen Rosen- und Holunderblüten werden wohlriechende, vielseitige anwendbare Hydrolate erzeugt</li>
+                          <li>Getrocknete Blüten eignen sich hervorragend für harmonisierende, angenehme Räucherungen
+                          </li>
+                        </ul>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half" src="assets/So 2021 7.jpeg">
+                        <p>Die meist trockenen Tage um den 24. Juni (Johannistag) sind seit jeher als guter
+                          Erntezeitpunkt von Kräutern und <b>Johanniskraut</b> bekannt.
+                          Die kleinen feinen gelben Blüten dieser Pflanze scheinen die Sonne ☀️ eingefangen zu haben.
+                          Mit den zarten roten Punkten (= Wirkstoff Hypericin), färben sie das angesetzte Öl wunderbar.
+                          <br>
+                          <br>Bereits eine Handvoll Blüten mit Ölivenöl reichen aus, um ein paar
+                          Sonnenstrahlen ins Gemüt bringen, wenn die Tage wieder kürzer und dunkler sind.
+                          <br>
+                          <br>Äußerlich angewendet tut dieses Rotöl Körper & Seele gut. 😌
+                          <br>
+                          <br>Trotz der guter Verträglichkeit bitte die Vorsichtsmaßnahmen im Einzelfall beachten!
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+        <!-- FRÜHLING 2021-->
+        <v-dialog
+          class="diary"
+          data-titelbild="assets/Frühling.jpeg"
+          v-model="diary_fruehling2021"
+          fullscreen
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('zeitqualitaet')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Frühling 2021</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/Frühling.jpeg"></div>
+                        <p>FRÜHLINGsduft 2021 🌿 liegt in der Luft. Die dunkle, träge, gemächliche Zeit
+                          liegt hinter uns. Länger werdende Tage stärken unsere Gedanken und Achtsamkeit.
+                          Überall beginnt es zu sprießen, sich zu bewegen. Ein Frühjahrsputz eignet sich nicht nur für die 4 Wände.
+                          Auch unserem Körper täte es gut sich einem zu unterziehen, um sich vom Ballast der vergangenen Monate zu befreien.
+                          <br>
+                          <br>Einfache und effektive Methoden warten nur auf deren Umsetzung. Gerne begleite ich Sie in dieser Zeit. 💚
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <p>Blütenpracht, Hamamelis Blüte, Gänseblümchen Mazerat, Korkenzieherhasel 🍃</p>
+                        <img class="float-half" src="assets/ApfelBlüten.jpeg">
+                        <img class="float-half right" src="assets/Hamamelis.jpeg">
+                        <img class="float-half" src="assets/Gänseblümchen.jpeg">
+                        <img class="float-half right" src="assets/Korkenzieherhaselhasel.jpeg">
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half-right" src="assets/DIY Frühling.jpeg">
+                        <p>Dufte Ideen für ein befreiendes, straffendes Frühlingserwachen 😃</p>
+                        <ul>
+                          <li>Hydrolate zum Befeuchten der Haut vor der Anwendung von Körperölen oder als Frischekick zwischendurch</li>
+                          <li>Mit einem eigens kreiertem Duft, der aus einer Vielzahl von ätherischen Ölen bei einer Beratung zusammengestellt wird,
+                            kann man einen Raumspray herstellen, sowie eine Duschgelbasis oder ein Körperöl aufpeppen</li>
+                          <li>Um den Hunger nach Süßem zu bremsen, eignet sich der Duft von Vanille.
+                            In einem Riechstift jederzeit bei der Hand, wenn der Guster in uns geweckt wird! 💡“Fasten“ fürs Köpfchen</li>
+                          <li>Als Geschenk für diverse Anlässe sind „Gutscheine für einen Kurzurlaub in meiner
+                            Praxis!“ etwas ganz Individuelles 🤩</li>
+                        </ul>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half" src="assets/Wickl.jpeg">
+                        <p>Um unser Entgiftungsorgan durch einen Reiz von außen zu unterstützen, sind Leberwickel und Kompressen
+                          mit geeigneten fetten Ölen und ätherischen Ölen eine wertvolle Hilfe.
+                          <br>
+                          <br>Der frühe Nachmittag oder der Abend eignen sich am besten. Zum Kennenlernen dieser
+                          Methode lege ich Wickel erstmalig in meiner Praxis an.
+                          <br>
+                          <br>Für weiterführende Anwendungen im Privatbereich gebe ich anschließend Tipps, denn die Handgriffe sollten geübt werden,
+                          um einen ungestörten Ablauf zu gewährleisten. 😉 Geeignete Materialien können vor Ort erworben werden.
+                          <br>
+                          <br>Auch fette Pflanzenölkuren eignen sich besonders in dieser Jahreszeit. Entweder um die Haut mit Sanddornfruchtfleisch Öl
+                          auf die immer stärker werdende Sonne vorzubereiten oder mit Schwarzkümmelöl die Darmzotten zu reinigen.
+                          Schwarzkümmelöl ist aber auch geeignet, um die Reaktionen von Allergien 🤧 zu mildern.</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+        <!-- WINTER 2020-->
+        <v-dialog
+          class="diary"
+          data-titelbild="assets/Räucherzeug.jpeg"
+          data-titel="Winter 2020"
+          v-model="diary_winter2020"
+          fullscreen
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('zeitqualitaet')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Winter 2020</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/Räucherzeug.jpeg"></div>
+                        <p>WINTER 2020 ❄️ ...wenn am 21. Dezember mit der Wintersonnwende die Tage langsam länger
+                          werden und mit der Thomasnacht vielerorts die Rau(h)nächte ♨ beginnen!
+                          <br>Eine Zeit, in der auch ich dieses Brauchtum pflege, dabei das vergangene Jahr reflektiere und Neues willkommen heiße.
+                          Zum Einsatz kommt, was mir gerade "in die Hände fällt". Räucherwerk aus Bestand und zusammengetragene Kräuter und Harze
+                          von meinen Wanderungen in diesem Jahr. 
+                          <br>Besonders kraftvolle Tage, wenn man entschleunigt in die nächsten Tage blicken kann,
+                          weil Weihnachtsgeschenke bereits zum Verschenken bereitstehen! 🎁</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <p>Verschneite Latschenkiefer, Eisrose, Achtsamkeitszauber und Wunscherfüllung! 🌟</p>
+                        <img class="float-half" src="assets/Latschenschnee.jpeg">
+                        <img class="float-half right" src="assets/Schneerose.jpeg">
+                        <img class="float-half" src="assets/Winterzauber.jpeg">
+                        <img class="float-half right" src="assets/Elfenmasken.jpeg">
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half-right" src="assets/DIY Winter.jpeg">
+                        <p>Selbstgemachtes für liebe Menschen, die mich das ganze Jahr begleitet haben 🤩</p>
+                        <ul>
+                          <li>Zirbenhydrolat verwandelt schlaflose Nächte in süße Träume</li>
+                          <li>Badesalz macht müde Füße standhafter</li>
+                          <li>Körperbutter für streichelweiche, samtige Haut</li>
+                          <li>Johanniskrautmazerat, wohltuend bei körperliche und seelischen Wehwehchen 🤕</li>
+                          <li>Raumspray, versprüht weihnachtliche Atmosphäre 🎄</li>
+                        </ul>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half" src="assets/Elfenpunsch.jpeg">
+                        <p>Selbstproduziert wurde aber noch mehr, da die Vorweihnachtszeit so viel anders war, als die Jahre davor.
+                          <br>
+                          <br>Weihnachtsmärkte gibt es keine und so schien ein liebgewonnener Brauch der vergangen
+                          Jahre nicht durchführbar: Elfenpunsch trinken am Grazer Hauptplatz!
+                          <br>
+                          <br>"Aus der Not wurde Tugend" 💡 und so wurden Gewürze gebrüht, Eierlikör selbst
+                          hergestellt, verrührt, verziert und schließlich bei erstem Schneefall verkostet! 😋</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+        <!-- HERBST 2020-->
+        <v-dialog
+          class="diary"
+          data-titelbild="assets/neue-destille.jpg"
+          v-model="diary_herbst2020"
+          fullscreen
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('zeitqualitaet')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Herbst 2020</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/neue-destille.jpg"></div>
+                        <p>HERBST 2020 🍂 ...wenn die Ernte für so manches von statten geht und der Spätsommer ins Land zieht, beginnt eine meiner Lieblingszeiten.
+                          Die Hitze ist Großteils vorbei, die Blätter beginnen sich langsam zurückzuziehen und verfärben sich.
+                          <br>Für mich heuer besonders spannend, da ich seit kurzem stolze Besitzerin einer Leonardo Destille bin! 🧡
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <p>Salbei, Schafgarbe, Hamamelis und ein Kieferngewächs 🍃 sind erste Befüllungen.</p>
+                        <img class="float-half" src="assets/salbei-destillieren.jpg">
+                        <img class="float-half right" src="assets/schafgarbe-leonardo.jpg">
+                        <br>
+                        <img class="float-half" src="assets/hamamelis-destillieren.jpg">
+                        <img class="float-half right" src="assets/douglasie-destillieren.jpg">
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half" src="assets/leonardo.gif">
+                        <p>Mit geeignetem Pflanzenmaterial kann ich Destillate herstellen, die im Privatbereich zur Anwendung kommen.
+                          <br>
+                          <br>Die Blüten- und Kräuterwässerchen sind für ihre Sanftheit bekannt, haben aber trotzdem eine starke Wirkung.
+                          Geeignet auch in der Babypflege, für Kinder, Schwangere und ältere Personen.
+                          Einige Ausnahmen sind bei der Anwendung, trotz guter Verträglichkeit, im Einzelfall zu beachten.
+                          <br>
+                          <br>Ich verwende sie gerne für Parfum und Raumsprays, pur als Tonik oder als Wasserphase bei selbstgerührten Cremen.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <img class="float-half" src="assets/fertig-destilliert.jpg">
+                        <p>Diese Pflanzenwässerchen werden nach einer Zeit der Reifung, in kleine Chargen abgefüllt.
+                          Der geringe Anteil an gewonnenem ätherischem Öl (im Bild in der vordersten Flasche
+                          erkennbar 🤓) darf als leichte Konservierung bleiben.
+                          Eine Ausnahme ist die Zaubernuss, auch bekannt als Hamamelis. Aus ihr kann ausschließlich ein Hydrolat gewonnen werden.
+                          <br>
+                          <br>Nicht alle Hydrolate ähneln dem Duft der Pflanze die destilliert wurde.
+                          Mein Hauptaugenmerk liegt bei den Anwendungsmöglichkeiten deshalb auch bei der Wirkung.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GUTSCHEINBESTELLUNG -->
         <v-dialog
           v-model="gutschein_dialog"
           scrollable
@@ -2113,6 +2209,7 @@
     </script>
     <script>
     const karlklammer = '@';
+
     const menu = document.querySelectorAll('v-navigation-drawer v-list-item-content');
     const menuItems = [];
     menu.forEach(function (item) {
@@ -2123,6 +2220,18 @@
         leistungen: leistung ? Number(leistung) : 0
       });
       });
+
+    const diary = document.querySelectorAll('v-dialog[class="diary"]');
+    const diaryItems = [];
+    diary.forEach(function (item) {
+      diaryItems.push({
+        dialog: item.getAttribute('v-model'),
+        titel: item.querySelector('v-toolbar-title').innerText,
+        titelbild: item.getAttribute('data-titelbild'),
+      });
+    });
+    console.log(diaryItems);
+
     const app = new Vue({
       el: '#app',
       vuetify: new Vuetify(),
@@ -2131,6 +2240,11 @@
       },
       data() {
         return {
+          diaryItems: diaryItems,
+          ...diaryItems.reduce((acc, item) => {
+            acc[item.dialog] = false;
+            return acc;
+          }, {}),
           valid: true,
           validgutschein: true,
           name: '',
@@ -2139,8 +2253,6 @@
           agreement: false,
           leistungenCount: 7,
           leistungen: 6,
-          zeitenCount: 6,
-          zeiten: 5,
           menuItems: menuItems,
           images: [
             { title: 'Citrus aurantium flos.', description: 'Neroli', href: 'assets/lightbox/Neroli.jpeg', shop: 'https://shop.feeling.at/products/nerolioel-in-jojoba-citrus-aurantium-flos#375' },
@@ -2172,7 +2284,8 @@
           gutschein_ename: '',
           gutschein_eadresse: '',
           gutschein_amount: 50,
-          gutschein_widmung: ''
+          gutschein_widmung: '',
+          diary_winter2021: false
         }
       },
       mounted() {
@@ -2181,22 +2294,27 @@
         }
       },
       methods: {
+        openDiaryItem(dialog) {
+          this[dialog] = true;
+        },
+        closeDialog(hash) {
+          for (const key in app) {
+            if ((key.endsWith('_dialog') || key.startsWith('diary_')) && app[key]) {
+              app[key] = false;
+              break;
+            }
+          }
+          if (hash) {
+            window.location.hash = hash;
+          }
+        },
         goto(target) {
           if (this[target.substr(1)] !== undefined) {
             this[target.substr(1)] = true;
+            window.location.hash = target;
           } else {
             this.$vuetify.goTo(target);
           }
-        },
-        nextZeiten() {
-          this.zeiten = this.zeiten + 1 === this.zeitenCount
-            ? 0
-            : this.zeiten + 1
-        },
-        prevZeiten() {
-          this.zeiten = this.zeiten - 1 < 0
-            ? this.zeitenCount - 1
-            : this.zeiten - 1
         },
         nextLeistungen() {
           this.leistungen = this.leistungen + 1 === this.leistungenCount
@@ -2233,16 +2351,10 @@
       }
     });
     window.addEventListener('popstate', function(e) {
+      app.closeDialog()
       const target = window.location.hash;
-      if (target && target.endsWith('_dialog')) {
+      if (target && target.endsWith('_dialog') || target.startsWith('#diary_')) {
         app.goto(target);
-      } else {
-        for (const key in app) {
-          if (key.endsWith('_dialog')) {
-            app[key] = false;
-            break;
-          }
-        }
       }
     });
     </script>

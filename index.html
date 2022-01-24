@@ -874,7 +874,7 @@
                   <gallery :images="images" :index="index" @close="index = null"></gallery>
                   <v-container grid-list-xl>
                     <v-layout row wrap align-center>
-                      <v-flex xs15 md3 v-for="image, imageIndex in images" :key="image.href">
+                      <v-flex xs12 md3 v-for="image, imageIndex in images" :key="image.href">
                         <v-card flat>
                           <v-card-text class="text-center image" @click="index = imageIndex"
                             :style="{ backgroundImage: 'url(' + image.href + ')' }" :title="image.title"

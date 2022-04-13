@@ -1289,8 +1289,8 @@
                       <div class="headline">Stornobedingungen</div>
                     </v-card-title>
                     <v-card-text>
-                      Ich ersuche um Verständnis, dass bei Nichterscheinen zu einem gebuchten Termin, 
-                      der Gesamtbetrag einer gebuchten Leistung in Rechnung gestellt wird!
+                      Ich ersuche um Verständnis, dass bei Nichterscheinen zu einem gebuchten Termin 
+                      die versäumte Leistung in Rechnung gestellt wird!
                     </v-card-text>
                     <v-card-text>
                       <div class="text-center">
@@ -2760,7 +2760,7 @@
           this.$refs.anfrage.reset();
         },
         submitBestellung() {
-         const data = `?rname=${encodeURIComponent(this.gutschein_rname)}&email=${encodeURIComponent(this.gutschein_email)}&radresse=${encodeURIComponent(this.gutschein_radresse)}&ename=${encodeURIComponent(this.gutschein_ename)}&eadresse=${encodeURIComponent(this.gutschein_eadresse)}&amount=${encodeURIComponent(this.gutschein_amount)}&widmung=${encodeURIComponent(this.gutschein_widmung)}`;
+         const data = `?rnamei=${encodeURIComponent(this.gutschein_rname)}&email=${encodeURIComponent(this.gutschein_email)}&radresse=${encodeURIComponent(this.gutschein_radresse)}&ename=${encodeURIComponent(this.gutschein_ename)}&eadresse=${encodeURIComponent(this.gutschein_eadresse)}&amount=${encodeURIComponent(this.gutschein_amount)}&widmung=${encodeURIComponent(this.gutschein_widmung)}`;
           const script = document.createElement('script');
           script.async = true;
           script.src = 'https://script.google.com/macros/s/AKfycbwWaPcOI3vaSpX_tIWx8CuW_26_Hce-Py1M6GfeE-MfWOqMcb94qn3a4yihm_Rw2Es/exec' + data;

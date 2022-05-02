@@ -281,13 +281,11 @@
                           <a @click="leistungen=6">Gutscheine</a>
                           <br>
                           Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich, Wickel & Auflagen in meiner Praxis anzulegen.
-                          <br>
-                            
+                          <br>  
                           <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
                             <a @click="leistungen=6">Aktion Zeitqualität "Maienfeste", bis einschließlich 20. Juni 2022: 
                               Gutscheine - Sparen Sie minus 10% beim Erwerb!</a>
                           </v-card-title>
-                          
                         </v-card-text>
                       </v-card>
                     </v-flex>
@@ -1209,8 +1207,9 @@
               <v-flex xs12 sm4 class="my-4">
                 <div class="text-center">
                   <h2 class="headline">Galerie</h2>
-                  <span class="subheading">  
-                    Bilder einiger Pflanzen, deren Düfte und Wirkungen ich verwende</span>
+                  <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">„Bilder einiger Pflanzen, 
+                    deren Düfte und Wirkungen ich verwende“</v-card-title>
+                  
                   <gallery :images="images" :index="index" @close="index = null"></gallery>
                   <v-container grid-list-xl>
                     <v-layout row wrap align-center>

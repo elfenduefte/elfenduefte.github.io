@@ -1165,10 +1165,10 @@
               <v-flex xs12>
                 <v-container grid-list-xl>
                   <v-layout row wrap align-center>
-                    <v-flex xs12 md4 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
+                    <v-flex xs12 md3 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
                       <v-card flat @click="goto('#' + diaryItem.dialog)">
                         <v-img :src="diaryItem.titelbild"></v-img>
-                        <v-card-title class="justify-center">{{diaryItem.titel}}</v-card-title>
+                        <v-card-title class="justify-center small">{{diaryItem.titel}}</v-card-title>
                       </v-card>
                     </v-flex>
                   </v-layout>

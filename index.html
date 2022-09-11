@@ -3228,7 +3228,7 @@
                 <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
                   <label slot="label">
                     Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a>
-                    und die <a href="assets/Widerrufsrecht.pdf" target="_blank">Widerrufsbelehrung</a> gelesen und erkenne diese an.
+                    und die <a @click.stop href="assets/Widerrufsrecht .pdf" target="_blank">Widerrufsbelehrung</a> gelesen und erkenne diese an.
                   </label>
                 </v-checkbox>
                 <v-btn @click="submitBestellung" :disabled="!validgutschein" depressed>Zahlungspflichtig bestellen</v-btn>

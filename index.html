@@ -288,9 +288,9 @@
                           Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich, Wickel, Auflagen & Kompressen in meiner Praxis anzulegen.
                           <br>  
                           <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                            <a @click="leistungen=0">Aktion zur Zeitqualität "Hoch- Spätsommer", bis einschließlich 22. September 2022: 
-                              Aromafachberatung um 72 €, 
-                              <br>für Kids bis einschließlich 16 Jahre um 50 €
+                            <a @click="leistungen=1">Aktion zur Zeitqualität "Tag- und Nachtgleiche Herbst", bis einschließlich 31. Oktober 2022: 
+                              Wickel, Auflagen & Kompressen 
+                              <br>um 54 € genießen
                             </a>
                           </v-card-title>
                         </v-card-text>
@@ -423,9 +423,16 @@
                                 <b>Wickel, Auflagen & Kompressen</b> an. Die Erstanwendung findet in der Praxis statt. 
                                 <br>Anschließend erhalten Sie Tipps, damit eine regelmäßige Anwendung auch bei Ihnen zu Hause durchführbar ist.
                                 <br>
+                                Passende hilfreiche Utensilien kommen bei mir in der Praxis zum Einsatz.
                                 <br>
-                                In einem Vorgespräch können sie eine <b>Mischung aus Pflanzenölen & ätherischen Ölen</b> wählen, die gerade zu Ihren Bedürfnissen passt.
+                                <br>
+                                In einem Vorgespräch können sie für die jeweilige Körperanwendung eine <b>Mischung aus 
+                                  Pflanzenölen & ätherischen Ölen</b> wählen, die gerade zu Ihren Bedürfnissen passt.
                                 Diese wird anschließend auf die entsprechenden Hautareale aufgetragen.
+                                <br>
+                                <br>Zur gegönnten Wohlfühlzeit soll eine Nachruhezeit von mindestens 10 Minuten eingeplant werden, 
+                                um die Anwendung nachwirken lassen zu können
+                                <br>
                               </p>
                             </v-card-text>
                           </v-card>
@@ -460,9 +467,6 @@
                                     </tr>
                                     <tr>
                                       <td colspan="2">
-                                        <br>Zur gegönnten Wohlfühlzeit soll eine Nachruhezeit von mindestens 10 Minuten eingeplant werden, 
-                                        um die Anwendung nachwirken lassen zu können
-                                        <br>
                                         <br>
                                         <b>Anmerkung:</b> Die Durchführung einer Körperanwendung erfolgt ausschließlich auf intakter, gesunder Haut!
                                       </td>
@@ -470,6 +474,11 @@
                                   </tbody>
                                 </template>
                               </v-simple-table>
+                              <br>
+                              <div class="text-center">
+                                <img class="max300"
+                                  src="assets/Le 2a.jpeg" alt="Wickel Auflagen Kompressen">
+                              </div>
                             </v-card-text>
                           </v-card>
                         </v-flex>
@@ -746,7 +755,7 @@
                               <br>
                               <div class="text-center">
                                 <img class="max300"
-                                  src="assets/DA2.jpeg" alt="Hochzeit">
+                                  src="assets/Le 5a.jpeg" alt="Hochzeit">
                               </div>
                             </v-card-text>
                           </v-card>
@@ -1776,7 +1785,336 @@
             </v-card-text>
           </v-card>
         </v-bottom-sheet>
-
+        <!-- SEPTEMBER 2022 -->
+        <v-dialog
+          class="diary"
+          data-titelbild="assets/Tn 2022 1.jpeg"
+          v-model="diary_tagnachtgleiche2022"
+          fullscreen
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('zeitqualitaet')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Tag- und Nachtgleiche Herbst 2022</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">„„🎶Jo, i bin mit ‘n  🚲  do 🎶““</v-card-title>
+                      <v-card-text>
+                        <p>
+                          Vor einem Jahr bin ich <b>aufs Rad umzusteigen</b>
+                          , um zu meinem <b>Brotjob</b> (Angestelltenverhältnis) zu kommen. 
+                          <br>Das erspart mir so manchen Stress, den die Autofahrt vor allem in der Stadt mit sich bringt und 
+                          steigende Spritpreise lassen mich kalt – <b>über 3000 km Benzin gespart 🤑</b>
+                          <br>Außerdem macht es mein Köpfchen so schön frei und nach ein paar Minuten am Rad beginnen 
+                          die Inspirationen zu fließen, die ich für meinen <b>Brötchenjob</b> (💜-ensarbeit) sinnvoll einsetzen kann.
+                        </p> 
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Tn 2022 2.jpeg" alt="Rad"></v-img>
+                            <small>Mit Stella erlebe ich ...</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Tn 2022 3.jpeg" alt="Nachtdienst"></v-img>
+                            <small>...Islandfeeling nach einem Nachtdienst ...</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Tn 2022 4.jpeg" alt="Sturmschäden"></v-img>
+                            <small>...überwinde Hürden von Sturmschäden und ...</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Tn 2022 5.jpeg" alt="Radfahrgebote"></v-img>
+                            <small>...durchforste Schilderwälder!</small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                      <v-card-text>
+                        <p>
+                          Besonders liebe ich bei dieser Tätigkeit die Düfte von frischer Natur am Morgen, 
+                          den Geruch des Bachufers oder Duft Impulse von Iris, Vetiver, Sandelholz & Co, 
+                          die eigentlich gar nicht hier wachsen und dennoch da sind! 🙃
+                          <br>
+                          <br>
+                          Auch <b>gedankliche Wortspenden</b> für Zeilen wie diese, trudeln bei Begegnungen mit 
+                          Reh, 🐇, 🐌 sowie den zahlreichen Pflanzen ein. Wildrosen, Schafgarben oder 
+                          Mädesüß beglücken mich dabei mit deren Duft und Aussehen. 
+                        </p>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        „Eine Pflanze im Wandel ihrer Zeit “</v-card-title>
+                      <v-card-text>
+                        <p>Unter den verschiedenen Pflanzen, die mir begegneten, fiel mir eine besonders auf - 
+                          <b>die wilde Karotte</b>. Ich beobachtete sie das ganze Jahr und konnte ihr beim Wachsen und ihrer Verwandlung zusehen.
+                          <br>Sie zeigt sich sehr facettenreich in ihrem Blüten- und Pflanzenleben - ich mag diese Pflanze 💚 
+                          <br>
+                          <br>
+                        </p>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Tn 2022 6.jpeg" alt="Wachstum"></v-img>
+                            <small>Blüte im Wachstum</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Tn 2022 7.jpeg" alt="Sommerwiesenvielfalt"></v-img>
+                            <small>Sommerwiesenvielfalt</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Tn 2022 8.jpeg" alt="Schmetterling"></v-img>
+                            <small>gut besucht von Insekten</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Tn 2022 9.jpeg" alt="Scheinblüte"></v-img>
+                            <small>Scheinblüte im Bütenzentrum!</small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                    </v-card>
+                    <v-card-text>
+                      <p>
+                        Erste Erfahrungen mit diesem speziellen Duft sammelte ich im Rahmen eines Seminars vor vielen Jahren, 
+                        wo es u.a. um <b>Wickel und Auflagen</b>
+                        ging. Genauer gesagt, die besonders wertvolle Anwendung bei einem <b>Leberwickel</b>.
+                        <br>
+                        <br>Irgendwann traf ich sie auch in der Natur und seither zieht sie mich in ihrem Bann.
+                        <br>
+                        <br>
+                        Viele kennen sie von <b>Weg- und Straßenrändern,</b>  an denen sie oft zu sehen ist.
+                        Zwischen den vielen Doldenblütlern fällt sie meist erst auf, wenn die Tage langsam kürzer werden. 
+                        Denn spätestens dann erblickt man eine <b>Verwandlung</b>, die charakteristisch für diese Pflanze ist: 
+                        <b>sie bildet ein Nestchen.</b> 
+                        Unzählige <b>Tierchen</b>
+                        krabbeln hinein und <b>finden darin Schutz.</b> 
+                        <br>
+                        <br>💡 Zu bedenken wäre: Zum Sammeln sollte man abgelegenere Gegenden aufsuchen und kein 
+                        Pflanzenmaterial von befahrenen Straßen nehmen!
+                        <br>
+                        <br>
+                        Die <b>Heilwirkung</b>
+                        auf <b>Leber und Verdauungsapparat</b> ist schon sehr lange bekannt. 
+                        Unsere Vorfahren nutzen sie aber auch als <b>Aphrodisiakum.</b> 😏
+                        <br>
+                        <br>Die wilde Karotte ist mit all ihren Teilen essbar. Samen können gemörsert über Speisen gestreut werden, 
+                        oder es die Wurzel verwendet. Diese verholzt aber recht rasch, sobald sich im zweiten Jahr die Blüten ausbilden.
+                        <br>
+                        <br>Es gäbe noch so viel zu erzählen. Meine großartige Referentin bei der Duftkommunikationsausbildung, 
+                        Christine Lamontain, scheint auch eine Liebe zu dieser Pflanze entwickelt zu haben und beschreibt 
+                        diese in zahlreichen Blogs auf Ihrer Webseite <a href="https://www.christinelamontain.de">
+                          www.christinelamontain.de</a>
+                        - es lohnt sich da mal vorbeizuschauen! 💜<br>
+                        <br>
+                      </p>
+                      <v-row align="start">
+                        <v-col cols="12" sm="3">
+                          <v-img
+                            src="assets/Tn 2022 10.jpeg" alt="Karottensamenwurzel"></v-img>
+                          <small>Die Wurzel...</small>
+                        </v-col>
+                        <v-col cols="12" sm="3">
+                          <v-img
+                            src="assets/Tn 2022 11.jpeg" alt="Neroliblüte"></v-img>
+                          <small>...das frische Nestchen...</small>
+                        </v-col>
+                        <v-col cols="12" sm="3">
+                          <v-img
+                            src="assets/Tn 2022 12.jpeg" alt="Neroliblüte"></v-img>
+                          <small>...das trockenen Nestchen...</small>
+                        </v-col>
+                        <v-col cols="12" sm="3">
+                          <v-img
+                            src="assets/Tn 2022 13.jpeg" alt="Neroliblüte"></v-img>
+                          <small>...bereit zum Destillieren!</small>
+                        </v-col>
+                      </v-row>
+                    </v-card-text>
+                    <v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Meine Zeitqualität Pflanze: Die wilde Karotte - <i>Daucus carota L.</i>
+                      </v-card-title>
+                      🌿 <b>Pflanzenportrait</b>
+                      <ul>
+                        <li>
+                          Sie zählt zu den Doldengewächsen – <i>Apiaceae (früher Umbelliferae)</i>
+                        </li>
+                        <li>
+                          die <b>„wilde Möhre“</b>, wie sie auch genannt wird, ist ein „Vorfahre“ unserer heute bekannten 
+                          schmackhafteren Karotte</li> 
+                        <li>
+                          sie ist eine <b>zweijährige Pflanze</b>
+                          und bildet eine lange bleiche <b>Pfahlwurzel</b> aus
+                        </li>
+                        <li>
+                          <b>vorzufinden</b> ist sie in ganz Europa, aber auch in anderen Kontinenten
+                        </li> 
+                        <li>
+                          wächst auf <b>magere, durchlässige, schlottrige</b> Böden
+                        </li> 
+                        <li>
+                          die <b>unterschiedlichen Formen der Blütenköpfe</b> reichen von klein bis groß, flach oder nach außen 
+                          gedreht, ähnlich einem Schirmchen</li>  
+                        <li>ab Mai öffnen sich die ersten Blütenstände</li>  
+                        <li>
+                          meist befindet sich im Zentrum eine sogenannte <b>farbige Scheinblüte</b>, inmitten der unzähligen 
+                          weißen Blüten, um Insekten anzulocken</li>  
+                        <li>
+                          bei einer Ansammlung von vielen Pflanzen, sind <b>gleichzeitig verschiedenen Entwicklungsstadien</b> 
+                          zu entdecken. Von frisch aufblühenden Blütenköpfe bis hin zu den abgedorrten Dolden mit den 
+                          getrockneten Samen</li>  
+                      </ul>
+                      <br>
+                      Mittels <b>Wasserdampfdestillation</b> entsteht aus den Samen ein 
+                      <a href="https://shop.feeling.at/products/karottensamenoel-in-jojoba-daucus-carota#375">ätherisches Öl</a> 
+                      und das wunderbare Hydrolat, welches selten im Handel zu finden ist.  
+                      Ein Fettes Öl aus Karottensamen gibt es im speziellen nicht, es lässt sich aber mit geschabten Karotten, 
+                      wie wir sie kennen, ein Mazerat herstellen.
+                      <br>
+                      <br>
+                      <ul>
+                        <li>Erste gesetzlich bekundete Einführung in den Handel im Jahre 1540 bis 1589 als „Möhrensamenöl“</li> 
+                        <li>Für 1 kg ätherisches Öl benötigt man 60-100 kg Samen</li>
+                        <li>Da es ein sehr duftintensives Öl ist, wird es (Firmenabhängig) in verdünnter Form (Jojoba) angeboten</li>
+                        <li>
+                          ich mag diesen <b>eigenwillig erdigen Duft</b>...
+                        </li>
+                        <li>... und doch stößt dieser, trotz der so wunderbaren Eigenschaften des ätherischen Öles, bei vielen Ablehnung</li>
+                        <li>
+                          <b>Duftimpulse</b>
+                          eignen sich ausgezeichnet für <b>Duftreisen</b>, verbinden für mich das obere und 
+                          untere Chakra miteinander, erden und lassen Ruhe einkehren</li>
+                        <li>theoretisch würde ich es, aufgrund der Gewinnung aus Samen, meiner oberen Körperhälfte 
+                          zuordnen und doch fühlt sich meine Körpermitte abwärts angesprochen - im Gegensatz dazu, 
+                          empfinde ich das Angelikawurzelöl genau umgekehrt</li>
+                        <li>
+                          dass <b>im Samen gespeicherte Licht</b> durchflutet von oben nach unten und vermittelt Geborgenheit
+                        </li>
+                        <li>
+                          weiters ist dieses Öl <b>sehr hautpflegend</b>, weshalb ich es auch für meine Hautprodukte verwende
+                        </li>
+                        <li>
+                          es unterstützt in seiner biochemischen Zusammensetzung die <b>Regeneration der Hautzellen</b> und 
+                          darf bei Leberwickel stets in die Mischungen mitkommen - eine wahre Wohltat für diese Region</li>
+                        <br>
+                        <li>
+                          im <b>Duftprofil</b> krautig schwer, tief, würzig-warm mit einer Spur von süßer Karotte, 
+                          welches sich wunderbar mit Blüten- und Zitrusölen vermischen lässt</li>
+                        <li>
+                          umschmeichelt in Mischungen mit Rose</li>
+                        <br>
+                      </ul>
+                      Das <b>Hydrolat</b> duftet auch nach Karotte. Besonders intensiv, 
+                      wenn man ihm Zeit gibt zu reifen - das Destillat aus dem Vorjahr ist in dieser Phase angekommen. 
+                      Da es sehr selten im Handel angeboten wird, schätze ich meines besonders! 🥰
+                      <ul>
+                        <li>erfrischend und gleichzeitig einhüllend als Tonikum pur ins Gesicht</li>
+                        <li>vor dem Auftragen einer Salbe angewendet, lässt sich wunderbar im Gesicht verteilen und zieht diese anschließend rascher ein</li>
+                        <li>aber auch ein erfrischender Sprühstoß zwischendurch, vermittelt mir Klarheit und Sicherheit</li>
+                      </ul>
+                      <br>💡 Zu beachten wäre: Bevor man das Destilliergerät befüllt, sollten Einwohner / Bewohner von Pflanzen 
+                      genug Möglichkeit haben, ihre Bleibe zu wechseln! Deshalb lege ich Pflanzengut für eine gewisse Zeit 
+                      auf ein Blech, bzw. schüttle dieses vorsichtig durch!
+                      <br>
+                      <br>
+                      Gemörserte Karottensamen verhelfen mit bei <b>Räuchermischungen</b> zu einer gewissen Tiefgründigkeit. 
+                      <br>
+                      <br>
+                      Ein passendes Öl, wenn es um <b>Wickel, Auflagen & Kompressen</b>
+                      geht, ist ein fettes Öl, welches mittels <b>Kaltpressung</b>
+                      aus den <b>Samen</b> gewonnen wird:
+                      <br>
+                    </v-card-text>
+                    <v-card flat class="transparent">
+                      <div align="center">
+                        <v-img max-width="600" src="assets/Tn 2022 15.jpeg" alt="Sesam Sesamöl"></v-img>
+                        <small>Sesam, Sesamöl</small>
+                      </div>
+                    </v-card>
+                    <v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Meine Zeitqualität Pflanze: Der Sesam – <i>Sesamum indicum L.</i>
+                      </v-card-title>
+                      🌿 <b>Pflanzenportrait</b>
+                      <ul>
+                        <li>
+                          <b>Pflanzenfamilie:</b>
+                          Sesamgewächs – <i>Pedaliaceae</i>
+                        </li>
+                        <li>
+                          <b>Einjährige Pflanze</b>, die tief verwurzelt ist, sodass längere Trockenphasen gut überstanden 
+                          werden können</li>
+                        <li>
+                          <b>Vorkommen</b>: Tropisches-, Subtropisches Klima ist für die Kulturpflanze am geeignetsten
+                        </li>
+                        <li>
+                          Angeblich war es eine Grabbeigaben bei Tutenchamun. Das würde von einer <b>Jahrtausende alten 
+                            Bekanntheit</b> dieser Pflanze als Lebensmittel zeugen</li>
+                        <li>im Ayurveda als „Reinigungs- und Heilungsöl“ verwendet</li>
+                        <li>verfügt über einen natürlichen Sonnenschutzfaktor von 3-4</li>
+                      </ul>
+                      <br>
+                      Ich <b>verwende</b> das 
+                      <a href="https://shop.feeling.at/products/sesamoel-nativ-bio-sesamum-indicum#375">Sesamöl</a>
+                      <ul>
+                        <li>
+                          aufgrund dem <b>hohen Anteil an ungesättigte Fettsäuren</b>. Besonders das geröstete Öl ist sehr schmackhaft für die 
+                          Zubereitung von kalten und warmen Speisen. Es duftet intensiv und harmoniert mit gedünstetem Gemüse aus dem Wok
+                        </li>
+                        <li>
+                          zur Verdünnung vom ätherischen Öl bei <b>Leberwickel</b> 
+                        </li>
+                        <li>
+                          bei vielen <b>Körperanwendungen</b>, da es besonders gut in die Haut eindringt
+                        </li>
+                        <li>
+                          zum <b>Ölziehen</b> am Morgen oder
+                        </li>
+                        <li>
+                          als <b>Mundöl</b> besonders bei entzündetem Zahnfleisch hervorragend geeignet
+                        </li>
+                      </ul>
+                      <br>
+                      Eine weitere Anwendung im Ayurveda ist der sogenannte Öl Guss: So einen durfte ich bereits erleben. 
+                      Dabei werden auch die Haare mitbehandelt und so kann es passieren, dass man nach so einer Einheit beim 
+                      Einkauf danach, schief angeschaut wird! 🙃 Ich war aber so tiefenentspannt, dass mich diese 
+                      Blicke keineswegs aus dieser Ruhe brachten! 😌 
+                      <br>
+                      <br>💡 Zu beachten wäre: Damit man die Zeit der Anwendung voll auskosten kann, sind beim ersten 
+                      Anlegen von Wickel, Auflagen & Kompressen Vorbereitungen nötig, um einen reibungslosen Ablauf zu 
+                      gewährleisten. Sich vorab über die zahlreichen Handgriffe Gedanken zu machen, macht durchaus Sinn! 
+                      Außerdem gibt es praktische Hilfsmittel (Tücher, Heilwolle, Kissen) aus Baumwolle und Leinen, die 
+                      diesen Vorgang wesentlich erleichtern. Gerne berate ich Sie zu anwendbaren Utensilien in meiner Praxis!                                           
+                      <br>
+                      <br>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Aktion zur Zeitqualität "Tag- und Nachtgleiche Herbst" bis einschließlich 31. Oktober 2022:
+                      </v-card-title>
+                      Das ganze Jahr über bieten sich 
+                      <a href="#leistungen" @click="closeDialog('zeitqualitaet'); leistungen=1">"Wickel, Auflagen & Kompressen"</a>
+                      zur Gesundheitsvorsorge an. 
+                      Im Frühjahr, im Rahmen einer Entschlackungskur oder eben auch im Herbst, um den Bereich der Leber 
+                      von so manchem Sommerspritzer zu entlasten und der Haut eine extra Portion Pflege zukommen zu lassen! 🥂🍻
+                      Deshalb biete ich, passend zu den Zeitqualitätspflanzen, gerade jetzt diese Leistung zum Aktionspreis an.
+                      <br>Ich freue mich auf Ihre Anfrage!
+                    </v-card-text>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>  
+          </v-card>
+        </v-dialog> 
         <!-- AUGUST 2022 -->
         <v-dialog
           class="diary"
@@ -1833,7 +2171,6 @@
                           <small>Lernfit</small>
                         </div>
                       </v-card-text>
-                    
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
                         „Was Hänschen nicht lernt, lernt Hans nimmer mehr“</v-card-title>
                       <v-card-text>
@@ -1931,10 +2268,9 @@
                           entkrampfend in Bauchstreichelmischungen im Bereich des <b>Sacralchakras</b>aufgetragen oder 
                           als liebliche Note in einem Parfum</li>
                         <br>
-                        <li>
-                          Das <b>Hydrolat</b> setze ich als erfrischendes Gesichtswasser und in diversen Sprays/Parfums als Grundlage ein
-                        </li>
                       </ul>
+                      Das <b>Hydrolat</b> setze ich als erfrischendes Gesichtswasser und in diversen Sprays/Parfums als Grundlage ein
+                      <br>
                       <br>💡 Zu bedenken wäre: Die entspannteste Mischung/Einzelduft führt zu keinem zufriedenstellenden 
                       Ergebnis, wenn <b>Duftvorlieben</b> nicht beachtet werden!
                       <br>💡 Zu bedenken wäre weiters: Seinen Biorhythmus zu kennen und welcher Lerntyp man ist, 
@@ -1972,7 +2308,7 @@
                         <li>Benötigen viel Wasser beim Heranwachsen</li>
                       </ul>
                       <br>
-                      Vorwiegend ist das <a href="https://shop.feeling.at/products/hanfsamenoel-us-am-laendle?_pos=2&_sid=ea9f64bc8&_ss=r">
+                      Vorwiegend ist das <a href="https://shop.feeling.at/products/hanfsamenoel-us-am-laendle#375'">
                         fettes Pflanzenöl</a> anzufinden - selten ein ätherisches Öl, welches aus Blättern destilliert wird.
                       <br>
                       <br>

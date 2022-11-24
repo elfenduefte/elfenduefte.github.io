@@ -269,8 +269,7 @@
                         <v-card-title primary-title class="layout justify-center">
                           <div class="headline text-center">Leistungen</div>
                         </v-card-title>
-                        <v-card-text class="text-center">
-                          
+                        <v-card-text class="text-center">  
                           Als <b>Humanenergetikerin</b>
                           biete ich <a @click="leistungen=0">Aromafachberatung</a> sowie
                           <a @click="leistungen=1">Körperanwendungen</a> an.
@@ -285,11 +284,12 @@
                           <a @click="leistungen=5">Elfendüfte-Coaching</a> sowie
                           <a @click="leistungen=6">Gutscheine</a>
                           <br>
-                          Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich, Wickel, Auflagen & Kompressen in meiner Praxis anzulegen.
+                          Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich, 
+                          <a @click="leistungen=1">Wickel, Auflagen & Kompressen</a> in meiner Praxis anzulegen.
                           <br>  
                           <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
                             <a @click="leistungen=6">
-                              Aktion zur Zeitqualität "Ahnenfest", bis einschließlich 31. Dezember 2022: Gutscheine plus 10% zum gewählten Betrag
+                              Aktion zur Zeitqualität "Ahnenfest", bis einschließlich 21. Dezember 2022: Gutscheine plus 10% zum gewählten Betrag
                             </a>
                           </v-card-title>
                         </v-card-text>
@@ -1211,11 +1211,11 @@
                         </v-card-title>
                         <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
                           <div class="text-center">Texte beinhalten Tätigkeiten, die ich im Zusammenhang mit meiner 💜ensarbeit, 
-                            all meinen Sinnen, Fotografien und erlebten Kurzgeschichten, im Rhythmus der Jahreszeit ausführe und niederschreibe ✍🏻
-                            <br>Inhalte durch anklicken der Bilder aufrufbar!
+                            all meinen Sinnen, erlebten Kurzgeschichten und meine Leidenschaft zu fotografieren, 
+                            im Rhythmus der Jahreszeit ausführe!
+                            <br>Inhalte durch anklicken aufrufbar!
                           </div>
-                        </v-card-title>
-                        
+                        </v-card-title> 
                       </v-card>
                     </v-flex>
                   </v-layout>
@@ -1224,10 +1224,16 @@
               <v-flex xs12>
                 <v-container grid-list-xl>
                   <v-layout row wrap align-center>
-                    <v-flex xs12 md3 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
+                    <v-flex xs12 md4 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
                       <v-card flat @click="goto('#' + diaryItem.dialog)">
-                        <v-img :src="diaryItem.titelbild"></v-img>
-                        <v-card-title class="justify-center small">{{diaryItem.titel}}</v-card-title>
+                        <v-card-text>
+                          <div style="line-height: 0.8rem" class="small float-half">
+                            <img style="width: 100%"
+                              :src="diaryItem.titelbild"></div>
+                          <div class="diary-thumb-title" v-html="diaryItem.titel"></div> 
+                          <hr>
+                          <div v-html="diaryItem.summary"></div>
+                        </v-card-text>
                       </v-card>
                     </v-flex>
                   </v-layout>
@@ -1816,6 +1822,11 @@
               <v-toolbar-title>Ahnenfest 2022</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                <b>Gedanken zum Loslassen - Die Iris - Der Holunder - Der Sanddorn</b>
+                ⚜️ Der Herbst zieht durchs Land, die Baumkleider haben ihre Farbe gewechselt.
+                Eine goldenen Zeitqualität, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md12>
@@ -1910,7 +1921,7 @@
                           </v-col>
                           <v-col cols="12" sm="3">
                             <v-img
-                              src="assets/Ah 2022 8.jpeg" alt="Farmacia di Santa Maria Novella"></v-img>
+                              src="assets/AH 2022 8.jpeg" alt="Farmacia di Santa Maria Novella"></v-img>
                             <small>...in der ältesten Apotheke der Welt, ...</small>
                           </v-col>
                           <v-col cols="12" sm="3">
@@ -2302,9 +2313,14 @@
               <v-btn icon @click="closeDialog('zeitqualitaet')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
-              <v-toolbar-title>Tag- und Nachtgleiche Herbst 2022</v-toolbar-title>
+              <v-toolbar-title>Tag- Nachtgleiche 2022</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                <b>Alltagsgeschichten vom Radl´n - Der Karottensamen - Der Sesam</b>
+                🚲 Vor einem Jahr bin ich aufs Rad umzusteigen,
+                um ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md12>
@@ -2625,7 +2641,7 @@
         <!-- AUGUST 2022 -->
         <v-dialog
           class="diary"
-          data-titelbild="assets/Ho 2022 1 plus.jpeg"
+          data-titelbild="assets/Ho 2022 1.jpeg"
           v-model="diary_hochsommer2022"
           fullscreen
           transition="dialog-bottom-transition"
@@ -2639,6 +2655,10 @@
               <v-toolbar-title>Hoch- Spätsommer 2022</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                <b>Lernfit - Die Neroliblüte - Der Hanfsamen</b>
+                ☀️ Der Hochsommer zeigt sich mit seinen hohen Temperaturen und doch beginnt bereits dieser Tage der Spätsommer, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md12>
@@ -2720,7 +2740,6 @@
                         Meine Zeitqualität Pflanze: Die Neroliblüte - <i>Citrus aurantium L. ssp aurantium</i>
                       </v-card-title>
                       <v-card-text>
-                        
                         🌿 <b>Pflanzenportrait</b>
                         <ul>
                           <li>
@@ -2899,7 +2918,7 @@
         <!-- SOMMERSONNENWENDE 2022 -->
         <v-dialog
           class="diary"
-          data-titelbild="assets/So 2022 1 plus.jpeg"
+          data-titelbild="assets/So 2022 1.jpeg"
           v-model="diary_sommer2022"
           fullscreen
           transition="dialog-bottom-transition"
@@ -2913,6 +2932,11 @@
               <v-toolbar-title>Sommersonnenwende 2022</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                <b>Island & Die Engelwurz</b>
+                🌋 Ein Höhepunkt im Jahr ist die Sommersonnenwende.
+                Die Tage beginnen sich von nun an wieder zurückzuziehen, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md12>
@@ -3126,7 +3150,7 @@
         <!-- MAIFESTE 2022 -->
         <v-dialog
           class="diary"
-          data-titelbild="assets/Mai 2022 1 plus.jpeg"
+          data-titelbild="assets/Mai 2022 1.jpeg"
           v-model="diary_Maienfeste2022"
           fullscreen
           transition="dialog-bottom-transition"
@@ -3140,6 +3164,10 @@
               <v-toolbar-title>Maienfeste 2022</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                <b>"Als für mich Zitronensaft süß schmeckte und der Rosenstock nach Pfefferminze duftete"</b>
+                🦠 Viele Ursachen können eine Veränderung in der Duftwahrnehmung hervorrufen, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md12>
@@ -3149,8 +3177,8 @@
                       <v-card-text>
                         <p>
                           Viele Ursachen können eine Veränderung in der Duftwahrnehmung hervorrufen.
-                          Sei es eine neurologische oder virale 🦠 Erkrankung, voranschreitendes Alter, traumatische Ereignisse, Nebenwirkungen bestimmter 
-                          Medikamente - die Spannweite ist vielfältig!
+                          Sei es eine neurologische oder virale 🦠 Erkrankung, voranschreitendes Alter, traumatische Ereignisse, 
+                          Nebenwirkungen bestimmter Medikamente - die Spannweite ist vielfältig!
                           <br>Auch die Riechstörung an sich kann sich vielseitig zeigen: 
                           z.B eine komplette Anosmie (Riechverlust) oder eine Parosmie (Fehlwahrnehmung), 
                           um nur einige zu nennen.
@@ -3275,7 +3303,7 @@
         <!-- FRÜHLING 2022 -->
         <v-dialog
           class="diary"
-          data-titelbild="assets/Fr 2022 1 plus.jpeg"
+          data-titelbild="assets/Fr 2022 1.jpeg"
           v-model="diary_fruehling2022"
           fullscreen
           transition="dialog-bottom-transition"
@@ -3286,9 +3314,14 @@
               <v-btn icon @click="closeDialog('zeitqualitaet')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
-              <v-toolbar-title>Tag- und Nachtgleiche Frühling 2022</v-toolbar-title>
+              <v-toolbar-title>Tag- Nachtgleiche 2022</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                <b>"Frühlingsputz für Haus, Körper & Seele"</b>
+                🧹 Die letzten Schneereste sind in den Boden geschmolzen, ein neuer Jahreszyklus von Pflanzen 
+                kann beginnen, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md12>
@@ -3328,7 +3361,7 @@
                       </v-card-text>
                       <v-card-text>
                         Die notwendigen, aber kurzgehaltenen Lüftungsaktionen der vergangenen, kalten Jahreszeit 
-                        wechseln auf Dauerlüften, um frische Frühlingsluft einkehren zu lassen🪟.
+                        wechseln auf Dauerlüften, um frische Frühlingsluft einkehren zu lassen 🪟.
                         <br>Die erste Reinigung in diesem Jahr, hat für mich bereits in der letzten Rauhnacht Anfang Jänner stattgefunden, 
                         wo nochmals alle Ecken in den zu bewohnenden Räumen mit Kräutern und Harzen geklärt wurden. 
                         <br>
@@ -3433,7 +3466,7 @@
         <!-- MARIA LICHTMESS 2022--> 
         <v-dialog
           class="diary"
-          data-titelbild="assets/Ml 2022 1 plus.jpeg" 
+          data-titelbild="assets/Ml 2022 1.jpeg" 
           v-model="diary_MariaLichtmess2022"
           fullscreen
           transition="dialog-bottom-transition"
@@ -3447,6 +3480,10 @@
               <v-toolbar-title>Maria Lichtmess 2022</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                <b>"Der Tag an dem ich mir den Wald ins Zimmer hole"</b>
+                🕯️ Ein besonderer Tag zwischen den „großen Zeitqualitäten“ will sich zeigen, Maria Lichtmess, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md12>
@@ -3539,10 +3576,13 @@
               <v-btn icon @click="closeDialog('zeitqualitaet')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
-              <v-toolbar-title>Winter 2021
-              </v-toolbar-title>
+              <v-toolbar-title>Winter 2021</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                ❄️ Der erste Schnee war heuer früh dran, noch vor Winter beginn fielen die ersten Flocken 
+                Mittlerweile hat sich aber das Wetter wieder den Vorjahren angepasst, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md6>
@@ -3552,7 +3592,7 @@
                           <img style="width: 100%"
                             src="assets/Wi 2021 1.jpeg"></div>
                         <p>
-                          Der erste Schnee war heuer früh dran, noch vor <b>WINTER</b>beginn 2021 ❄️ 
+                          Der erste Schnee war heuer früh dran, noch vor <b>WINTER</b>beginn fielen die ersten Flocken ❄️ 
                           Mittlerweile hat sich aber das Wetter wieder den Vorjahren angepasst, derzeit besteht keine Hoffnung auf weiße Weihnachten - 
                           zumindest nicht in unseren Breitengraden.
                           <br>
@@ -3640,6 +3680,10 @@
               <v-toolbar-title>Herbst 2021</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                🍁 Um den 21. September findet die Tag- und Nachtgleiche statt, der Herbst ist da! Erste bunte Blätter säumen den Weg - 
+                die Natur beginnt sich zurückzuziehen, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md6>
@@ -3649,7 +3693,7 @@
                           <img style="width: 100%"
                             src="assets/He 2021 1.jpeg"></div>
                         <p>
-                          Um den 21. September findet die Tag- und Nachtgleiche statt, der <b>HERBST</b> 2021 ist da! Erste bunte Blätter 🍁 säumen den Weg - 
+                          Um den 21. September findet die Tag- und Nachtgleiche statt, der Herbst ist da! Erste bunte Blätter 🍁 säumen den Weg - 
                           die Natur beginnt sich zurückzuziehen, um sich auf den Winter vorzubereiten.
                           <br>
                           <br>Viele Pflanzen tragen nun Früchte, die nun geerntet werden können. 🍎🍐🍇🍅 Ein Lebenszyklus schließt sich.
@@ -3742,6 +3786,10 @@
               <v-toolbar-title>Sommer 2021</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                🐝 Viele Pflanzen sind jetzt in Hochblüte, viele Traditionen und Brauchtümer schwingen um die Tage
+                zur Sommersonnenwende am 21. Juni. Die zahllosen Sonnenstunden, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md6>
@@ -3751,8 +3799,8 @@
                           <img style="width: 100%"
                             src="assets/So 2021 1.jpeg"></div>
                         <p>
-                          <b>SOMMER</b> 2021 ☀️ Ab dem 21. Juni, zur Sommersonnenwende, werden die Tage langsam wieder kürzer.
-                          Viele Traditionen und Brauchtümer schwingen dieser Tage mit. Viele Pflanzen sind in Hochblüte.
+                          Viele Pflanzen sind jetzt in Hochblüte, viele Traditionen und Brauchtümer schwingen um die Tage
+                          zur Sommersonnenwende am 21. Juni.
                           <br>
                           <br>Die zahlreiche Sonnenstunden begünstigen das Freisetzen von Duftstoffen.
                           Unzählige Bienen 🐝🐝 Hummeln 🐝 Insekten werden dadurch angelockt um Blütenpollen
@@ -3829,6 +3877,10 @@
               <v-toolbar-title>Frühling 2021</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                🌿 Frühlingsduft liegt in der Luft. Die dunkle, träge, gemächliche Zeit
+                liegt hinter uns. Länger werdende Tage stärken unsere Gedanken und Achtsamkeit, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md6>
@@ -3837,7 +3889,7 @@
                         <div style="line-height: 0.8rem" class="small float-half">
                           <img style="width: 100%"
                             src="assets/Fr 2021 1.jpeg"></div>
-                        <p>FRÜHLINGsduft 2021 🌿 liegt in der Luft. Die dunkle, träge, gemächliche Zeit
+                        <p>Frühlingsduft  🌿 liegt in der Luft. Die dunkle, träge, gemächliche Zeit
                           liegt hinter uns. Länger werdende Tage stärken unsere Gedanken und Achtsamkeit.
                           Überall beginnt es zu sprießen, sich zu bewegen. Ein Frühjahrsputz eignet sich nicht nur für die 4 Wände.
                           Auch unserem Körper täte es gut sich einem zu unterziehen, um sich vom Ballast der vergangenen Monate zu befreien.
@@ -3917,6 +3969,11 @@
               <v-toolbar-title>Winter 2020</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                ♨ Ab dem 21. Dezember werden die Tage langsam länger
+                und mit der Thomasnacht beginnt so manche die Rau(h)nacht!
+                <br>Eine Zeit, in der auch ich dieses Brauchtum pflege, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md6>
@@ -3925,8 +3982,8 @@
                         <div style="line-height: 0.8rem" class="small float-half">
                           <img style="width: 100%"
                             src="assets/Wi 2020 1.jpeg"></div>
-                        <p>WINTER 2020 ❄️ ...wenn am 21. Dezember mit der Wintersonnwende die Tage langsam länger
-                          werden und mit der Thomasnacht vielerorts die Rau(h)nächte ♨ beginnen!
+                        <p>Ab dem 21. Dezember werden die Tage langsam länger
+                          und mit der Thomasnacht beginnt so manche die Rau(h)nacht ♨!
                           <br>Eine Zeit, in der auch ich dieses Brauchtum pflege, dabei das vergangene Jahr reflektiere und Neues willkommen heiße.
                           Zum Einsatz kommt, was mir gerade "in die Hände fällt". Räucherwerk aus Bestand und zusammengetragene Kräuter und Harze
                           von meinen Wanderungen in diesem Jahr. 
@@ -3997,6 +4054,11 @@
               <v-toolbar-title>Herbst 2020</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
+              <div class="summary">
+                🍂 Wenn die Ernte für so manches von statten geht und der Spätsommer ins Land zieht, 
+                beginnt eine meiner Lieblingszeiten.
+                Die Hitze ist Großteils vorbei, ...
+              </div>
               <v-container grid-list-xl>
                 <v-layout row wrap>
                   <v-flex xs12 md6>
@@ -4005,7 +4067,8 @@
                         <div style="line-height: 0.8rem" class="small float-half">
                           <img style="width: 100%"
                             src="assets/He 2020 1.jpg"></div>
-                        <p>HERBST 2020 🍂 ...wenn die Ernte für so manches von statten geht und der Spätsommer ins Land zieht, beginnt eine meiner Lieblingszeiten.
+                        <p>Wenn die Ernte für so manches von statten geht und der Spätsommer ins Land zieht, 
+                          beginnt eine meiner Lieblingszeiten.
                           Die Hitze ist Großteils vorbei, die Blätter beginnen sich langsam zurückzuziehen und verfärben sich.
                           <br>Für mich heuer besonders spannend, da ich seit kurzem stolze Besitzerin einer Leonardo Destille bin! 🧡
                         </p>
@@ -4143,8 +4206,9 @@
     diary.forEach(function (item) {
       diaryItems.push({
         dialog: item.getAttribute('v-model'),
-        titel: item.querySelector('v-toolbar-title').innerText,
+        titel: item.querySelector('v-toolbar-title').innerHTML,
         titelbild: item.getAttribute('data-titelbild'),
+        summary: item.querySelector('div.summary')?.innerHTML,
       });
     });
 

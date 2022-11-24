@@ -77,3 +77,10 @@ div.v-application a {
 a {
   color: purple
 }
+div.summary {
+  display: none;
+}
+.diary-thumb-title {
+  color: purple;
+  padding-bottom: 10px;
+}

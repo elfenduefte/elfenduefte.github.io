@@ -81,14 +81,14 @@
           <v-toolbar-items class="hidden-xs-only">
             <v-menu v-for="item in menuItems" :key="item.title">
               <template v-slot:activator="{ on, attrs }">
-                <v-btn v-if="item.path!=='#leistungen'" v-bind="attrs"
+                <v-btn v-if="item.path" v-bind="attrs"
                 v-on="on" text :href="item.path" @click="goto(item.path); leistungen=item.leistungen">{{
                   item.title }}</v-btn>
                 <v-btn v-else v-bind="attrs"
                 v-on="on" text>{{
                   item.title }}</v-btn>
               </template>
-              <v-list v-if="item.path='#leistungen'" v-for="(subitem,index) in leistungenItems" :key="subitem">
+              <v-list v-if="!item.path" v-for="(subitem,index) in leistungenItems" :key="subitem">
                 <v-list-item @click="leistungen=index;goto('#leistungen-content')">
                   <v-list-item-title>{{ subitem }}</v-list-item-title>
                 </v-list-item>

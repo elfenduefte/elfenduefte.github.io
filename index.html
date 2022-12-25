@@ -82,10 +82,10 @@
             <v-menu v-for="item in menuItems" :key="item.title">
               <template v-slot:activator="{ on, attrs }">
                 <v-btn v-if="item.path" v-bind="attrs"
-                v-on="on" text :href="item.path" @click="goto(item.path); leistungen=item.leistungen">{{
+                  v-on="on" text :href="item.path" @click="goto(item.path); leistungen=item.leistungen">{{
                   item.title }}</v-btn>
                 <v-btn v-else v-bind="attrs"
-                v-on="on" text>{{
+                  v-on="on" text>{{
                   item.title }}</v-btn>
               </template>
               <v-list v-if="!item.path" v-for="(subitem,index) in leistungenItems" :key="subitem">
@@ -289,43 +289,7 @@
          
           <section id="leistungen">
             <v-layout column wrap class="my-12" align-center>
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md12>
-                      <v-card flat class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Leistungen</div>
-                        </v-card-title>
-                        <v-card-text class="text-center">  
-                          Als <b>Humanenergetikerin</b>
-                          biete ich <a @click="leistungen=0">Aromafachberatung</a> sowie
-                          <a @click="leistungen=1">Körperanwendungen</a> an.
-                          <br>
-                          Diese Leistungen führe ich nach dem <a class="text-no-wrap" target="_blank"
-                            href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO durch.
-                          <br>
-                          <b>Sonstiges:</b>
-                          <a @click="leistungen=2">Naturparfum</a>, 
-                          <a @click="leistungen=3">Workshop</a>,
-                          <a @click="leistungen=4">Duftmarketing & AirDesign</a>,
-                          <a @click="leistungen=5">Elfendüfte-Coaching</a> sowie
-                          <a @click="leistungen=6">Gutscheine</a>
-                          <br>
-                          Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich, 
-                          <a @click="leistungen=1">Wickel, Auflagen & Kompressen</a> in meiner Praxis anzulegen.
-                          <br>  
-                          <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                            <a @click="leistungen=6">
-                              Aktion zur Zeitqualität "Wintersonnenwende", bis einschließlich 31. Dezember 2022: Gutscheine plus 20% zum gewählten Betrag
-                            </a>
-                          </v-card-title>
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
+              
               <v-card id="leistungen-content">
                 <v-card-actions class="justify-space-between">
                   <v-btn text @click="prevLeistungen">
@@ -344,6 +308,7 @@
                 </v-card-actions>
                 <v-window v-model="leistungen">
                   <v-window-item>
+                    
                     <!-- AROMAFACHBERATUNG -->
                     <v-container grid-list-xl>
                       <v-layout row wrap>
@@ -351,7 +316,8 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                <span class="leistung">Aromafachberatung</span><br>
+                                <span class="leistung">Aromafachberatung</span>
+                                <br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Duftbegleitung für den Alltag
                                 </v-card-title>
@@ -426,7 +392,8 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                <span class="leistung">Körperanwendungen</span><br>
+                                <span class="leistung">Körperanwendungen</span>
+                                <br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Wohlbefinden nachhaltig stärken und Gesundheit fördern
                                 </v-card-title>
@@ -527,7 +494,8 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                <span class="leistung">Naturparfum</span><br>
+                                <span class="leistung">Naturparfum</span>
+                                <br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Düfte sollten zu Menschen, deren Umgebung und Stimmung passen
                                 </v-card-title>
@@ -595,7 +563,8 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                <span class="leistung">Workshop</span><br>
+                                <span class="leistung">Workshop</span>
+                                <br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Individuelle Mischungen, Naturparfum oder Naturkosmetik selbst herstellen
                                 </v-card-title>
@@ -634,10 +603,7 @@
                                 „Zur Information“</div>
                               <p>Da ich das Skriptum stets passend zum Thema individuell zusammenstelle, 
                                 ist mit einer gewissen Vorlaufzeit zu rechen!
-                                <br>
-                                Für einen Workshop, wo <b>Weihnachtsgeschenke</b>"" hergestellt werden, 
-                                ersuche ich um baldigste Terminanfrage, um keinen Stress in der Vorweihnachtszeit zu bringen! 
-                                Danke für Ihr Verständnis!</p>
+                              </p>
                             </v-card-text>   
                           </v-card>
                         </v-flex>
@@ -699,7 +665,8 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                <span class="leistung">Duftmarketing & Airdesign</span><br>
+                                <span class="leistung">Duftmarketing & Airdesign</span>
+                                <br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Corporate Scent - steigern Sie Ihren Wiedererkennungswert
                                 </v-card-title>
@@ -815,7 +782,8 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                <span class="leistung">Elfendüfte-Coaching</span><br>
+                                <span class="leistung">Elfendüfte-Coaching</span>
+                                <br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Eine (Duft)Reise ohne Gepäck
                                 </v-card-title>
@@ -910,7 +878,8 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                <span class="leistung">Gutscheine</span><br>
+                                <span class="leistung">Gutscheine</span>
+                                <br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Die Geschenksidee für alle Duftbegeisterte
                                 </v-card-title>
@@ -971,37 +940,90 @@
                       </v-layout>
                     </v-container>
                   </v-window-item>
+                  <v-window-item>
+                    <!-- ALLGEIMEINE INFORMATIONEN -->
+                    <v-container grid-list-xl>
+                      <v-layout row wrap>
+                        <v-flex xs12 md12>
+                          <v-card flat class="transparent">
+                            <v-card-title primary-title class="layout justify-center">
+                              <div class="headline text-center">
+                                <span class="leistung">Allgemeines</span>
+                                <br>
+                                <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                                  Informationen, Aktionen & Tipps zum Leistungsangebot
+                                </v-card-title>
+                              </div>
+                            </v-card-title>
+                          </v-card>
+                        </v-flex>
+                        <v-flex xs12 md12>
+                          <v-card flat class="transparent">
+                            <v-card-text>
+                              <div class="text-center">
+                                <img class="float-half max300"
+                                  src="assets/Le 8.jpeg" alt="Duftmarkting & AirDesign">
+                              </div>
+                              Als <b>Humanenergetikerin</b>
+                              biete ich <a @click="leistungen=0">Aromafachberatung</a> sowie
+                              <a @click="leistungen=1">Körperanwendungen</a> an.
+                              <br>
+                              Diese Leistungen führe ich nach dem <a class="text-no-wrap" target="_blank"
+                                href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO durch.
+                              <br>
+                              <br>
+                              Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich zusätzlich, auch
+                              <a @click="leistungen=1">Wickel, Auflagen & Kompressen</a> in meiner Praxis anzulegen.
+                              <br>
+                              <br>
+                              <b>Sonstiges:</b>
+                              <a @click="leistungen=2">Naturparfum</a>, 
+                              <a @click="leistungen=3">Workshop</a>,
+                              <a @click="leistungen=4">Duftmarketing & AirDesign</a>,
+                              <a @click="leistungen=5">Elfendüfte-Coaching</a> sowie
+                              <a @click="leistungen=6">Gutscheine</a> 
+                              <br>  
+                              <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                                <a @click="leistungen=6">
+                                  Aktion zur Zeitqualität "Wintersonnenwende", bis einschließlich 31. Dezember 2022: 
+                                  Gutscheinwert plus 20% zum gewählten Betrag
+                                </a>
+                              </v-card-title>  
+                            </v-card-text>
+                          </v-card>
+                        </v-flex>
+                        <v-flex xs12 md12>
+                          <v-card flat class="transparent">
+                            <v-card-text>
+                              <div class="text-center">
+                                <img class="float-half-right max300"
+                                  src="assets/Le 8b.jpeg" alt="Duftmarkting & AirDesign">
+                              </div> 
+                              Zur Anwendung kommen nur 100 % naturreine ätherische Öle, hochwertige Pflanzenöle, Buttern, Wachse 
+                              und Hydrolate. Vorzugsweise in Bio Qualität (nach Verfügbarkeit) von Firmen in und um Österreich, z.B. 
+                              <a href="https://www.bergila.com/c/shop/">Bergila</a>,
+                              <a href="https://shop.feeling.at/#375">feeling</a>,
+                              <a href="https://www.sandicca.com/shop/">SANDICCA</a> oder
+                              <a href="https://sensoleo.at/de/shop/">SENSOLEO</a>. 
+                              <br>Es sind Produkte, mit denen ich gute 
+                              Erfahrungen gemacht habe und von deren Wirkung ich überzeugt bin. 
+                              <br>Vielleicht inspiriere ich damit auch den einen oder anderen, die so wie ich Wert auf heimische Betriebe, Produkte 
+                              und Nachhaltigkeit legen!
+                              <br>
+                              <br>In meiner Praxis ist nur Barzahlung möglich. Bei einer Gutscheinbestellung erfolgt die Zahlung 
+                              mittels Überweisung. Die Rechnung ist aufgrund der Kleinunternehmerregelung umsatzsteuerfrei!</p>
+                              <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                                Tipp: Viele Zusatzversicherungen gewähren eine Kostenrückerstattung für 
+                                ganzheitsmedizinische Behandlungsmethoden. Informieren Sie sich!
+                              </v-card-title>  
+                            </v-card-text>
+                          </v-card>
+                        </v-flex>
+                      </v-layout>       
+                    </v-container>
+                  </v-window-item>
                 </v-window>
               </v-card>
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md12>
-                      <v-card flat class="transparent">
-                        <v-card-text>
-                          <p> 
-                            Zur Anwendung kommen nur 100 % naturreine ätherische Öle, hochwertige Pflanzenöle, Buttern, Wachse 
-                            und Hydrolate. Vorzugsweise in Bio Qualität (nach Verfügbarkeit) von Firmen in und um Österreich, z.B. 
-                            <a href="https://www.bergila.com/c/shop/">Bergila</a>,
-                            <a href="https://shop.feeling.at/#375">feeling</a>,
-                            <a href="https://www.sandicca.com/shop/">SANDICCA</a> oder
-                            <a href="https://sensoleo.at/de/shop/">SENSOLEO</a>. 
-                            <br>Es sind Produkte, mit denen ich gute 
-                            Erfahrungen gemacht habe und von deren Wirkung ich überzeugt bin. 
-                            <br>Vielleicht inspiriere ich damit auch den einen oder anderen, die so wie ich Wert auf heimische Betriebe, Produkte 
-                            und Nachhaltigkeit legen!
-                            <br>
-                            <br>In meiner Praxis ist nur Barzahlung möglich. Bei einer Gutscheinbestellung erfolgt die Zahlung 
-                            mittels Überweisung. Die Rechnung ist aufgrund der Kleinunternehmerregelung umsatzsteuerfrei!</p>
-                          <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                            <b>Tipp:</b> Viele Zusatzversicherungen gewähren eine Kostenrückerstattung für ganzheitsmedizinische Behandlungsmethoden. Informieren Sie sich!
-                          </v-card-title> 
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
             </v-layout>
           </section>
           <section>
@@ -4626,7 +4648,7 @@
           email: '',
           message: '',
           agreement: false,
-          leistungenCount: 7,
+          leistungenCount: 8,
           leistungen: 0,
           leistungenItems: leistungenItems,
           menuItems: menuItems,
@@ -4643,18 +4665,12 @@
             { title: 'Jasminum grandiflorum', description: 'Jasmin', href: 'assets/lightbox/Jasmin.jpeg' },
             { title: 'Salvia sclarea', description: 'Muskatellersalbei', href: 'assets/lightbox/Muskatellersalbei.jpg' },
             { title: 'Rosa damascena', description: 'Rose', href: 'assets/lightbox/Rose.jpeg' },
-            
             { title: 'Lavandula angustifolia', description: 'Lavendel', href: 'assets/lightbox/Lavendel.jpg' },
-            
             { title: 'Thymus vulgaris', description: 'Thymian', href: 'assets/lightbox/Thymian.jpg' },
             { title: 'Melissa officinalis', description: 'Melisse', href: 'assets/lightbox/Melisse.jpg' },
-            
             { title: 'Vetiveria zizanoides', description: 'Vetiver', href: 'assets/lightbox/Vetiver.jpg' },
             { title: 'Juniperus communis', description: 'Wacholderbeere', href: 'assets/lightbox/Wacholderbeere.jpg' },
             { title: 'Cedrus atlantica', description: 'Zeder', href: 'assets/lightbox/Zeder.jpg' },
-            
-            
-
           ],
           index: null,
           sidebar: false,

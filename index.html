@@ -40,10 +40,15 @@
               @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
               <v-list-item-content>Ätherische Öle & Co.</v-list-item-content>
             </v-list-item>
-            <v-list-item href="#leistungen"
-              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
-              <v-list-item-content>Leistungen</v-list-item-content>
-            </v-list-item>
+            <v-list-group :value="true">
+              <template v-slot:activator>
+                <v-list-item-title>Leistungen</v-list-item-title>
+              </template>
+              <v-list-item v-for="(leistung,index) in leistungenItems" :key="`${leistung}${index}`"
+                @click="leistungen=index; goto('#leistungen-content'); sidebar=false">
+                <v-list-item-content class="pl-3">{{ leistung }}</v-list-item-content>
+              </v-list-item>
+            </v-list-group>
             <v-list-item href="#leistungen_6"
               @click="goto($event.target.parentElement.getAttribute('href')); leistungen = 6; sidebar = false">
               <v-list-item-content>Shop</v-list-item-content>
@@ -74,8 +79,21 @@
           </v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items class="hidden-xs-only">
-            <v-btn text v-for="item in menuItems" :key="item.title" :href="item.path" @click="goto(item.path); leistungen=item.leistungen">{{
-              item.title }}</v-btn>
+            <v-menu v-for="item in menuItems" :key="item.title">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn v-if="item.path!=='#leistungen'" v-bind="attrs"
+                v-on="on" text :href="item.path" @click="goto(item.path); leistungen=item.leistungen">{{
+                  item.title }}</v-btn>
+                <v-btn v-else v-bind="attrs"
+                v-on="on" text>{{
+                  item.title }}</v-btn>
+              </template>
+              <v-list v-if="item.path='#leistungen'" v-for="(subitem,index) in leistungenItems" :key="subitem">
+                <v-list-item @click="leistungen=index;goto('#leistungen-content')">
+                  <v-list-item-title>{{ subitem }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
           </v-toolbar-items>
         </v-app-bar>
         <v-main>
@@ -333,7 +351,7 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                Aromafachberatung<br>
+                                <span class="leistung">Aromafachberatung</span><br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Duftbegleitung für den Alltag
                                 </v-card-title>
@@ -408,7 +426,7 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                Körperanwendungen<br>
+                                <span class="leistung">Körperanwendungen</span><br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Wohlbefinden nachhaltig stärken und Gesundheit fördern
                                 </v-card-title>
@@ -509,7 +527,7 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                Naturparfum<br>
+                                <span class="leistung">Naturparfum</span><br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Düfte sollten zu Menschen, deren Umgebung und Stimmung passen
                                 </v-card-title>
@@ -577,7 +595,7 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                Workshop<br>
+                                <span class="leistung">Workshop</span><br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Individuelle Mischungen, Naturparfum oder Naturkosmetik selbst herstellen
                                 </v-card-title>
@@ -681,7 +699,7 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                Duftmarketing & Airdesign<br>
+                                <span class="leistung">Duftmarketing & Airdesign</span><br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Corporate Scent - steigern Sie Ihren Wiedererkennungswert
                                 </v-card-title>
@@ -797,7 +815,7 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                Elfendüfte-Coaching<br>
+                                <span class="leistung">Elfendüfte-Coaching</span><br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Eine (Duft)Reise ohne Gepäck
                                 </v-card-title>
@@ -892,7 +910,7 @@
                           <v-card flat class="transparent">
                             <v-card-title primary-title class="layout justify-center">
                               <div class="headline text-center">
-                                Gutscheine<br>
+                                <span class="leistung">Gutscheine</span><br>
                                 <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
                                   Die Geschenksidee für alle Duftbegeisterte
                                 </v-card-title>
@@ -4568,11 +4586,13 @@
     <script>
     const karlklammer = '@';
 
+    const leistungenItems = Array.from(document.querySelectorAll('v-window[v-model="leistungen"] .leistung')).map(item => item.innerText);
+
     const menu = document.querySelectorAll('v-navigation-drawer v-list-item-content');
     const menuItems = [];
     menu.forEach(function (item) {
       menuItems.push({
-        title: item.innerText,
+        title: item.innerText.replace('{{ leistung }}', 'Leistungen'),
         path: item.parentElement.getAttribute('href')
       });
     });
@@ -4609,6 +4629,7 @@
           agreement: false,
           leistungenCount: 7,
           leistungen: 0,
+          leistungenItems: leistungenItems,
           menuItems: menuItems,
           images: [
             { title: 'Citrus aurantium flos.', description: 'Neroli', href: 'assets/lightbox/Neroli.jpeg' },

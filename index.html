@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Ätherische Öle & Co. zur Steigerung des Wohlbefindens, als Duftmischung für zu Hause oder bei einer Körperanwendung in meiner Praxis in Graz. Düfte als wiedererkennbare Note für Ihr Unternehmen oder zur Konzentrationssteigerung">
+      content="Ätherische Öle und mehr. zur Steigerung des Wohlbefindens, als Duftmischung für zu Hause oder bei einer Körperanwendung in meiner Praxis in Graz. Düfte als wiedererkennbare Note für Ihr Unternehmen oder zur Konzentrationssteigerung">
     <link href="https://cdn.jsdelivr.net/npm/@fontsource/maven-pro@4.5.11/latin.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fontsource/ms-madi@4.5.3/latin.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fontsource/roboto@4.5.8/latin.css" rel="stylesheet">
@@ -38,7 +38,7 @@
           <v-list>
             <v-list-item href="#aetherische-oele"
               @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
-              <v-list-item-content>Ätherische Öle & Co.</v-list-item-content>
+              <v-list-item-content>Ätherische Öle und mehr</v-list-item-content>
             </v-list-item>
             <v-list-group :value="true">
               <template v-slot:activator>
@@ -109,7 +109,20 @@
             </v-parallax>
           </section>
           <section id="aetherische-oele">
-            <v-layout column wrap class="my-12" align-center>
+            <v-layout column wrap class="my-12" align-center> 
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Ätherische Öle und mehr</div>
+                        </v-card-title>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
               <v-flex xs12>
                 <v-container grid-list-xl>
                   <v-layout row wrap>
@@ -119,7 +132,7 @@
                           <div class="headline text-center">
                             Ätherische Öle, Absolues, <span
                               style="white-space: nowrap;">CO<sub>2</sub>
-                            </span> Extrakte,...
+                            </span> Extrakte
                           </div>
                         </v-card-title>
                         <v-card-text>
@@ -286,6 +299,7 @@
             </v-parallax>
           </section>
          
+          
          
           <section id="leistungen">
             <v-layout column wrap class="my-12" align-center>
@@ -984,8 +998,8 @@
                               <br>  
                               <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
                                 <a @click="leistungen=6">
-                                  Aktion zur Zeitqualität "Wintersonnenwende", bis einschließlich 31. Dezember 2022: 
-                                  Gutscheinwert plus 20% zum gewählten Betrag
+                                  Ganzjahresaktion "Preise wie im Vorjahr", bis einschließlich 31. Dezember 2023: 
+                                  Anstatt die Preise zu erhöhen, möchte ich Ihnen damit Zeit schenken, die nicht zusätzlich bezahlt werden muß!
                                 </a>
                               </v-card-title>  
                             </v-card-text>
@@ -1037,6 +1051,19 @@
           
           <section id="ueber-mich">
             <v-layout column wrap class="my-12" align-center>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Über mich</div>
+                        </v-card-title>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
               <v-flex xs12>
                 <v-container grid-list-xl>
                   <v-layout row wrap>
@@ -1120,10 +1147,8 @@
                       </v-card>
                     </v-flex>
                     <v-flex xs12 md12>
-                      <h2 class="headline text-center">Referenzen</h2>
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="subheading text-center">Was KundInnen sagen</div>
-                      </v-card-title>
+                      <h2 class="headline text-center">Was KundInnen sagen</h2>
+                      <br>
                       <v-container grid-list-xl>
                         <v-layout row wrap>
                           <v-flex xs12 md6>
@@ -1371,117 +1396,127 @@
               </v-layout>
             </v-parallax>  
           </section>
+          
           <section id="kontakt">
-            <v-container grid-list-xl>
-              <v-layout row wrap justify-center class="my-12">
-                <v-flex xs12 sm6>
-                  <v-card height="100%" class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline">Sabine Krenn</div>
-                    </v-card-title>
-                    <v-card-text>
-                      <div class="subheading text-center">Dipl. Aromapraktikerin</div>
-                      <div class="text-center">DGKP-Aromapflege</div>
-                      <div class="text-center">Praktikerin für dialogisch aktive Duftkommunikation©</div>
-                    </v-card-text>
-                    <v-list class="transparent">
-                      <v-list-item href="tel:+436508095272">
-                        <v-list-item-action>
-                          <v-icon class="deep-purple--text text--lighten-2">mdi-phone</v-icon>
-                        </v-list-item-action>
-                        <v-list-item-content>
-                          <v-list-item-title>+43 650 8095272</v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-                      <v-list-item href="https://goo.gl/maps/u9xd5mnbRxsD4LFx7" target="_blank">
-                        <v-list-item-action>
-                          <v-icon class="deep-purple--text text--lighten-2">mdi-map-marker</v-icon>
-                        </v-list-item-action>
-                        <v-list-item-content>
-                          <v-list-item-title>8020 Graz, Grüne Gasse 21d</v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-                      <v-list-item :href="'mailto:' + ceomnatial">
-                        <v-list-item-action>
-                          <v-icon class="deep-purple--text text--lighten-2">mdi-email</v-icon>
-                        </v-list-item-action>
-                        <v-list-item-content>
-                          <v-list-item-title>{{ ceomnatial }}</v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-                      <v-list-item>
-                        <v-list-item-action>
-                          <v-icon class="deep-purple--text text--lighten-2">mdi-door-open</v-icon>
-                        </v-list-item-action>
-                        <v-list-item-content>
-                          <v-list-item-title>Nach Terminvereinbarung</v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-list>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline">Kontaktformular</div>
-                    </v-card-title>
-                    <v-card-text>
-                      <v-form ref="anfrage" v-model="valid">
-                        <v-text-field v-model="email"
-                          :rules="[v => !!v || 'Bitte geben Sie Ihre e-mail Adresse an.',v => /.+@.+\..+/.test(v) || 'Bitte geben Sie eine gültige e-mail Adresse an.']"
-                          label="Ihre e-mail" filled required dense></v-text-field>
-                        <v-text-field v-model="name" :rules="[v => !!v || 'Bitte geben Sie Ihren Namen an.']"
-                          label="Ihr Name" filled required dense></v-text-field>
-                        <v-textarea v-model="message" label="Ihre Anfrage" filled required rows="3" auto-grow dense>
-                        </v-textarea>
-                        <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
-                          <label slot="label">
-                            Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> gelesen und erkenne diese an.
-                          </label>
-                        </v-checkbox>
-                        <v-btn @click="submitAnfrage" :disabled="!valid" depressed>Anfrage senden</v-btn>
-                      </v-form>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 sm6>
-                  <v-card height="100%" class="transparent">
-                    <v-card-title primary-title class="layout justify-center">
+            <v-layout column wrap class="my-12" align-center>   
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Kontakt</div>
+                      </v-card-title>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 sm6>
+                    <v-card height="100%" class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline">Sabine Krenn</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <div class="subheading text-center">Dipl. Aromapraktikerin</div>
+                        <div class="text-center">DGKP-Aromapflege</div>
+                        <div class="text-center">Praktikerin für dialogisch aktive Duftkommunikation©</div>
+                      </v-card-text>
+                      <v-list class="transparent">
+                        <v-list-item href="tel:+436508095272">
+                          <v-list-item-action>
+                            <v-icon class="deep-purple--text text--lighten-2">mdi-phone</v-icon>
+                          </v-list-item-action>
+                          <v-list-item-content>
+                            <v-list-item-title>+43 650 8095272</v-list-item-title>
+                          </v-list-item-content>
+                        </v-list-item>
+                        <v-list-item href="https://goo.gl/maps/u9xd5mnbRxsD4LFx7" target="_blank">
+                          <v-list-item-action>
+                            <v-icon class="deep-purple--text text--lighten-2">mdi-map-marker</v-icon>
+                          </v-list-item-action>
+                          <v-list-item-content>
+                            <v-list-item-title>8020 Graz, Grüne Gasse 21d</v-list-item-title>
+                          </v-list-item-content>
+                        </v-list-item>
+                        <v-list-item :href="'mailto:' + ceomnatial">
+                          <v-list-item-action>
+                            <v-icon class="deep-purple--text text--lighten-2">mdi-email</v-icon>
+                          </v-list-item-action>
+                          <v-list-item-content>
+                            <v-list-item-title>{{ ceomnatial }}</v-list-item-title>
+                          </v-list-item-content>
+                        </v-list-item>
+                        <v-list-item>
+                          <v-list-item-action>
+                            <v-icon class="deep-purple--text text--lighten-2">mdi-door-open</v-icon>
+                          </v-list-item-action>
+                          <v-list-item-content>
+                            <v-list-item-title>Nach Terminvereinbarung</v-list-item-title>
+                          </v-list-item-content>
+                        </v-list-item>
+                      </v-list>
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline">Kontaktformular</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <v-form ref="anfrage" v-model="valid">
+                          <v-text-field v-model="email"
+                            :rules="[v => !!v || 'Bitte geben Sie Ihre e-mail Adresse an.',v => /.+@.+\..+/.test(v) || 'Bitte geben Sie eine gültige e-mail Adresse an.']"
+                            label="Ihre e-mail" filled required dense></v-text-field>
+                          <v-text-field v-model="name" :rules="[v => !!v || 'Bitte geben Sie Ihren Namen an.']"
+                            label="Ihr Name" filled required dense></v-text-field>
+                          <v-textarea v-model="message" label="Ihre Anfrage" filled required rows="3" auto-grow dense>
+                          </v-textarea>
+                          <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
+                            <label slot="label">
+                              Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> gelesen und erkenne diese an.
+                            </label>
+                          </v-checkbox>
+                          <v-btn @click="submitAnfrage" :disabled="!valid" depressed>Anfrage senden</v-btn>
+                        </v-form>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 sm6>
+                    <v-card height="100%" class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
                       
-                      <div class="headline">Haftungsausschluss</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Meine, auf dieser Webseite und in der Praxis angebotenen Behandlungen, Beratungen und Empfehlungen
-                      unterstützen Sie um in Balance zu kommen und Ihr Wohlbefinden zu steigern.
-                      Es werden weder Diagnosen erstellt, noch Krankheiten behandelt. Eine laufende Therapie und/oder
-                      Medikation soll nicht unterbrochen werden.
-                      Gerne arbeite ich auf Wunsch mit Ärzten und Therapeuten zusammen, da sich die Schulmedizin mit
-                      diesen Methoden sehr gut ergänzen lässt.
-                    </v-card-text>
+                        <div class="headline">Haftungsausschluss</div>
+                      </v-card-title>
+                      <v-card-text>
+                        Meine, auf dieser Webseite und in der Praxis angebotenen Behandlungen, Beratungen und Empfehlungen
+                        unterstützen Sie um in Balance zu kommen und Ihr Wohlbefinden zu steigern.
+                        Es werden weder Diagnosen erstellt, noch Krankheiten behandelt. Eine laufende Therapie und/oder
+                        Medikation soll nicht unterbrochen werden.
+                        Gerne arbeite ich auf Wunsch mit Ärzten und Therapeuten zusammen, da sich die Schulmedizin mit
+                        diesen Methoden sehr gut ergänzen lässt.
+                      </v-card-text>
                     
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline">Stornobedingungen</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Ich ersuche um Verständnis, dass bei Nichterscheinen zu einem gebuchten Termin 
-                      die versäumte Leistung in Rechnung gestellt wird!
-                    </v-card-text>
-                    <v-card-text>
-                      <div class="text-center">
-                        <img class="fill-width" src="assets/Ko 1.jpeg" alt="Praxis">
-                      </div>
-                    </v-card-text>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline">Aktuelles</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Für heuer schließe ich meine Räumlichkeiten und bin ab 15. Jänner wieder für Sie da.
-                      Terminanfragen sowie Gutscheinbestellungen nehme ich durchgehend entgegen! 
-                      <br>Bleiben Sie gesund! 💜
-                      <br>
-                      <br>
-                      <br>
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline">Stornobedingungen</div>
+                      </v-card-title>
+                      <v-card-text>
+                        Ich ersuche um Verständnis, dass bei Nichterscheinen zu einem gebuchten Termin 
+                        die versäumte Leistung in Rechnung gestellt wird!
+                      </v-card-text>
+                      <v-card-text>
+                        <div class="text-center">
+                          <img class="fill-width" src="assets/Ko 1.jpeg" alt="Praxis">
+                        </div>
+                      </v-card-text>
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline">Aktuelles</div>
+                      </v-card-title>
+                      <v-card-text>
+                        Für heuer schließe ich meine Räumlichkeiten und bin ab 15. Jänner wieder für Sie da.
+                        Terminanfragen sowie Gutscheinbestellungen nehme ich durchgehend entgegen! 
+                        <br>Bleiben Sie gesund! 💜
+                        <br>
+                        <br>
+                        <br>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-layout>
           </section id="kontakt">
           <v-footer color="purple darken-4">
             <v-layout row wrap align-center>

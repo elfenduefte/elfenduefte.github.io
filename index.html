@@ -37,7 +37,7 @@
         <v-navigation-drawer disable-resize-watcher v-model="sidebar" app>
           <v-list>
             <v-list-item href="#aetherische-oele"
-              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="sidebar = false">
               <v-list-item-content>Ätherische Öle und mehr</v-list-item-content>
             </v-list-item>
             <v-list-group :value="true">
@@ -45,51 +45,51 @@
                 <v-list-item-title>Leistungen</v-list-item-title>
               </template>
               <v-list-item v-for="(leistung,index) in leistungenItems" :key="`${leistung}${index}`"
-                @click="leistungen=index; goto('#leistungen-content'); sidebar=false">
+                @click="sidebar=false" :href="`#leistungen_${index}`">
                 <v-list-item-content class="pl-3">{{ leistung }}</v-list-item-content>
               </v-list-item>
             </v-list-group>
             <v-list-item href="#leistungen_6"
-              @click="goto($event.target.parentElement.getAttribute('href')); leistungen = 6; sidebar = false">
+              @click="sidebar = false">
               <v-list-item-content>Shop</v-list-item-content>
             </v-list-item>
             <v-list-item href="#ueber-mich"
-              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="sidebar = false">
               <v-list-item-content>Über mich</v-list-item-content>
             </v-list-item>
             <v-list-item href="#zeitqualitaeten"
-              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="sidebar = false">
               <v-list-item-content>Zeitqualitäten</v-list-item-content>
             </v-list-item>
             <v-list-item href="#galerie"
-              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="sidebar = false">
               <v-list-item-content>Galerie
               </v-list-item-content>
             </v-list-item>
             <v-list-item href="#kontakt"
-              @click="goto($event.target.parentElement.getAttribute('href')); sidebar = false">
+              @click="sidebar = false">
               <v-list-item-content>Kontakt</v-list-item-content>
             </v-list-item>
           </v-list>
         </v-navigation-drawer>
         <v-app-bar app dark color="rgb(68,0,72)" elevate-on-scroll>
           <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
-          <v-toolbar-title class="button" href="#intro" @click="goto('#intro');">
-            <span class="subheading">Elfendüfte</span>
+          <v-toolbar-title class="button">
+            <a class="subheading" href="#intro">Elfendüfte</a>
           </v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items class="hidden-xs-only">
             <v-menu v-for="item in menuItems" :key="item.title">
               <template v-slot:activator="{ on, attrs }">
                 <v-btn v-if="item.path" v-bind="attrs"
-                  v-on="on" text :href="item.path" @click="goto(item.path); leistungen=item.leistungen">{{
+                  v-on="on" text :href="item.path">{{
                   item.title }}</v-btn>
                 <v-btn v-else v-bind="attrs"
                   v-on="on" text>{{
                   item.title }}</v-btn>
               </template>
               <v-list v-if="!item.path" v-for="(subitem,index) in leistungenItems" :key="subitem">
-                <v-list-item @click="leistungen=index;goto('#leistungen-content')">
+                <v-list-item :href="`#leistungen_${index}`">
                   <v-list-item-title>{{ subitem }}</v-list-item-title>
                 </v-list-item>
               </v-list>
@@ -102,7 +102,7 @@
               <v-layout column align-center justify-center class="white--text">
                 <img src="assets/WebElfe.svg" alt="Elfe" height="161">
                 <div class="shadow subheading mb-4 text-center ci">Sabine Krenn</div>
-                <v-btn class="mt-12" color="rgb(68,0,72)" dark large @click="goto('#aetherische-oele')">
+                <v-btn class="mt-12" color="rgb(68,0,72)" dark large href="#aetherische-oele">
                   Willkommen
                 </v-btn>
               </v-layout>
@@ -1309,7 +1309,7 @@
                 <v-container grid-list-xl>
                   <v-layout row wrap align-center>
                     <v-flex xs12 md4 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
-                      <v-card flat @click="goto('#' + diaryItem.dialog)">
+                      <v-card flat :href="'#' + diaryItem.dialog">
                         <v-card-text>
                           <div style="line-height: 0.8rem" class="small float-half">
                             <img style="width: 100%"
@@ -3585,7 +3585,7 @@
                       </v-card-title>
                       <v-card-text>
                         Zum Aktionspreis lade ich Sie bei einem 
-                        <a href="#leistungen" @click="closeDialog('zeitqualitaet'); leistungen=5">"Elfendüfte-Coaching"</a> 
+                        <a href="#leistungen_5" @click="closeDialog('zeitqualitaet');">"Elfendüfte-Coaching"</a> 
                         ein, mit mir auf eine (Duft)Reise zu gehen. 
                         Anhand Ihrer persönlichen DuftSpur suchen wir Plätze mit schönen Erinnerungen auf, die sie
                         danach in angespannten Zeiten mit Unterstützung einer Duftmischung abrufen können.
@@ -4724,6 +4724,11 @@
           gutschein_amount: 50,
           gutschein_widmung: ''
         }
+      },
+      created() {
+        window.addEventListener('popstate', () => {
+          this.goto(location.hash);
+        });
       },
       mounted() {
         if (location.hash) {

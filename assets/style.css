@@ -27,6 +27,13 @@
 div.v-application a {
   color: #800080;
 }
+a.subheading {
+  text-decoration: none;
+  color: white;
+}
+a.subheading:visited {
+  color: white;
+}
 .subheading {
   font-size: 1.25rem;
 }

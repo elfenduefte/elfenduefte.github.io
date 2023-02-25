@@ -75,7 +75,7 @@
         <v-app-bar app dark color="rgb(68,0,72)" elevate-on-scroll>
           <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
           <v-toolbar-title class="button">
-            <a class="subheading" href="#intro">Elfendüfte</a>
+            <img height="20" src="assets/Elfe white.svg"> <a class="subheading white--text" href="#intro">Elfendüfte</a>
           </v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items class="hidden-xs-only">
@@ -98,15 +98,29 @@
         </v-app-bar>
         <v-main>
           <section id="intro">
-            <v-parallax :src="introSrc" :height="introHeight">
-              <v-layout column align-center justify-center class="white--text">
-                <img src="assets/WebElfe.svg" alt="Elfe" height="161">
-                <div class="shadow subheading mb-4 text-center ci">Sabine Krenn</div>
-                <v-btn class="mt-12" color="rgb(68,0,72)" dark large href="#aetherische-oele">
-                  Willkommen
-                </v-btn>
-              </v-layout>
-            </v-parallax>
+            <v-carousel cycle>
+              <v-carousel-item>
+                <v-img class="fill-height" src="assets/WK3.jpeg">
+                  <v-layout column fill-height align-center justify-center class="white--text">
+                    <div class="shadow headline mb-4 ci">Sabine Krenn Text 1</div>
+                  </v-layout>
+                </v-img>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-img class="fill-height" src="assets/WK2.jpeg">
+                  <v-layout column fill-height align-center justify-center class="white--text">
+                    <div class="shadow headline mb-4 ci">Sabine Krenn Text 2</div>
+                  </v-layout>
+                </v-img>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-img class="fill-height" src="assets/WK1.jpeg">
+                  <v-layout column fill-height align-center justify-center class="white--text">
+                    <div class="shadow headline mb-4 ci">Sabine Krenn Text 3</div>
+                  </v-layout>
+                </v-img>
+              </v-carousel-item>
+            </v-carousel>
           </section>
           <section id="aetherische-oele">
             <v-layout column wrap class="my-12" align-center> 

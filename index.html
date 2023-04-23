@@ -44,9 +44,9 @@
               <template v-slot:activator>
                 <v-list-item-title>Leistungen</v-list-item-title>
               </template>
-              <v-list-item v-for="(leistung,index) in leistungenItems" :key="`${leistung}${index}`"
-                @click="sidebar=false" :href="`#leistungen_${index}`">
-                <v-list-item-content class="pl-3">{{ leistung }}</v-list-item-content>
+              <v-list-item v-for="(leistung,index) in serviceItems" :key="`${leistung}${index}`"
+                @click="sidebar=false" :href="`#${leistung.dialog}`">
+                <v-list-item-content class="pl-3">{{ leistung.titel }}</v-list-item-content>
               </v-list-item>
             </v-list-group>
             
@@ -86,9 +86,9 @@
                   v-on="on" text>{{
                   item.title }}</v-btn>
               </template>
-              <v-list v-if="!item.path" v-for="(subitem,index) in leistungenItems" :key="subitem">
-                <v-list-item :href="`#leistungen_${index}`">
-                  <v-list-item-title>{{ subitem }}</v-list-item-title>
+              <v-list v-if="!item.path" v-for="(subitem,index) in serviceItems" :key="`${subitem.dialog}__`">
+                <v-list-item :href="`#${subitem.dialog}`">
+                  <v-list-item-title>{{ subitem.titel }}</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -369,748 +369,890 @@
 
           <section id="leistungen">
             <v-layout column wrap class="my-12" align-center> 
-              <v-card id="leistungen-content">
-                <v-card-actions class="justify-space-between">
-                  <v-btn text @click="prevLeistungen">
-                    <v-icon>mdi-chevron-left</v-icon>
-                  </v-btn>
-                  <v-item-group v-model="leistungen" class="text-center" mandatory>
-                    <v-item v-for="n in leistungenCount" :key="`btn-${n}`" v-slot="{ active, toggle }">
-                      <v-btn :input-value="active" icon @click="toggle">
-                        <v-icon>mdi-record</v-icon>
-                      </v-btn>
-                    </v-item>
-                  </v-item-group>
-                  <v-btn text @click="nextLeistungen">
-                    <v-icon>mdi-chevron-right</v-icon>
-                  </v-btn>
-                </v-card-actions>
-                <v-window v-model="leistungen">
-                  <v-window-item>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Leistungen</div>
+                        </v-card-title>
+                        <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                          <div class="text-center">Persönliche Botschaft zu Leistungen
+                            <br>Inhalte durch anklicken aufrufbar!
+                          </div>
+                        </v-card-title> 
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap align-center>
+                    <v-flex xs12 md4 v-for="serviceItem in serviceItems" :key="serviceItem.dialog">
+                      <v-card flat :href="'#' + serviceItem.dialog">
+                        <v-card-text>
+                          <div style="line-height: 0.8rem" class="small float-half">
+                            <img style="width: 100%"
+                              :src="serviceItem.titelbild"></div>
+                          <div class="service-thumb-title" v-html="serviceItem.titel"></div> 
+                          <hr>
+                          <div v-html="serviceItem.summary"></div>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
                     
-                    <!-- AROMAFACHBERATUNG -->
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-center">
-                                <span class="leistung">Aromafachberatung</span>
-                                <br>
-                                <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                                  Duftbegleitung für den Alltag
-                                </v-card-title>
-                              </div>
+              <!-- AROMAFACHBERATUNG -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Ah 2022 1.jpeg"
+                v-model="leistungen_0"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Aromafachberatung</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Kurztext
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              Duftbegleitung für den Alltag
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Le 1.jpeg" alt="Aromafachberatung">
+                            </div>
+                            <p>
+                              Im Beratungsgespräch können Sie an <b>Lieblingsdüften</b> schnuppern und neue Duftrichtungen kennenlernen.
+                              Ebenso werden passende <b>Hydrolate</b>
+                              und <b>Pflanzenöle</b> vorgestellt.
+                              Um <b>Kontraindikationen & Vorsichtsgebote</b> berücksichtigen zu können, findet bei der ersten Beratung ein ausführliches Gespräch statt.
+                              Je nach Duftvorliebe und <b>anstehenden persönlichen Themen</b> entsteht eine Rezeptur, 
+                              die für Sie zum Mitnehmen in einem Riechstift gemischt wird.
+                              <br>
+                              <br>
+                              Im Feedback Gespräch wird Ihr Allgemeinbefinden evaluiert, bei Bedarf die individuelle Mischung 
+                              abgeändert oder auf Wunsch nachproduziert. Für diese <b>Wohlfühlmischung</b> erhalten Sie 
+                              eigens erstellte Unterlagen mit Anwendungsmöglichkeiten für den Alltag.
+                              <br>
+                              <br>
+                              <b>Ziele meiner Beratung:</b> Mit Ihrer duftenden Begleitung erlangen Sie Wohlbefinden und fühlen sich in der aktuellen 
+                              Lebensphase energetisch und körperlich ausgeglichen.</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Kosten</td>
+                                    <td align="right">99 €
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Kids bis 14 Jahre</td>
+                                    <td align="right">66 €
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Dauer: 60 bis 90 Minuten</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>
+                                      <p>Preis inklusiv Riechstift mit der erstellen Mischung und Feedback nach ca 3 Wochen, 
+                                        welches in der Praxis oder telefonisch stattfindet 
+                                        <br>
+                                        <br>zzgl. Kosten für die Nachproduktion der Individuellen Mischung
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <!-- KOERPERANWENDUNGEN -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Ah 2022 1.jpeg"
+                v-model="leistungen_1"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Körperanwendungen</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Kurztext
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              Wohlbefinden nachhaltig stärken und Gesundheit fördern
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <img class="float-half-right max300" src="assets/Le 2.jpg" alt="Rhytmisches Körperbalancing">
+                            <p>
+                              Beim <b>RHYTHMISCHES KÖRPERBALANCING</b> findet die Anwendung im Bereich von Rücken & Nacken ODER Unterarme & Hände ODER 
+                              Unterschenkel & Füße statt. Dieses kann im Sitzen oder Liegen durchgeführt werden. Wiederkehrende <b>rhythmische Streichungen</b>
+                              führen zu einem tiefen <b>Gefühl der Entspannung</b>, Blockaden können gelöst werden.
+                              <br>
+                              <br>
+                              Die <b>GANZKÖRPERANWENDUNG</b> wird im Liegen an Rücken, Armen und Beinen, sowie im Gesicht ausgeführt. 
+                              Ausgleichende und harmonische Einreibungen/Streichungen führen zu einer <b>energetischen & körperlichen Ausgewogenheit</b>.
+                              <br>
+                              <br>
+                              Als unterstützende Maßnahme bei einer Entgiftungskur oder während einer Erholungszeit, bieten sich 
+                              <b>WICKEL, AUFLAGEN & KOMPRESSEN</b> an. Die Erstanwendung findet in der Praxis statt. 
+                              <br>Anschließend erhalten Sie Tipps, damit eine regelmäßige Anwendung auch bei Ihnen zu Hause durchführbar ist.
+                              <br>
+                              Passende hilfreiche Utensilien kommen bei mir in der Praxis zum Einsatz.
+                              <br>
+                              <br>
+                              In einem Erstgespräch, Dauer 10 - 15 Minuten, werden Fragen zur Behandlungsmethode, 
+                              Ist-Zustand sowie das Ziel einer Körperanwendung besprochen. Danach können Sie eine 
+                              <b>Mischung aus Pflanzenölen & ätherischen Ölen</b> wählen, die gerade zu Ihren Bedürfnissen passt.
+                              Diese wird anschließend auf die entsprechenden Hautareale aufgetragen.
+                              <br>
+                              <br>Zur gegönnten Wohlfühlzeit sollten anschließend 5-10 Minuten eingeplant werden, damit die 
+                              Anwendung nachwirken kann.
+                              <br>
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Rhytmisches Körperbalancing
+                                      <br>25 Minuten
+                                    </td>
+                                    <td align="right">50 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5er Block</td>
+                                    <td align="right">225 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Ganzkörperanwendung
+                                      <br>50 Minuten
+                                    </td>
+                                    <td align="right">80 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5er Block</td>
+                                    <td align="right">360 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Wickel, Auflagen & Kompressen
+                                      <br>60 Minuten
+                                    </td>
+                                    <td align="right">80 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Erstgespräch zzgl.</td>
+                                    <td align="right">20 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>
+                                      <b>Anmerkung:</b> Die Durchführung einer Körperanwendung erfolgt ausschließlich auf intakter, gesunder Haut!
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                            <br>
+                            <div class="text-center">
+                              <img class="max300"
+                                src="assets/Le 2a.jpeg" alt="Wickel Auflagen Kompressen">
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <!-- NATURPARFUM -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Ah 2022 1.jpeg"
+                v-model="leistungen_2"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Naturparfum</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Kurztext
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div class="headline text-center">
+                              <span class="leistung">Naturparfum</span>
+                              <br>
+                              <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                                Düfte sollten zu Menschen, deren Umgebung und Stimmung passen
+                              </v-card-title>
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <img class="float-half-right max300" src="assets/Le 3.jpg" alt="Naturparfum">
+                            <p>
+                              Ein <b>individuell erstelltes Naturparfum</b> ist Einzigartig.
+                              Ob mit feniminen, maskulinen, blumigen, würzigen oder orientalischen Charakter, vieles ist möglich.
+                              <br>
+                              <br>
+                              Um eine <b>gelungene Duftkomposition</b> zu erhalten, unterstütze ich Sie beim Wählen aus 
+                              einer Vielzahl von Essenzen.</b>
+                          Aufeinander abgestimmte Akkorde ergeben eine ausgewogene Zusammenstellung, deren Duftrichtung Sie vorgeben. 
+                              <br>
+                              <br>
+                              Nach einer Reifezeit von ca. 3 Wochen kann die Komposition dann zu einem 
+                              <b>EdP, EdT, EdC, Ölparfum, Creme de Parfum oder Aftershafe</b> verarbeitet werden. 
+                              Ebenso ist es möglich ein <b>Körperöl</b>
+                              oder eine <b>Duschbasis</b> damit zu beduften.
+                              <br>
+                              <br>Mein Bestreben ist es, einen Duft zu kreieren, mit dem Sie sich gerne umgeben 
+                              und der Ihre Persönlichkeit unterstreicht. 
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Kosten</td>
+                                    <td align="right">99 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Dauer: 60 Minuten</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>Preis inklusiv Nachbesprechung
+                                      <br>
+                                      <br>zzgl. Materialkosten, die sich nach den verwendeten Rohstoffe und Leerbehälter richten
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <!-- WORKSHOP -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Ah 2022 1.jpeg"
+                v-model="leistungen_3"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Workshop</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Kurztext
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              Individuelle Mischungen, Naturparfum oder Naturkosmetik selbst herstellen
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Le 4.jpeg" alt="Workshop">
+                            </div>
+                            <p>
+                              Das <b>DIY-Produkt</b>
+                              rund um ätherische Öle, Hydrolate und Pflanzenöle richtet sich nach Ihren <b>persönlichen Wünschen & Interessen.</b>
+                              <br>
+                              <br>
+                              <b>Duftmischungen mit ätherischen Ölen, ein Naturparum oder 
+                                Salbe, Lippen-Balsam, Creme, Körperöl</b> - Sie entscheiden, was produziert wird! 
+                              Unter Anleitung wird gemischt, gerührt und das fertige Produkt kann mit nach Hause genommen werden.
+                              <br>
+                              <br>
+                              Sie erhalten ein <b>Skriptum</b> mit einer Beschreibung der verwendeten Zutaten, 
+                              Verarbeitungshinweise und dem Rezept des erzeugten Produktes. 
+                              Damit kann es zu Hause für den Eigengebrauch jederzeit nachgerührt werden.
+                              <br>
+                              <br>
+                              <b>Damit bestimmen Sie was hineinkommt, um Ihre Duftvorliebe zu fördern und Unverträglichkeiten zu minimieren.</b>
+                              <br>
+                              <br>Ob für Sie alleine, zu zweit oder in der Kleingruppe bis maximal 4 Personen, 
+                              ich freue mich auf Ihre Anfrage und werde mich bemühen, ihre Wünsche umsetzen zu können.
+                            </p>
+                            <div class="text-center" style="font-family: Ms Madi; font-size: 20px; font-weight: 700;">
+                              „Zur Information“</div>
+                            <p>Da ich das Skriptum stets passend zum Thema individuell zusammenstelle 
+                              und die benötigten Rohstoffe nicht auf Vorrat lagern, sondern frisch bestellt werden,
+                              ist mit ca. 3-4 Wochen Vorbereitungszeit zu rechen! 
+                            </p>
+                          </v-card-text>   
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td colspan="2">
+                                      <b>Kosten je nach Teilnehmeranzahl:</b>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1 Teilnehmer</td>
+                                    <td align="right">150 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2 Teilnehmer</td>
+                                    <td align="right">je 90 €</td>  
+                                  </tr>
+                                  <tr>
+                                    <td>3 Teilnehmer</td>
+                                    <td align="right">je 65 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td>4 Teilnehmer</td>
+                                    <td align="right">je 50 €</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Dauer: 90 bis 120 Minuten</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>Preis inklusive Skriptum
+                                      <br>
+                                      <br>zzgl. Materialkosten, je nach verwendeten Rohstoffe und Leerbehälter
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <!-- DUFTMARKETING & AIRDESIGN -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Ah 2022 1.jpeg"
+                v-model="leistungen_4"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Duftmarketing & Airdesign</v-toolbar-title>
+                  </v-toolbar>      
+                  <div class="summary">
+                    Kurztext
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              Corporate Scent - steigern Sie Ihren Wiedererkennungswert
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Le 5.jpeg" alt="Duftmarkting & AirDesign">
+                            </div>
+                            Wir sind ständig von Düften umgeben. Sobald diese in unsere Nase gelangen, lösen diese in unserem <b>Unterbewusstsein</b> eine 
+                            bestimmte Reaktion aus, auch wenn sie kaum wahrnehmbar ist.
+                            Umso angenehmer ein Duft erscheint, desto länger wird man sich in diesem Umfeld wohlfühlen.
+                            <br> 
+                            <br> 
+                            Ein Duft hinterlässt Erinnerungen, die unmittelbar mit Gefühlen, Erlebnissen und Bildern verknüpft sind. 
+                            <br>
+                            <br>
+                            <b>Raumbeduftung für Praxis/Büro</b>: 
+                            <ul>
+                              <li>
+                                <b>Raumluftreinigende und -harmonisierende</b> Duftmischungen schaffen eine angenehme, frische Atmosphäre
+                              </li>
+                              <li>
+                                Von ätherischen Ölen, welche die <b>Aufmerksamkeit</b>
+                                erhöhen und ein <b>konstruktives Raumklima</b> schaffen, profitieren Ihre Mitarbeiter
+                              </li>
+                            </ul>
+                            <br>
+                            <b>Firmenduft</b>: 
+                            <ul>
+                              <li>
+                                Ergänzen Sie Ihr <b>Logo</b>
+                                mit einem speziellen Duft, der Ihre <b>Firmenphilosophie</b> unterstreicht
+                              </li>
+                              <li>Damit können u.a. Visitenkarten, Flyer oder auch Ihr Messestand bei Veranstaltungen beduftet werden</li>
+                            </ul>
+                            <br>
+                            <b>Hochzeitsduft</b>: 
+                            <ul>
+                              <li>
+                                Ihr <b>besonderes Ereignis</b>
+                                bekommt eine <b>besondere Erinnerung</b>, wenn auch die Nase miteinbezogen wird
+                              </li>
+                              <li>Der exklusive Duft wird mit dem Brautpaar gemeinsam kreiert</li>
+                              <li>
+                                Exklusive <b>DuftGeschenke</b> können Sie im Rahmen einen Workshops als Giveaways 
+                                mit Ihrer individuellen Duftkomposition für Ihre Gäste erstellen, 
+                                damit diese sich auch noch später an diesen besonderen Tag erinnern können</li>
+                            </ul> 
+                            <br>Gerne unterstütze ich Sie beim Entdecken der passenden ätherische Öle, 
+                            um einen <b>individuellen Duft</b>
+                            für Ihre speziellen <b>Bedürfnisse</b> zu kreieren.
+                            <br>
+                            Auf Wunsch kann ein <b>Beduftungskonzept</b> erstellt werden.
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Erstberatung</td>
+                                    <td align="right">120&nbsp;€</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Dauer: 60 Minuten</td>   
+                                  </tr>
+                                  <tr>
+                                    <td>Jede weiter Stunde</td>
+                                    <td align="right">100&nbsp;€</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Gesamtkosten richten sich nach Aufwand</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>
+                                      <b>Bei Anreise:</b> Verrechnung des amtlichen Kilometergeldes
+                                      <br>
+                                      <br>
+                                    </td>
+                                  </tr> 
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                            <br>
+                            <div class="text-center">
+                              <img class="max300"
+                                src="assets/Le 5a.jpeg" alt="Hochzeit">
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <!-- ELFENDÜFTE-COACHING -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Ah 2022 1.jpeg"
+                v-model="leistungen_5"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Elfendüfte-Coaching</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Kurztext
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              Eine (Duft)Reise ohne Gepäck
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Le 6e.jpeg" alt="Elfendüfte-Coaching">
+                            </div>
+                            <p>
+                              <b>Begegnen Sie der wunderbaren Kraft der Pflanzendüfte auf Ihrer persönlichen DuftSpur.</b>
+                              <br>So wie die Pflanze unterschiedliche Lebensbedingungen vorfindet und ständig mit ihrem Umfeld 
+                              kommuniziert (Anlocken von Nützlingen, Abwehr von Schädlingen,...), so vielfältig 
+                              können auch unsere <b>Reaktionen auf den Duft</b> einer Pflanze sein, denn auch wir machen 
+                              unterschiedliche Erfahrungen, die mit Düften verknüpft sind:</p>
+                            <ul>
+                              <li>Zimt kann Gefühle von weihnachtlicher Stimmung erwecken oder lässt an einen selbstgemachten Apfelstrudel denken</li>
+                              <li>Lavendel erinnert vielleicht an ein Säckchen, welches entweder im Kasten hängt um Motten fernzuhalten oder als Duftimpuls neben dem Kopfpolster seinen Platz findet</li> 
+                            </ul>  
+                            <p>
+                              <br>
+                              Erinnerungen sind abgespeichert, die bei <b>bewussten oder unbewussten Wahrnehmen</b> Reaktionen 
+                              auslösen - Duft & Psyche treten in Kommunikation!
+                              <br>
+                              <br>Sie erhalten während des Coachings Duftimpulse gereicht. Dabei spielt es keine Rolle zu 
+                              erkennen, welche Pflanze dahintersteckt. Es zählt lediglich Ihre <b>Wahrnehmung, Empfindung 
+                                & Reaktion</b> darauf.
+                              <br>Ich unterstütze Sie beim Entdecken Ihres Duftes/Ihrer Duftmischung, diese darf wiederum 
+                              in der folgenden Zeit Ihr Begleiter in Form eines Riechstiftes sein, wann immer Sie an Ihrem 
+                              selbstbestimmten Ziel beim Coaching erinnert werden wollen.
+                              <br>
+                              <br>Wenn Sie neugierig sind, welche Stationen Sie auf Ihrer Reise noch erwarten könnten, ist ein 
+                              Duftcoaching eine Möglichkeit, diese aufzuzeigen. 
+                              <br>
+                              <br>
+                              <b>Es handelt sich dabei weder um eine psychologische oder psychotherapeutischer Behandlung, noch ersetzt diese.</b> 
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Kosten</td>
+                                    <td align="right">99&nbsp;€</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Folgeberatung zum selben Anliegen</td>
+                                    <td align="right">66&nbsp;€</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Dauer: 60-90 Minuten</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>Preis inklusiv Riechstift und Feedback nach ca 3 Wochen, welches in der Praxis oder telefonisch stattfindet
+                                      <br>zzgl. Kosten für Leerbehältnisse und Rohstoffe für weitere Anwendungsmöglichkeiten
+                                      <br>
+                                      <br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>Ein Elfendüfte-Coaching via Skype wäre auch möglich. Dafür ist aus organisatorischen Gründen 
+                                      mit einer Vorbereitungszeit von mindestens einer Woche zu rechnen. Der genaue Ablauf einer 
+                                      Beratung wird bei Terminvergabe besprochen.
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <!-- GUTSCHEINE -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Ah 2022 1.jpeg"
+                v-model="leistungen_6"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Gutscheine</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Kurztext
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              Die Geschenksidee für alle Duftbegeisterte
                             </v-card-title>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md8>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div class="text-center">
-                                <img class="float-half-right max300"
-                                  src="assets/Le 1.jpeg" alt="Aromafachberatung">
-                              </div>
-                              <p>
-                                Im Beratungsgespräch können Sie an <b>Lieblingsdüften</b> schnuppern und neue Duftrichtungen kennenlernen.
-                                Ebenso werden passende <b>Hydrolate</b>
-                                und <b>Pflanzenöle</b> vorgestellt.
-                                Um <b>Kontraindikationen & Vorsichtsgebote</b> berücksichtigen zu können, findet bei der ersten Beratung ein ausführliches Gespräch statt.
-                                Je nach Duftvorliebe und <b>anstehenden persönlichen Themen</b> entsteht eine Rezeptur, 
-                                die für Sie zum Mitnehmen in einem Riechstift gemischt wird.
-                                <br>
-                                <br>
-                                Im Feedback Gespräch wird Ihr Allgemeinbefinden evaluiert, bei Bedarf die individuelle Mischung 
-                                abgeändert oder auf Wunsch nachproduziert. Für diese <b>Wohlfühlmischung</b> erhalten Sie 
-                                eigens erstellte Unterlagen mit Anwendungsmöglichkeiten für den Alltag.
-                                <br>
-                                <br>
-                                <b>Ziele meiner Beratung:</b> Mit Ihrer duftenden Begleitung erlangen Sie Wohlbefinden und fühlen sich in der aktuellen 
-                                Lebensphase energetisch und körperlich ausgeglichen.</p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <v-simple-table>
-                                <template v-slot:default>
-                                  <tbody>
-                                    <tr>
-                                      <td>Kosten</td>
-                                      <td align="right">99 €
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>Kids bis 14 Jahre</td>
-                                      <td align="right">66 €
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">Dauer: 60 bis 90 Minuten</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">
-                                        <br>
-                                        <p>Preis inklusiv Riechstift mit der erstellen Mischung und Feedback nach ca 3 Wochen, 
-                                          welches in der Praxis oder telefonisch stattfindet 
-                                          <br>
-                                          <br>zzgl. Kosten für die Nachproduktion der Individuellen Mischung
-                                        </p>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </template>
-                              </v-simple-table>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <v-window-item>
-                    <!-- KOERPERANWENDUNGEN -->
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-center">
-                                <span class="leistung">Körperanwendungen</span>
-                                <br>
-                                <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                                  Wohlbefinden nachhaltig stärken und Gesundheit fördern
-                                </v-card-title>
-                              </div>
-                            </v-card-title>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md8>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half-right max300" src="assets/Le 2.jpg" alt="Rhytmisches Körperbalancing">
-                              <p>
-                                Beim <b>RHYTHMISCHES KÖRPERBALANCING</b> findet die Anwendung im Bereich von Rücken & Nacken ODER Unterarme & Hände ODER 
-                                Unterschenkel & Füße statt. Dieses kann im Sitzen oder Liegen durchgeführt werden. Wiederkehrende <b>rhythmische Streichungen</b>
-                                führen zu einem tiefen <b>Gefühl der Entspannung</b>, Blockaden können gelöst werden.
-                                <br>
-                                <br>
-                                Die <b>GANZKÖRPERANWENDUNG</b> wird im Liegen an Rücken, Armen und Beinen, sowie im Gesicht ausgeführt. 
-                                Ausgleichende und harmonische Einreibungen/Streichungen führen zu einer <b>energetischen & körperlichen Ausgewogenheit</b>.
-                                <br>
-                                <br>
-                                Als unterstützende Maßnahme bei einer Entgiftungskur oder während einer Erholungszeit, bieten sich 
-                                <b>WICKEL, AUFLAGEN & KOMPRESSEN</b> an. Die Erstanwendung findet in der Praxis statt. 
-                                <br>Anschließend erhalten Sie Tipps, damit eine regelmäßige Anwendung auch bei Ihnen zu Hause durchführbar ist.
-                                <br>
-                                Passende hilfreiche Utensilien kommen bei mir in der Praxis zum Einsatz.
-                                <br>
-                                <br>
-                                In einem Erstgespräch, Dauer 10 - 15 Minuten, werden Fragen zur Behandlungsmethode, 
-                                Ist-Zustand sowie das Ziel einer Körperanwendung besprochen. Danach können Sie eine 
-                                <b>Mischung aus Pflanzenölen & ätherischen Ölen</b> wählen, die gerade zu Ihren Bedürfnissen passt.
-                                Diese wird anschließend auf die entsprechenden Hautareale aufgetragen.
-                                <br>
-                                <br>Zur gegönnten Wohlfühlzeit sollten anschließend 5-10 Minuten eingeplant werden, damit die 
-                                Anwendung nachwirken kann.
-                                <br>
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <v-simple-table>
-                                <template v-slot:default>
-                                  <tbody>
-                                    <tr>
-                                      <td>Rhytmisches Körperbalancing
-                                        <br>25 Minuten
-                                      </td>
-                                      <td align="right">50 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td>5er Block</td>
-                                      <td align="right">225 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Ganzkörperanwendung
-                                        <br>50 Minuten
-                                      </td>
-                                      <td align="right">80 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td>5er Block</td>
-                                      <td align="right">360 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Wickel, Auflagen & Kompressen
-                                        <br>60 Minuten
-                                      </td>
-                                      <td align="right">80 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Erstgespräch zzgl.</td>
-                                      <td align="right">20 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">
-                                        <br>
-                                        <b>Anmerkung:</b> Die Durchführung einer Körperanwendung erfolgt ausschließlich auf intakter, gesunder Haut!
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </template>
-                              </v-simple-table>
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Le 7.jpeg" alt="Gutscheine">
+                            </div>
+                            <p>
+                              Überraschen Sie Ihre Liebsten mit einer<b> dufterfüllten Auszeit </b>in meiner Praxis.
                               <br>
-                              <div class="text-center">
-                                <img class="max300"
-                                  src="assets/Le 2a.jpeg" alt="Wickel Auflagen Kompressen">
-                              </div>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <v-window-item>
-                    <!-- NATURPARFUM -->
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-center">
-                                <span class="leistung">Naturparfum</span>
-                                <br>
-                                <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                                  Düfte sollten zu Menschen, deren Umgebung und Stimmung passen
-                                </v-card-title>
-                              </div>
-                            </v-card-title>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md8>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <img class="float-half-right max300" src="assets/Le 3.jpg" alt="Naturparfum">
-                              <p>
-                                Ein <b>individuell erstelltes Naturparfum</b> ist Einzigartig.
-                                Ob mit feniminen, maskulinen, blumigen, würzigen oder orientalischen Charakter, vieles ist möglich.
-                                <br>
-                                <br>
-                                Um eine <b>gelungene Duftkomposition</b> zu erhalten, unterstütze ich Sie beim Wählen aus 
-                                einer Vielzahl von Essenzen.</b>
-                                Aufeinander abgestimmte Akkorde ergeben eine ausgewogene Zusammenstellung, deren Duftrichtung Sie vorgeben. 
-                                <br>
-                                <br>
-                                Nach einer Reifezeit von ca. 3 Wochen kann die Komposition dann zu einem 
-                                <b>EdP, EdT, EdC, Ölparfum, Creme de Parfum oder Aftershafe</b> verarbeitet werden. 
-                                Ebenso ist es möglich ein <b>Körperöl</b>
-                                oder eine <b>Duschbasis</b> damit zu beduften.
-                                <br>
-                                <br>Mein Bestreben ist es, einen Duft zu kreieren, mit dem Sie sich gerne umgeben 
-                                und der Ihre Persönlichkeit unterstreicht. 
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <v-simple-table>
-                                <template v-slot:default>
-                                  <tbody>
-                                    <tr>
-                                      <td>Kosten</td>
-                                      <td align="right">99 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">Dauer: 60 Minuten</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">
-                                        <br>Preis inklusiv Nachbesprechung
-                                        <br>
-                                        <br>zzgl. Materialkosten, die sich nach den verwendeten Rohstoffe und Leerbehälter richten
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </template>
-                              </v-simple-table>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <v-window-item>
-                    <!-- WORKSHOP -->
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-center">
-                                <span class="leistung">Workshop</span>
-                                <br>
-                                <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                                  Individuelle Mischungen, Naturparfum oder Naturkosmetik selbst herstellen
-                                </v-card-title>
-                              </div>
-                            </v-card-title>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md8>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div class="text-center">
-                                <img class="float-half-right max300"
-                                  src="assets/Le 4.jpeg" alt="Workshop">
-                              </div>
-                              <p>
-                                Das <b>DIY-Produkt</b>
-                                rund um ätherische Öle, Hydrolate und Pflanzenöle richtet sich nach Ihren <b>persönlichen Wünschen & Interessen.</b>
-                                <br>
-                                <br>
-                                <b>Duftmischungen mit ätherischen Ölen, ein Naturparum oder 
-                                  Salbe, Lippen-Balsam, Creme, Körperöl</b> - Sie entscheiden, was produziert wird! 
-                                Unter Anleitung wird gemischt, gerührt und das fertige Produkt kann mit nach Hause genommen werden.
-                                <br>
-                                <br>
-                                Sie erhalten ein <b>Skriptum</b> mit einer Beschreibung der verwendeten Zutaten, 
-                                Verarbeitungshinweise und dem Rezept des erzeugten Produktes. 
-                                Damit kann es zu Hause für den Eigengebrauch jederzeit nachgerührt werden.
-                                <br>
-                                <br>
-                                <b>Damit bestimmen Sie was hineinkommt, um Ihre Duftvorliebe zu fördern und Unverträglichkeiten zu minimieren.</b>
-                                <br>
-                                <br>Ob für Sie alleine, zu zweit oder in der Kleingruppe bis maximal 4 Personen, 
-                                ich freue mich auf Ihre Anfrage und werde mich bemühen, ihre Wünsche umsetzen zu können.
-                              </p>
-                              <div class="text-center" style="font-family: Ms Madi; font-size: 20px; font-weight: 700;">
-                                „Zur Information“</div>
-                              <p>Da ich das Skriptum stets passend zum Thema individuell zusammenstelle 
-                                und die benötigten Rohstoffe nicht auf Vorrat lagern, sondern frisch bestellt werden,
-                                ist mit ca. 3-4 Wochen Vorbereitungszeit zu rechen! 
-                              </p>
-                            </v-card-text>   
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <v-simple-table>
-                                <template v-slot:default>
-                                  <tbody>
-                                    <tr>
-                                      <td colspan="2">
-                                        <b>Kosten je nach Teilnehmeranzahl:</b>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>1 Teilnehmer</td>
-                                      <td align="right">150 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td>2 Teilnehmer</td>
-                                      <td align="right">je 90 €</td>  
-                                    </tr>
-                                    <tr>
-                                      <td>3 Teilnehmer</td>
-                                      <td align="right">je 65 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td>4 Teilnehmer</td>
-                                      <td align="right">je 50 €</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">Dauer: 90 bis 120 Minuten</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">
-                                        <br>Preis inklusive Skriptum
-                                        <br>
-                                        <br>zzgl. Materialkosten, je nach verwendeten Rohstoffe und Leerbehälter
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </template>
-                              </v-simple-table>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <v-window-item>
-                    <!-- DUFTMARKETING & AIRDESIGN -->
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-center">
-                                <span class="leistung">Duftmarketing & Airdesign</span>
-                                <br>
-                                <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                                  Corporate Scent - steigern Sie Ihren Wiedererkennungswert
-                                </v-card-title>
-                              </div>
-                            </v-card-title>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md8>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div class="text-center">
-                                <img class="float-half-right max300"
-                                  src="assets/Le 5.jpeg" alt="Duftmarkting & AirDesign">
-                              </div>
-                              Wir sind ständig von Düften umgeben. Sobald diese in unsere Nase gelangen, lösen diese in unserem <b>Unterbewusstsein</b> eine 
-                              bestimmte Reaktion aus, auch wenn sie kaum wahrnehmbar ist.
-                              Umso angenehmer ein Duft erscheint, desto länger wird man sich in diesem Umfeld wohlfühlen.
-                              <br> 
-                              <br> 
-                              Ein Duft hinterlässt Erinnerungen, die unmittelbar mit Gefühlen, Erlebnissen und Bildern verknüpft sind. 
+                              <br>Eine besondere Aufmerksamkeit, passend zu einem besonderen Anlaß oder einfach so, um Freude zu bereiten.
                               <br>
                               <br>
-                              <b>Raumbeduftung für Praxis/Büro</b>: 
-                              <ul>
-                                <li>
-                                  <b>Raumluftreinigende und -harmonisierende</b> Duftmischungen schaffen eine angenehme, frische Atmosphäre
-                                </li>
-                                <li>
-                                  Von ätherischen Ölen, welche die <b>Aufmerksamkeit</b>
-                                  erhöhen und ein <b>konstruktives Raumklima</b> schaffen, profitieren Ihre Mitarbeiter
-                                </li>
-                              </ul>
+                              Momente zum<b> Genießen, Wohlfühlen, Entspannen, Entschleunigen, Verwöhnen lassen. </b>
                               <br>
-                              <b>Firmenduft</b>: 
-                              <ul>
-                                <li>
-                                  Ergänzen Sie Ihr <b>Logo</b>
-                                  mit einem speziellen Duft, der Ihre <b>Firmenphilosophie</b> unterstreicht
-                                </li>
-                                <li>Damit können u.a. Visitenkarten, Flyer oder auch Ihr Messestand bei Veranstaltungen beduftet werden</li>
-                              </ul>
-                              <br>
-                              <b>Hochzeitsduft</b>: 
-                              <ul>
-                                <li>
-                                  Ihr <b>besonderes Ereignis</b>
-                                  bekommt eine <b>besondere Erinnerung</b>, wenn auch die Nase miteinbezogen wird
-                                </li>
-                                <li>Der exklusive Duft wird mit dem Brautpaar gemeinsam kreiert</li>
-                                <li>
-                                  Exklusive <b>DuftGeschenke</b> können Sie im Rahmen einen Workshops als Giveaways 
-                                  mit Ihrer individuellen Duftkomposition für Ihre Gäste erstellen, 
-                                  damit diese sich auch noch später an diesen besonderen Tag erinnern können</li>
-                              </ul> 
-                              <br>Gerne unterstütze ich Sie beim Entdecken der passenden ätherische Öle, 
-                              um einen <b>individuellen Duft</b>
-                              für Ihre speziellen <b>Bedürfnisse</b> zu kreieren.
-                              <br>
-                              Auf Wunsch kann ein <b>Beduftungskonzept</b> erstellt werden.
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <v-simple-table>
-                                <template v-slot:default>
-                                  <tbody>
-                                    <tr>
-                                      <td>Erstberatung</td>
-                                      <td align="right">120&nbsp;€</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">Dauer: 60 Minuten</td>   
-                                    </tr>
-                                    <tr>
-                                      <td>Jede weiter Stunde</td>
-                                      <td align="right">100&nbsp;€</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">Gesamtkosten richten sich nach Aufwand</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">
-                                        <br>
-                                        <b>Bei Anreise:</b> Verrechnung des amtlichen Kilometergeldes
-                                        <br>
-                                        <br>
-                                      </td>
-                                    </tr> 
-                                  </tbody>
-                                </template>
-                              </v-simple-table>
-                              <br>
-                              <div class="text-center">
-                                <img class="max300"
-                                  src="assets/Le 5a.jpeg" alt="Hochzeit">
-                              </div>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <v-window-item>
-                    <!-- ELFENDÜFTE-COACHING -->
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-center">
-                                <span class="leistung">Elfendüfte-Coaching</span>
-                                <br>
-                                <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                                  Eine (Duft)Reise ohne Gepäck
-                                </v-card-title>
-                              </div>
-                            </v-card-title>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md8>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div class="text-center">
-                                <img class="float-half-right max300"
-                                  src="assets/Le 6e.jpeg" alt="Elfendüfte-Coaching">
-                              </div>
-                              <p>
-                                <b>Begegnen Sie der wunderbaren Kraft der Pflanzendüfte auf Ihrer persönlichen DuftSpur.</b>
-                                <br>So wie die Pflanze unterschiedliche Lebensbedingungen vorfindet und ständig mit ihrem Umfeld 
-                                kommuniziert (Anlocken von Nützlingen, Abwehr von Schädlingen,...), so vielfältig 
-                                können auch unsere <b>Reaktionen auf den Duft</b> einer Pflanze sein, denn auch wir machen 
-                                unterschiedliche Erfahrungen, die mit Düften verknüpft sind:</p>
-                              <ul>
-                                <li>Zimt kann Gefühle von weihnachtlicher Stimmung erwecken oder lässt an einen selbstgemachten Apfelstrudel denken</li>
-                                <li>Lavendel erinnert vielleicht an ein Säckchen, welches entweder im Kasten hängt um Motten fernzuhalten oder als Duftimpuls neben dem Kopfpolster seinen Platz findet</li> 
-                              </ul>  
-                              <p>
-                                <br>
-                                Erinnerungen sind abgespeichert, die bei <b>bewussten oder unbewussten Wahrnehmen</b> Reaktionen 
-                                auslösen - Duft & Psyche treten in Kommunikation!
-                                <br>
-                                <br>Sie erhalten während des Coachings Duftimpulse gereicht. Dabei spielt es keine Rolle zu 
-                                erkennen, welche Pflanze dahintersteckt. Es zählt lediglich Ihre <b>Wahrnehmung, Empfindung 
-                                  & Reaktion</b> darauf.
-                                <br>Ich unterstütze Sie beim Entdecken Ihres Duftes/Ihrer Duftmischung, diese darf wiederum 
-                                in der folgenden Zeit Ihr Begleiter in Form eines Riechstiftes sein, wann immer Sie an Ihrem 
-                                selbstbestimmten Ziel beim Coaching erinnert werden wollen.
-                                <br>
-                                <br>Wenn Sie neugierig sind, welche Stationen Sie auf Ihrer Reise noch erwarten könnten, ist ein 
-                                Duftcoaching eine Möglichkeit, diese aufzuzeigen. 
-                                <br>
-                                <br>
-                                <b>Es handelt sich dabei weder um eine psychologische oder psychotherapeutischer Behandlung, noch ersetzt diese.</b> 
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <v-simple-table>
-                                <template v-slot:default>
-                                  <tbody>
-                                    <tr>
-                                      <td>Kosten</td>
-                                      <td align="right">99&nbsp;€</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Folgeberatung zum selben Anliegen</td>
-                                      <td align="right">66&nbsp;€</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">Dauer: 60-90 Minuten</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">
-                                        <br>Preis inklusiv Riechstift und Feedback nach ca 3 Wochen, welches in der Praxis oder telefonisch stattfindet
-                                        <br>zzgl. Kosten für Leerbehältnisse und Rohstoffe für weitere Anwendungsmöglichkeiten
-                                        <br>
-                                        <br>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">
-                                        <br>Ein Elfendüfte-Choaching via Skype wäre auch möglich. Dafür ist aus organisatorischen Gründen 
-                                        mit einer Vorbereitungszeit von mindestens einer Woche zu rechnen. Der genaue Ablauf einer 
-                                        Beratung wird bei Terminvergabe besprochen.
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </template>
-                              </v-simple-table>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <v-window-item>
-                    <!-- GUTSCHEINE -->
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-center">
-                                <span class="leistung">Gutscheine</span>
-                                <br>
-                                <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                                  Die Geschenksidee für alle Duftbegeisterte
-                                </v-card-title>
-                              </div>
-                            </v-card-title>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md8>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div class="text-center">
-                                <img class="float-half-right max300"
-                                  src="assets/Le 7.jpeg" alt="Gutscheine">
-                              </div>
-                              <p>
-                                Überraschen Sie Ihre Liebsten mit einer<b> dufterfüllten Auszeit </b>in meiner Praxis.
-                                <br>
-                                <br>Eine besondere Aufmerksamkeit, passend zu einem besonderen Anlaß oder einfach so, um Freude zu bereiten.
-                                <br>
-                                <br>
-                                Momente zum<b> Genießen, Wohlfühlen, Entspannen, Entschleunigen, Verwöhnen lassen. </b>
-                                <br>
-                                <br>Auf Wunsch kann der Gutschein auch mit einer persönlichen Widmung als Geschenk von mir versendet werden.
-                              </p>
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <v-simple-table>
-                                <template v-slot:default>
-                                  <tbody>
-                                    <tr>
-                                      <td>Kosten</td>
-                                      <td align="right">Betrag frei wählbar</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">Anrechenbar auf sämtlichen Leistungen</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">
-                                        <br>zzgl. Verpackungs- und Versandspesen von 5 € (entfallen bei einem Gutscheinwert ab 50 €)
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </template>
-                              </v-simple-table>
-                            </v-card-text>
-                            <v-card-actions class="justify-center">
-                              <v-btn color="rgb(68,0,72)" dark @click="gutschein_dialog = true">
-                                <v-icon left>mdi-cash-multiple</v-icon>
-                                <span>Jetzt bestellen</span>
-                              </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-window-item>
-                  <v-window-item>
-                    <!-- ALLGEIMEINE INFORMATIONEN -->
-                    <v-container grid-list-xl>
-                      <v-layout row wrap>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-center">
-                                <span class="leistung">Allgemeines</span>
-                                <br>
-                                <v-card-title style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                                  Informationen, Aktionen & Tipps zum Leistungsangebot
-                                </v-card-title>
-                              </div>
-                            </v-card-title>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div class="text-center">
-                                <img class="float-half max300"
-                                  src="assets/Le 8.jpeg" alt="Duftmarkting & AirDesign">
-                              </div>
-                              <a @click="leistungen=0">Aromafachberatungen</a> sowie
-                              <a @click="leistungen=1">Körperanwendungen</a> führe ich im Rahmen meiner Tätigkeit als 
-                              <b>Humanenergetikerin</b>
-                              nach dem <a class="text-no-wrap" target="_blank"
-                                href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO durch.
-                              <br>
-                              <br>
-                              Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich zusätzlich,
-                              <a @click="leistungen=1">Wickel, Auflagen & Kompressen</a> in meiner Praxis anzulegen.
-                              <br>
-                              <br>
-                              <b>Weitere Leistungen</b>, um duftende Wohlfühlmomente in Ihr Leben zu bringen:
-                              <a @click="leistungen=2">Naturparfum</a>, 
-                              <a @click="leistungen=3">Workshop</a>,
-                              <a @click="leistungen=4">Duftmarketing & AirDesign</a>,
-                              <a @click="leistungen=5">Elfendüfte-Coaching</a> sowie
-                              <a @click="leistungen=6">Gutscheine</a> 
-                              <br>  
-                              <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                                <a @click="leistungen=6">
-                                  Aktion "Gutscheine": Bei Erwerb erhöhe ich den Betrag um 10%! 
-                                  Ich freue mich auf Ihre Anfrage!
-                                </a>
-                              </v-card-title>  
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md12>
-                          <v-card flat class="transparent">
-                            <v-card-text>
-                              <div class="text-center">
-                                <img class="float-half-right max300"
-                                  src="assets/Le 8e.jpeg" alt="Duftmarkting & AirDesign">
-                              </div> 
-                              Zur Anwendung kommen nur 100 % naturreine ätherische Öle, hochwertige Pflanzenöle, Buttern, Wachse 
-                              und Hydrolate. Vorzugsweise in Bio Qualität (nach Verfügbarkeit) von Firmen in und um Österreich, z.B. 
-                              <a href="https://www.bergila.com/c/shop/">Bergila</a>,
-                              <a href="https://shop.feeling.at/#375">feeling</a>,
-                              <a href="https://www.sandicca.com/shop/">SANDICCA</a> oder
-                              <a href="https://sensoleo.at/de/shop/">SENSOLEO</a>. 
-                              <br>Es sind Produkte, mit denen ich gute 
-                              Erfahrungen gemacht habe und von deren Wirkung ich überzeugt bin. 
-                              <br>Vielleicht inspiriere ich damit auch den einen oder anderen, die so wie ich Wert auf heimische Betriebe, Produkte 
-                              und Nachhaltigkeit legen!
-                              <br>
-                              <br>In meiner Praxis ist nur Barzahlung möglich. Bei einer Gutscheinbestellung erfolgt die Zahlung 
-                              mittels Überweisung. Die Rechnung ist aufgrund der Kleinunternehmerregelung umsatzsteuerfrei!</p>
-                              <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                                Tipp: Viele Zusatzversicherungen übernehmen teilweise die Kosten für 
-                                ganzheitsmedizinische Behandlungsmethoden. Informieren Sie sich!
-                              </v-card-title>  
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>       
-                    </v-container>
-                  </v-window-item>
-                </v-window>
-              </v-card>
+                              <br>Auf Wunsch kann der Gutschein auch mit einer persönlichen Widmung als Geschenk von mir versendet werden.
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Kosten</td>
+                                    <td align="right">Betrag frei wählbar</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Anrechenbar auf sämtlichen Leistungen</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>zzgl. Verpackungs- und Versandspesen von 5 € (entfallen bei einem Gutscheinwert ab 50 €)
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                          <v-card-actions class="justify-center">
+                            <v-btn color="rgb(68,0,72)" dark @click="gutschein_dialog = true">
+                              <v-icon left>mdi-cash-multiple</v-icon>
+                              <span>Jetzt bestellen</span>
+                            </v-btn>
+                          </v-card-actions>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <!-- ALLGEIMEINE INFORMATIONEN -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Ah 2022 1.jpeg"
+                v-model="leistungen_7"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Allgemeines</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Kurztext
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              Informationen, Aktionen & Tipps zum Leistungsangebot
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half max300"
+                                src="assets/Le 8.jpeg" alt="Duftmarkting & AirDesign">
+                            </div>
+                            <a href="#leistungen_0">Aromafachberatungen</a> sowie
+                            <a href="#leistungen_1">Körperanwendungen</a> führe ich im Rahmen meiner Tätigkeit als 
+                            <b>Humanenergetikerin</b>
+                            nach dem <a class="text-no-wrap" target="_blank"
+                              href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO durch.
+                            <br>
+                            <br>
+                            Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich zusätzlich,
+                            <a href="#leistungen_1">Wickel, Auflagen & Kompressen</a> in meiner Praxis anzulegen.
+                            <br>
+                            <br>
+                            <b>Weitere Leistungen</b>, um duftende Wohlfühlmomente in Ihr Leben zu bringen:
+                            <a href="#leistungen_2">Naturparfum</a>, 
+                            <a href="#leistungen_3">Workshop</a>,
+                            <a href="#leistungen_4">Duftmarketing & AirDesign</a>,
+                            <a href="#leistungen_5">Elfendüfte-Coaching</a> sowie
+                            <a href="#leistungen_6">Gutscheine</a> 
+                            <br>  
+                            <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                              <a href="#leistungen_6">
+                                Aktion "Gutscheine": Bei Erwerb erhöhe ich den Betrag um 10%! 
+                                Ich freue mich auf Ihre Anfrage!
+                              </a>
+                            </v-card-title>  
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Le 8e.jpeg" alt="Duftmarkting & AirDesign">
+                            </div> 
+                            Zur Anwendung kommen nur 100 % naturreine ätherische Öle, hochwertige Pflanzenöle, Buttern, Wachse 
+                            und Hydrolate. Vorzugsweise in Bio Qualität (nach Verfügbarkeit) von Firmen in und um Österreich, z.B. 
+                            <a href="https://www.bergila.com/c/shop/">Bergila</a>,
+                            <a href="https://shop.feeling.at/#375">feeling</a>,
+                            <a href="https://www.sandicca.com/shop/">SANDICCA</a> oder
+                            <a href="https://sensoleo.at/de/shop/">SENSOLEO</a>. 
+                            <br>Es sind Produkte, mit denen ich gute 
+                            Erfahrungen gemacht habe und von deren Wirkung ich überzeugt bin. 
+                            <br>Vielleicht inspiriere ich damit auch den einen oder anderen, die so wie ich Wert auf heimische Betriebe, Produkte 
+                            und Nachhaltigkeit legen!
+                            <br>
+                            <br>In meiner Praxis ist nur Barzahlung möglich. Bei einer Gutscheinbestellung erfolgt die Zahlung 
+                            mittels Überweisung. Die Rechnung ist aufgrund der Kleinunternehmerregelung umsatzsteuerfrei!</p>
+                            <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                              Tipp: Viele Zusatzversicherungen übernehmen teilweise die Kosten für 
+                              ganzheitsmedizinische Behandlungsmethoden. Informieren Sie sich!
+                            </v-card-title>  
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
             </v-layout>
           </section>
+
           <section>
-            
             <v-parallax src="assets/Pa 2.jpg" height="380">
               <v-layout column align-center justify-center>
                 <div class="shadow headline white--text mb-4 text-center">„Wenn es einen Glauben gibt, der Berge versetzen
@@ -1405,10 +1547,10 @@
                             <br> 
                             <br>🌿 Da es mir verboten ist Heilwirkungen auszusprechen, möchte ich darauf verweisen, 
                             dass alle getroffenen Aussagen auf Erfahrungen beruhen, die ich mit den beschriebenen Produkten 
-                            gemacht habe. Sie sind aussschließlich zu allgemeinen Informations und stellen keine
+                            gemacht habe. Sie sind aussschließlich zur allgemeinen Information und stellen keine
                             Empfehlung dar. Zur Diagnosestellung wenden Sie sich bitte an einen fachkundigen Arzt.
                             <br>
-                            <br>🌿 Für DIY Produkte gibt es bereits eine Vielzahl an Rezepte von namhaften 
+                            <br>🌿 Für DIY Produkte gibt es bereits eine Vielzahl an Rezepten von namhaften 
                             Firmen und Aromafachleute in Bücher oder im Internet nachzulesen. 
                             Deswegen möchte ich bei meinen Zeitqualitäten lediglich darauf verweisen.
                             Achten Sie dabei auf seriöse Artikel und Mengenangaben! 
@@ -1970,7 +2112,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>
@@ -2108,13 +2250,13 @@
                         <br>
                         <p>
                           Gerade der Frühling ist eine besondere Zeitqualität, um sich von den Lasten der letzten Monate zu 
-                          befreien. Eine warme <a href="#leistungen" @click="closeDialog('zeitqualitaet'); leistungen=1">"Ölkompresse"</a> 
+                          befreien. Eine warme <a href="#leistungen_1">"Ölkompresse"</a> 
                           im Bereich der Leber (unser Entgiftungsorgan 
                           ) aufgelegt, ist für mich schon seit Jahren zum Ritual geworden. Dazu verwende ich ein Sesamöl
                           (siehe <a href="#diary_tagnachtgleiche2022">„Tag- Nachtgleiche“</a> )
                           sowie den Rosmarin Ct. Verbenon, entweder als Einzelöl oder in einer individuellen Mischung.  
                           <br>Angewärmt angewendet, entfaltet sich die wohltuende, entspannende Wirkung. 
-                          Geeignete <a href="#leistungen" @click="closeDialog('zeitqualitaet'); leistungen=1">"Hilfsmateralien"</a> ermöglichen es auch, 
+                          Geeignete <a href="#leistungen_1">"Hilfsmateralien"</a> ermöglichen es auch, 
                           den Wickel über Nacht
                           zu belassen. Denn gerade zwischen 1 und 3 Uhr steht die Organuhr auf "Leber". Laut TCM die Zeit, 
                           in der dieses Organ am aktivsten ist! 
@@ -2368,7 +2510,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Wintersonnenwende 2022</v-toolbar-title>
@@ -2689,7 +2831,7 @@
                       </v-card-title>
                       <v-card-text>
                         <p>Für Kurzentschlossene, die das Kontaktformular zwischen 21.12 und 31.12. an mich senden und einen 
-                          <a href="#leistungen" @click="closeDialog('zeitqualitaet'); leistungen=6">"Gutschein"</a> erwerben, 
+                          <a href="#leistungen_6">"Gutschein"</a> erwerben, 
                           erhöhe ich wie auch im Vorhjahr den Wert um 20%. Versendet wird dieser ab 02. Jänner 2023 
                           und könnte nach dem ganzen Rummel als <b>besondere Aufmerksamkeit</b> an liebe Menschen weitergegeben 
                           oder selbst verwendet werden!
@@ -2725,7 +2867,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Ahnenfest 2022</v-toolbar-title>
@@ -3207,7 +3349,7 @@
                             Gönnen Sie sich <b>JETZT</b>
                             eine Auszeit oder schenken sie <b>JETZT</b> (oder zu Weihnachten) 
                             Ihren Liebsten <b>Wohlfühlmomente</b> von einer sehr fordernden Zeit: Beim Erwerb von  
-                            <a href="#leistungen" @click="closeDialog('zeitqualitaet'); leistungen=6">"Gutscheinen"</a>
+                            <a href="#leistungen_6">"Gutscheinen"</a>
                             erhöhe ich um 10% den Wert des Kaufpreises. Dieser kann für sämtliche Leistungen in Anspruch genommen werden! 
                             <br>Ich freue mich auf Ihre Anfrage!
                           </v-card-text>
@@ -3232,7 +3374,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Tag- Nachtgleiche 2022</v-toolbar-title>
@@ -3548,7 +3690,7 @@
                       </v-card-title>
                       <v-card-text>
                         Das ganze Jahr über bieten sich 
-                        <a href="#leistungen" @click="closeDialog('zeitqualitaet'); leistungen=1">"Wickel, Auflagen & Kompressen"</a>
+                        <a href="#leistungen_1">"Wickel, Auflagen & Kompressen"</a>
                         zur Gesundheitsvorsorge an. 
                         Im Frühjahr, im Rahmen einer Entschlackungskur oder eben auch im Herbst, um den Bereich der Leber 
                         von so manchem Sommerspritzer zu entlasten und der Haut eine extra Portion Pflege zukommen zu lassen! 🥂🍻
@@ -3574,7 +3716,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Hoch- Spätsommer 2022</v-toolbar-title>
@@ -3808,7 +3950,7 @@
                       </v-card-title>
                       <v-card-text>
                         <p> Gerne stelle ich Ihnen oder Ihrem Kind bei einer
-                          <a href="#leistungen" @click="closeDialog('zeitqualitaet'); leistungen=0">"Aromafachberatung"</a> 
+                          <a href="#leistungen_0">"Aromafachberatung"</a> 
                           zum Thema <b>Lernfit</b> passende ätherische Öle vor. 
                           Unter Berücksichtigung der Duftvorlieben komponiere ich daraus eine unterstützende Mischung 
                           oder es wird ein Einzelduft ausgewählt, der beim Lernen eines Stoffgebietes die Merkfähigkeit bestärkt.
@@ -3852,7 +3994,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Sommersonnenwende 2022</v-toolbar-title>
@@ -4059,7 +4201,7 @@
                       </v-card-title>
                       <v-card-text>
                         Zum Aktionspreis lade ich Sie bei einem 
-                        <a href="#leistungen_5" @click="closeDialog('zeitqualitaet');">"Elfendüfte-Coaching"</a> 
+                        <a href="#leistungen_5">"Elfendüfte-Coaching"</a> 
                         ein, mit mir auf eine (Duft)Reise zu gehen. 
                         Anhand Ihrer persönlichen DuftSpur suchen wir Plätze mit schönen Erinnerungen auf, die sie
                         danach in angespannten Zeiten mit Unterstützung einer Duftmischung abrufen können.
@@ -4084,7 +4226,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Maienfeste 2022</v-toolbar-title>
@@ -4237,7 +4379,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Tag- Nachtgleiche 2022</v-toolbar-title>
@@ -4400,7 +4542,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Maria Lichtmess 2022</v-toolbar-title>
@@ -4499,7 +4641,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Winter 2021</v-toolbar-title>
@@ -4600,7 +4742,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Herbst 2021</v-toolbar-title>
@@ -4706,7 +4848,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Sommer 2021</v-toolbar-title>
@@ -4797,7 +4939,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Frühling 2021</v-toolbar-title>
@@ -4889,7 +5031,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Winter 2020</v-toolbar-title>
@@ -4974,7 +5116,7 @@
         >
           <v-card>
             <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('zeitqualitaet')">
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>Herbst 2020</v-toolbar-title>
@@ -5118,14 +5260,23 @@
     <script>
     const karlklammer = '@';
 
-    const leistungenItems = Array.from(document.querySelectorAll('v-window[v-model="leistungen"] .leistung')).map(item => item.innerText);
-
     const menu = document.querySelectorAll('v-navigation-drawer v-list-item-content');
     const menuItems = [];
     menu.forEach(function (item) {
       menuItems.push({
-        title: item.innerText.replace('{{ leistung }}', 'Leistungen'),
+        title: item.innerText.replace('{{ leistung.titel }}', 'Leistungen'),
         path: item.parentElement.getAttribute('href')
+      });
+    });
+
+    const services = document.querySelectorAll('v-dialog[class="service"]');
+    const serviceItems = [];
+    services.forEach(function (item) {
+      serviceItems.push({
+        dialog: item.getAttribute('v-model'),
+        titel: item.querySelector('v-toolbar-title').innerText,
+        titelbild: item.getAttribute('data-titelbild'),
+        summary: item.querySelector('div.summary')?.innerHTML,
       });
     });
 
@@ -5148,6 +5299,11 @@
       },
       data() {
         return {
+          serviceItems: serviceItems,
+          ...serviceItems.reduce((acc, item) => {
+            acc[item.dialog] = false;
+            return acc;
+          }, {}),
           diaryItems: diaryItems,
           ...diaryItems.reduce((acc, item) => {
             acc[item.dialog] = false;
@@ -5159,9 +5315,6 @@
           email: '',
           message: '',
           agreement: false,
-          leistungenCount: 8,
-          leistungen: 0,
-          leistungenItems: leistungenItems,
           menuItems: menuItems,
           images: [
             { title: 'Citrus aurantium flos.', description: 'Neroli', href: 'assets/lightbox/Neroli.jpeg' },
@@ -5215,7 +5368,7 @@
         },
         closeDialog(hash) {
           for (const key in app) {
-            if ((key.endsWith('_dialog') || key.startsWith('diary_')) && app[key]) {
+            if ((key.endsWith('_dialog') || key.startsWith('diary_') || key.startsWith('leistungen_')) && app[key]) {
               app[key] = false;
               break;
             }
@@ -5225,29 +5378,14 @@
           }
         },
         goto(target) {
-          if (target.startsWith('#diary_')) {
+          if (target.startsWith('#diary_') || target.startsWith('#leistungen_')) {
             this[target.substr(1)] = true;
             window.location.hash = target;
-          } else if (target.startsWith('#leistungen_')) {
-            this.$vuetify.goTo(target.substr(0, 11));
-            Vue.nextTick(() => {
-              this.leistungen = Number(target.substr(12));
-            });
           } else if (target.endsWith('_dialog')) {
             this[target.substr(0)] = true;
           } else {
             this.$vuetify.goTo(target);
           }
-        },
-        nextLeistungen() {
-          this.leistungen = this.leistungen + 1 === this.leistungenCount
-            ? 0
-            : this.leistungen + 1
-        },
-        prevLeistungen() {
-          this.leistungen = this.leistungen - 1 < 0
-            ? this.leistungenCount - 1
-            : this.leistungen - 1
         },
         submitAnfrage() {
           const data = `?name=${encodeURIComponent(this.name)}&email=${encodeURIComponent(this.email)}&message=${encodeURIComponent(this.message)}`;
@@ -5270,7 +5408,7 @@
     window.addEventListener('popstate', function(e) {
       app.closeDialog()
       const target = window.location.hash;
-      if (target && target.endsWith('_dialog') || target.startsWith('#diary_')) {
+      if (target && target.endsWith('_dialog') || target.startsWith('#diary_')  || target.startsWith('#leistungen_')) {
         app.goto(target);
       }
     });

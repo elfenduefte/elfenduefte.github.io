@@ -378,8 +378,7 @@
                           <div class="headline text-center">Leistungen</div>
                         </v-card-title>
                         <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                          <div class="text-center">Persönliche Botschaft zu Leistungen
-                            <br>Inhalte durch anklicken aufrufbar!
+                          <div class="text-center">Inhalte durch anklicken aufrufbar!
                           </div>
                         </v-card-title> 
                       </v-card>
@@ -406,11 +405,107 @@
                   </v-layout>
                 </v-container>
               </v-flex>
-                    
+               
+              <!-- ALLGEIMEINE INFORMATIONEN -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Le 8.jpeg"
+                v-model="leistungen_7"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Allgemeines</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Aromafachberatung sowie Körperanwendungen führe ich im Rahmen,...
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              Informationen, Aktionen & Tipps zum Leistungsangebot
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half max300"
+                                src="assets/Le 8.jpeg" alt="Duftmarkting & AirDesign">
+                            </div>
+                            <a href="#leistungen_0">Aromafachberatungen</a> sowie
+                            <a href="#leistungen_1">Körperanwendungen</a> führe ich im Rahmen meiner Tätigkeit als 
+                            <b>Humanenergetikerin</b>
+                            nach dem <a class="text-no-wrap" target="_blank"
+                              href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO durch.
+                            <br>
+                            <br>
+                            Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich zusätzlich,
+                            <a href="#leistungen_1">Wickel, Auflagen & Kompressen</a> in meiner Praxis anzulegen.
+                            <br>
+                            <br>
+                            <b>Weitere Leistungen</b>, um duftende Wohlfühlmomente in Ihr Leben zu bringen:
+                            <a href="#leistungen_2">Naturparfum</a>, 
+                            <a href="#leistungen_3">Workshop</a>,
+                            <a href="#leistungen_4">Duftmarketing & AirDesign</a>,
+                            <a href="#leistungen_5">Elfendüfte-Coaching</a> sowie
+                            <a href="#leistungen_6">Gutscheine</a> 
+                            <br>  
+                            <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                              <a href="#leistungen_6">
+                                Aktion "Gutscheine": Bei Erwerb erhöhe ich den Betrag um 10%! 
+                                Ich freue mich auf Ihre Anfrage!
+                              </a>
+                            </v-card-title>  
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Le 8e.jpeg" alt="Duftmarkting & AirDesign">
+                            </div> 
+                            Zur Anwendung kommen nur 100 % naturreine ätherische Öle, hochwertige Pflanzenöle, Buttern, Wachse 
+                            und Hydrolate. Vorzugsweise in Bio Qualität (nach Verfügbarkeit) von Firmen in und um Österreich, z.B. 
+                            <a href="https://www.bergila.com/c/shop/">Bergila</a>,
+                            <a href="https://shop.feeling.at/#375">feeling</a>,
+                            <a href="https://www.sandicca.com/shop/">SANDICCA</a> oder
+                            <a href="https://sensoleo.at/de/shop/">SENSOLEO</a>. 
+                            <br>Es sind Produkte, mit denen ich gute 
+                            Erfahrungen gemacht habe und von deren Wirkung ich überzeugt bin. 
+                            <br>Vielleicht inspiriere ich damit auch den einen oder anderen, die so wie ich Wert auf heimische Betriebe, Produkte 
+                            und Nachhaltigkeit legen!
+                            <br>
+                            <br>In meiner Praxis ist nur Barzahlung möglich. Bei einer Gutscheinbestellung erfolgt die Zahlung 
+                            mittels Überweisung. Die Rechnung ist aufgrund der Kleinunternehmerregelung umsatzsteuerfrei!</p>
+                            <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                              Tipp: Viele Zusatzversicherungen übernehmen teilweise die Kosten für 
+                              ganzheitsmedizinische Behandlungsmethoden. Informieren Sie sich!
+                            </v-card-title>  
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
               <!-- AROMAFACHBERATUNG -->
               <v-dialog
                 class="service"
-                data-titelbild="assets/Ah 2022 1.jpeg"
+                data-titelbild="assets/Le 1.jpeg"
                 v-model="leistungen_0"
         
                 transition="dialog-bottom-transition"
@@ -423,8 +518,9 @@
                     </v-btn>
                     <v-toolbar-title>Aromafachberatung</v-toolbar-title>
                   </v-toolbar>
-                  <div class="summary">
-                    Kurztext
+                  <div class="summary"> 
+                    Im Beratungsgespräch können Sie an Lieblingsdüften schnuppern,...
+                    <br>
                   </div>
                   <v-card-text>
                     <v-layout row wrap>
@@ -445,21 +541,22 @@
                                 src="assets/Le 1.jpeg" alt="Aromafachberatung">
                             </div>
                             <p>
-                              Im Beratungsgespräch können Sie an <b>Lieblingsdüften</b> schnuppern und neue Duftrichtungen kennenlernen.
-                              Ebenso werden passende <b>Hydrolate</b>
-                              und <b>Pflanzenöle</b> vorgestellt.
-                              Um <b>Kontraindikationen & Vorsichtsgebote</b> berücksichtigen zu können, findet bei der ersten Beratung ein ausführliches Gespräch statt.
+                              Im Beratungsgespräch können Sie an <b>Lieblingsdüften</b> schnuppern und neue Duftrichtungen 
+                              kennenlernen. Ebenso werden passende <b>Hydrolate</b>
+                              und <b>Pflanzenöle</b>
+                              vorgestellt. Um <b>Kontraindikationen & Vorsichtsgebote</b> berücksichtigen zu können, 
+                              findet bei der ersten Beratung ein ausführliches Gespräch statt.
                               Je nach Duftvorliebe und <b>anstehenden persönlichen Themen</b> entsteht eine Rezeptur, 
                               die für Sie zum Mitnehmen in einem Riechstift gemischt wird.
                               <br>
                               <br>
-                              Im Feedback Gespräch wird Ihr Allgemeinbefinden evaluiert, bei Bedarf die individuelle Mischung 
-                              abgeändert oder auf Wunsch nachproduziert. Für diese <b>Wohlfühlmischung</b> erhalten Sie 
-                              eigens erstellte Unterlagen mit Anwendungsmöglichkeiten für den Alltag.
+                              Im Feedback Gespräch wird Ihr Allgemeinbefinden evaluiert. Bei Bedarf wird die individuelle Mischung 
+                              abgeändert. Auf Wunsch kann die individuelle <b>Wohlfühlmischung</b> für Sie auch nachproduziert werden
+                              Dazu erhalten Sie eigens erstellte Unterlagen mit weiteren Anwendungsmöglichkeiten für den Alltag.
                               <br>
                               <br>
-                              <b>Ziele meiner Beratung:</b> Mit Ihrer duftenden Begleitung erlangen Sie Wohlbefinden und fühlen sich in der aktuellen 
-                              Lebensphase energetisch und körperlich ausgeglichen.</p>
+                              <b>Ziel meiner Beratung:</b> Mit Ihrer duftenden Begleitung erlangen Sie Wohlbefinden und fühlen 
+                              sich in der aktuellen Lebensphase energetisch und körperlich ausgeglichen.</p>
                           </v-card-text>
                         </v-card>
                       </v-flex>
@@ -506,7 +603,7 @@
               <!-- KOERPERANWENDUNGEN -->
               <v-dialog
                 class="service"
-                data-titelbild="assets/Ah 2022 1.jpeg"
+                data-titelbild="assets/Le 2.jpg"
                 v-model="leistungen_1"
         
                 transition="dialog-bottom-transition"
@@ -520,7 +617,7 @@
                     <v-toolbar-title>Körperanwendungen</v-toolbar-title>
                   </v-toolbar>
                   <div class="summary">
-                    Kurztext
+                    Beim Rhythmischen Körperbalancing findet die Anwendung,...
                   </div>
                   <v-card-text>
                     <v-layout row wrap>
@@ -627,7 +724,7 @@
               <!-- NATURPARFUM -->
               <v-dialog
                 class="service"
-                data-titelbild="assets/Ah 2022 1.jpeg"
+                data-titelbild="assets/Le 3.jpg"
                 v-model="leistungen_2"
         
                 transition="dialog-bottom-transition"
@@ -641,7 +738,7 @@
                     <v-toolbar-title>Naturparfum</v-toolbar-title>
                   </v-toolbar>
                   <div class="summary">
-                    Kurztext
+                    Ein individuell erstelltes Naturparfum,...
                   </div>
                   <v-card-text>
                     <v-layout row wrap>
@@ -663,13 +760,13 @@
                           <v-card-text>
                             <img class="float-half-right max300" src="assets/Le 3.jpg" alt="Naturparfum">
                             <p>
-                              Ein <b>individuell erstelltes Naturparfum</b> ist Einzigartig.
+                              Ein <b>individuell erstelltes Naturparfum</b> ist einzigartig.
                               Ob mit feniminen, maskulinen, blumigen, würzigen oder orientalischen Charakter, vieles ist möglich.
                               <br>
                               <br>
                               Um eine <b>gelungene Duftkomposition</b> zu erhalten, unterstütze ich Sie beim Wählen aus 
                               einer Vielzahl von Essenzen.</b>
-                          Aufeinander abgestimmte Akkorde ergeben eine ausgewogene Zusammenstellung, deren Duftrichtung Sie vorgeben. 
+                              Aufeinander abgestimmte Akkorde ergeben eine ausgewogene Zusammenstellung, deren Duftrichtung Sie vorgeben. 
                               <br>
                               <br>
                               Nach einer Reifezeit von ca. 3 Wochen kann die Komposition dann zu einem 
@@ -717,7 +814,7 @@
               <!-- WORKSHOP -->
               <v-dialog
                 class="service"
-                data-titelbild="assets/Ah 2022 1.jpeg"
+                data-titelbild="assets/Le 4.jpeg"
                 v-model="leistungen_3"
         
                 transition="dialog-bottom-transition"
@@ -731,7 +828,7 @@
                     <v-toolbar-title>Workshop</v-toolbar-title>
                   </v-toolbar>
                   <div class="summary">
-                    Kurztext
+                    Das DIY-Produkt rund um ätherische Öle,...
                   </div>
                   <v-card-text>
                     <v-layout row wrap>
@@ -831,7 +928,7 @@
               <!-- DUFTMARKETING & AIRDESIGN -->
               <v-dialog
                 class="service"
-                data-titelbild="assets/Ah 2022 1.jpeg"
+                data-titelbild="assets/Le 5.jpeg"
                 v-model="leistungen_4"
         
                 transition="dialog-bottom-transition"
@@ -845,7 +942,7 @@
                     <v-toolbar-title>Duftmarketing & Airdesign</v-toolbar-title>
                   </v-toolbar>      
                   <div class="summary">
-                    Kurztext
+                    Wir sind ständig von Düften umgeben,...
                   </div>
                   <v-card-text>
                     <v-layout row wrap>
@@ -960,7 +1057,7 @@
               <!-- ELFENDÜFTE-COACHING -->
               <v-dialog
                 class="service"
-                data-titelbild="assets/Ah 2022 1.jpeg"
+                data-titelbild="assets/Le 6e.jpeg"
                 v-model="leistungen_5"
         
                 transition="dialog-bottom-transition"
@@ -974,7 +1071,7 @@
                     <v-toolbar-title>Elfendüfte-Coaching</v-toolbar-title>
                   </v-toolbar>
                   <div class="summary">
-                    Kurztext
+                    Begegenen Sie der wunderbaren Kraft der Pflanzendüfte,...
                   </div>
                   <v-card-text>
                     <v-layout row wrap>
@@ -1071,7 +1168,7 @@
               <!-- GUTSCHEINE -->
               <v-dialog
                 class="service"
-                data-titelbild="assets/Ah 2022 1.jpeg"
+                data-titelbild="assets/Le 7.jpeg"
                 v-model="leistungen_6"
         
                 transition="dialog-bottom-transition"
@@ -1085,7 +1182,7 @@
                     <v-toolbar-title>Gutscheine</v-toolbar-title>
                   </v-toolbar>
                   <div class="summary">
-                    Kurztext
+                    Überraschen Sie Ihre Liebsten,...
                   </div>
                   <v-card-text>
                     <v-layout row wrap>
@@ -1154,11 +1251,11 @@
                 </v-card>
               </v-dialog>
 
-              <!-- ALLGEIMEINE INFORMATIONEN -->
+              <!-- KINESIOLOGISCHE METHODE -->
               <v-dialog
                 class="service"
-                data-titelbild="assets/Ah 2022 1.jpeg"
-                v-model="leistungen_7"
+                data-titelbild="assets/Le 8.jpeg"
+                v-model="leistungen_8"
         
                 transition="dialog-bottom-transition"
                 scrollable
@@ -1168,10 +1265,10 @@
                     <v-btn icon @click="closeDialog('leistungen')">
                       <v-icon>mdi-close</v-icon>
                     </v-btn>
-                    <v-toolbar-title>Allgemeines</v-toolbar-title>
+                    <v-toolbar-title>Kinesiologische Methode</v-toolbar-title>
                   </v-toolbar>
                   <div class="summary">
-                    Kurztext
+                    In Vorbereitung,...
                   </div>
                   <v-card-text>
                     <v-layout row wrap>
@@ -1179,7 +1276,7 @@
                         <v-card flat class="transparent">
                           <v-card-title primary-title class="layout justify-center">
                             <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                              Informationen, Aktionen & Tipps zum Leistungsangebot
+                              Balancing mit Farben, Meridianspaziergang,...
                             </div>
                           </v-card-title>
                         </v-card>
@@ -1189,30 +1286,9 @@
                           <v-card-text>
                             <div class="text-center">
                               <img class="float-half max300"
-                                src="assets/Le 8.jpeg" alt="Duftmarkting & AirDesign">
+                                src="assets/Le 6a.jpeg" alt="Duftmarkting & AirDesign">
                             </div>
-                            <a href="#leistungen_0">Aromafachberatungen</a> sowie
-                            <a href="#leistungen_1">Körperanwendungen</a> führe ich im Rahmen meiner Tätigkeit als 
-                            <b>Humanenergetikerin</b>
-                            nach dem <a class="text-no-wrap" target="_blank"
-                              href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO durch.
-                            <br>
-                            <br>
-                            Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich zusätzlich,
-                            <a href="#leistungen_1">Wickel, Auflagen & Kompressen</a> in meiner Praxis anzulegen.
-                            <br>
-                            <br>
-                            <b>Weitere Leistungen</b>, um duftende Wohlfühlmomente in Ihr Leben zu bringen:
-                            <a href="#leistungen_2">Naturparfum</a>, 
-                            <a href="#leistungen_3">Workshop</a>,
-                            <a href="#leistungen_4">Duftmarketing & AirDesign</a>,
-                            <a href="#leistungen_5">Elfendüfte-Coaching</a> sowie
-                            <a href="#leistungen_6">Gutscheine</a> 
-                            <br>  
-                            <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                              <a href="#leistungen_6">
-                                Aktion "Gutscheine": Bei Erwerb erhöhe ich den Betrag um 10%! 
-                                Ich freue mich auf Ihre Anfrage!
+                            ...in Vorbereitung...
                               </a>
                             </v-card-title>  
                           </v-card-text>
@@ -1223,24 +1299,11 @@
                           <v-card-text>
                             <div class="text-center">
                               <img class="float-half-right max300"
-                                src="assets/Le 8e.jpeg" alt="Duftmarkting & AirDesign">
+                                src="assets/Le 6d.jpeg" alt="Duftmarkting & AirDesign">
                             </div> 
-                            Zur Anwendung kommen nur 100 % naturreine ätherische Öle, hochwertige Pflanzenöle, Buttern, Wachse 
-                            und Hydrolate. Vorzugsweise in Bio Qualität (nach Verfügbarkeit) von Firmen in und um Österreich, z.B. 
-                            <a href="https://www.bergila.com/c/shop/">Bergila</a>,
-                            <a href="https://shop.feeling.at/#375">feeling</a>,
-                            <a href="https://www.sandicca.com/shop/">SANDICCA</a> oder
-                            <a href="https://sensoleo.at/de/shop/">SENSOLEO</a>. 
-                            <br>Es sind Produkte, mit denen ich gute 
-                            Erfahrungen gemacht habe und von deren Wirkung ich überzeugt bin. 
-                            <br>Vielleicht inspiriere ich damit auch den einen oder anderen, die so wie ich Wert auf heimische Betriebe, Produkte 
-                            und Nachhaltigkeit legen!
-                            <br>
-                            <br>In meiner Praxis ist nur Barzahlung möglich. Bei einer Gutscheinbestellung erfolgt die Zahlung 
-                            mittels Überweisung. Die Rechnung ist aufgrund der Kleinunternehmerregelung umsatzsteuerfrei!</p>
+                            ...demnächst verfügbar...</p>
                             <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                              Tipp: Viele Zusatzversicherungen übernehmen teilweise die Kosten für 
-                              ganzheitsmedizinische Behandlungsmethoden. Informieren Sie sich!
+                              Seien Sie gespannt!
                             </v-card-title>  
                           </v-card-text>
                         </v-card>

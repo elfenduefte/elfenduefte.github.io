@@ -391,14 +391,18 @@
                 <v-container grid-list-xl>
                   <v-layout row wrap align-center>
                     <v-flex xs12 md4 v-for="serviceItem in serviceItems" :key="serviceItem.dialog">
-                      <v-card flat :href="'#' + serviceItem.dialog">
+                      <v-card :href="'#' + serviceItem.dialog">
                         <v-card-text>
-                          <div style="line-height: 0.8rem" class="small float-half">
-                            <img style="width: 100%"
-                              :src="serviceItem.titelbild"></div>
-                          <div class="service-thumb-title" v-html="serviceItem.titel"></div> 
-                          <hr>
-                          <div v-html="serviceItem.summary"></div>
+                          <div class="d-flex flex-row mb-2">
+                            <v-card flat width="50%">
+                              <v-img :src="serviceItem.titelbild"></v-img>
+                            </v-card>
+                            <v-card flat class="pl-1" width="50%">
+                              <div class="service-thumb-title" v-html="serviceItem.titel"></div> 
+                              <hr>
+                              <div v-html="serviceItem.summary"></div>
+                            </v-card>
+                          </div>
                         </v-card-text>
                       </v-card>
                     </v-flex>

@@ -1527,6 +1527,7 @@
                                   <br>
                                   <br>
                                   <br>
+                                  <img style="vertical-align:top;height:190px;padding-top:20px;padding-bottom:20px;" src="assets/aromainfo-Guetesiegel2023.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   <a target="_blank" href="https://www.aromapraktiker.eu/">
                                     <img style="padding-right:20px;" src="assets/zertifiziertes_Mitglied_praktiker_2025.png">
                                   </a>
@@ -1609,6 +1610,9 @@
                   </v-layout>
                 </v-container>
               </v-flex>
+
+              <trennzeile></trennzeile>
+          
               <v-flex xs12>
                 <v-container grid-list-xl>
                   <v-layout row wrap>
@@ -6009,20 +6013,37 @@
       </v-app>
     </div>
     <script>
-    const suffix = location.host === 'elfenduefte.at' ? '.min.js' : '.js';
-    const scripts = [
-      'https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue' + suffix,
-      'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify' + suffix,
-      'https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/js/blueimp-helper.js',
-      'https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/js/blueimp-gallery' + suffix,
-      'https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/js/blueimp-gallery-fullscreen.js',
-      'https://cdn.jsdelivr.net/npm/vue-gallery@2.x'
-    ];
-    for (let i = 0, ii = scripts.length; i < ii; ++i) {
-      document.write('<script src="' + scripts[i] + '"><\/script>');
-    }
+      const suffix = location.host === 'elfenduefte.at' ? '.min.js' : '.js';
+      const scripts = [
+        'https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue' + suffix,
+        'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify' + suffix,
+        'https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/js/blueimp-helper.js',
+        'https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/js/blueimp-gallery' + suffix,
+        'https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/js/blueimp-gallery-fullscreen.js',
+        'https://cdn.jsdelivr.net/npm/vue-gallery@2.x'
+      ];
+      for (let i = 0, ii = scripts.length; i < ii; ++i) {
+        document.write('<script src="' + scripts[i] + '"><\/script>');
+        }
     </script>
     <script>
+    Vue.component('trennzeile', {
+      template: `
+        <trennzeile class="divider-block" inline-template>
+          <div class="row">
+            <div class="col">
+              <div class="divider"></div>
+            </div>
+            <div class="col divider-image">
+              <img src="./assets/RLR mit Flasche.svg" width="120">
+            </div>
+            <div class="col">
+              <div class="divider"></div>
+            </div>
+          </div>
+        </trennzeile>`
+    });
+    
     const karlklammer = '@';
 
     const menu = document.querySelectorAll('v-navigation-drawer v-list-item-content');

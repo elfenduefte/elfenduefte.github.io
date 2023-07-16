@@ -7,6 +7,10 @@
   background-size: 16px;
   background-repeat: no-repeat;
 }
+body {
+  overflow-x: hidden;
+}
+
 .button {
   cursor: pointer;
 }
@@ -90,4 +94,28 @@ div.summary {
 .services-thumb-title {
   color: purple;
   padding-bottom: 10px;
+}
+
+.row {
+  display: flex;  /* aligns all child elements (flex items) in a row */
+}
+
+.divider-block {
+  width: 90%;
+  max-width: 700px;
+}
+.col {
+  flex: 1;        /* distributes space on the line equally among items */
+  align-items: center;
+}
+
+.divider {
+  height: 50px;
+  border-bottom: 1px solid #ebebeb;
+  flex-grow: 2;
+}
+
+.divider-image {
+  width: 120px;
+  flex-grow: 0;
 }

@@ -4651,9 +4651,8 @@
 
                         <trennzeile></trennzeile>
 
-                        <br>
                         Um diese Zeit zusätzlich von innen heraus zu unterstützen, stelle ich auch ein <b>fettes Pflanzenöl</b> vor:</p>
-                        <v-card flat class="transparent">
+                        <v-sheet flat class="transparent">
                           <v-row align="start">
                             <v-col cols="12" sm="6">
                               <v-img
@@ -4666,7 +4665,7 @@
                               <small>Weibliche Pflanze</small>
                             </v-col>
                           </v-row>
-                        </v-card>
+                        </v-sheet>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
                         Meine Zeitqualität Pflanze: Der Hanfsamen - <i>Cannabis sativa L.</i>
@@ -6032,15 +6031,11 @@
     <script>
     Vue.component('trennzeile', {
       template: `
-        <trennzeile class="divider-block" inline-template>
-          <div class="row">
-            <div class="col">
+        <trennzeile inline-template>
+          <div class="divider-wrapper">
+            <div class="divider-container">
               <div class="divider"></div>
-            </div>
-            <div class="col divider-image">
               <img src="./assets/RLR mit Flasche.svg" width="120">
-            </div>
-            <div class="col">
               <div class="divider"></div>
             </div>
           </div>

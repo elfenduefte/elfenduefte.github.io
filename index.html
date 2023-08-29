@@ -556,7 +556,9 @@
                               Im Beratungsgespräch können Sie an <b>Lieblingsdüften</b> schnuppern und neue Duftrichtungen 
                               kennenlernen. Ebenso werden passende <b>Hydrolate</b>
                               und <b>Pflanzenöle</b>
-                              vorgestellt. Um <b>Kontraindikationen & Vorsichtsgebote</b> berücksichtigen zu können, 
+                              vorgestellt. 
+                              <br>
+                              Um <b>Kontraindikationen & Vorsichtsgebote</b> berücksichtigen zu können, 
                               findet bei der ersten Beratung ein ausführliches Gespräch statt.
                               <br>
                               <br>
@@ -598,13 +600,143 @@
                                   </tr>
                                   <tr>
                                     <td colspan="2">
+                                      <br>Preis inklusiv Riechstift mit der erstellen Mischung und Feedback nach ca 3 Wochen, 
+                                      welches in der Praxis oder telefonisch stattfindet 
                                       <br>
-                                      <p>Preis inklusiv Riechstift mit der erstellen Mischung und Feedback nach ca 3 Wochen, 
-                                        welches in der Praxis oder telefonisch stattfindet 
-                                        <br>
-                                        <br>zzgl. Kosten für die Nachproduktion der Individuellen Mischung, Rohstoffe und Lehrbehältnisse
-                                        für weitere Anwendungsmöglichkeiten
-                                      </p>
+                                      <br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>zzgl. Kosten für die Nachproduktion der Individuellen Mischung, Rohstoffe und Lehrbehältnisse
+                                      für weitere Anwendungsmöglichkeiten
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <!-- ELFENDÜFTE-COACHING -->
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Le 6.jpeg"
+                v-model="leistungen_5"
+
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Elfendüfte-Coaching</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Begegenen Sie der wunderbaren Kraft der Pflanzendüfte,...
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              <br>Eine (Duft)Reise ohne Gepäck
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Le 6.jpeg" alt="Elfendüfte-Coaching">
+                            </div>
+                            <p>
+                              <b>Begegnen Sie der wunderbaren Kraft der Pflanzendüfte auf Ihrer persönlichen DuftSpur.</b>
+                              <br>So wie Pflanzen unterschiedliche Lebensbedingungen vorfinden und ständig mit ihrem Umfeld 
+                              kommunizieren (Anlocken von Nützlingen, Abwehr von Schädlingen,...), so vielfältig 
+                              können auch unsere <b>Reaktionen auf den Duft</b> einer Pflanze sein. Denn auch wir machen 
+                              unterschiedliche Erfahrungen, die mit Düften verknüpft sind:</p>
+                            <ul>
+                              <li>
+                                Zimt kann Gefühle von weihnachtlicher Stimmung erwecken <b>oder</b> 
+                                lässt an einen selbstgemachten Apfelstrudel denken</li>
+                              <li>Lavendel erinnert vielleicht an ein Säckchen, welches entweder im Kasten hängt um Motten 
+                                fernzuhalten <b>oder</b> als Duftimpuls neben dem Kopfpolster seinen Platz findet
+                              </li> 
+                            </ul>  
+                            <p>
+                              <br>
+                              Erinnerungen sind abgespeichert, die bei <b>bewussten oder unbewussten Wahrnehmen</b> Reaktionen 
+                              auslösen - <b>Duft & Psyche</b>
+                              treten in <b>Kommunikation</b>!
+                              <br>
+                              <br>Sie erhalten während des Coachings Duftimpulse gereicht. Dabei spielt es keine Rolle zu 
+                              erkennen, welche Pflanze dahintersteckt. Es zählt lediglich Ihre <b>Wahrnehmung, Empfindung 
+                                & Reaktion</b> darauf.
+                              <br>Ich unterstütze Sie beim Entdecken Ihres Duftes/Ihrer Duftmischung. Diese darf wiederum 
+                              in der folgenden Zeit Ihr Begleiter in Form eines Riechstiftes sein, wann immer Sie an Ihr 
+                              selbst gesetztes Ziel erinnert werden wollen.
+                              <br>
+                              <br>Wenn Sie neugierig sind, welche Stationen Sie auf Ihrer Reise noch erwarten könnten, ist ein 
+                              Duftcoaching eine Möglichkeit, diese aufzuzeigen. 
+                              <br>
+                              <br>
+                              <b>Zur Information:</b> Das Coaching ist weder eine psychologische oder 
+                              psychotherapeutischer Behandlung, noch ersetzt diese!
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Kosten</td>
+                                    <td align="right">99&nbsp;€</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Folgeberatung zum selben Anliegen</td>
+                                    <td align="right">66&nbsp;€</td>
+                                  </tr>
+                                  <tr>
+                                    <td>zzgl. Erstgespräch (entfällt bei bestehenden Kunden)</td>
+                                    <td align="right">20 €
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>Preis inklusiv Riechstift und Feedback nach ca 3 Wochen, welches in der Praxis 
+                                      oder telefonisch stattfindet
+                                      <br>
+                                      <br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>
+                                      zzgl. Kosten für Leerbehältnisse und Rohstoffe für weitere Anwendungsmöglichkeiten
+                                      <br>
+                                      <br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>Ein Elfendüfte-Coaching via Skype wäre auch möglich. Dafür ist aus organisatorischen Gründen 
+                                      mit einer Vorbereitungszeit von mindestens einer Woche zu rechnen. Der genaue Ablauf einer 
+                                      Beratung wird bei Terminvergabe besprochen
                                     </td>
                                   </tr>
                                 </tbody>
@@ -653,6 +785,12 @@
                           <v-card-text>
                             <img class="float-half-right max300" src="assets/Le 2.jpg" alt="Rhytmisches Körperbalancing">
                             <p>
+                              Im <b>Erstgespräch</b> werden Fragen zur Behandlungsmethode, 
+                              Ist-Zustand sowie das Ziel einer Körperanwendung besprochen. Danach können Sie eine 
+                              <b>Mischung aus Pflanzenölen & ätherischen Ölen</b> wählen, die gerade zu Ihren Bedürfnissen passt.
+                              Diese wird anschließend auf die entsprechenden Hautareale aufgetragen.
+                              <br>
+                              <br>
                               Beim <b>RHYTHMISCHES KÖRPERBALANCING©</b> findet die Anwendung im Bereich von Rücken & Nacken 
                               ODER Unterarme & Hände ODER Unterschenkel & Füße statt. Dieses kann im Sitzen oder Liegen 
                               durchgeführt werden. Wiederkehrende <b>rhythmische Streichungen</b>
@@ -670,14 +808,11 @@
                               <br>
                               Passende hilfreiche Utensilien kommen bei mir in der Praxis zum Einsatz.
                               <br>
-                              <br>
-                              In einem Erstgespräch, Dauer 10 - 15 Minuten, werden Fragen zur Behandlungsmethode, 
-                              Ist-Zustand sowie das Ziel einer Körperanwendung besprochen. Danach können Sie eine 
-                              <b>Mischung aus Pflanzenölen & ätherischen Ölen</b> wählen, die gerade zu Ihren Bedürfnissen passt.
-                              Diese wird anschließend auf die entsprechenden Hautareale aufgetragen.
-                              <br>
                               <br>Zur gegönnten Wohlfühlzeit sollten anschließend 5-10 Minuten eingeplant werden, damit die 
                               Anwendung nachwirken kann.
+                              <br>
+                              <br>
+                              <b>Anmerkung:</b> Die Durchführung einer Körperanwendung erfolgt ausschließlich auf intakter, gesunder Haut!
                               <br>
                             </p>
                           </v-card-text>
@@ -718,12 +853,6 @@
                                   <tr>
                                     <td>zzgl. Erstgespräch (entfällt bei bestehenden Kunden)</td>
                                     <td align="right">20 €
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td colspan="2">
-                                      <br>
-                                      <b>Anmerkung:</b> Die Durchführung einer Körperanwendung erfolgt ausschließlich auf intakter, gesunder Haut!
                                     </td>
                                   </tr>
                                 </tbody>
@@ -787,6 +916,7 @@
                               <br>
                               Um eine <b>gelungene Duftkomposition</b> zu erhalten, unterstütze ich Sie beim Wählen aus 
                               einer Vielzahl von Essenzen.</b>
+                              <br>
                               Aufeinander abgestimmte Akkorde ergeben eine ausgewogene Zusammenstellung, deren Duftrichtung Sie vorgeben. 
                               <br>
                               <br>
@@ -797,6 +927,11 @@
                               <br>
                               <br>Mein Bestreben ist es, einen Duft zu kreieren, mit dem Sie sich gerne umgeben 
                               und der Ihre Persönlichkeit unterstreicht. 
+                              <br>
+                              <br>
+                              Um <b>Kontraindikationen & Vorsichtsgebote</b> berücksichtigen zu können, 
+                              findet bei der ersten Beratung ein ausführliches Gespräch statt.
+                              <br>
                             </p>
                           </v-card-text>
                         </v-card>
@@ -820,6 +955,11 @@
                                     <td colspan="2">
                                       <br>Preis inklusiv Nachbesprechung
                                       <br>
+                                      <br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
                                       <br>zzgl. Materialkosten, die sich nach den verwendeten Rohstoffe und Leerbehälter richten
                                     </td>
                                   </tr>
@@ -882,9 +1022,12 @@
                               <b>Damit bestimmen Sie was auf Ihre Haut kommt, um persönliche Duftvorliebe und Wohlbefinden zu fördern.</b>
                               <br>
                               <br>
-                              Nach einem kurzem <b>Vorgespräch</b> (entfällt bei bestehenden Kunden)
-                              erhalten Sie eine <b>theoretische Information</b> aller im Kurs verwendeten Rohstoffe, sowie eine 
-                              Einführung in ins Reich der ätherischen Öle.
+                              <br>
+                              Um <b>Kontraindikationen & Vorsichtsgebote</b> berücksichtigen zu können, 
+                              findet zuerst ein ausführliches Gespräch statt.
+                              <br>
+                              Danach erhalten Sie <b>theoretische Informationen</b> zu allen im Kurs verwendeten Rohstoffe, 
+                              sowie eine Einführung in ins Reich der ätherischen Öle.
                               <br>
                               Anschließend geht es mit einer <b>Step by Step</b> Anleitung ans Rühren/Mischen.
                               Zum Nachschlagen ist alles in einem <b>Skriptum</b> mit 
@@ -934,6 +1077,11 @@
                                     <td colspan="2">
                                       <br>Preis inklusive Erstgespräch und Skriptum
                                       <br>
+                                      <br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
                                       <br>zzgl. Materialkosten, je nach verwendeten Rohstoffe und Leerbehälter
                                     </td>
                                   </tr>
@@ -1025,9 +1173,12 @@
                                 mit Ihrer individuellen Duftkomposition für Ihre Gäste erstellen, 
                                 damit diese sich auch noch später an diesen besonderen Tag erinnern können</li>
                             </ul> 
-                            <br>Gerne unterstütze ich Sie beim Entdecken der passenden ätherische Öle, 
+                            <br>
+                            <b>Mein Bestreben ist es:</b>
+                            Sie entdecken mit meiner Unterstützung passende ätherische Öle, 
                             um einen <b>individuellen Duft</b>
-                            für Ihre speziellen <b>Bedürfnisse</b> zu kreieren.
+                            für Ihre besonderen Bedürfnisse zu kreieren.
+                            <br>
                             <br>
                             Auf Wunsch kann ein <b>Beduftungskonzept</b> erstellt werden.
                           </v-card-text>
@@ -1074,119 +1225,6 @@
                               <img class="max300"
                                 src="assets/Le 5a.jpeg" alt="Hochzeit">
                             </div>
-                          </v-card-text>
-                        </v-card>
-                      </v-flex>
-                    </v-layout>
-                  </v-card-text>
-                </v-card>
-              </v-dialog>
-
-              <!-- ELFENDÜFTE-COACHING -->
-              <v-dialog
-                class="service"
-                data-titelbild="assets/Le 6.jpeg"
-                v-model="leistungen_5"
-        
-                transition="dialog-bottom-transition"
-                scrollable
-              >
-                <v-card grid-list-xl>
-                  <v-toolbar elevate-on-scroll dense>
-                    <v-btn icon @click="closeDialog('leistungen')">
-                      <v-icon>mdi-close</v-icon>
-                    </v-btn>
-                    <v-toolbar-title>Elfendüfte-Coaching</v-toolbar-title>
-                  </v-toolbar>
-                  <div class="summary">
-                    Begegenen Sie der wunderbaren Kraft der Pflanzendüfte,...
-                  </div>
-                  <v-card-text>
-                    <v-layout row wrap>
-                      <v-flex xs12 md12>
-                        <v-card flat class="transparent">
-                          <v-card-title primary-title class="layout justify-center">
-                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
-                              <br>Eine (Duft)Reise ohne Gepäck
-                            </div>
-                          </v-card-title>
-                        </v-card>
-                      </v-flex>
-                      <v-flex xs12 md8>
-                        <v-card flat class="transparent">
-                          <v-card-text>
-                            <div class="text-center">
-                              <img class="float-half-right max300"
-                                src="assets/Le 6.jpeg" alt="Elfendüfte-Coaching">
-                            </div>
-                            <p>
-                              <b>Begegnen Sie der wunderbaren Kraft der Pflanzendüfte auf Ihrer persönlichen DuftSpur.</b>
-                              <br>So wie die Pflanze unterschiedliche Lebensbedingungen vorfindet und ständig mit ihrem Umfeld 
-                              kommuniziert (Anlocken von Nützlingen, Abwehr von Schädlingen,...), so vielfältig 
-                              können auch unsere <b>Reaktionen auf den Duft</b> einer Pflanze sein, denn auch wir machen 
-                              unterschiedliche Erfahrungen, die mit Düften verknüpft sind:</p>
-                            <ul>
-                              <li>Zimt kann Gefühle von weihnachtlicher Stimmung erwecken oder lässt an einen selbstgemachten Apfelstrudel denken</li>
-                              <li>Lavendel erinnert vielleicht an ein Säckchen, welches entweder im Kasten hängt um Motten fernzuhalten oder als Duftimpuls neben dem Kopfpolster seinen Platz findet</li> 
-                            </ul>  
-                            <p>
-                              <br>
-                              Erinnerungen sind abgespeichert, die bei <b>bewussten oder unbewussten Wahrnehmen</b> Reaktionen 
-                              auslösen - Duft & Psyche treten in Kommunikation!
-                              <br>
-                              <br>Sie erhalten während des Coachings Duftimpulse gereicht. Dabei spielt es keine Rolle zu 
-                              erkennen, welche Pflanze dahintersteckt. Es zählt lediglich Ihre <b>Wahrnehmung, Empfindung 
-                                & Reaktion</b> darauf.
-                              <br>Ich unterstütze Sie beim Entdecken Ihres Duftes/Ihrer Duftmischung, diese darf wiederum 
-                              in der folgenden Zeit Ihr Begleiter in Form eines Riechstiftes sein, wann immer Sie an Ihrem 
-                              selbstbestimmten Ziel beim Coaching erinnert werden wollen.
-                              <br>
-                              <br>Wenn Sie neugierig sind, welche Stationen Sie auf Ihrer Reise noch erwarten könnten, ist ein 
-                              Duftcoaching eine Möglichkeit, diese aufzuzeigen. 
-                              <br>
-                              <br>
-                              <b>Es handelt sich dabei weder um eine psychologische oder psychotherapeutischer Behandlung, noch ersetzt diese.</b> 
-                            </p>
-                          </v-card-text>
-                        </v-card>
-                      </v-flex>
-                      <v-flex xs12 md4>
-                        <v-card flat class="transparent">
-                          <v-card-text>
-                            <v-simple-table>
-                              <template v-slot:default>
-                                <tbody>
-                                  <tr>
-                                    <td>Kosten</td>
-                                    <td align="right">99&nbsp;€</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Folgeberatung zum selben Anliegen</td>
-                                    <td align="right">66&nbsp;€</td>
-                                  </tr>
-                                  <tr>
-                                    <td>zzgl. Erstgespräch (entfällt bei bestehenden Kunden)</td>
-                                    <td align="right">20 €
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td colspan="2">
-                                      <br>Preis inklusiv Riechstift und Feedback nach ca 3 Wochen, welches in der Praxis oder telefonisch stattfindet
-                                      <br>zzgl. Kosten für Leerbehältnisse und Rohstoffe für weitere Anwendungsmöglichkeiten
-                                      <br>
-                                      <br>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td colspan="2">
-                                      <br>Ein Elfendüfte-Coaching via Skype wäre auch möglich. Dafür ist aus organisatorischen Gründen 
-                                      mit einer Vorbereitungszeit von mindestens einer Woche zu rechnen. Der genaue Ablauf einer 
-                                      Beratung wird bei Terminvergabe besprochen.
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </template>
-                            </v-simple-table>
                           </v-card-text>
                         </v-card>
                       </v-flex>

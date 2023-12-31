@@ -2389,375 +2389,326 @@
           </v-card>
         </v-bottom-sheet>
 
-        <!-- Dezember 2023 
+        <!-- Dezember 2023 -->  
           
-          <v-dialog
+        <v-dialog
           class="diary"
-          data-titelbild="assets/He 2023 1.jpeg"
-          v-model="diary_herbst2023"
+          data-titelbild="assets/Wi 2023 1.jpeg"
+          v-model="diary_winter2023"
           
           transition="dialog-bottom-transition"
           scrollable
-          >
+        >
           <v-card>
-          <v-toolbar elevate-on-scroll dense>
-          <v-btn icon @click="closeDialog('zeitqualitaeten')">
-          <v-icon>mdi-close</v-icon>
-          </v-btn>
-          <v-toolbar-title>
-          <b>AKTUELL: Herbst 2023</b>
-          </v-toolbar-title>
-          </v-toolbar>
-          <v-card-text>
-          <div class="summary">
-          <b>Aus der Balance - in die Balance ⚖️ Die Rosengeranie</b>
-          </div>
-          <v-container grid-list-xl>
-          <v-layout row wrap>
-          <v-flex xs12 md12>
-          <v-card flat class="transparent">
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">„Aus der Balance - in die Balance!“</v-card-title>
-          <v-card-text>
-          <p>
-          In diesem Beitrag werde ich zum <b>Ausgleich</b> einmal nicht von einer Reise berichten, 
-          sondern ein paar Zeilen vom Tun in meinem Brötchenjob.
-          <br>
-          Finden Kunden erstmals den Weg zu mir in die Praxis, sind diese meist gut informiert, 
-          was sie erwartet: 
-          Bevor die gewünschte Leistung in Anspruch genommen wird, erhebe ich den <b>IST-Zustand</b> und bei 
-          Neukunden gibt es neben dem 
-          <b>Erstgespräch</b>
-          auch eine kurze Erläuterung, welche Möglichkeiten ich Ihnen zum <b>Erreichen 
-          Ihrer Wohlbefindlichkeit</b> anbiete. Hierzu kommt auch die Erklärung, dass ich nach dem 
-          nach dem <a class="text-no-wrap" target="_blank"
-          href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO im Bereich Humanenergetik arbeite.
-          <div align="center">
-          <v-img max-width="600" src="assets/He 2023 2.png" alt="Düfte & Aromen"></v-img>
-          <small>(Bild in voller Auflösung und umfangreicher Erläuterung - folge dem Link ⬆︎)</small>
-          </div> 
-                          
-          <trennzeile></trennzeile>
-        
-          <br>
-          <p>
-          Welche Bedeutung hat dieses Modell umgesetzt im Alltag:
-          Damit Leben möglich wird, benötigen wir <b>Energie</b>. Diese fließt ständig in uns, umgibt uns und kann auch 
-          von außen zugeführt werden. 
-          <br>
-          <br>
-          Ist <b>neues Leben</b> im Entstehen, ist viel Bewegung notwendig. Samen und Eizelle müssen sich finden und
-          verschmelzen, um sich gemeinsam auf der Suche nach einer Energiequelle (Plazenta) zu machen,
-          damit weiteres Wachstum möglich ist.
-          <br>
-          <br>
-          Entdeckt dieses Wesen dann das <b>Licht der Welt</b>, hat es bereits erste Erfahrungen im Mutterleib gemacht.
-          Aber auch jede Menge <b>Talente & Fähigkeiten</b>
-          sind jedem von uns sprichwörtlich <b>„in die Wiege gelegt".</b>                        
-          <br>
-          <br>
-          Bekommt dieses Menschenkind dann von seiner Umgebung <b>genügend Raum & Zeit</b> und wird gefördert 
-          seinen <b>"Schatz"</b> zu entdecken und auszuleben, kann die Lebensenergie ungehindert fließen
-          und einen <b>kontinuierlichen Ausgleich</b>
-          schaffen - so ein Leben scheint <b>vollkommen</b>
-          und <b>wünschenswert</b> zu sein.
-          <br>
-          <br>
-          Die Realität gestaltet sich jedoch schwieriger: 
-          <ul>
-          <li>
-          Leistungsdruck, den man von außen bekommt oder sich selbst auferlegt
-          </li>
-          <li>
-          ständige Erreichbarkeit
-          </li>
-          <li>
-          eine hektische, von Erfolg geprägte Zeit
-          </li>
-          <li>
-          Schnelllebigkeit
-          </li>
-          <li>
-          Erfolgsdruck und nicht zu vergessen:
-          </li>
-          <li>
-          <b>einem Idealbild nachzueifern, welches es in der Realität gar nicht gibt, </b> 
-          haben in unserer Gesellschaft eine übergeordnete Rolle und scheinen unser Leben zu bestimmen. 
-          </li>
-          </ul>
-          <br>
-          Sobald man sich <b>unausgeglichen, unwohl, antriebslos</b>
-          oder <b>ausgelaugt</b> fühlt, 
-          sendet der Körper bereits erste <b>Warnsignale</b>, die uns aufhorchen lassen sollten.</p>
-          <v-row align="start">
-          <v-col cols="12" sm="4">
-          <v-img max-width="600" src="assets/He 2023 3.gif" alt="im Fluss des Lebens"></v-img>
-          <small>Im Fluss des Lebens</small>
-          </v-col>
-          <v-col cols="12" sm="4">
-          <v-img max-width="600" src="assets/He 2023 4.jpeg" alt="Abwärzspirale"></v-img>
-          <small>Abwärtsspirale</small>
-          </v-col>
-          <v-col cols="12" sm="4">
-          <v-img max-width="600" src="assets/He 2023 5.gif" alt="Hamsterrag"></v-img>
-          <small>Hamsterrad</small>
-          </v-col>
-          </v-row>  
-          <br>
-          <p>
-          Werden diese Signale <b>ignoriert</b>
-          , findet man sich schnell in einem <b>Hamsterrad</b>
-          oder einer <b>Abwärtsspirale</b> 
-          wieder, aus denen man selbst nur mehr mit höchster Kraftanstrengung herauskommt. 
-          Fehlt dann die Energie, um unsere <b>Selbstheilungskräfte</b> zu mobilisieren, leidet unser Immunsystem und
-          körperliche Beschwerden haben leichtes Spiel sich zu manifestieren. 
-          Diese zeigen sich dann auf der materiellen Ebene wieder mit Diagnosen, die eigentlich keiner haben möchte. 
-          Oft bleibt nur mehr Möglichkeit, Krankheiten mit Medikamenten/Operationen zu behandeln. 
-          Dabei könnten wir vieles im Vorfeld abwenden, 
-          wenn wir mehr auf unseren Körper und die Warnsignale hören würden.*</p>
-          <div align="center">
-          <v-img max-width="600" src="assets/He 2023 6.jpeg" alt="Gewitterwolken"></v-img>
-          <small>Gewitterwolken am karnischen Höhenrücken</small>
-          </div>  
-          <br>
-          <p>
-          Wenn im Gebirge Gewitterwolken aufkommen, sollte man zeitnah Möglichkeiten suchen, 
-          einem Schauer zu entkommt. Da heißt es rasch handeln. Bestenfalls informiert man sich aber schon 
-          im Vorfeld, um erst gar nicht in eine solche Situation zu kommen.
-          <br>
-          <br>
-          Prophylaktisch kann man auf viele <b>unterschiedlichste Möglichkeiten</b> zurückgreifen. 
-          Es spielt dabei keine Rolle, ob man die sportliche, musikalische oder kreative Seite an sich 
-          (wieder) entdeckt oder professionelle Unterstützung hinzuzieht – ein Leitmotiv kann dabei sein: 
-          <b>„Ich bin in meiner Mitte“.</b>
-          </p>
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          „In der Mitte meines Lebens fand ich die Mitte in mir“
-          </v-card-title>   
-          <v-card-text>
-          <div align="center">
-          <v-img max-width="600" src="assets/He 2023 7.jpeg" alt="Ausbalanciert"></v-img>
-          <small>Ausbalanciert</small>
-          </div> 
-          <br>
-          <p>
-          Auch bei mir gehen immer wieder die Wogen hoch oder ich befinde mich tiefer unten als mir guttut. 
-          Die letzten Jahre haben aber viel bewegt und verändert. <b>Energieräuber</b> ließ ich gehen, 
-          <b>Lieblingsmenschen</b> lade ich ein, um zu bleiben.
-          Ich nehme mir Raum & Zeit, um meine <b>Talente</b>
-          auszuleben und erhalte <b>liebenswerte Anerkennung</b> für meine Herzensarbeit im Brötchenjob! 🩵💙
-          Umso wertvoller erscheint mir nun mein Sein, in dem ich das Leben leben darf, 
-          welches mich stark macht und nährt. 
-          <br>
-          <br>
-
-          <trennzeile></trennzeile>
-                          
-          Wer schon einige meiner Berichte gelesen hat, wird vielleicht den roten Faden 🧶 erkannt haben, 
-          dass ich am liebsten über Pflanzen schreibe, die ich bereits in ihrer Heimat besucht habe. 
-          Dieses Jahr gelang es mir bei der <a href="#diary_sommer2023">Bergamotte</a> in Kalabrien. 
-          Auch dem <a href="#diary_fruehling2023">Rosmarin</a> statte ich demnächst 
-          wieder einen Besuch in Kroatien ab. 
-          Einen Weg nach Madagaskar oder Indien habe ich leider noch nicht gefunden. 
-          Aber in dieses Jahr leitet mich so oder so eine andere Motivation und so folgt dieses Mal eine 
-          Kurzbeschreibung der <b>Rosengeranie</b>! 
-          <br>
-          <br>
-          Nahe Madagaskar, auf der Insel Réunion, soll eine besondere Sorte an <b>Rosengeranien</b> gedeihen. 
-          Nämlich die <b>Bourbon Geranie.</b>
-          Sie und ihre Verwandten aus Ägypten, liegen mir sehr am Herzen. Das ätherische Öl dieser Sorten ist als 
-          <b>„DER Ausgleichsduft“</b> bekannt.
-          Ganz egal, ob ein <b>körperlich/hormoneller</b>
-          oder <b>geistig/seelische Ausgleich</b> gesucht wird 
-          - ihr Duft vermag auf <b>allen Ebenen</b> die Kraft zu bündeln und Harmonie zu schaffen.
-          <br>
-          <br>
-          Sie berührt aber nicht nur mein Herz - Sie möchte auch berührt werden. Denn erst wenn man mit ihr 
-          in Kontakt tritt, verströmen die gezackten Blätter den typischen leicht blumig-krautigen Duft.
-          <br>
-          <br>
-          Es gibt mehrere hundert Arten an Pelargonien. Wild wachsende in der Natur, als Bodendecker im Beet 
-          oder die Züchtung, die so manchen Balkon schmückt. Dieser Duft ist meiner Nase aber keineswegs wohlgesonnen. 
-          Denn nur die <b>Rosengeranie</b> eignet sich aufgrund ihrer Duftmelodie zum Erzeugen des ätherischen Öles.
-          <br>
-          </p>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/He 2023 8.jpeg" alt="Rosmarin"></v-img>
-          <small>Balkon Pelargonien</small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/He 2023 9.jpeg" alt="Rosmarin"></v-img>
-          <small>Brauner Storchenschnabel</small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/He 2023 10.jpeg" alt="Rosmarin"></v-img>
-          <small>Duftgeranie</small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/He 2023 11.jpeg" alt="Rosmarin"></v-img>
-          <small>Rosengeranie</small>
-          </v-col>
-          </v-row>
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          Meine Zeitqualität Pflanze: Die Rosengeranie – <i>Pelargonium graveolens, Pelargonium x asperum</i>
-          </v-card-title>
-          <v-card-text>
-          🌿 <b>Pflanzenportrait</b>
-          <ul>
-          <li>
-          <b>Pflanzenfamilie:</b>
-          Storchenschnabelgewächs - <i>Geraniaceae</i>
-          </li>
-          <li>
-          <b>Vorkommen</b>: Madagaskar, Réunion, Nordafrika,...
-          </li> 
-          </ul>
-          <br>
-          🪴 <b>Wirkungen und Eigenschaften</b> aus der 
-          <b>Fachliteratur</b>:
-          <br>
-          epithelisierend, entstauend, antimykotisch, antiviral, hormonmodulierend, entspannend, 
-          ausgleichend und stimmungsaufhellend!
-          <br>Eine weitere Einsatzmöglichkeit findet sich in einem meiner kommenden Beiträge, seien Sie gespannt!
-          <br>
-          <br>
-          💡 Gut zu wissen: Auch wenn das ätherische Öl als <b>sehr hautpflegend</b> beschrieben wird, 
-          ist trotzdem Vorsicht bei zu hoher Dosierung geboten! Ebenfalls ist bei Schwangerschaft und 
-          einer Anwendung mit der Rosengeranie Bourbon fachlicher Rat einzuholen!
-          <br>
-          <br>
-          Wenn man liest, dass das ätherische Öl aus den Blüten gewonnen wurde, ist Achtsamkeit geboten. 
-          Das würde den Preis deutlich erhöhen und dem der Rose nahekommen.
-          Denn es werden 300-500 kg <b>Blätter</b>
-          verwendet, um 1 lt Öl aus <b>Wasserdestillation</b> zu gewinnen.
-          <br>
-          <br>
-          Der Umstand, dass der Duft an Rosen erinnern lässt, verleitete bereits Anfang des 
-          vorigen Jahrhunderts und auch heute noch dazu, echtes Rosenöl damit zu strecken, um den Preis zu senken.
-          Was natürlich verboten ist, wenn es nicht ausdrücklich am Etikett vermerkt wird!       
-          <br>
-          <br>
-          💡 Gut zu wissen: Das ätherische Öl der Rosengeranie Bourbon <i>Pelargonium x asperum</i>, das aus 
-          Madagaskar stammt, duftet etwas feiner und lieblicher als das Öl der Rosengeranie, 
-          die meist aus Ägypten stammt. Vorsicht ist jedoch bei Epileptikern und Schwangeren geboten und 
-          der Rat einer geschulten Person empfehlenswert!
-          <br>
-          <br>
-          🪴 <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
-          mit den <b>ätherischen Ölen:</b>               
-          <ul>
-          <li>
-          Findet Platz in den unterschiedlichsten <b>Aromakosmetikprodukten</b>, sei es 
-          fürs Gesicht, den Händen/Füßen oder dem ganzen Körper.
-          </li>
-          <li>
-          Für ein <b>harmonisierendes Massage Öl</b> nach der Dusche
-          </li>
-          <li>
-          Verarbeitet mit Kakao-, Sheabutter und Wirkstoffölen in pflegenden <b>Zäpfchen</b>
-          </li>
-          <li>
-          Als <b>blumige Note</b>
-          in einem <b>Plagegeisterspray</b>
-          </li>
-          </ul>            
-          <br>
-          Im Vorjahr beschloss ich, die getrockneten Blätter meiner Rosengeranien, 
-          die ich im Laufe eines Jahres gesammelt hatte, zu destillieren. Die Menge war überschaubar 
-          und so hab ich mit der kleinen Destille „Valentina“ gearbeitet. Die ersten hundert ml duften 
-          intensiv nach Geranie, blumig, frisch, wunderbar.
-          Die weiteren hunderte ml sind wesentlich herber, fast rauchig und haben dadurch einen eigenen Duft 
-          Charakter, ähnlich dem einer Cistrose! 🩷💚
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="6">
-          <v-img
-          src="assets/He 2023 12.jpeg" alt="Destillieren"></v-img>
-          <small>Hydrolatgewinnung</small>
-          </v-col>
-          <v-col cols="12" sm="6">
-          <v-img
-          src="assets/He 2023 13.jpeg" alt="Storchenschnabel"></v-img>
-          <small>"Storchenschnäbel" ragen in die Luft</small>
-          </v-col>
-          </v-row>
-          <br>
-          🪴 Ein <b>Patchoulihydrolatt</b> ist mir derweilen noch nicht untergekommen.
-          Sollte es sich ändern, werde ich an dieser Stelle Ergänzungen vermerken! 
-          <br>
-          <br>
-          🪴 <b>Räucherungen</b>
-          mit <b>Patchouliblätter:</b>
-          <br>
-          Der Duft ist mir schon länger bekannt, gibt es doch zahlreiche Räucherstäbchen mit diesem Geruch!
-          Wer kennt diese gerollten Stäbchen nicht, die Jahr für Jahr früher für mich diese Zeit im wahrsten Sinne des Wortes 
-          "eingeräuchert" haben. Irgendwann habe ich damit aufgehört und bin auf Räucherkohle/Sieb gewchselt.
-          In einer Schachtel habe ich aber noch ein paar Packungen gerollter Stäbchen. 
-          Hin und wieder öffne ich diese Schachtel und schnuppere am Inhalt, der mich sofort in einen Zeitabschnitt vor zig
-          Jahren katapultiert, wo ich mich mit dieser Materie zu beschäftigen begann, ein ganz bestimmtes Geschäft in Wien und 
-          einer besonderen Decke, die auch noch irgendwo in einer Schachtel wartet, irgendwann wieder angesehen zu werden und 
-          an eine Zeitt erinnernd, die so "einfach" war. Und schon ist die Verknüpfung zur Duftkommunikation gewachsen. 
-          Schön. Ich liebe Sie und das, was sie mir mitteilt!
-          <br>
-          <br>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>
+                <b>AKTUELL: Winter 2023</b>
+              </v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <div class="summary">
+                <b>Die (Duft)Kommunikation 🗯️ Der Patchouli</b>
+              </div>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">„Man kann nicht nicht kommunizieren“</v-card-title>
+                      <v-card-text>
+                        <p>
+                          Nach Tagen in der Stille ohne Internet und Handyempfang bin ich zurück, 
+                          um meinen (Jahres)Kreis zu schließen. Mit dem Winteranfang lade ich ein, 
+                          mich auf eine (Duft)Reise zu begleiten, in der viel kommuniziert wird.
+                          Achtsames Zuhören bestärkt dabei zusätzlich das Gegenüber, gehört zu werden. Wird mit Tier oder 
+                          Natur „kommuniziert“, ist das gesprochene Wort alleine nicht ausreichend. 
+                          Dann macht es durchaus Sinn, auch hinzusehen und hinzuspüren. 
+                          <br>Im vergangenen Winter schien mir, als hätte mein prächtiger Rosmarin mit mir kommuniziert und 
+                          mich zum genauen Hinsehen verführt. Denn erst durch meine Achtsamkeit entdeckte ich ein Wunderwerk 
+                          der Natur:</p>
+                        <div align="center">
+                          <v-img max-width="600" src="assets/Wi 2023 2.jpeg" alt="Wunderwerk in der Natur"></v-img>
+                          <small>SchneeRosenRosmarinKristall</small>
+                        </div>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        "Duftkommunikation"
+                      </v-card-title>
+                      <v-card-text>
+                        <p>
+                          Wenn ich für ein <b>Elfendüfte-Coaching</b> Vorbereitungen treffe, 
+                          begleitet mich das Wissen um die <b>Duftkommunikation</b> . 
+                          Dann „packe“ ich ein paar ausgewählte, sowie ein paar bewährte Düfte in meinen (Aroma)Koffer 
+                          und mache mich auf den Weg in meine Praxis. Für meine Kunden steht ein sehr alter Sessel bereit, 
+                          der auch bestimmt viel zu erzählen hätte - könnte er. 
+                          <br>
+                          Beim Reichen der Duftstreifen, darf über Gedanken und Eindrücke erzählt werden, die durch den Kopf 
+                          schwirren. Farbe, Formen, Gefühle bekommen genauso Gehör, wie die Wahrnehmung, ob das Gefühl dazu 
+                          sich mit der Zeit verändert.  
+                          <br>
+                          Je nachdem welche Erfahrungen wir mit diesen Gerüchen in unserer Vergangenheit gemacht haben, 
+                          können unterschiedliche Reaktionen auslöst werden. 
+                          <br>
+                          Es kommen dabei Essencen von Pflanzen zum Einsatz, die auch Ihre Geschichten mitbringen und imstande sind, 
+                          unser Limbisches Zentrum in Windeseile zu erreichen. Dabei spielt es keine Rolle, 
+                          um welchen Duft es sich handelt, sondern was dieser für Erinnerungen in uns weckt.  
+                        <ul>
+                          <li>
+                            es darf erzählt werden, was auch ausgesprochen werden möchte 
+                          </li>
+                          <li>
+                            Erkenntnisse und Emotionen bekommen Platz
+                          </li>
+                          <li>
+                            Fragen sind gestattet und können hinterfragt werden
+                          </li>
+                          <li>
+                            mitgebrachtes Gepäck 🎒 wird durchleuchtet 
+                          </li>
+                          <li>
+                            <b>es darf ins Fließen kommen</b>
+                          </li>
+                        </ul>
+                        <br>
+                        Jede Pflanze lässt sich bestimmte Eigenschaften/Wirkungsweisen zuordnen. 
+                        Es geht dabei u.a. um die ICH Stärkung, ein gemeinsames WIR, Tag - Nacht, Feuer-Luft-Wasser-Erde 
+                        oder Yin & Yang. 
+                        <br>
+                        <br>
+                        Diese Art der Kommunikation findet verbal UND nonverbal statt. 
+                        Denn oftmals vermag es nicht die Stimme, die eine Kommunikation ausmacht, 
+                        sondern das Große & Ganze, was nicht immer in Worte zu fassen ist. Hat man diesen Zugang entdeckt
+                        und vielleicht sogar den Stein ins Rollen gebracht, bleibt es meist nicht nur bei einer Sitzung.
+                        <br>
+                        <br>
+                        Das Reinschnuppern ins Kursthema <b>„Duft und Psyche, geht das?“,</b> und die darauffolgende Ausbildung 
+                        zur <b>„Praktikerin für dialogisch integrative Duftkommunikation“*</b> ebnete mir den Weg, 
+                        um achtsam hinzusehen UND mich mit der Pflanzensprache auseinanderzusetzen.
+                        </p>
+                        <div align="center">
+                          <v-img max-width="600" src="assets/Wi 2023 3.jpeg" alt="Duftkommunikation"></v-img>
+                          <small>Vorbereitungen</small>
+                        </div> 
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        „Das Geheimnis der Kommunikation liegt im Respekt, den wir unseren Mitmenschen entgegenbringen“
+                      </v-card-title>
+                      <v-card-text>
+                        <p>Menschen Tiere und Pflanzen „unterhalten“ sich miteinander, indem (nicht immer selbstgesteuert) 
+                          Gerüche produziert werden, um einen Zustand auszudrücken. Angst, Zuneigung können so „gezeigt“ werden. 
+                          Pflanzen erwirken mit dem Produzieren von "Stinker", dass Fressfeinde ferngehalten werden 
+                          oder Wohlgerüche, um anzulocken, damit die Vermehrung durch Samen und Pollen stattfinden kann.
+                          <br>
+                          Die <a href="#diary_herbst2023">Rosengeranie</a> ist z.B. eine „Kontaktpflanze“, die erst bei Berührung der Blätter ihren Duft frei gibt.
+                          <br>
+                          Ich nutze des weiteren gerne die Möglichkeit, bei Duftimpulsen zum Stift zu greifen, 
+                          um damit meine Gefühle und inneren Bilder auf ein Blatt zu bringen und es auch sichtbar werden zu lassen. 
+                          Viele Fantasiebilder und Zeichnungen voller Farben und Formen sind dabei bereits entstanden. 
+                          Hin und wieder bringen auch Kunden ihre Eindrücke zu Papier und lassen damit ihre Gefühle sprechen.
+                        </p>
+                        <v-row align="start">
+                          <v-col cols="12" sm="4">
+                            <v-img
+                              src="assets/Wi 2023 4.jpeg" alt="Kommunikation"></v-img>
+                            <small>Kuhbusserl</small>
+                          </v-col>
+                          <v-col cols="12" sm="4">
+                            <v-img
+                              src="assets/Wi 2023 5.jpeg" alt="Kommunikation"></v-img>
+                            <small>(Fress)Feine abwehren</small>
+                          </v-col>
+                          <v-col cols="12" sm="4">
+                            <v-img
+                              src="assets/Wi 2023 6.jpeg" alt="Kommunikation"></v-img>
+                            <small>Pure Verlockung</small>
+                          </v-col>
+                        </v-row>  
+                        <br>
+                        <br>
+  
+                        <trennzeile></trennzeile>
                         
-          <trennzeile></trennzeile>
+                        <p>Beim Schreiben meiner Zeitqualitäten verschaffe ich mir die nötige Kreativität, 
+                          wenn die Essence der zu beschreibenden Pflanze in Reichweite „verduftet“.
+                          Dieses Mal kommt <b>Patchouli</b>
+                          in die Duftlampe.<br>
+                          <br>Wir befinden uns nun in einer Zeitqualität, welche die dunkelsten Tage schreibt. 
+                          Man ist übers Jahr gewachsen – hat wieder Erkanntnisse gewonnen - sitzt zusammen und 
+                          kommuniziert vielleicht über vergangene Zeiten. 
+                          <br>Mit diesem Duft ist es gut möglich, dass man bei der Gedankenreise in den 60er - 70er Jahren landet. 
+                          Damals war dieser Geruch up to date, vermag er doch andere Gerüche zu überdecken.
+                          <br>Ende der 80er Jahre hätte auch ich eine Duftwolke an Patchouli benötigt, als die ersten heimlich 
+                          gerauchten Zigaretten konsumiert wurden und all mein Gewand eingeraucht wurde. 🫣 
+                        </p>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        "Hippie, yeah"
+                      </v-card-title>
+                      <v-card-text>
+                        <p>
+                          Heute einer meiner Lieblingsdüfte, hätte er in meinen Jugendjahren wahrscheinlich nicht 
+                          zu meinen Wohlgerüchen gezählt. Denn er scheidet somanche Geister! 
+                          Die eine Gruppe könnten sich darin baden, der Rest verfällt maximal in der Vorstellung, 
+                          Motten damit vertreiben zu können. 🥴
+                          <br>
+                          <br>
+                          In der <b>Duftkommunikation</b>
+                          steht <b>der Patchouli</b>
+                          > für den <b>WINTER</b>. 
+                          Nun dürfen die Wurzeln wachsen. Der Bezug zu seinen Ahnen, Vorfahren darf reflektiert werden.
+                          <br>
+                          Es geht um <b>SICHERHEIT</b>
+                          UND <b>STABILITÄT</b>
+                          , aber auch um <b>Urvertrauen</b>. 
+                          Wieviel nehmen wir uns aus unserer Vergangenheit mit - und dabei meine ich nicht nur unsere gelebte. 😉 
+                          Auch die <b>Erfahrungen</b> unserer Ahnen schwingen mit. Wie viel Vertrauen schenken wir unseren Mitmenschen, 
+                          wieviel Vertrauen haben wir in uns selbst? 
+                          <br>All das sind Themen, die mit dem Patchouli auch in Zusammenhang gebracht werden können.
+                          <br>
+                          <br>So dunkel und schwer wie die Tage um die Wintersonnenwende, 
+                          die Raunächte und den Beginn eines neuen Jahres oftmals scheinen, 
+                          so schwermütig wird der Patchouli oftmals in Farbe und Wahrnehmung beschrieben.
+                        </p>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2023 7.jpeg" alt="Hippiestyle"></v-img>
+                            <small>Blumenmädchen</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2023 8.jpeg" alt="Patchouli"></v-img>
+                            <small>Patchouliblätter</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2023 9.jpeg" alt="Patchouli"></v-img>
+                            <small>Patchouliblüten</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2023 10.jpeg" alt="Patchouli"></v-img>
+                            <small>PatchouliKäferKommunikation</small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Meine Zeitqualität Pflanze: Der Patchouli - <i>Pogostemon calbin</i>
+                      </v-card-title>
+                      <v-card-text>
+                        🌿 <b>Pflanzenportrait</b>
+                        <ul>
+                          <li>
+                            <b>Pflanzenfamilie:</b>
+                            Lippenblütengewächs - <i>Lamiaceae</i>
+                          </li>
+                          <li>
+                            <b>Vorkommen</b>: wachsen natürlich in tropischen Ländern.
+                            Seit der Entdeckung der insektenfernhaltenden 
+                            Eigenschaft dieses Geruches, verwendet die dort einheimische Bevölkerung
+                            die getrockneten Blätter zwischen Kleidungsstücken und gewebten Waren.
+                          </li>
+                          <li>Die Blätter werden vor der Destillation fermentiert. Aus ca. 30-40 kg kann 
+                            1 lt ätherisches Öl gewonnen werden</li> 
+                        </ul>
+                        <br>
+                        🪴 <b>Wirkungen und Eigenschaften</b> aus der 
+                        <b>Fachliteratur</b>:
+                        <br>
+                        sehr hautpflegend, epithelisierend, entstauend, gute Anwendung bei Stress und Stimmungsschwankungen, erotisierend
+                        <br>
+                        <br>
+                        💡 Gut zu wissen: Obwohl die Essence aus Blättern gewonnen wird, ist bei der Dosierung Achtsamkeit geboten, 
+                        da der volle und schwerde Duft als Basisnote gewertet werden kann, 
+                        für die geringen Mengen in einer Mischung ausreichen. 
+                        <br>
+                        <br>
+                        🪴 <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
+                        mit dem <b>ätherischen Öl:</b>               
+                        <ul>
+                          <li>
+                            <b>Duftspektrum</b>: intensiv holzig, rauchig, exotisch, zitrusartig, erdig, schwer, dunkel
+                          </li>
+                          <li>
+                            Dieser Charakter ist nichts für ein leichtes Frühlingsparfum. 
+                            Allerdings bestens geeignet, um schwere, exotische, sinnliche Duftmischungen zu kreieren.
+                            Da es sehr lange haftet, ist er als Fixateur bestens geeignet. 
+                          </li>
+                          <li>
+                            Geringe Mengen finden sich bei mir in der <b>Aromakosmetik</b> 
+                          </li>
+                        </ul> 
+                        <br>
+                       
+                        💡 Gut zu wissen: Es gehört zu jenen ätherischen Ölen, die sehr lange haltbar sind und mit den Jahren 
+                        im Duft reifen und aromatischer werden. Dies liegt an der biochemischen Zusammensetzung, da es 
+                        vorwiegend aus Sesquiterpenverbindungen besteht und daher kaum oxidiert.        
+                        <br>
+                        <br>
+                        🪴 Ein <b>Patchoulihydrolat</b> ist mir derweilen noch nicht untergekommen.
+                        Sollte es sich ändern, werde ich an dieser Stelle Ergänzungen vermerken! 
+                        <br>
+                        <br>
+                        🪴 <b>Räucherungen</b>
+                        mit <b>Patchouliblätter:</b>
+                        <br>
+                        Der Duft ist mir schon länger bekannt, gibt es doch zahlreiche Räucherstäbchen mit diesem Geruch!
+                        Jahr für Jahr habe ich mich früher in diese Zeit im wahrsten Sinne des Wortes 
+                        "eingeräuchert". Irgendwann wechselte ich aber auf Räucherkohle und Sieb.
+                        In einer roten Schachtel habe ich allerdings noch ein paar Packungen mit gerollten Stäbchen für irgendwann gehortet. 
+                        Hin und wieder wird diese Schachtel geöffnet und der Duftinhalt katapuliert mich sofort in einen Zeitabschnitt vor zig
+                        Jahren, wo meine Duftreise begann. 
+                        Es kommen mir Bilder von einem Geschäft in Wien und einem Wandbehang, den ich zusammen mit dem 
+                        Räucherwerk kaufte. Dieser liegt auch in einer Schachtel, die mich beim Öffnen an eine Zeit erinnert, 
+                        die gefühlt so "einfach und unbeschwert gestrickt" war. 
+                        Und schon findet sich wieder der rote Faden zur Duftkommunikation. 🧶
+                        <br>
+                        <br>
+                        
+                        <trennzeile></trennzeile>
 
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          Eine (Duft)Reise ohne Gebäck
-          </v-card-title>
-          <v-card-text>
-          <br>
-          Machen Sie sich auf den Weg und erkundigen sie was war, wo Sie gerade stehen, was vor Ihnen liegt!
-          Vieles wird 
-          </p> 
-          <div align="center">
-          <v-img max-width="600" src="assets/He 2023 14.jpeg" alt="Duftspur mit Vogerl"></v-img>
-          <small>Aufwärtsspirale</small>
-          </div>           
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          Mein Zeitqualität Tipp
-          </v-card-title>
-          <v-card-text>
-          <p>
-          Vereinbaren Sie einen Termin, besuchen Sie mich in meiner Praxis und gönnen sich 
-          ein <a href="#leistungen_5">Elfendüfte-Coaching.</a> 
-          Bei diesem <b>"gehen auf der persönlichen Duftspur"</b> begleite ich mit passenden Düften.
-          Und vielleicht fühlt sich ein schwerer Rucksack durch entdeckte Erkenntnisse leichter an als er war!
-          Bis zur nächsten Zeitqualität erwartett Sie bei dieser Leistung ein Überraschungsrabatt!
-          <br>
-          <br>
-          Bis zum Jahreswechsel bleibt nicht mehr viel Zeit, genießen Sie diese mit Ihren Liebsten!
-          Ich wünsche einen guten Rutsch, auf das sich unsere Wege im kommenden Jahr kreuzen! 
-          <br>
-          <br>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Mein Zeitqualität Tipp - Eine (Duft)Reise ohne Gepäck
+                      </v-card-title>
+                      <v-card-text>
+                        <p>
+                          Vereinbaren Sie dazu einen Termin für ein 
+                          <a href="#leistungen_5">Elfendüfte-Coaching</a> und machen sich auf den Weg in meine Praxis.
+                          Bei diesem <b>"Gehen auf der persönlichen Duftspur"</b> begleite ich mit passenden Düften.
+                          Erkunden Sie was war, wo Sie gerade stehen und was vor Ihnen liegt!
+                          Vielleicht fühlt sich, durch entdeckte Erkenntnisse, ein schwerer Rucksack leichter an. 
+                          Als besonderes Zuckerl 🍬 gibt es diesmal zu dieser Leistung den <b>Überraschungsrabatt</b> bis zur nächsten Zeitqualität!
+                          <br>
+                          <br>
+                          Nun wünsche ich noch einen guten Rutsch, genießen Sie die Zeit,
+                          auf dass sich unsere Wege im kommenden Jahr vielleicht (wieder) kreuzen! 💫
+                          <br>
+                        <div align="center">
+                          <v-img max-width="600" src="assets/Wi 2023 11.jpeg" alt="Kreuzungen"></v-img>
+                          <small>Sich kreuzende Wege</small>
+                        </div> 
+                        
+                        <br>
+                        <br>
+                        <trennzeile></trennzeile>
 
-          <trennzeile></trennzeile>
-
-          <br>
-          *Dazu möchte ich keineswegs unbetont lassen, dass nicht alle Krankheiten im Vorfeld 
-          erkannt und abgewendet werden können.  
-          Schulmedizin ist wichtig und oft lebensnotwendig! Wünschenswerter wäre daher ein Zusammenarbeiten der 
-          unterschiedlichen Berufsgruppen und das Anwenden komplementärere Methoden. Im Idealfall auch die 
-          Erkenntnis, dass es mehr gibt, als man nur sehen kann! 💫
-          </p>
-          </v-card-text>
-          </v-card>
-          </v-flex>
-          </v-layout>
-          </v-container>
-          </v-card-text>
+                        <br>
+                        *Ich durfte diese Methode von Christine Lamontain lernen, die für mich mit diesem Wissen 
+                        den Zugang zu ätherischen Ölen vollkommen macht. Sie selbst wurde wiederum von der 
+                        „Integrale Osmologie“ (Martin Henglein) und der „Dialogischen Aktiven Kommunikation“ 
+                        (Gerhard Tiemeyer) inspiriert und hat dieses Wissen weiterentwickelt.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
           </v-card> 
-          </v-dialog>-->  
+        </v-dialog>-->  
 
         <!-- Juni 2023 --> 
         
@@ -2776,7 +2727,7 @@
                 <v-icon>mdi-close</v-icon>
               </v-btn>
               <v-toolbar-title>
-                <b>AKTUELL: Herbst 2023</b>
+                Herbst 2023
               </v-toolbar-title>
             </v-toolbar>
             <v-card-text>
@@ -3022,7 +2973,7 @@
                         einer Anwendung mit der Rosengeranie Bourbon fachlicher Rat einzuholen!
                         <br>
                         <br>
-                        Wenn man liest, dass das ätherische Öl aus den Blüten gewonnen wurde, ist Achtsamkeit geboten. 
+                        Wenn man liest, dass diese ätherische Öl aus Blüten gewonnen wurde, ist Achtsamkeit geboten. 
                         Das würde den Preis deutlich erhöhen und dem der Rose nahekommen.
                         Denn es werden 300-500 kg <b>Blätter</b>
                         verwendet, um 1 lt Öl aus <b>Wasserdestillation</b> zu gewinnen.

@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/@fontsource/roboto@4.5.8/latin.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/css/blueimp-gallery.min.css">
     <link href="assets/style.css" rel="stylesheet">
     <!-- Matomo -->
     <script>
@@ -1872,16 +1871,15 @@
                   <h2 class="headline">Duft-Galerie</h2>
                   <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">Bilder einiger Pflanzen, 
                     deren Düfte und Wirkungen ich in ätherischen Ölen, fetten Ölen sowie Hydrolaten sehr schätze!</v-card-title>
-                  <gallery :images="images" :index="index" @close="index = null"></gallery>
                   <v-container grid-list-xl>
                     <v-layout row wrap align-center>
-                      <v-flex xs12 md3 v-for="image, imageIndex in images" :key="image.href">
+                      <v-flex xs12 md3 v-for="(image, imageIndex) in galerieItems" :key="image.titelbild">
                         <v-card flat>
-                          <v-card-text class="text-center image" @click="index = imageIndex"
-                            :style="{ backgroundImage: 'url(' + image.href + ')' }" :title="image.title"
-                            :alt="image.title"></v-card-text>
+                          <v-card-text class="text-center image" @click="goto(`#galerie_${image.titel}`)"
+                            :style="{ backgroundImage: 'url(' + image.titelbild + ')' }" :title="image.titel"
+                            :alt="image.titel"></v-card-text>
                           <v-card-actions class="justify-center">
-                            <v-btn text :href="image.shop" target="_blank">{{image.description}}</v-btn>
+                            <v-btn text :href="`#galerie_${image.titel}`">{{image.titel}}</v-btn>
                           </v-card-actions>
                         </v-card>
                       </v-flex>
@@ -6532,6 +6530,618 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - NEROLI-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Neroli.jpeg"
+          v-model="galerie_Neroli"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Neroli</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Neroli.jpeg"></div>
+                        <p>Citrus aurantium flos.</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - HANF-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Hanf.jpeg"
+          v-model="galerie_Hanf"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Hanf</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Hanf.jpeg"></div>
+                        <p>Cannabis sativa L.</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - SANDDORNFRUCHT-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Sanddornfrucht.jpeg"
+          v-model="galerie_Sanddornfrucht"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Sanddornfrucht</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Sanddornfrucht.jpeg"></div>
+                        <p>Hippophae rhamnoides</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - IRIS-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Iris.jpeg"
+          v-model="galerie_Iris"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Iris</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Iris.jpeg"></div>
+                        <p>Iris pallida, Iris germanica, Iris germanica</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - HOLUNDER-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Holunder.jpeg"
+          v-model="galerie_Holunder"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Holunder</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Holunder.jpeg"></div>
+                        <p>Sambucus nigra</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - ROSMARIN-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Rosmarin.jpg"
+          v-model="galerie_Rosmarin"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Rosmarin</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Rosmarin.jpg"></div>
+                        <p>Salvia rosmarinus</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - KAROTTENSAMEN-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Karottensamen.jpeg"
+          v-model="galerie_Karottensamen"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Karottensamen</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Karottensamen.jpeg"></div>
+                        <p>Daucus carota</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - ROSENGERANIE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Geranium.jpg"
+          v-model="galerie_Rosengeranie"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Rosengeranie</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Geranium.jpg"></div>
+                        <p>Pelargonium graveolens</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - ORANGE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Orange.jpeg"
+          v-model="galerie_Orange"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Orange</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Orange.jpeg"></div>
+                        <p>Citrus sinensis</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - JASMIN-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Jasmin.jpeg"
+          v-model="galerie_Jasmin"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Jasmin</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Jasmin.jpeg"></div>
+                        <p>Jasminum grandiflorum</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - MUSKATELLERSALBEI-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Muskatellersalbei.jpg"
+          v-model="galerie_Muskatellersalbei"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Muskatellersalbei</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Muskatellersalbei.jpg"></div>
+                        <p>Salvia sclarea</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - ROSE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Rose.jpeg"
+          v-model="galerie_Rose"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Rose</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Rose.jpeg"></div>
+                        <p>Rosa damascena</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - LAVENDEL-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Lavendel.jpg"
+          v-model="galerie_Lavendel"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Lavendel</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Lavendel.jpg"></div>
+                        <p>Lavandula angustifolia</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - THYMIAN-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Thymian.jpg"
+          v-model="galerie_Thymian"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Thymian</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Thymian.jpg"></div>
+                        <p>Thymus vulgaris</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - MELISSE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Melisse.jpg"
+          v-model="galerie_Melisse"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Melisse</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Melisse.jpg"></div>
+                        <p>Melissa officinalis</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - VETIVER-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Vetiver.jpg"
+          v-model="galerie_Vetiver"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Vetiver</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Vetiver.jpg"></div>
+                        <p>Vetiveria zizanoides</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - WACHOLDERBEERE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Wacholderbeere.jpg"
+          v-model="galerie_Wacholderbeere"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Wacholderbeere</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Wacholderbeere.jpg"></div>
+                        <p>Juniperus communis</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - ZEDER-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Zeder.jpeg"
+          v-model="galerie_Zeder"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Zeder</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Zeder.jpeg"></div>
+                        <p>Cedrus atlantica, Cedrus deodora</p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
         <!-- GUTSCHEINBESTELLUNG -->
         <v-dialog
           v-model="gutschein_dialog"
@@ -6582,17 +7192,14 @@
             </v-card-text>
           </v-card>
         </v-dialog>
+
       </v-app>
     </div>
     <script>
       const suffix = location.host === 'elfenduefte.at' ? '.min.js' : '.js';
       const scripts = [
         'https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue' + suffix,
-        'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify' + suffix,
-        'https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/js/blueimp-helper.js',
-        'https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/js/blueimp-gallery' + suffix,
-        'https://cdn.jsdelivr.net/npm/blueimp-gallery@2.44.0/js/blueimp-gallery-fullscreen.js',
-        'https://cdn.jsdelivr.net/npm/vue-gallery@2.x'
+        'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify' + suffix
       ];
       for (let i = 0, ii = scripts.length; i < ii; ++i) {
         document.write('<script src="' + scripts[i] + '"><\/script>');
@@ -6645,12 +7252,19 @@
       });
     });
 
+    const galerie = document.querySelectorAll('v-dialog[class="galerie"]');
+    const galerieItems = [];
+    galerie.forEach(function (item) {
+      galerieItems.push({
+        dialog: item.getAttribute('v-model'),
+        titel: item.querySelector('v-toolbar-title').innerHTML,
+        titelbild: item.getAttribute('data-titelbild'),
+      });
+    });
+
     const app = new Vue({
       el: '#app',
       vuetify: new Vuetify(),
-      components: {
-        'gallery': VueGallery
-      },
       data() {
         return {
           serviceItems: serviceItems,
@@ -6663,6 +7277,11 @@
             acc[item.dialog] = false;
             return acc;
           }, {}),
+          galerieItems: galerieItems,
+          ...galerieItems.reduce((acc, item) => {
+            acc[item.dialog] = false;
+            return acc;
+          }, {}),
           valid: true,
           validgutschein: true,
           name: '',
@@ -6670,27 +7289,6 @@
           message: '',
           agreement: false,
           menuItems: menuItems,
-          images: [
-            { title: 'Citrus aurantium flos.', description: 'Neroli', href: 'assets/lightbox/Neroli.jpeg' },
-            { title: 'Cannabis sativa L.', description: 'Hanf', href: 'assets/lightbox/Hanf.jpeg' },
-            { title: 'Hippophae rhamnoides', description: 'Sanddornfrucht', href: 'assets/lightbox/Sanddornfrucht.jpeg' },
-            { title: 'Iris pallida, Iris germanica, Iris germanica', description: 'Iris', href: 'assets/lightbox/Iris.jpeg' },
-            { title: 'Sambucus nigra', description: 'Holunder', href: 'assets/lightbox/Holunder.jpeg' },
-            { title: 'Salvia rosmarinus', description: 'Rosmarin', href: 'assets/lightbox/Rosmarin.jpg' },
-            { title: 'Daucus carota', description: 'Karottensamen', href: 'assets/lightbox/Karottensamen.jpeg' },
-            { title: 'Pelargonium graveolens', description: 'Rosengeranie', href: 'assets/lightbox/Geranium.jpg' },
-            { title: 'Citrus sinensis', description: 'Orange', href: 'assets/lightbox/Orange.jpeg' },
-            { title: 'Jasminum grandiflorum', description: 'Jasmin', href: 'assets/lightbox/Jasmin.jpeg' },
-            { title: 'Salvia sclarea', description: 'Muskatellersalbei', href: 'assets/lightbox/Muskatellersalbei.jpg' },
-            { title: 'Rosa damascena', description: 'Rose', href: 'assets/lightbox/Rose.jpeg' },
-            { title: 'Lavandula angustifolia', description: 'Lavendel', href: 'assets/lightbox/Lavendel.jpg' },
-            { title: 'Thymus vulgaris', description: 'Thymian', href: 'assets/lightbox/Thymian.jpg' },
-            { title: 'Melissa officinalis', description: 'Melisse', href: 'assets/lightbox/Melisse.jpg' },
-            { title: 'Vetiveria zizanoides', description: 'Vetiver', href: 'assets/lightbox/Vetiver.jpg' },
-            { title: 'Juniperus communis', description: 'Wacholderbeere', href: 'assets/lightbox/Wacholderbeere.jpg' },
-            { title: 'Cedrus atlantica, Cedrus deodora', description: 'Zeder', href: 'assets/lightbox/Zeder.jpeg' },
-          ],
-          index: null,
           sidebar: false,
           ceomnatial: ('ta.etfeudnefle' + karlklammer + 'liam').split('').reverse().join(''),
           introSrc: innerWidth > 1560 ? 'assets/Rauhnachtsintro-large.jpeg' : 'assets/Rauhnachtsintro.jpeg',
@@ -6717,12 +7315,9 @@
         }
       },
       methods: {
-        openDiaryItem(dialog) {
-          this[dialog] = true;
-        },
         closeDialog(hash) {
           for (const key in app) {
-            if ((key.endsWith('_dialog') || key.startsWith('diary_') || key.startsWith('leistungen_')) && app[key]) {
+            if ((key.endsWith('_dialog') || key.startsWith('diary_') || key.startsWith('leistungen_') || key.startsWith('galerie_')) && app[key]) {
               app[key] = false;
               break;
             }
@@ -6732,7 +7327,7 @@
           }
         },
         goto(target) {
-          if (target.startsWith('#diary_') || target.startsWith('#leistungen_')) {
+          if (target.startsWith('#diary_') || target.startsWith('#leistungen_') || target.startsWith('#galerie_')) {
             this[target.substr(1)] = true;
             window.location.hash = target;
           } else if (target.endsWith('_dialog')) {
@@ -6759,10 +7354,11 @@
         }
       }
     });
+
     window.addEventListener('popstate', function(e) {
       app.closeDialog()
       const target = window.location.hash;
-      if (target && target.endsWith('_dialog') || target.startsWith('#diary_')  || target.startsWith('#leistungen_')) {
+      if (target && target.endsWith('_dialog') || target.startsWith('#diary_') || target.startsWith('#leistungen_') || target.startsWith('#galerie_')) {
         app.goto(target);
       }
     });

@@ -517,7 +517,6 @@
                               Hinweiß</div>
                             Viele Zusatzversicherungen übernehmen teilweise die Kosten für 
                             ganzheitsmedizinische Behandlungsmethoden. Informieren Sie sich!
-                            
                           </v-card-text>
                         </v-card>
                       </v-flex>
@@ -6539,6 +6538,42 @@
         <!-- GALERIE - NEROLI-->
         <v-dialog
           class="galerie"
+          data-titelbild="assets/lightbox/Engelwurz.jpeg"
+          v-model="galerie_Engelwurz"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Engelwurz</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Engelwurz.jpeg"></div>
+                        <p>Angelica archangelica
+                          <br>Blüte einer Zitrusfrucht.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - NEROLI-->
+        <v-dialog
+          class="galerie"
           data-titelbild="assets/lightbox/Neroli.jpeg"
           v-model="galerie_Neroli"
           transition="dialog-bottom-transition"
@@ -6560,7 +6595,10 @@
                         <div style="line-height: 0.8rem" class="small float-half">
                           <img style="width: 100%"
                             src="assets/lightbox/Neroli.jpeg"></div>
-                        <p>Citrus aurantium flos.</p>
+                        <p>Citrus aurantium flos
+                          <br>
+                          <a href="#diary_hochsommer2022">klick</a>
+                        </p>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -6594,143 +6632,9 @@
                         <div style="line-height: 0.8rem" class="small float-half">
                           <img style="width: 100%"
                             src="assets/lightbox/Hanf.jpeg"></div>
-                        <p>Cannabis sativa L.</p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        <!-- GALERIE - SANDDORNFRUCHT-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Sanddornfrucht.jpeg"
-          v-model="galerie_Sanddornfrucht"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Sanddornfrucht</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Sanddornfrucht.jpeg"></div>
-                        <p>Hippophae rhamnoides</p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        <!-- GALERIE - IRIS-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Iris.jpeg"
-          v-model="galerie_Iris"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Iris</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Iris.jpeg"></div>
-                        <p>Iris pallida, Iris germanica, Iris germanica</p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        <!-- GALERIE - HOLUNDER-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Holunder.jpeg"
-          v-model="galerie_Holunder"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Holunder</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Holunder.jpeg"></div>
-                        <p>Sambucus nigra</p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        <!-- GALERIE - ROSMARIN-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Rosmarin.jpg"
-          v-model="galerie_Rosmarin"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Rosmarin</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Rosmarin.jpg"></div>
-                        <p>Salvia rosmarinus</p>
+                        <p>Cannabis sativa L.
+                          <a href="#diary_hochsommer2022">klick</a>
+                        </p>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -6764,7 +6668,160 @@
                         <div style="line-height: 0.8rem" class="small float-half">
                           <img style="width: 100%"
                             src="assets/lightbox/Karottensamen.jpeg"></div>
-                        <p>Daucus carota</p>
+                        <p>Daucus carota
+                          <br>
+                          <a href="#diary_tagnachtgleiche2022">klick</a>
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+        
+        <!-- GALERIE - IRIS-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Iris.jpeg"
+          v-model="galerie_Iris"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Iris</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Iris.jpeg"></div>
+                        <p>Iris pallida, Iris germanica, Iris germanica
+                          <br>
+                          <a href="#diary_ahnenfest2022">klick</a>
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - HOLUNDER-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Holunder.jpeg"
+          v-model="galerie_Holunder"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Holunder</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Holunder.jpeg"></div>
+                        <p>Sambucus nigra
+                          <br>
+                          <a href="#diary_ahnenfest2022">klick</a>
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - SANDDORNFRUCHT-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Sanddornfrucht.jpeg"
+          v-model="galerie_Sanddornfrucht"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Sanddornfrucht</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Sanddornfrucht.jpeg"></div>
+                        <p>Hippophae rhamnoides
+                          <br>
+                          <a href="#diary_ahnenfest2022">klick</a>
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - ROSMARIN-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Rosmarin.jpeg"
+          v-model="galerie_Rosmarin"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Rosmarin</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Rosmarin.jpeg"></div>
+                        <p>Salvia rosmarinus
+                          <br>
+                          Weiterführende Informationen rund um die Zeitqualität zum Rosmarin finden sie hier...
+                          <br>
+                          <a href="#diary_fruehling2023">klick</a>
+                        </p>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -6798,7 +6855,10 @@
                         <div style="line-height: 0.8rem" class="small float-half">
                           <img style="width: 100%"
                             src="assets/lightbox/Geranium.jpg"></div>
-                        <p>Pelargonium graveolens</p>
+                        <p>Pelargonium graveolens
+                          <br>
+                          <a href="#diary_herbst2023">klick</a>
+                        </p>
                       </v-card-text>
                     </v-card>
                   </v-flex>

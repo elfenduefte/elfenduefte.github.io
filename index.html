@@ -54,14 +54,14 @@
               @click="sidebar = false">
               <v-list-item-content>Ich bin...</v-list-item-content>
             </v-list-item>
-            <v-list-item href="#zeitqualitaeten"
-              @click="sidebar = false">
-              <v-list-item-content>Zeitqualitäten</v-list-item-content>
-            </v-list-item>
             <v-list-item href="#galerie"
               @click="sidebar = false">
               <v-list-item-content>Duft-Galerie
               </v-list-item-content>
+            </v-list-item>
+            <v-list-item href="#zeitqualitaeten"
+              @click="sidebar = false">
+              <v-list-item-content>Zeitqualitäten</v-list-item-content>
             </v-list-item>
             <v-list-item href="#kontakt"
               @click="sidebar = false">
@@ -1756,8 +1756,46 @@
               </v-flex>
             </v-layout>
           </section>
+          
           <section>
+            <v-parallax src="assets/Pa 4.jpg" height="380">
+              <v-layout column align-center justify-center>
+                <div class="shadow headline white--text mb-4 text-center">„Das Äußere einer Pflanze ist nur die Hälfte
+                  ihrer Wirklichkeit“</div>
+                <em class="shadow">Johann Wolfgang von Goethe</em>
+              </v-layout>
+            </v-parallax>
+          </section>
 
+          <section id="galerie">
+            <v-layout column wrap class="my-12" align-center>
+              <v-flex xs12 sm4 class="my-4">
+                <div class="text-center">
+                  <h2 class="headline">Duft-Galerie</h2>
+                  <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">Bilder einiger Pflanzen, 
+                    deren Düfte und Wirkungen ich in ätherischen Ölen, fetten Ölen sowie Hydrolaten sehr schätze!
+                  </v-card-title>
+                  <v-card-text>NEU: Hinter (fast) jedem Bild "verbirgt" sich ein kurzes Pflanzenportrait</v-card-text>
+                  <v-container grid-list-xl>
+                    <v-layout row wrap align-center>
+                      <v-flex xs12 md3 v-for="(image, imageIndex) in galerieItems" :key="image.titelbild">
+                        <v-card flat>
+                          <v-card-text class="text-center image" @click="goto(`#galerie_${image.titel}`)"
+                            :style="{ backgroundImage: 'url(' + image.titelbild + ')' }" :title="image.titel"
+                            :alt="image.titel"></v-card-text>
+                          <v-card-actions class="justify-center">
+                            <v-btn text :href="`#galerie_${image.titel}`">{{image.titel}}</v-btn>
+                          </v-card-actions>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </div>
+              </v-flex>
+            </v-layout>
+          </section>
+
+          <section>
             <v-parallax src="assets/Pa 1.jpg" height="380">
               <v-layout column align-center justify-center>
                 <div class="shadow headline white--text mb-4 text-center">„Die größte heilende Kraft liegt darin,
@@ -1780,7 +1818,7 @@
                         <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
                           <div class="text-center">Texte beinhalten erlebte Kurzgeschichten und Tätigkeiten, die ich mit all 
                             meinen Sinnen im Zusammenhang mit meiner 💜ensarbeit im Jahreskreislauf erlebe. 
-                            Meine Leidenschaft zu fotografieren ermöglichen mir, Geschriebenes mit zahlreichen Bilder zu gestalten!
+                            Meine Leidenschaft zu fotografieren ermöglicht mir, Geschriebenes mit zahlreichen Bilder zu gestalten!
                           </div>
                         </v-card-title>
                       </v-card>
@@ -1844,44 +1882,6 @@
                     </v-flex>
                   </v-layout>
                 </v-container>
-              </v-flex>
-            </v-layout>
-          </section>
-
-          <section>
-            <v-parallax src="assets/Pa 4.jpg" height="380">
-              <v-layout column align-center justify-center>
-                <div class="shadow headline white--text mb-4 text-center">„Das Äußere einer Pflanze ist nur die Hälfte
-                  ihrer Wirklichkeit“</div>
-                <em class="shadow">Johann Wolfgang von Goethe</em>
-              </v-layout>
-            </v-parallax>
-          </section>
-
-          <section id="galerie">
-            <v-layout column wrap class="my-12" align-center>
-              <v-flex xs12 sm4 class="my-4">
-                <div class="text-center">
-                  <h2 class="headline">Duft-Galerie</h2>
-                  <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">Bilder einiger Pflanzen, 
-                    deren Düfte und Wirkungen ich in ätherischen Ölen, fetten Ölen sowie Hydrolaten sehr schätze!
-                  </v-card-title>
-                  <v-card-text>NEU: "Hinter den Bildern" befindet sich passend dazu ein Kurzportrait</v-card-text>
-                  <v-container grid-list-xl>
-                    <v-layout row wrap align-center>
-                      <v-flex xs12 md3 v-for="(image, imageIndex) in galerieItems" :key="image.titelbild">
-                        <v-card flat>
-                          <v-card-text class="text-center image" @click="goto(`#galerie_${image.titel}`)"
-                            :style="{ backgroundImage: 'url(' + image.titelbild + ')' }" :title="image.titel"
-                            :alt="image.titel"></v-card-text>
-                          <v-card-actions class="justify-center">
-                            <v-btn text :href="`#galerie_${image.titel}`">{{image.titel}}</v-btn>
-                          </v-card-actions>
-                        </v-card>
-                      </v-flex>
-                    </v-layout>
-                  </v-container>
-                </div>
               </v-flex>
             </v-layout>
           </section>
@@ -4863,7 +4863,8 @@
                         🌿 <b>Pflanzenportrait</b>
                         <ul>
                           <li>
-                            sie zählt zu den Doldengewächsen – <i>Apiaceae (früher Umbelliferae)</i>
+                            <b>Pflanzenfamilie:</b>
+                            Doldengewächse – <i>Apiaceae (früher Umbelliferae)</i>
                           </li>
                           <li>
                             die <b>„wilde Möhre“</b>, wie sie auch genannt wird, ist ein „Vorfahre“ unserer heute bekannten 
@@ -6720,7 +6721,8 @@
                         🌿 <b>Pflanzenportrait</b>
                         <ul>
                           <li>
-                            sie zählt zur Familie der Doldenblütler, <i>Apiaceae</i>
+                            <b>Pflanzenfamilie:</b>
+                            Doldenblütler - <i>Apiaceae</i>
                           </li> 
                           <li>mag feuchte Standorte, was ich aufgrund meiner Begegnungen mit Ihr in Island nur bestätigen kann</li>
                           <li>erreicht ausgewachsen bei bestimmten Sorten teils gigantische Höhen</li>
@@ -7206,7 +7208,8 @@
                         🌿 <b>Pflanzenportrait</b>
                         <ul>
                           <li>
-                            sie zählt zu den Doldengewächsen – <i>Apiaceae (früher Umbelliferae)</i>
+                            <b>Pflanzenfamilie:</b>
+                            Doldengewächse – <i>Apiaceae (früher Umbelliferae)</i>
                           </li>
                           <li>
                             die <b>„wilde Möhre“</b>, wie sie auch genannt wird, ist ein „Vorfahre“ unserer heute bekannten 

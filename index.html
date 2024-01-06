@@ -1781,9 +1781,8 @@
                           <div class="text-center">Texte beinhalten erlebte Kurzgeschichten und Tätigkeiten, die ich mit all 
                             meinen Sinnen im Zusammenhang mit meiner 💜ensarbeit im Jahreskreislauf erlebe. 
                             Meine Leidenschaft zu fotografieren ermöglichen mir, Geschriebenes mit zahlreichen Bilder zu gestalten!
-                            <br>Inhalte sind durch anklicken aufrufbar!
                           </div>
-                        </v-card-title> 
+                        </v-card-title>
                       </v-card>
                     </v-flex>
                   </v-layout>
@@ -1865,7 +1864,9 @@
                 <div class="text-center">
                   <h2 class="headline">Duft-Galerie</h2>
                   <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">Bilder einiger Pflanzen, 
-                    deren Düfte und Wirkungen ich in ätherischen Ölen, fetten Ölen sowie Hydrolaten sehr schätze!</v-card-title>
+                    deren Düfte und Wirkungen ich in ätherischen Ölen, fetten Ölen sowie Hydrolaten sehr schätze!
+                  </v-card-title>
+                  <v-card-text>NEU: "Hinter den Bildern" befindet sich passend dazu ein Kurzportrait</v-card-text>
                   <v-container grid-list-xl>
                     <v-layout row wrap align-center>
                       <v-flex xs12 md3 v-for="(image, imageIndex) in galerieItems" :key="image.titelbild">
@@ -3262,6 +3263,10 @@
                           <br>
                           Bei einer <b>kinesiologischen Austestung</b> können unterschiedliche Stärkungsmöglichkeiten 
                           zusätzliche Power geben, um fokusierter zu agieren.
+                          <br>
+                          <br>
+  
+                          <trennzeile></trennzeile>
                         </p>
                         <div align="center">
                           <v-img max-width="600" src="assets/So 2023 14.jpeg" alt="Parfum"></v-img>
@@ -3377,16 +3382,16 @@
                         mit dem <b>Hydrolat</b>: 
                         <br>Ich verwende es direkt pur ins Gesicht gesprüht als Erfrischung am Morgen oder mische mir einen 
                         angenehm kühlenden Spray für hitzige Tagen. Dazu gebe ich ätherischen Ölen von Nelke und Geranie dazu.
-                       </p>  
-
+                        <br>
+                        <br>
+  
                         <trennzeile></trennzeile>
-
-                      </v-card-text>
-                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        
+                        <br> 
+                        <br> 
                         Auch wenn sich die Bräune im Gesicht langsam verblasst, sind die Erinnerungen an diese 
-                        wunderbare Reise zu der fabelhaften Bergamotte allgegenwärtig in Form von Duft & Geschmack
-                      </v-card-title>
-                      <v-card-text>
+                        wunderbare Reise zu der fabelhaften Bergamotte allgegenwärtig in Form von Duft & Geschmack.
+                      
                         <div align="center">
                           <v-img max-width="600" src="assets/So 2023 19.jpeg" alt="Bergamottprodukte"></v-img>
                           <small>Köstliche Bergamottprodukte</small>
@@ -6535,6 +6540,133 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - BERGAMOTTE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Bergamotte.jpeg"
+          v-model="galerie_Bergamotte"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Bergamotte</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/So 2023 15.jpeg" alt="Blüte"></v-img>
+                            <small>Blüte</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/So 2023 16.jpeg" alt="Unreife Frucht"></v-img>
+                            <small>Unreife Frucht</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/So 2023 17.jpeg" alt="Reife Frucht"></v-img>
+                            <small>Reife Frucht</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/So 2023 18.jpeg" alt="Bergamottbaum"></v-img>
+                            <small>Bergamottbaum</small>
+                          </v-col>
+                        </v-row>  
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Die Bergamotte – <i>Citrus bergamia Risso und Poiteau</i>
+                      </v-card-title>
+                      <v-card-text>
+                        <p>
+                          🌿 <b>Pflanzenportrait</b>
+                        <ul>
+                          <li>
+                            <b>Pflanzenfamilie:</b>
+                            Rautengewächs - <i>Rutaceae</i>
+                          </li>
+                          <li>
+                            <b>Vorkommen</b>: Obwohl sie auch in Brasilien, Argentinien oder an der Elfenbeinküste angebaut wird, 
+                            bleibt <b>Kalabrien</b> das Hauptanbaugebiet dieser kälteempfindlichen Frucht, 
+                            weil von dort das <b>qualitativ hochwertigste Öl</b> stammt
+                          </li> 
+                          <li>200 kg Schalen ergeben 1 kg ätherisches Öl</li>
+                          <li>
+                            <b>Aromaküche</b>: Marmeladen, Säfte (beides durchaus spannend im Geschmack) und als bekannte Zutat vom Earl Grey Tea
+                          </li>
+                        </ul>
+                        <br>
+                        Gewonnen wird das ätherische Öl durch <b>Pressung der Schalen</b>. Bei diesen Vorgang werden die 
+                        Öldrüsen „geknackt" und geben so das Öl frei. Gerade bei dieser Methode macht es Sinn, auf <b>biologischen Anbau</b> zu achten.        
+                        <br>
+                        <br>Selten werden Zitrusfrüchte destilliert. Wenn doch, unterscheidet sich der Duft wesentlich vom 
+                        Pressverfahren. Obwohl die Spritzigkeit und Fruchtigkeit fehlt, haben diese Öle eine eigene Note, 
+                        die ich in bestimmten Mischungen gerne verwende.
+                        <br>
+                        💡 Zu beachten wäre: Das ätherische Öl enthält den Inhaltsstoff <b>Furocumarin</b>, 
+                        der die Lichtempfindlichkeit der Haut erhöht. Daher sollten bei geplanten Sonnenbädern/Solariumbesuchen 
+                        keine Körperpflegeprodukte damit beduftet werden. Der Einsatz in einem Riechstift oder als Bestandteil 
+                        einer Mischung für die Raumbeduftung ist aber ohne Einschränkung möglich.
+                        <br>
+                        <br>
+                        🪴 <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
+                        mit dem <b>ätherischen Öl:</b>               
+                        <ul>
+                          <li>
+                            lieblich, unaufdringlich, warm und blumig nehme ich diesen Duft wahr
+                          </li>
+                          <li>
+                            herb, grün, gelb</li>
+                          <li>
+                            erfrischt und macht glücklich</li>
+                          <li>je nach Grundstimmung werden anregende oder beruhigende Aspekte gefördert</li>
+                        </ul> 
+                        <br>
+                        Oft hole ich mir einen Duftstreifen, wenn ich mal zielgerichtete Impulse empfangen möchte. 
+                        Auch in diesem Moment, wo ich die letzten Zeilen dieses Beitrages verfasse, sind einige Tropfen 
+                        in Nasennähe. 😉 
+                        <br>
+                        Die Mischungen, bei denen ich die Bergamotte verwende, sind sehr vielfältig und lassen unzählige 
+                        Variationen zu. Ob sinnlich, aufmunternd, entspannend oder fokussierend, vieles ist möglich. 
+                        Der Duft sticht nicht hinaus, sondern ist sanft und doch bestimmend.          
+                        <br>
+                        <br>
+                        Weniger bekannt ist das <b>Hydrolat</b>. Eines entdeckte ich mal zufällig. Leider war es mit dürftiger 
+                        Aufschrift in einer Plastikflasche abgefüllt - trotzdem durfte es mit. Zu neugierig war ich auf 
+                        Duft und Wirkung! Und ich muss sagen, auch das Hydrolat erleuchtet mich! 
+                        <br>
+                        <br>
+                        🪴 <b>Meine Anwendungen</b>
+                        mit dem <b>Hydrolat</b>: 
+                        <br>Ich verwende es direkt pur ins Gesicht gesprüht als Erfrischung am Morgen oder mische mir einen 
+                        angenehm kühlenden Spray für hitzige Tagen. Dazu gebe ich ätherischen Ölen von Nelke und Geranie dazu.
+                        <br>
+                        <br>
+  
+                        <trennzeile></trennzeile>
+                        
+                        Was ich sonst noch mit der Bergamotte verbinde, kann in meinem Beitrag zur Zeitqualität
+                        <a href="#diary_sommer2023">Sommer 2023</a> nachgelesen werden.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
         <!-- GALERIE - ENGELWURZ-->
         <v-dialog
           class="galerie"
@@ -7022,7 +7154,7 @@
           </v-card>
         </v-dialog>
 
-        <!-- GALERIE - Karottensamen-->
+        <!-- GALERIE - KAROTTENSAMEN-->
         <v-dialog
           class="galerie"
           data-titelbild="assets/lightbox/Karottensamen.jpeg"
@@ -7173,8 +7305,138 @@
 
                         <trennzeile></trennzeile>
             
-                        Was ich sonst noch mit dem Hanfsamen verbinde, kann in meinem Beitrag zur Zeitqualität
+                        Was ich sonst noch mit dem Karottensamen verbinde, kann in meinem Beitrag zur Zeitqualität
                         <a href="#diary_tagnachtgleiche2022">Tag- Nachtgleiche 2022</a> nachgelesen werden.
+                       </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - LÄRCHE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Lärche.jpeg"
+          v-model="galerie_Lärche"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Lärche</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wsw 2022 7.jpeg" alt="Lärche im Frühling"></v-img>
+                            <small>Die Lärche im Frühling, ...</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wsw 2022 8.jpeg" alt="Lärche im Sommer"></v-img>
+                            <small>...Sommer...</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wsw 2022 9.jpeg" alt="Lärche im Herbst"></v-img>
+                            <small>...Herbst...</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wsw 2022 10.jpeg" alt="Lärche im Winter"></v-img>
+                            <small>... und Winter</small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Die Lärche – <i>Larix decidua, L. europaea DC.</i>
+                      </v-card-title>
+                      <v-card-text>
+                        <p>
+                          🌿 <b>Pflanzenportrait</b>
+                        <ul>
+                          <li>
+                            <b>Pflanzenfamilie:</b>
+                            Kieferngewächs - <i>Pinaceae</i>
+                          </li>
+                          <li>
+                            <b>Vorkommen</b>: vorwiegend auf der Nordhalbkugel
+                          </li>
+                        </ul>
+                        <br>
+                        Der lichtbedürftige Tiefwurzler ist sehr anspruchslos und wächst in höheren Lagen. 
+                        Aufgrund des hohen Harzgehaltes ist sie sehr witterungsbeständig und zählt zu den härtesten Holzarten. 
+                        Lärchen können bis zu 1000 Jahre alt werden und verändern die Holzfalbe ins Silberne, 
+                        anstatt abzudunkeln.
+                        <br>
+                        <br>
+                        Aus <b>Zweigen und Ästen</b>
+                        wird das ätherische Öl mittels <b>Wasserdampfdestillation</b> gewonnen. 
+                        <ul>
+                          <li>
+                            <b>benötigtes Pflanzenmaterial:</b> 500 kg/1 Kg
+                          </li>
+                          <li>für Anwendungen auf der Haut nur frisches Öl verwenden, da es sonst zu Hautreizungen kommen kann</li>
+                          <li>einsetzbar bei Atemwegserkrankungen</li>
+                        </ul>
+                        <br>
+                        🪴 <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
+                        mit dem <b>ätherischen Öl:</b>
+                        <br>Seit ich diesen Duft zum ersten Mal vor Jahren beim Besuch der Destillerie von Bergila in Südtirol 
+                        wahrgenommen habe, ist stets ein geöffnetes und ein Reserve Fläschchen in meinem AromaKoffer. 
+                        Damit kann ich nach Lust und Laune mischen:
+                        <ul>
+                          <li>
+                            mit anderen Nadeldüfte zum <b>Waldbaden</b> 
+                          </li>
+                          <li>
+                            mit Cajeput, um die <b>Erkältungszeit</b> so kurz wie möglich zu halten
+                          </li>
+                          <li>
+                            mit Angelika zum <b>Meditieren</b> Klarheit schaffen
+                          </li>
+                          <li>
+                            in Kombination mit Zitrusölen für einen erfrischenden <b>Saunaaufguss</b>
+                          </li>
+                          <li>
+                            oder hervorragend geeignet in Mischungen für ein <b>maskulines Parfum</b>
+                          </li> 
+                        </ul>               
+                        <br>
+                        🪴 <b>Meine Anwendungen</b>
+                        mit dem <b>Hydrolat</b>: 
+                        <br>Selten findet man es im Verkauf. Schade eigentlich, denn in der Duftlampe oder im Raumsprays 
+                        verbreitet es einen feinen, wunderschön warmen, klaren und sonnigen Duft. 
+                        Pur oder mit ätherischen Ölen vermischt ruft es Freude, gute Laune und Heiterkeit hervor.
+                        <br>
+                        <br>
+                        🪴 <b>Meine Erfahrungen</b>
+                        bei <b>Räucherungen:</b>
+                        <br>
+                        Lärchenharz, wie auch Harze von Fichte oder anderen Nadelbäume, empfinde ich als kostbaren 
+                        <b>Weihrauch der Heimat</b>. Meine kleine Ausbeute hüte ich wie einen Schatz und verräuchere es nur 
+                        zu besonderen Anlässen. Alten Gebräuchen folgend, wird das Harz für Glücksräucherungen verendet, 
+                        da gute Geister, weise Zauberfee und Waldelfen sich im Umkreis von Lärchen aufhalten.
+                        <br>
+                        <br>
+
+                        <trennzeile></trennzeile>
+
+                        Was ich sonst noch mit der Lärche verbinde, kann in meinem Beitrag zur Zeitqualität
+                        <a href="#diary_wintersonnenwende2022">Wintersonnenwende 2022</a> nachgelesen werden.
                        </p>
                       </v-card-text>
                     </v-card>
@@ -7325,10 +7587,263 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - OLIVE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Olive.jpeg"
+          v-model="galerie_Olive"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Olive</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Fr 2023 11.jpeg" alt="Junge Olivenblätter"></v-img>
+                            <small>Junge Olivenblätter</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Fr 2023 12.jpeg" alt="Oliven"></v-img>
+                            <small>grüne und ...</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Fr 2023 13.jpeg" alt="Oliven"></v-img>
+                            <small>schwarze Früchte</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Fr 2023 14.jpeg" alt="alter Baumbestand in botanischen Garten von Meran"></v-img>
+                            <small>Alter Baum in botanischen Garten von Meran</small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Der Olivenbaum – <i>Olea europaea</i>
+                      </v-card-title>
+                      <v-card-text>
+                        🌿 <b>Pflanzenportrait</b>
+                        <ul>
+                          <li>
+                            <b>Pflanzenfamilie:</b>
+                            Ölbaumgewächs - <i>Oleaceae</i>
+                          </li>
+                          <li>
+                            <b>Vorkommen</b>: hauptsächlich in Mittelmeerländer
+                          </li> 
+                          <li>archäologische Funde belegen eine Bepflanzung bereits vor 5000 Jahren</li>
+                        </ul>
+                        <br>
+                        💡 Zu bedenken wäre: Native Qualität, 1. Kaltpressung, ist anderen Gewinnungsarten vorzuziehen         
+                        <br>
+                        <br>              
+                        <ul>
+                          <li>
+                            natürlicher Lichtschutzfaktor 3-4
+                          </li>
+                          <li>
+                            schmerzlindernd, erwärmend
+                          </li>
+                          <li>
+                            pflegt großflächig unproblematische Haut und hält sie elastisch und geschmeidig
+                          </li>
+                        </ul>
+                        <br>
+                        🪴 <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
+                        mit dem <b>fetten Öl:</b>
+                        <ul>
+                          <li>
+                            <b>Innerlich:</b> fruchtig, aromatisches Öl für die Aromaküche 
+                          </li>
+                          <li>
+                            <b>Äußerlich:</b> als wohltuender Öl Wickel und Grundlage für Mazerate
+                          </li>     
+                        </ul> 
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Rosmarin trifft auf Olive
+                      </v-card-title>
+                      <v-card-text> 
+                        <div align="center">
+                          <v-img max-width="600" src="assets/Fr 2023 15.jpeg" alt="Rosmarin trifft Olive"></v-img>
+                          <small>Olivenhain mit Rosmarin nahe dem Gardasee</small>
+                        </div> 
+                        <br>
+                        <p>
+                          Aufgrund ihrer gemeinsamen Herkünfte werden sie in der Natur oft zusammen gesehen.
+                          Eng verbunden sind auch Geruch und Geschmack. Besonders beflügelt es nun diese Sinne, 
+                          wenn zwei Pflanzen aufeinandertreffen, die sich so gut ergänzen wie frischer Rosmarin und nativ 
+                          gepresstes Olivenöl. 
+                          <br>
+                          <br>
+                          Daraus ergibt sich für die Aromaküche ein schmackhaftes Team. Rasch zubereitet ist das <b>Rosmarinöl</b>. 
+                          Ähnlich einem Mazerat, übergießt man die leicht angetrockneten Rosmarinzweige mit dem 
+                          fetten Öl und gibt, wenn gewünscht, noch eine gepresste Knoblauchzehe dazu. Das Ganze benötigt 
+                          nur wenige Tage, um Geschmack und Geruch zu vereinigen. 
+                          Es harmoniert mit Salaten und Kartoffeln oder verfeinert mediterrane Speisen.
+                        <div align="center">
+                          <v-img max-width="600" src="assets/Fr 2023 16.jpeg" alt="Olivenbaum auf der Insel Brijuni"></v-img>
+                          <small>Ein auf 1600 Jahre geschätzter alter Olivenbaum in Kroatien, Insel Brijuni</small>
+                        </div>  
+                        <br>
+                        <br>
+
+                        <trennzeile></trennzeile>
+
+                        Was ich sonst noch mit der Neroliblüte verbinde, kann in meinem Beitrag zur Zeitqualität
+                        <a href="#diary_fruehling2023">Frühling 2023</a> nachgelesen werden.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - PATCHOULI-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Patchouli.jpeg"
+          v-model="galerie_Patchouli"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Patchouli</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2023 7a.jpeg" alt="Pflanze"></v-img>
+                            <small>Pflanze</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2023 8.jpeg" alt="Patchouli"></v-img>
+                            <small>Patchouliblätter</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2023 9.jpeg" alt="Patchouli"></v-img>
+                            <small>Patchouliblüten</small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2023 10.jpeg" alt="Patchouli"></v-img>
+                            <small>PatchouliKäferKommunikation</small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Der Patchouli - <i>Pogostemon calbin</i>
+                      </v-card-title>
+                      <v-card-text>
+                        <p>
+                          🌿 <b>Pflanzenportrait</b>
+                        <ul>
+                          <li>
+                            <b>Pflanzenfamilie:</b>
+                            Lippenblütengewächs - <i>Lamiaceae</i>
+                          </li>
+                          <li>
+                            <b>Vorkommen</b>: wachsen natürlich in tropischen Ländern.
+                            Seit der Entdeckung der insektenfernhaltenden 
+                            Eigenschaft dieses Geruches, verwendet die dort einheimische Bevölkerung
+                            die getrockneten Blätter zwischen Kleidungsstücken und gewebten Waren.
+                          </li>
+                          <li>Die Blätter werden vor der Destillation fermentiert. Aus ca. 30-40 kg kann 
+                            1 lt ätherisches Öl gewonnen werden</li> 
+                        </ul>
+                        <br>
+                        🪴 <b>Wirkungen und Eigenschaften</b> aus der 
+                        <b>Fachliteratur</b>:
+                        <br>
+                        sehr hautpflegend, epithelisierend, entstauend, gute Anwendung bei Stress und Stimmungsschwankungen, erotisierend
+                        <br>
+                        <br>
+                        💡 Gut zu wissen: Obwohl die Essence aus Blättern gewonnen wird, ist bei der Dosierung Achtsamkeit geboten, 
+                        da der volle und schwere Duft als Basisnote gewertet werden kann, 
+                        für die geringen Mengen in einer Mischung ausreichen. 
+                        <br>
+                        <br>
+                        🪴 <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
+                        mit dem <b>ätherischen Öl:</b>               
+                        <ul>
+                          <li>
+                            <b>Duftspektrum</b>: intensiv holzig, rauchig, exotisch, zitrusartig, erdig, schwer, dunkel
+                          </li>
+                          <li>
+                            Dieser Charakter ist nichts für ein leichtes Frühlingsparfum. 
+                            Allerdings bestens geeignet, um schwere, exotische, sinnliche Duftmischungen zu kreieren.
+                            Da es sehr lange haftet, ist er als Fixateur bestens geeignet. 
+                          </li>
+                          <li>
+                            Geringe Mengen finden sich bei mir in der <b>Aromakosmetik</b> 
+                          </li>
+                        </ul> 
+                        <br>
+                        💡 Gut zu wissen: Es gehört zu jenen ätherischen Ölen, die sehr lange haltbar sind und mit den Jahren 
+                        im Duft reifen und aromatischer werden. Dies liegt an der biochemischen Zusammensetzung, da es 
+                        vorwiegend aus Sesquiterpenverbindungen besteht und daher kaum oxidiert.        
+                        <br>
+                        <br>
+                        🪴 Ein <b>Patchoulihydrolat</b> ist mir derweilen noch nicht untergekommen.
+                        Sollte es sich ändern, werde ich an dieser Stelle Ergänzungen vermerken! 
+                        <br>
+                        <br>
+                        🪴 <b>Räucherungen</b>
+                        mit <b>Patchouliblätter:</b>
+                        <br>
+                        Der Duft ist mir schon länger bekannt, gibt es doch zahlreiche <b>Räucherstäbchen</b> mit diesem Geruch!
+                        Jahr für Jahr habe ich mich früher in diese Zeit im wahrsten Sinne des Wortes 
+                        "eingeräuchert". Irgendwann wechselte ich aber auf <b>Räucherkohle</b>
+                        und <b>Sieb</b>.
+                        <br>
+                        <br>
+                        
+                        <trennzeile></trennzeile>
+
+                        Was ich sonst noch mit der Neroliblüte verbinde, kann in meinem Beitrag zur Zeitqualität
+                        <a href="#diary_winter2023">Winter 2023</a> nachgelesen werden.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
         <!-- GALERIE - ROSENGERANIE-->
         <v-dialog
           class="galerie"
-          data-titelbild="assets/lightbox/Geranium.jpg"
+          data-titelbild="assets/lightbox/Rosengeranie.jpg"
           v-model="galerie_Rosengeranie"
           transition="dialog-bottom-transition"
           scrollable

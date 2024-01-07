@@ -5773,7 +5773,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Der Hanfsamen - <i>Cannabis sativa L.</i>
+                        Hanf - <i>Cannabis sativa L.</i>
                       </v-card-title>
                       <v-card-text>
                         <p>
@@ -5885,7 +5885,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Diy-Produkt: Die Harzsalbe
+                        Diy-Produkt: Harzsalbe
                       </v-card-title>
                       <v-card-text>
                         🌿 <b>Benötigte Rohprodukte zur Herstellung:</b>
@@ -6005,7 +6005,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Der Holunder – <i>Sambucus nigra</i>
+                        Holunder – <i>Sambucus nigra</i>
                       </v-card-title>
                       <v-card-text>
                         🌿 <b>Pflanzenportrait</b>
@@ -6116,7 +6116,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Die Iris – <i>Iris pallida Lam. , Iris germanica L., Iris florentina L.</i>
+                        Iris – <i>Iris pallida Lam. , Iris germanica L., Iris florentina L.</i>
                       </v-card-title>
                       <v-card-text>
                         🌿 <b>Pflanzenportrait</b>
@@ -6196,6 +6196,43 @@
                       
                         Was ich sonst noch mit der Iris verbinde, kann in meinem Beitrag zur Zeitqualität
                         <a href="#diary_ahnenfest2022">Ahnenfest 2022</a> nachgelesen werden.
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - JASMIN-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Jasmin.jpeg"
+          v-model="galerie_Jasmin"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Jasmin</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Jasmin.jpeg"></div>
+                        <p>Jasminum grandiflorum
+                          <br>
+                          <b>Pflanzenportrait</b> folgt...
                         </p>
                       </v-card-text>
                     </v-card>
@@ -6287,7 +6324,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Die wilde Karotte - <i>Daucus carota L.</i>
+                        Wilde Karotte - <i>Daucus carota L.</i>
                       </v-card-title>
                       <v-card-text>
                         <br>
@@ -6406,6 +6443,43 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - LAVENDEL-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Lavendel.jpg"
+          v-model="galerie_Lavendel"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Lavendel</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Lavendel.jpg"></div>
+                        <p>Lavandula angustifolia
+                          <br>
+                          <b>Pflanzenportrait</b> folgt...
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
         <!-- GALERIE - LÄRCHE-->
         <v-dialog
           class="galerie"
@@ -6451,7 +6525,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Die Lärche – <i>Larix decidua, L. europaea DC.</i>
+                        Lärche – <i>Larix decidua, L. europaea DC.</i>
                       </v-card-title>
                       <v-card-text>
                         <p>
@@ -6536,6 +6610,80 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - MELISSE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Melisse.jpg"
+          v-model="galerie_Melisse"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Melisse</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Melisse.jpg"></div>
+                        <p>Melissa officinalis
+                          <br>
+                          <b>Pflanzenportrait</b> folgt...
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - MUSKATELLERSALBEI-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Muskatellersalbei.jpg"
+          v-model="galerie_Muskatellersalbei"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Muskatellersalbei</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Muskatellersalbei.jpg"></div>
+                        <p>Salvia sclarea
+                          <br>
+                          <b>Pflanzenportrait</b> folgt...
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
         <!-- GALERIE - NEROLI-->
         <v-dialog
           class="galerie"
@@ -6581,7 +6729,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Die Neroliblüte - <i>Citrus aurantium L. ssp aurantium</i>
+                        Neroliblüte - <i>Citrus aurantium L. ssp aurantium</i>
                       </v-card-title>
                       <v-card-text>
                         <p>
@@ -6721,7 +6869,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Der Olivenbaum – <i>Olea europaea</i>
+                        Olivenbaum – <i>Olea europaea</i>
                       </v-card-title>
                       <v-card-text>
                         🌿 <b>Pflanzenportrait</b>
@@ -6804,6 +6952,43 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - ORANGE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Orange.jpeg"
+          v-model="galerie_Orange"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Orange</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Orange.jpeg"></div>
+                        <p>Citrus sinensis
+                          <br>
+                          <b>Pflanzenportrait</b> folgt...
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
         <!-- GALERIE - PATCHOULI-->
         <v-dialog
           class="galerie"
@@ -6849,7 +7034,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Der Patchouli - <i>Pogostemon calbin</i>
+                        Patchouli - <i>Pogostemon calbin</i>
                       </v-card-title>
                       <v-card-text>
                         <p>
@@ -6929,6 +7114,43 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - ROSE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Rose.jpeg"
+          v-model="galerie_Rose"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Rose</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Rose.jpeg"></div>
+                        <p>Rosa damascena
+                          <br>
+                          <b>Pflanzenportrait</b> folgt...
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
         <!-- GALERIE - ROSENGERANIE-->
         <v-dialog
           class="galerie"
@@ -6974,7 +7196,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Die Rosengeranie – <i>Pelargonium graveolens, Pelargonium x asperum</i>
+                        Rosengeranie – <i>Pelargonium graveolens, Pelargonium x asperum</i>
                       </v-card-title>
                       <v-card-text>
                         🌿 <b>Pflanzenportrait</b>
@@ -7133,7 +7355,7 @@
                         </v-row>
                       </v-card-text>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Der Rosmarin – <i>Salvia rosmarinus</i>
+                        Rosmarin – <i>Salvia rosmarinus</i>
                       </v-card-title>
                       <v-card-text>
                         🌿 <b>Pflanzenportrait</b>
@@ -7266,7 +7488,7 @@
                         </v-row>
                       </v-card-text> 
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-                        Der Sanddorn – <i>Hippophae rhamnoides</i>
+                        Sanddorn – <i>Hippophae rhamnoides</i>
                       </v-card-title>
                       <v-card-text>
                         🌿 <b>Pflanzenportrait</b>
@@ -7338,191 +7560,6 @@
           </v-card>
         </v-dialog>
 
-        <!-- GALERIE - ORANGE-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Orange.jpeg"
-          v-model="galerie_Orange"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Orange</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Orange.jpeg"></div>
-                        <p>Citrus sinensis
-                          <br>
-                          <b>Pflanzenportrait</b> folgt...
-                        </p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        <!-- GALERIE - JASMIN-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Jasmin.jpeg"
-          v-model="galerie_Jasmin"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Jasmin</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Jasmin.jpeg"></div>
-                        <p>Jasminum grandiflorum
-                          <br>
-                          <b>Pflanzenportrait</b> folgt...
-                        </p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        <!-- GALERIE - MUSKATELLERSALBEI-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Muskatellersalbei.jpg"
-          v-model="galerie_Muskatellersalbei"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Muskatellersalbei</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Muskatellersalbei.jpg"></div>
-                        <p>Salvia sclarea
-                          <br>
-                          <b>Pflanzenportrait</b> folgt...
-                        </p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        <!-- GALERIE - ROSE-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Rose.jpeg"
-          v-model="galerie_Rose"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Rose</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Rose.jpeg"></div>
-                        <p>Rosa damascena
-                          <br>
-                          <b>Pflanzenportrait</b> folgt...
-                        </p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        <!-- GALERIE - LAVENDEL-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Lavendel.jpg"
-          v-model="galerie_Lavendel"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Lavendel</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Lavendel.jpg"></div>
-                        <p>Lavandula angustifolia
-                          <br>
-                          <b>Pflanzenportrait</b> folgt...
-                        </p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
         <!-- GALERIE - THYMIAN-->
         <v-dialog
           class="galerie"
@@ -7548,43 +7585,6 @@
                           <img style="width: 100%"
                             src="assets/lightbox/Thymian.jpg"></div>
                         <p>Thymus vulgaris
-                          <br>
-                          <b>Pflanzenportrait</b> folgt...
-                        </p>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-
-        <!-- GALERIE - MELISSE-->
-        <v-dialog
-          class="galerie"
-          data-titelbild="assets/lightbox/Melisse.jpg"
-          v-model="galerie_Melisse"
-          transition="dialog-bottom-transition"
-          scrollable
-        >
-          <v-card>
-            <v-toolbar elevate-on-scroll dense>
-              <v-btn icon @click="closeDialog('galerie')">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Melisse</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-container grid-list-xl>
-                <v-layout row wrap>
-                  <v-flex xs12 md6>
-                    <v-card flat class="transparent">
-                      <v-card-text>
-                        <div style="line-height: 0.8rem" class="small float-half">
-                          <img style="width: 100%"
-                            src="assets/lightbox/Melisse.jpg"></div>
-                        <p>Melissa officinalis
                           <br>
                           <b>Pflanzenportrait</b> folgt...
                         </p>

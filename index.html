@@ -36,6 +36,11 @@
       <v-app light fill-height>
         <v-navigation-drawer disable-resize-watcher v-model="sidebar" app>
           <v-list>
+            <v-list-item href="#aktuelles"
+              @click="sidebar = false">
+              <v-list-item-content>Aktuelles</v-list-item-content>
+            </v-list-item>
+
             <v-list-item href="#aetherische-oele"
               @click="sidebar = false">
               <v-list-item-content>Ätherische Öle & mehr</v-list-item-content>
@@ -97,11 +102,25 @@
         <v-main>
           <section id="intro">
             <v-carousel cycle>
+              
+              <v-carousel-item>
+                <v-img class="fill-height" src="assets/WK0.jpeg" alt="Wassertropfen">
+                  <v-layout column fill-height align-center justify-center class="white--text">
+                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">
+                      Herzlich Willkommen auf meiner Webseite!
+                      <br>(klick "Aktuelles")
+                    </div>
+                    <v-btn elevation="2" fab href="#aktuelles">
+                      <v-icon>mdi-arrow-down</v-icon>
+                    </v-btn>
+                  </v-layout>
+                </v-img>
+              </v-carousel-item>
+              
               <v-carousel-item>
                 <v-img class="fill-height" src="assets/WK1.jpeg" alt="Aroma">
                   <v-layout column fill-height align-center justify-center class="white--text">
-                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">Herzlich Willkommen! 
-                      <br>
+                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">
                       Tauchen Sie ein in ein duftende Reich der Blüten, Blätter, Früchten, Gräser, Harzen, Hölzern, Samen und Wurzeln!
                       <br>(klick "Atherische Öle & mehr)
                     </div>
@@ -175,6 +194,77 @@
               </v-carousel-item>
             </v-carousel>
           </section>
+
+          
+
+          <section id="aktuelles">
+            <v-layout column wrap class="my-12" align-center> 
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Aktuelles</div>
+                        </v-card-title>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                     
+                    <v-flex xs12 md12>
+                      <v-card height="100%" class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Informationen / Aktionen / Vorankündigungen</div>
+                        </v-card-title>
+                        <v-card-text>
+                          <p>
+                            <b>Information:</b>Von 21.12.2023 bis 10.01.2024 schließe ich meine Praxistüre.
+                            Terminanfragen werden ab 02. Jänner 2024 bearbeitet! 💜 Guten Rusch und Willkommen 2024! 💫
+                            <b>Aktion:</b>
+                            In meiner aktuellen 
+                            
+                            <a href="#zeitqualitaeten">Zeitqualität</a>
+                            
+                            findet sich zu einer passenden Leistung stets ein
+                            Überraschungsrabatt! 
+                          </p>
+                          <div class="text-center">
+                            <img class="fill-width" src="assets/Ak 1b.jpeg" alt="Achtsamkeitspraxis mit Walddüften">
+                          </div>
+                          <p>
+                            <br>
+                            <b>Vorankündigung:</b>
+                            Die Vorbereitung zum Workshop <a target="_blank" href="https://yogaraumlassnitzhoehe.com/angebote/achtsamkeitspraxis/">
+                              "Achtsamkeitspraxis mit Walddüften"</a>, den ich gemeinsamm mit 
+                            Andrea Pierus  <a target="_blank" href="https://www.meincoachingziel.at/">
+                              "Andrea Pierus"</a>
+                            Anfang April 2024 im Yogaraum 
+                            Laßnitzhöhe anbieten werde, sind im vollem Gange. 
+                          </p>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+            </v-layout>
+          </section>
+
+          <section>
+            <v-parallax src="assets/Pa 0b.jpeg" height="380">
+              <v-layout column align-center justify-center>
+                <div class="shadow headline white--text mb-4 text-center">„Der Rose süßer Duft genügt, man braucht sie
+                  nicht zu brechen, und wer sich mit dem Duft begnügt, den wird ihr Dorn nicht stechen“</div>
+                <em class="shadow">Friedrich von Bodenstedt</em>
+              </v-layout>
+            </v-parallax>
+          </section>
+
           <section id="aetherische-oele">
             <v-layout column wrap class="my-12" align-center> 
               <v-flex xs12>
@@ -377,8 +467,8 @@
               </v-flex>
             </v-layout>
           </section>
+          
           <section>
-
             <v-parallax src="assets/Pa 3.jpeg" height="380">
               <v-layout column align-center justify-center>
                 <div class="shadow headline white--text mb-4 text-center">„Der Rose süßer Duft genügt, man braucht sie
@@ -398,10 +488,6 @@
                         <v-card-title primary-title class="layout justify-center">
                           <div class="headline text-center">Leistungen</div>
                         </v-card-title>
-                        <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                          <div class="text-center">Inhalte durch anklicken aufrufbar!
-                          </div>
-                        </v-card-title> 
                       </v-card>
                     </v-flex>
                   </v-layout>
@@ -1130,21 +1216,6 @@
                                   <tr>
                                     <td colspan="2">
                                       <br>zzgl. Materialkosten, je nach verwendeten Rohstoffe und Leerbehälter
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td colspan="2">
-                                      <br>
-                                      <b>NEU | NEU | NEU</b>
-                                      <br>
-                                      In <b>Kooperation</b>
-                                      mit der Achtsamkeitstrainerin <a target="_blank" href="https://www.meincoachingziel.at">
-                                        Andrea Pierus</a>
-                                      ist die Idee zum Workshop <b>"Gelebte Achtsamkeit und Meditation mit den Düften des Waldes"</b>
-                                      geboren worden und darf nun wachsen. Die Vorbereitungen dazu sind bereits im vollem Gange. 
-                                      Da dieser in einem anderem Rahmen stattfindet, gibt es geänderte Bedingungen zu Raum, Zeit und Preis! 
-                                      Hinweise dazu: <a target="_blank" href="https://yogaraumlassnitzhoehe.com/angebote/achtsamkeitspraxis/">
-                                        "klick"</a>
                                     </td>
                                   </tr>
                                 </tbody>

@@ -2025,6 +2025,51 @@
                   <v-flex xs12 sm6>
                     <v-card height="100%" class="transparent">
                       <v-card-title primary-title class="layout justify-center">
+                        <div class="headline">Kontaktformular</div>
+                      </v-card-title>
+                      <v-card-text>
+                        <v-form ref="anfrage" v-model="valid">
+                          <v-text-field v-model="email"
+                            :rules="[v => !!v || 'Bitte geben Sie Ihre e-mail Adresse an.',v => /.+@.+\..+/.test(v) || 'Bitte geben Sie eine gültige e-mail Adresse an.']"
+                            label="Ihre e-mail" filled required dense></v-text-field>
+                          <v-text-field v-model="name" :rules="[v => !!v || 'Bitte geben Sie Ihren Namen an.']"
+                            label="Ihr Name" filled required dense></v-text-field>
+                          <v-textarea v-model="message" label="Ihre Anfrage" filled required rows="3" auto-grow dense>
+                          </v-textarea>
+                          <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
+                            <label slot="label">
+                              Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> gelesen und erkenne diese an.
+                            </label>
+                          </v-checkbox>
+                          <v-btn @click="submitAnfrage" :disabled="!valid" depressed>Anfrage senden</v-btn>
+                        </v-form>
+                      </v-card-text>
+                      <v-card-title primary-title class="layout justify-center">    
+                        <div class="headline">Haftungsausschluss</div>
+                      </v-card-title>
+                      <v-card-text>
+                        Meine, auf dieser Webseite und in der Praxis angebotenen Behandlungen, Beratungen und Empfehlungen
+                        unterstützen Sie um in Balance zu kommen und Ihr Wohlbefinden zu steigern.
+                        Es werden weder Diagnosen erstellt, noch Krankheiten behandelt. Eine laufende Therapie und/oder
+                        Medikation soll nicht unterbrochen werden.
+                        Gerne arbeite ich auf Wunsch mit Ärzten und Therapeuten zusammen, da sich die Schulmedizin mit
+                        diesen Methoden sehr gut ergänzen lässt.
+                      </v-card-text>
+                      <v-card-title primary-title class="layout justify-center">
+                        <div class="headline">Stornobedingungen</div>
+                      </v-card-title>
+                      <v-card-text>
+                        Ich ersuche um Verständnis, dass bei Nichterscheinen zu einem gebuchten Termin 
+                        die versäumte Leistung in Rechnung gestellt wird!
+                        <br>
+                        <br>
+                        <br>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                  <v-flex xs12 sm6>
+                    <v-card height="100%" class="transparent">
+                      <v-card-title primary-title class="layout justify-center">
                         <div class="headline">Sabine Krenn</div>
                       </v-card-title>
                       <v-card-text>
@@ -2077,55 +2122,10 @@
                           </v-list-item-content>
                         </v-list-item>
                       </v-list>
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline">Kontaktformular</div>
-                      </v-card-title>
-                      <v-card-text>
-                        <v-form ref="anfrage" v-model="valid">
-                          <v-text-field v-model="email"
-                            :rules="[v => !!v || 'Bitte geben Sie Ihre e-mail Adresse an.',v => /.+@.+\..+/.test(v) || 'Bitte geben Sie eine gültige e-mail Adresse an.']"
-                            label="Ihre e-mail" filled required dense></v-text-field>
-                          <v-text-field v-model="name" :rules="[v => !!v || 'Bitte geben Sie Ihren Namen an.']"
-                            label="Ihr Name" filled required dense></v-text-field>
-                          <v-textarea v-model="message" label="Ihre Anfrage" filled required rows="3" auto-grow dense>
-                          </v-textarea>
-                          <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
-                            <label slot="label">
-                              Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> gelesen und erkenne diese an.
-                            </label>
-                          </v-checkbox>
-                          <v-btn @click="submitAnfrage" :disabled="!valid" depressed>Anfrage senden</v-btn>
-                        </v-form>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
-                  <v-flex xs12 sm6>
-                    <v-card height="100%" class="transparent">
-                      <v-card-title primary-title class="layout justify-center">    
-                        <div class="headline">Haftungsausschluss</div>
-                      </v-card-title>
-                      <v-card-text>
-                        Meine, auf dieser Webseite und in der Praxis angebotenen Behandlungen, Beratungen und Empfehlungen
-                        unterstützen Sie um in Balance zu kommen und Ihr Wohlbefinden zu steigern.
-                        Es werden weder Diagnosen erstellt, noch Krankheiten behandelt. Eine laufende Therapie und/oder
-                        Medikation soll nicht unterbrochen werden.
-                        Gerne arbeite ich auf Wunsch mit Ärzten und Therapeuten zusammen, da sich die Schulmedizin mit
-                        diesen Methoden sehr gut ergänzen lässt.
-                      </v-card-text>
                       <v-card-text>
                         <div class="text-center">
                           <img class="fill-width" src="assets/Ko 1.jpeg" alt="Praxis">
                         </div>
-                      </v-card-text>
-                      <v-card-title primary-title class="layout justify-center">
-                        <div class="headline">Stornobedingungen</div>
-                      </v-card-title>
-                      <v-card-text>
-                        Ich ersuche um Verständnis, dass bei Nichterscheinen zu einem gebuchten Termin 
-                        die versäumte Leistung in Rechnung gestellt wird!
-                        <br>
-                        <br>
-                        <br>
                       </v-card-text>
                     </v-card>
                   </v-flex>

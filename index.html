@@ -236,7 +236,7 @@
                             <a target="_blank" href="https://seu2.cleverreach.com/f/377472-377504/">
                               "Elfendüfte-News Anmeldung"</a>
                             <br>
-                            Die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> wurde zur Kenntnis genommen.
+                            Die <a href="#impressum">Datenschutzerklärung</a> wurde zur Kenntnis genommen.
                             <br>
                             <br>
                             <b>VORANKÜNDIGUNG</b> | Workshop
@@ -2061,7 +2061,7 @@
                           </v-textarea>
                           <v-checkbox v-model="agreement" filled dense :rules="[v => !!v || 'Bitte stimmen Sie zu.']">
                             <label slot="label">
-                              Ich habe die <a @click.stop="impressum = !impressum">Datenschutzerklärung</a> gelesen und erkenne diese an.
+                              Ich habe die <a @click.stop href="#impressum">Datenschutzerklärung</a> gelesen und erkenne diese an.
                             </label>
                           </v-checkbox>
                           <v-btn @click="submitAnfrage" :disabled="!valid" depressed>Anfrage senden</v-btn>
@@ -2162,7 +2162,7 @@
               <v-flex xs12>
                 <div class="small white--text ml-4 pa-4">
                   &copy; 2019-2024 present Elfendüfte Sabine Krenn – <a class="white--text"
-                    @click="impressum = !impressum">Impressum | Datenschutzerklärung</a>  
+                    href="#impressum">Impressum | Datenschutzerklärung</a>  
                 </div>
               </v-flex>
             </v-layout>
@@ -7982,6 +7982,7 @@
           }
         },
         goto(target) {
+          this.impressum = target === '#impressum';
           if (target.startsWith('#diary_') || target.startsWith('#leistungen_') || target.startsWith('#galerie_')) {
             this[target.substr(1)] = true;
             window.location.hash = target;

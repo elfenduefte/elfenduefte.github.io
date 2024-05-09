@@ -1825,39 +1825,40 @@
                             <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
                               <div class="text-center">
                                 <b>Aktuell</b>: 
-                                Seminare und Duftreisen stehen auch heuer wieder auf meiner Fortbildungsliste! 🤩
+                                Seminare und Duftreisen stehen auch heuer wieder auf meiner Fort- und Weiterbildungsliste! 🤩
                               </div>
                             </v-card-title>
                             <v-card flat class="transparent">
                               <v-card-text>
                                 <p>
-                                  2023 Fortbildung <b>Biologische Hautpflege</b>, Ruth von Braunschweig (aromapflege.com) 
+                                  2024 Weiterbildungsseminar: <b>Schattenarbeit mit Aromatherapie</b>, Sandra Ananda 
                                   <br>
-                                  Dezember 2023 <b>Vom Zauber des Duftes</b>, Ingrid Kleindienst-John
+                                  Fortbildung: <b>Biologische Hautpflege</b>, Ruth von Braunschweig 
                                   <br>
-                                  2023 Lehrgänge 
+                                  2023 <b>Vom Zauber des Duftes</b>, Ingrid Kleindienst-John
+                                  <br>Lehrgänge:  
+                                  <b>Gewerbliche Kosmetikerzeugung</b>, DGKP Thomas Schlager, Mag.a. Sabine Hönig,
+                                  <br>
                                   <b>Kinesiologie & Aromatherapie</b>, Mag. Christian Dillinger und DGKP Eva Liebmann und
                                   <br>
-                                  <b>Gewerbliche Kosmetikerzeugung</b>, DGKP Thomas Schlager, Mag.a. Sabine Hönig (arominfo.at) 
+                                  2021 Ausbildung: <b>Praktikerin für dialogisch aktive Duftkommunikation</b>, Dipl.-Ing.in (FH) Christine Lamontain 
                                   <br>
-                                  2021 Ausbildung zur <b>Praktikerin für dialogisch aktive Duftkommunikation</b>, Dipl.-Ing.in (FH) Christine Lamontain (aromainfo.at)
+                                  2017-2019 Lehrgang: <b>Dipl. Aromapraktikerin</b> - MAScent® PROFESSIONAL - Master of Aromapractice
+                                  und <b>Komplimentäre Aromaflege</b> - NurScent® PROFESSIONAL, Weiterbildung gemäß § 64 Abs. 3 GuKG, aromainfo
                                   <br>
-                                  2017-2019 Lehrgang zur <b>Dipl. Aromapraktikerin</b> - MAScent® PROFESSIONAL - Master of Aromapractice
-                                  und <b>Komplimentäre Aromaflege</b> - NurScent® PROFESSIONAL, Weiterbildung gemäß § 64 Abs. 3 GuKG sowie
+                                  Seminare: <b>Rhythmisches Körperbalancing</b>
+                                  und <b>Duftmarkting & AirDesign</b>, Mag.a. Ingrid Karner 
                                   <br>
-                                  Seminare <b>Rhythmisches Körperbalancing</b>
-                                  und <b>Duftmarkting & AirDesign</b>, Mag.a. Ingrid Karner (aromainfo.at) 
+                                  2015-2018 Seminare: <b>Aromapflege</b>
+                                  Einführung und Fortsetzung, DGKP Evelyn Deutsch-Grasl, <b>Palliative care</b>,
+                                  DKKS Alexandra Stampf, <b>Niemand riecht so gut wie du</b>, Prof. Dr. Dr. Hatt 
                                   <br>
-                                  2015-2018 Seminare <b>Aromapflege</b>
-                                  Einführung und Fortsetzung, DGKP Evelyn Deutsch-Grasl und <b>Palliative care</b>,
-                                  DKKS Alexandra Stampf sowie <b>Niemand riecht so gut wie du</b>, Prof. Dr. Dr. Hatt (aromapflege.com) 
-                                  <br>
-                                  2013-2014 Fortbildungen <b>Ätherische Öle und deren Verwendung</b>
+                                  2013-2014 Fortbildungen: <b>Ätherische Öle und deren Verwendung</b>
                                   und <b>Naturparfum</b>, Andrea Bregar
                                   <br>
-                                  2000 Fortbildung <b>Alles was ist wirkt</b> (ÖKV)
+                                  2000 Fortbildung: <b>Alles was ist wirkt</b> (ÖKV)
                                   <br>
-                                  1998 Seminar <b>Alternativen in der Pflege</b> (Institut Rosenberger)
+                                  1998 Seminar: <b>Alternativen in der Pflege</b> (Institut Rosenberger)
                                   <br>
                                   <br>
                                   <img style="vertical-align:top;height:190px;padding-top:20px;padding-bottom:20px;" src="assets/aromainfo-Guetesiegel2023.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -8722,12 +8723,12 @@
       },
       created() {
         window.addEventListener('popstate', () => {
-          this.goto(location.hash);
+          this.goto(decodeURIComponent(location.hash));
         });
       },
       mounted() {
         if (location.hash) {
-          this.goto(location.hash);
+          this.goto(decodeURIComponent(location.hash));
         }
       },
       methods: {
@@ -8774,7 +8775,7 @@
 
     window.addEventListener('popstate', function(e) {
       app.closeDialog()
-      const target = window.location.hash;
+      const target = decodeURIComponent(location.hash);
       if (target && target.endsWith('_dialog') || target.startsWith('#diary_') || target.startsWith('#leistungen_') || target.startsWith('#galerie_')) {
         app.goto(target);
       }

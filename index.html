@@ -1961,7 +1961,7 @@
           <section id="galerie">
             <v-layout column wrap class="my-12" align-center>
               <v-flex xs12 sm4 class="my-4">
-                <div class="text-center">
+                <v-card class="text-center">
                   <h2 class="headline">Duftgalerie</h2>
                   <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">Bilder einiger Pflanzen, 
                     deren Düfte und Wirkungen ich in ätherischen Ölen, fetten Ölen sowie Hydrolaten sehr schätze!
@@ -1981,7 +1981,7 @@
                       </v-flex>
                     </v-layout>
                   </v-container>
-                </div>
+                </v-card>
               </v-flex>
 
               <trennzeile></trennzeile>
@@ -2051,15 +2051,15 @@
                 <v-container grid-list-xl>
                   <v-layout row wrap align-center>
                     <v-flex xs12 md4 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
-                      <v-card flat :href="diaryItem.more ? '' : '#' + diaryItem.dialog" @click="diaryItem.more && showAllDiaryItems()">
-                        <v-card-text>
+                      <v-card flat class="d-flex" :href="diaryItem.more ? '' : '#' + diaryItem.dialog" @click="diaryItem.more && showAllDiaryItems()">
+                        <v-card-text class="fill-height">
                           <template v-if="!diaryItem.more">
                             <div style="line-height: 0.8rem" class="small float-half">
-                              <img style="width: 100%"
-                                :src="diaryItem.titelbild"></div>
+                              <v-img
+                                :src="diaryItem.titelbild"/></div>
                             <div class="diary-thumb-title" v-html="diaryItem.titel"></div>
                             <hr>
-                            <div v-html="diaryItem.summary"></div>
+                            <div v-html="diaryItem.summary"></>
                           </template>
                           <template v-else>
                             <div class="diary-thumb-title">Ältere Beiträge anzeigen...</div>

@@ -10083,14 +10083,10 @@
           gutschein_widmung: ''
         }
       },
-      created() {
-        window.addEventListener('popstate', () => {
-          this.goto(decodeURIComponent(location.hash));
-        });
-      },
-      mounted() {
+      async mounted() {
+        await this.$nextTick();
         if (location.hash) {
-          this.goto(decodeURIComponent(location.hash));
+         this.goto(decodeURIComponent(location.hash));
         }
       },
       methods: {
@@ -10112,8 +10108,6 @@
             window.location.hash = target;
           } else if (target.endsWith('_dialog')) {
             this[target.substr(0)] = true;
-          } else {
-            this.$vuetify.goTo(target);
           }
         },
         submitAnfrage() {

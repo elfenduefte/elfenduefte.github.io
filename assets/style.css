@@ -10,6 +10,10 @@
 body {
   overflow-x: hidden;
 }
+section {
+  margin-top: -20px;
+  padding-top: 20px;
+}
 
 .button {
   cursor: pointer;

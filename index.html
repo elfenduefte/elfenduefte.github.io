@@ -2051,14 +2051,19 @@
                 <v-container grid-list-xl>
                   <v-layout row wrap align-center>
                     <v-flex xs12 md4 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
-                      <v-card flat :href="'#' + diaryItem.dialog">
+                      <v-card flat :href="diaryItem.more ? '' : '#' + diaryItem.dialog" @click="diaryItem.more && showAllDiaryItems()">
                         <v-card-text>
-                          <div style="line-height: 0.8rem" class="small float-half">
-                            <img style="width: 100%"
-                              :src="diaryItem.titelbild"></div>
-                          <div class="diary-thumb-title" v-html="diaryItem.titel"></div> 
-                          <hr>
-                          <div v-html="diaryItem.summary"></div>
+                          <template v-if="!diaryItem.more">
+                            <div style="line-height: 0.8rem" class="small float-half">
+                              <img style="width: 100%"
+                                :src="diaryItem.titelbild"></div>
+                            <div class="diary-thumb-title" v-html="diaryItem.titel"></div>
+                            <hr>
+                            <div v-html="diaryItem.summary"></div>
+                          </template>
+                          <template v-else>
+                            <div class="diary-thumb-title">Ältere Beiträge anzeigen...</div>
+                          </template>
                         </v-card-text>
                       </v-card>
                     </v-flex>
@@ -10012,14 +10017,18 @@
     });
 
     const diary = document.querySelectorAll('v-dialog[class="diary"]');
-    const diaryItems = [];
+    const allDiaryItems = [];
     diary.forEach(function (item) {
-      diaryItems.push({
+      allDiaryItems.push({
         dialog: item.getAttribute('v-model'),
         titel: item.querySelector('v-toolbar-title').innerHTML,
         titelbild: item.getAttribute('data-titelbild'),
         summary: item.querySelector('div.summary')?.innerHTML,
       });
+    });
+    const diaryItems = allDiaryItems.slice(0, 3);
+    diaryItems.push({
+      more: true
     });
 
     const galerie = document.querySelectorAll('v-dialog[class="galerie"]');
@@ -10043,7 +10052,7 @@
             return acc;
           }, {}),
           diaryItems: diaryItems,
-          ...diaryItems.reduce((acc, item) => {
+          ...allDiaryItems.reduce((acc, item) => {
             acc[item.dialog] = false;
             return acc;
           }, {}),
@@ -10122,6 +10131,10 @@
           script.src = 'https://script.google.com/macros/s/AKfycbxuhU3notHUkz0J6MPoI7Udsvpy6kGtIBD28b_goFfnvImBW_RPTv1CzCx3frdU8UHO/exec' + data;
           document.getElementsByTagName('head')[0].appendChild(script);
           this.gutschein_dialog = false;
+        },
+        showAllDiaryItems() {
+          this.diaryItems.pop();
+          this.diaryItems.push.apply(diaryItems, allDiaryItems.slice(3));
         }
       }
     });

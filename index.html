@@ -10103,20 +10103,41 @@
           }
         },
         submitAnfrage() {
-          const data = `?name=${encodeURIComponent(this.name)}&email=${encodeURIComponent(this.email)}&message=${encodeURIComponent(this.message)}`;
-          const script = document.createElement('script');
-          script.async = true;
-          script.src = 'https://script.google.com/macros/s/AKfycbwx-ETuDaMYYCFZGQqBJqE0WOdwraansEwFTJqVlmaN-uQyt0E/exec' + data;
-          document.getElementsByTagName('head')[0].appendChild(script);
-          this.$refs.anfrage.reset();
+          const url = new URL('https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-4ad0edcb-73a1-42c5-971d-2387d68b99b3/default/contact');
+          const params = url.searchParams;
+          params.append('name', this.name);
+          params.append('email', this.email);
+          params.append('subject', 'elfenduefte.at Kontaktformular');
+          params.append('message', this.message);
+          fetch(url).then(response => {
+            if (response.ok) {
+              this.$refs.anfrage.reset();
+              alert('Die Anfrage wurde erfolgreich übermittelt.');
+            } else {
+              alert('Die Anfrage konnte nicht übermittelt werden. Bitte später erneut versuchen.');
+            }
+          }).catch(error => {
+            alert('Die Anfrage konnte nicht übermittelt werden. Bitte später erneut versuchen.');
+          });
         },
         submitBestellung() {
-         const data = `?rnamei=${encodeURIComponent(this.gutschein_rname)}&email=${encodeURIComponent(this.gutschein_email)}&radresse=${encodeURIComponent(this.gutschein_radresse)}&ename=${encodeURIComponent(this.gutschein_ename)}&eadresse=${encodeURIComponent(this.gutschein_eadresse)}&amount=${encodeURIComponent(this.gutschein_amount)}&widmung=${encodeURIComponent(this.gutschein_widmung)}`;
-          const script = document.createElement('script');
-          script.async = true;
-          script.src = 'https://script.google.com/macros/s/AKfycbxuhU3notHUkz0J6MPoI7Udsvpy6kGtIBD28b_goFfnvImBW_RPTv1CzCx3frdU8UHO/exec' + data;
-          document.getElementsByTagName('head')[0].appendChild(script);
-          this.gutschein_dialog = false;
+          const url = new URL('https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-4ad0edcb-73a1-42c5-971d-2387d68b99b3/default/contact');
+          const params = url.searchParams;
+          params.append('name', this.gutschein_rname);
+          params.append('email', this.gutschein_email);
+          params.append('subject', 'elfenduefte.at Gutscheinbestellung');
+          params.append('message', `Rechnungsadresse: ${this.gutschein_radresse}\nEmpfänger: ${this.gutschein_ename}\nEmpfängeradresse: ${this.gutschein_eadresse}\nBetrag: ${this.gutschein_amount}\nWidmung: ${this.gutschein_widmung}`);
+          fetch(url).then(response => {
+            if (response.ok) {
+              this.gutschein_dialog = false;
+              this.$refs.gutschein.reset();
+              alert('Die Bestellung wurde erfolgreich übermittelt.');
+            } else {
+              alert('Die Bestellung konnte nicht übermittelt werden. Bitte später erneut versuchen.');
+            }
+          }).catch(error => {
+            alert('Die Bestellung konnte nicht übermittelt werden. Bitte später erneut versuchen.');
+          });
         },
         showAllDiaryItems() {
           this.diaryItems.pop();

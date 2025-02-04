@@ -1880,7 +1880,10 @@
                             <v-card flat class="transparent">
                               <v-card-text>
                                 <p>
-                                  <b>2024: Der magische Küchentisch - Destillations-Aufbaukurs</b>, Susanne Fischer-Rizzi
+                                  <b>
+                                    2024: <b>Aroma Botanica</b> Kongress in Eppan mit zahlreichen Aroma- und Phytoexperten
+                                    <br>Der magische Küchentisch - Destillations-Aufbaukurs
+                                  </b>, Susanne Fischer-Rizzi
                                   <br>Bildungsreise in die Provence 
                                   <br>
                                   Seminar: <b>Aromabotanik - die Kunst der Destillation</b>, Susanne Fischer-Rizzi
@@ -1924,7 +1927,7 @@
                                   <br>
                                   <img style="vertical-align:top;height:190px;padding-top:20px;padding-bottom:20px;" src="assets/aromainfo-Guetesiegel2023.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   <a target="_blank" href="https://www.aromapraktiker.eu/">
-                                    <img style="padding-right:20px;padding-bottom:70px;" src="assets/VAGA-CertifiedMember-2024.png">
+                                    <img style="padding-right:20px;padding-bottom:70px;" src="assets/VAGA-CertifiedMember-2027.png">
                                   </a>
                                   <img style="height:250px;padding-top:16px;padding-bottom:54px;" src="assets/Üm 7.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   <br>
@@ -7625,6 +7628,43 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - Douglasie-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Douglasie.jpeg"
+          v-model="galerie_Douglasie"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Douglasie</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Douglasie.jpeg"></div>
+                        <p>Pseudotsuga menzisii
+                          <br>
+                          <b>PFLANZENPORTRAIT</b> folgt...
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
         <!-- GALERIE - ENGELWURZ-->
         <v-dialog
           class="galerie"
@@ -7765,6 +7805,43 @@
                       
                         Was ich sonst noch mit der Engelwurz verbinde, kann in meinem Beitrag zur Zeitqualität
                         <a href="#diary_sommer2022">Sommersonnenwende 2022</a> nachgelesen werden.
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - FICHTE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Fichte.jpeg"
+          v-model="galerie_Fichte"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Fichte</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Fichte.jpeg"></div>
+                        <p>Picea abies
+                          <br>
+                          <b>PFLANZENPORTRAIT</b> folgt...
+                        </p>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -8515,6 +8592,43 @@
             
                         Was ich sonst noch mit dem Karottensamen verbinde, kann in meinem Beitrag zur Zeitqualität
                         <a href="#diary_tagnachtgleiche2022">Tag- Nachtgleiche 2022</a> nachgelesen werden.
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
+        <!-- GALERIE - KIEFER-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Kiefer.jpeg"
+          v-model="galerie_Kiefer"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Kiefer</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Kiefer.jpeg"></div>
+                        <p>Pinus sylvestris
+                          <br>
+                          <b>PFLANZENPORTRAIT</b> folgt...
+                        </p>
                       </v-card-text>
                     </v-card>
                   </v-flex>

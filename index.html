@@ -48,7 +48,7 @@
             </v-list-item>
             <v-list-group :value="true">
               <template v-slot:activator>
-                <v-list-item-title>Leistungen</v-list-item-title>
+                <v-list-item-title>.</v-list-item-title>
               </template>
               <v-list-item v-for="(leistung,index) in serviceItems" :key="`${leistung}${index}`"
                 @click="sidebar=false" :href="`#${leistung.dialog}`">
@@ -135,9 +135,9 @@
                   <v-layout column fill-height align-center justify-center class="white--text">
                     <div class="shadow headline mb-4 ci text-center pl-5 pr-5">Kräutertee, Bohnenkaffee, 
                       Lupinenkaffe oder Wasser zu Wohlfühlmomente genießen
-                      <br>"Leistungen"
+                      <br>
                     </div>
-                    <v-btn elevation="2" fab href="#Leistungen">
+                    <v-btn elevation="2" fab href="#.">
                       <v-icon>mdi-arrow-down</v-icon>
                     </v-btn>
                   </v-layout>
@@ -540,7 +540,7 @@
             </v-parallax>
           </section>
 
-          <section id="Leistungen">
+          <section id=".">
             <v-layout column wrap class="my-12" align-center> 
               <v-flex xs12>
                 <v-container grid-list-xl>
@@ -548,7 +548,7 @@
                     <v-flex xs12 md12>
                       <v-card flat class="transparent">
                         <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Leistungen</div>
+                          <div class="headline text-center">.</div>
                         </v-card-title>
                       </v-card>
                     </v-flex>
@@ -11026,7 +11026,7 @@
     const menuItems = [];
     menu.forEach(function (item) {
       menuItems.push({
-        title: item.innerText.replace('{{ leistung.titel }}', 'Leistungen'),
+        title: item.innerText.replace('{{ leistung.titel }}', ''),
         path: item.parentElement.getAttribute('href')
       });
     });

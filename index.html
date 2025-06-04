@@ -7,7 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Ätherische Öle und mehr. zur Steigerung des Wohlbefindens, als Duftmischung für zu Hause oder bei einer Körperanwendung in meiner Praxis in Graz. Düfte als wiedererkennbare Note für Ihr Unternehmen oder zur Konzentrationssteigerung">
+      content="Ätherische Öle und mehr. zur Steigerung des Wohlbefindens, als Duftmischung für zu Hause 
+      oder bei einer Körperanwendung in meiner Praxis in Graz. Düfte als wiedererkennbare Note für Ihr Unternehmen oder zur Konzentrationssteigerung">
     <link href="https://cdn.jsdelivr.net/npm/@fontsource/maven-pro@4.5.11/latin.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fontsource/ms-madi@4.5.3/latin.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fontsource/roboto@4.5.8/latin.css" rel="stylesheet">
@@ -41,21 +42,10 @@
               @click="sidebar = false">
               <v-list-item-content>Aktuelles</v-list-item-content>
             </v-list-item>
-
             <v-list-item href="#aetherische-oele"
               @click="sidebar = false">
               <v-list-item-content>Ätherische Öle & mehr</v-list-item-content>
             </v-list-item>
-            <v-list-group :value="true">
-              <template v-slot:activator>
-                <v-list-item-title>.</v-list-item-title>
-              </template>
-              <v-list-item v-for="(leistung,index) in serviceItems" :key="`${leistung}${index}`"
-                @click="sidebar=false" :href="`#${leistung.dialog}`">
-                <v-list-item-content class="pl-3">{{ leistung.titel }}</v-list-item-content>
-              </v-list-item>
-            </v-list-group>
-            
             <v-list-item href="#ueber-mich"
               @click="sidebar = false">
               <v-list-item-content>Ich bin...</v-list-item-content>
@@ -69,6 +59,15 @@
               @click="sidebar = false">
               <v-list-item-content>Zeitqualitäten</v-list-item-content>
             </v-list-item>
+            <v-list-group :value="true">
+              <template v-slot:activator>
+                <v-list-item-title></v-list-item-title>
+              </template>
+              <v-list-item v-for="(leistung,index) in serviceItems" :key="`${leistung}${index}`"
+                @click="sidebar=false" :href="`#${leistung.dialog}`">
+                <v-list-item-content class="pl-3">{{ leistung.titel }}</v-list-item-content>
+              </v-list-item>
+            </v-list-group>
             <v-list-item href="#kontakt"
               @click="sidebar = false">
               <v-list-item-content>Kontakt</v-list-item-content>
@@ -131,19 +130,6 @@
                 </v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img class="fill-height" src="assets/WK2.jpeg" alt="Aromapflege">
-                  <v-layout column fill-height align-center justify-center class="white--text">
-                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">Kräutertee, Bohnenkaffee, 
-                      Lupinenkaffe oder Wasser zu Wohlfühlmomente genießen
-                      <br>
-                    </div>
-                    <v-btn elevation="2" fab href="#.">
-                      <v-icon>mdi-arrow-down</v-icon>
-                    </v-btn>
-                  </v-layout>
-                </v-img>
-              </v-carousel-item>
-              <v-carousel-item>
                 <v-img class="fill-height" src="assets/WK3.jpeg" alt="Sabine Krenn">
                   <v-layout column fill-height align-center justify-center class="white--text">
                     <div class="shadow headline mb-4 ci text-center pl-5 pr-5">Gefühlt angekommen und doch bewege ich mich ständig weiter
@@ -180,6 +166,21 @@
                   </v-layout>
                 </v-img>
               </v-carousel-item>
+
+              <v-carousel-item>
+                <v-img class="fill-height" src="assets/WK2.jpeg" alt="Aromapflege">
+                  <v-layout column fill-height align-center justify-center class="white--text">
+                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">Kräutertee, Bohnenkaffee, 
+                      Lupinenkaffee oder Wasser zu Wohlfühlmomente genießen
+                      <br>"Meine Praxis"
+                    </div>
+                    <v-btn elevation="2" fab href="#Meine Praxis">
+                      <v-icon>mdi-arrow-down</v-icon>
+                    </v-btn>
+                  </v-layout>
+                </v-img>
+              </v-carousel-item>
+
               <v-carousel-item>
                 <v-img class="fill-height" src="assets/WK6.jpeg">
                   <v-layout column fill-height align-center justify-center class="white--text">
@@ -201,7 +202,7 @@
                 <div class="text-center">
                   <h2 class="headline">Aktuelles</h2>
                   <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                    Allgemeines | Elfendüfte-News | Aktion | Workshopkooperation
+                    Allgemeines | Elfendüfte-News | Workshopkooperation
                   </v-card-title>
                 </div>
               </v-flex>
@@ -238,15 +239,7 @@
                             Wem gerade <b>mein Newsletter</b> noch fehlt.....
                             🪷 ...hier geht´s zur 
                             <a target="_blank" href="https://1aa34b35.sibforms.com/serve/MUIFADeDdt2Rz9dTUQXqKXSFjYutHanqglproefHtalPtYnOKqUmiqAjn2AJVDtTRmn8ab2CW62uDMGphbXp2O7szHHqVAT0_7sCSoz-r46TWJXmO5Ky-gupbsg86kNiW1UMDj5gb42hOtXX0S9ZKTFMJ1wDn4jTFWL_ivyUv1tLpWU-sJv-YOqhJLPpEU5q1EucwW4Bz_s9swg5">
-                              "Elfendüfte-News Anmeldung"</a>.
-                            <!--<br>
-                              <br>
-                              <b>Aktion:</b>
-                              Anstatt der Überraschungsrabatte der letzten Jahre, gibt es parallel zu meinem großen, persönlichen Jahresthema, 
-                              <b>eine</b>
-                              große Jahresaktion. Dazu mehr in der <a href="#diary_frühling2025">Zeitqualität Frühling 2025</a>, 
-                              (Link ab Ende März aktiviert!)-->
-                          </p>
+                              "Elfendüfte-News Anmeldung"</a>.</p>
                         </v-card-text>
                       </v-card>
                     </v-flex>
@@ -530,17 +523,7 @@
             </v-layout>
           </section>
           
-          <section>
-            <v-parallax src="assets/Pa 3.jpeg" height="380">
-              <v-layout column align-center justify-center>
-                <div class="shadow headline white--text mb-4 text-center">„Der Rose süßer Duft genügt, man braucht sie
-                  nicht zu brechen, und wer sich mit dem Duft begnügt, den wird ihr Dorn nicht stechen“</div>
-                <em class="shadow">Friedrich von Bodenstedt</em>
-              </v-layout>
-            </v-parallax>
-          </section>
-
-          <!--<section id=".">
+          <!--<section id="Allgemeines">
             <v-layout column wrap class="my-12" align-center> 
             <v-flex xs12>
             <v-container grid-list-xl>
@@ -579,7 +562,7 @@
             </v-container>
             </v-flex>
                
-            <!-- ALLGEIMEINE INFORMATIONEN
+            ALLGEIMEINE INFORMATIONEN
             <v-dialog
             class="service"
             data-titelbild="assets/Le 0.jpeg"
@@ -679,9 +662,9 @@
             </v-layout>
             </v-card-text>
             </v-card>
-            </v-dialog>-->
+            </v-dialog>
 
-          <!-- AROMAFACHBERATUNG
+            AROMAFACHBERATUNG
             <v-dialog
             class="service"
             data-titelbild="assets/Le 1.jpeg"
@@ -803,9 +786,9 @@
             </v-layout>
             </v-card-text>
             </v-card>
-            </v-dialog>-->
+            </v-dialog>
 
-          <!-- DÜFTE-COACHING
+            DÜFTE-COACHING
             <v-dialog
             class="service"
             data-titelbild="assets/Le 6.jpeg"
@@ -917,7 +900,6 @@
             <br>
             </td>
             </tr>
-                                  
             </tbody>
             </template>
             </v-simple-table>
@@ -930,9 +912,9 @@
             </v-layout>
             </v-card-text>
             </v-card>
-            </v-dialog>-->
+            </v-dialog>
 
-          <!-- KOERPERANWENDUNGEN 
+            KOERPERANWENDUNGEN 
             <v-dialog
             class="service"
             data-titelbild="assets/Le 2.jpg"
@@ -987,11 +969,9 @@
             ODER Unterarme & Hände ODER Unterschenkel & Füße statt. Dieses kann im Sitzen oder Liegen 
             durchgeführt werden. Wiederkehrende <b>rhythmische Streichungen</b>
             führen zu einem tiefen <b>Gefühl der Entspannung</b>. Die Abfolge einer bestimmten Technik 
-            fördert eine verbesserte Körperwahrnehmung, Blockaden können sich lösen.</p>-->
+            fördert eine verbesserte Körperwahrnehmung, Blockaden können sich lösen.
                              
-
-
-          <!--Die <b>GANZKÖRPERANWENDUNG</b> wird im Liegen an Rücken, Armen und Beinen, sowie im Gesicht ausgeführt. 
+            Die <b>GANZKÖRPERANWENDUNG</b> wird im Liegen an Rücken, Armen und Beinen, sowie im Gesicht ausgeführt. 
             Ausgleichende und harmonische Einreibungen/Streichungen führen zu einer <b>energetischen & körperlichen Ausgewogenheit</b>.
             <br>
             <br>
@@ -1006,11 +986,9 @@
             <br>
             Passende hilfreiche Utensilien kommen bei mir in der Praxis zum Einsatz.
             <br>
-            <br>-->
-
-
-
-          <!--</v-card-text>
+            <br>
+            </p>
+            </v-card-text>
             </v-card>
             </v-flex>
             <v-flex xs12 md4>
@@ -1028,11 +1006,8 @@
             <tr>
             <td>5er Block</td>
             <td align="right">225€</td>
-            </tr>-->
-
-
-
-          <!--<tr>
+            </tr>
+            <tr>
             <td>Ganzkörperanwendung
             <br>ca. 50 Minuten
             </td>
@@ -1047,9 +1022,9 @@
             <br>ca. 50 Minuten
             </td>
             <td align="right">80€</td>
-            </tr>-->
+            </tr>
 
-          <!--<tr>
+            <tr>
             <td>Erstgespräch bei Neukunden zzgl.</td>
             <td align="right">20 €
             </td>
@@ -1059,15 +1034,15 @@
             </v-simple-table>
             <v-card-actions class="justify-center">
             <v-btn color="rgb(68,0,72)" dark href="#kontakt">Zur Terminvereinbarung</v-btn>
-            </v-card-actions>-->
+            </v-card-actions>
 
-          <!--<br>
+            <br>
             <div class="text-center">
             <v-img class="max300"
             src="assets/Le 2a.jpeg" alt="Auflagen & Wickel"/>
-            </div>-->
+            </div>
                               
-          <!--<v-card flat>
+            <v-card flat>
             <v-card-text>
             <div class="text-center" style="font-family: Ms Madi; font-size: 20px; font-weight: 700;">
             Anmerkung</div>
@@ -1080,9 +1055,9 @@
             </v-layout>
             </v-card-text>
             </v-card>
-            </v-dialog>-->
+            </v-dialog>
 
-          <!-- NATURPARFUM 
+            NATURPARFUM 
             <v-dialog
             class="service"
             data-titelbild="assets/Le 3a.jpeg"
@@ -1187,9 +1162,9 @@
             </v-layout>
             </v-card-text>
             </v-card>
-            </v-dialog>-->
+            </v-dialog>
 
-          <!-- WORKSHOP 
+            WORKSHOP 
             <v-dialog
             class="service"
             data-titelbild="assets/Le 4.jpeg"
@@ -1322,9 +1297,9 @@
             </v-layout>
             </v-card-text>
             </v-card>
-            </v-dialog>-->
+            </v-dialog>
 
-          <!-- DUFTMARKETING & AIRDESIGN 
+            DUFTMARKETING & AIRDESIGN 
             <v-dialog
             class="service"
             data-titelbild="assets/Le 5.jpeg"
@@ -1475,9 +1450,9 @@
             </v-layout>
             </v-card-text>
             </v-card>
-            </v-dialog>-->
+            </v-dialog>
 
-          <!-- KINESIOLOGISCHE METHODE 
+            KINESIOLOGISCHE METHODE 
             <v-dialog
             class="service"
             data-titelbild="assets/Le 7.jpeg"
@@ -1605,9 +1580,9 @@
             </v-layout>
             </v-card-text>
             </v-card>
-            </v-dialog>-->
+            </v-dialog>
 
-          <!-- GUTSCHEINE 
+            GUTSCHEINE 
             <v-dialog
             class="service"
             data-titelbild="assets/Le 8.jpeg"
@@ -1698,327 +1673,379 @@
             </v-card>
             </v-dialog>
             </v-layout>
-            </section>
-            </v-layout>
-            </section>
-
-            <section>
-            <v-parallax src="assets/Pa 2.jpg" height="380">
-            <v-layout column align-center justify-center>
-            <div class="shadow headline white--text mb-4 text-center">„Wenn es einen Glauben gibt, der Berge versetzen
-            kann, dann ist es der Glaube an die eigene Kraft“</div>
-            <em class="shadow">Marie von Ebner-Eschenbach</em>
-            </v-layout>
-            </v-parallax>
             </section>-->
-          
+
+          <section>
+            <v-parallax src="assets/Pa 2.jpg" height="380">
+              <v-layout column align-center justify-center>
+                <div class="shadow headline white--text mb-4 text-center">„Wenn es einen Glauben gibt, der Berge versetzen
+                  kann, dann ist es der Glaube an die eigene Kraft“</div>
+                <em class="shadow">Marie von Ebner-Eschenbach</em>
+              </v-layout>
+            </v-parallax>
+          </section>
+
           <section id="ueber-mich">
             <v-layout column wrap class="my-12" align-center>
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md12>
-                      <v-card flat class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Ich bin...</div>
-                        </v-card-title>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md6>
-                      <v-card height="100%" class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Faszination Duftpflanzen</div>
-                        </v-card-title>
-                        <v-card-text>
-                          <div style="line-height: 0.8rem" class="small float-half">
-                            <img style="width: 100%"
-                              src="assets/Üm 1b.jpeg" alt="Sabine Krenn"></div>
-                          ...seit vielen Jahren als 
-                          <br>
-                          <b>Dipl. Gesundheits- und Krankenpflegerin</b> in verschiedensten Einrichtungen und Richtungen tätig. 
-                          Schon immer intressierten mich Möglichkeiten, den Pflegealltag mit allen Sinnen 👀👂🏻👃🏻👅👐🏻 erlebbar zu machen.
-                          <br>
-                          <br>Das Verfassen einer Fachbereichsarbeit im Rahmen meiner Ausbildung zur 
-                          <b>Dipl. Aromapraktikerin / Komplementäre Aromapflege</b> veranlasste mich zu reflektieren, wann ich den ersten 
-                          „Kontakt“ mit ätherischen Ölen hatte und was sich daraus entwickelte.
-                          Mitte 1997 erwarb ich so ein schönes Fläschchen, dessen Duftmischung mir gefiel. Es nannte sich <b>"Inspiration"</b>!
-                          Das erste <b>Eintauchen ins Reich der naturreinen Düfte</b> begann, ich wurde immer neugieriger und begann zu hinterfragen,
-                          was da denn alles so drin sei und warum es so duftet wie es duftet. Ausbildungen begannen, Bücher um Bücher folgten. 
-                          Aber nicht nur neue Literatur füllt mein Regal. Auch vergangenes Wissen in antiquarischen Büchern finde ich sehr spannend, 
-                          vor allem im Kontext zu heutigen Studien!💡
-                          <br>
-                          <br>
-                          Bei meinen <b>Körperpflegeprodukten</b> achte ich sehr auf die verwendeten Inhaltsstoffe.
-                          Parfums, Körperöle und Gesichtspflege mische und rühre ich selbst zusammen. 
-                          Damit kann ich bei den Zutaten bestimmen, was rein darf und was nicht.
-                          <br>Wenn mir geeignetes Pflanzenmaterial zur Verfügung steht, setze ich damit auch Mazerate an oder 
-                          destilliere duftende Pflanzenwässerchen.
-                          <img class="float-half" src="assets/Üm 2.jpg" alt="Bücher">
-                          Mittlerweile kann ich schon auf einige Stationen meiner <b>DuftReise</b> blicken, 
-                          wo ich auf besondere Menschen im Rahmen meiner Ausbildungen traf,
-                          die mir Ihr Wissen vermittelten, mich inspirierten und Neues erfahren ließen.
-                          <br>Sehr schätze ich das Zusammentreffen mit Personen, deren Weg in meine Praxis führt. 
-                          Denen wiederum darf ich meine Erfahrung vermitteln und nachhaltige Wohlfühlmomente für den Alltag
-                          mitgeben.
-                          <br>
-                          <br>
-                          Das Erlernen der <b>Biochemie</b>
-                          und das Zusammenspiel von <b>Duft & Psyche</b> eröffneten 
-                          mir umfassende Perspektiven im achtsamen Umgang mit ätherischen Ölen. Damit kann ich die <b>physische 
-                            und psychische Wirkung</b> dieser kostbaren Essencen gezielt bei Beratungen einsetzen.
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                    <v-flex xs12 md6>
-                      <v-card height="100%" class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="text-center" style="font-family: Ms Madi; font-size: 24px;">Mit großer Leidenschaft mische ich Essenzen, 
-                            <br>um eine neue Komposition zu kreieren
-                          </div>
-                        </v-card-title>
-                        <v-card-text>
-                          <div class="text-center">
-                            <img class="fill-width" src="assets/Üm 3.jpeg" alt="Praxis">
-                          </div>
-                          <p>Im Herzen von Graz befindet sich meine Praxisräumlichkeit, in der ich Ihnen dieses 
-                            wunderbar wirkende und duftende Reich näherbringen kann.</p>
-                        </v-card-text>
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Entspannen, ausspannen, eine Auszeit vom Alltag nehmen und gleichzeitig etwas für die eigene Gesundheit tun</div>
-                        </v-card-title>
-                        <v-card-text>
-                          <div class="text-center">
-                            <img class="fill-width" src="assets/Üm 4.jpeg" alt="Schmetterlinge">
-                          </div> 
-                          <p>
-                            <br>
-                            Ich würde mich freuen, auch <b>Sie</b> in meiner Praxis begrüßen zu dürfen!
-                            <br>Herzlichst
-                            <br>
-                            <img src="assets/Sabine.png" style="padding-left:100px; height: 40px;">
-                          </p> 
-                        </v-card-text>   
-                      </v-card>
-                    </v-flex>
-
-
-                    <v-flex xs12 md12>
-                      <!--<h2 class="headline text-center">Was KundInnen sagen</h2>
-                        <br>-->
-                      <v-container grid-list-xl>
-                        <v-layout row wrap>
-                              
-                          <!--<v-flex xs12 md6>
-                            <v-card class="mx-auto" color="deep-purple lighten-5">
-                            <v-card-text>
-                            <p>
-                            "Liebe Sabine, es ist schon lange her, als du mir dein Vorhaben erzähltest und schon 
-                            damals wusste ich, dass du etwas sehr schönes, einfühlsames und bleibendes daraus machen 
-                            wirst. Die Sitzungen bei dir waren sehr entspannend, da du zum Erleben, Fühlen und Genießen 
-                            freien Raum lässt. Die Düfte und Einreibungen bringen viele Erinnerungen hoch. 
-                            Sehr kompetent stehst du mit Rat und Tat zur Seite. Auch halfst du meinen Kids bei der Wahl 
-                            der Düfte, bei jedem Test nehmen sie dich und deinen Duft in der Nase mit , und es hilft ihnen 
-                            nicht so aufgeregt zu sein. Du kannst mit Leuten sehr gut umgehen und kannst dich in vieles 
-                            reinversetzen, welches die Zusammenarbeit um einiges einfacher macht. Ich freue mich schon sehr 
-                            auf die nächsten Düfte von dir. Alles Liebe"
-                            </p>
-                            <i>Uschi</i>
-                            </v-card-text>
-                            </v-card>
-                            <v-card class="mt-4" color="deep-purple lighten-5">
-                            <v-card-text>
-                            <p>
-                            "Sabine Krenn ist kompetent, Sie ging stets empathisch auf meine Anliegen ein. 
-                            Bei den Beratungsgesprächen habe ich mich gut aufgehoben gefühlt. 
-                            Ich werde bei Bedarf die Leistungen von Sabine Krenn bestimmt wieder in Anspruch nehmen! 
-                            Ich kann Sabine Krenn mit gutem Gewissen weiter empfehlen. Schöner Therapieraum - der Parkplatz in unmittelbarer Praxisnähe 
-                            ist für eine nicht Grazerin positiv hervorzuheben!"
-                            </p>
-                            <i>Silvia</i> 
-                            </v-card-text>
-                            </v-card>
-                            <v-card class="mt-4" color="deep-purple lighten-5">
-                            <v-card-text>
-                            <p>
-                            "Sehr kompetente Beratung, nettes Ambiente 😊 💐"
-                            </p>
-                            <i>Esther</i> 
-                            </v-card-text>
-                            </v-card>
-                            </v-flex>
-                            <v-flex xs12 md6>
-                            <v-card color="deep-purple lighten-5">
-                            <v-card-text>
-                            <p>
-                            "Liebe Sabine, ich möchte mich nochmals herzlich für deine Zeit und dein Engagement, mir die Welt der Düfte zu eröffnen, 
-                            bedanken. Wie wichtig und einflussreich der Geruchssinn ist, merkt man oft erst, wenn man etwas nicht riechen kann und dadurch 
-                            negative Emotionen ausgelöst werden. Bei der Duftreise in deiner Praxis wird einem aber auch bewusst, wie mächtig ein "guter" Duft 
-                            sein kann. Deine hochwertigen Öle und Essenzen öffnen Türen in die Gefühlswelt, welche man nicht für möglich hält. 
-                            Durch deine Empathie, deine Fähigkeit zuzuhören, deine Fachkompetenz und deine Liebe zu den Düften hast du mir geholfen, 
-                            MEINEN Duft zu finden, der mich täglich durch den Alltag begleitet. Ich bin überaus dankbar und glücklich diese Reise 
-                            in die Welt der Düfte mit dir gemacht zu haben und hoffe, dass noch viele andere Menschen dieses Erlebnis mit mir teilen dürfen. 
-                            Ich wünsche dir noch viel Freude und Erfüllung bei deiner Tätigkeit und bedanke mich nochmals ganz herzlich bei dir 🙂 glg"
-                            </p>
-                            <i>Gaby</i>
-                            </v-card-text>
-                            </v-card>
-                            <v-card class="mt-4" color="deep-purple lighten-5">
-                            <v-card-text>
-                            <p>
-                            "Ich habe Sabine als DGKP kennenlernen dürfen, und kann sagen, dass Sie eine sehr 
-                            gewissenhafte Person ist! Ich bin mit meinen Kindern bei Ihr. Meine Jungs sind von 
-                            ihr begeistert! Sie hat eine sehr liebevolle Art und kann mit Kindern sehr gut umgehen! 
-                            Sie hört sehr gut zu, ist immer voll und ganz bei meinen Jungs wenn wir bei ihr sind! 
-                            Die Kinder freuen sich immer, wenn wir zu ihr fahren! Ich kann Sabine mit sehr gutem 
-                            Gewissen weiterempfehlen! Sie macht eine tolle Aromafachberatung! LG"
-                            </p>
-                            <i>Romana</i> 
-                            </v-card-text>
-                            </v-card>
-                            </v-flex>-->
-
-
-                          <v-flex xs12 md12>
-                            <br>
-                            <br>
-                            <h2 class="headline text-center">Ausbildungen</h2>
-                            <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                              <div class="text-center">Stets liebäugle ich mit Seminaren, Duftreisen, Fort- und Weiterbildungen. 
-                                <br>
-                                Daher steht laufend so einiges auf meiner <b>Horizonterweiterungsliste</b>! 🤩
-                              </div>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-container grid-list-xl>
+                      <v-layout row wrap>
+                        <v-flex xs12 md12>
+                          <v-card flat class="transparent">
+                            <v-card-title primary-title class="layout justify-center">
+                              <div class="headline text-center">Ich bin...</div>
                             </v-card-title>
+                          </v-card>
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-flex>
+                  <v-flex xs12 md12>
+                    <v-card height="100%" class="transparent">
+                      <v-card-text>
+                        <v-layout row wrap>
+                          <v-flex xs12 md12>
                             <v-card flat class="transparent">
+                              <v-card-title primary-title class="layout justify-center">
+                                <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                                  <br>Faszination Duftpflanzen
+                                </div>
+                              </v-card-title>
                               <v-card-text>
-                                <p>
-                                  <b>2025</b>
-                                <ul>
-                                  <li>
-                                    Seminar <b>Astromedizin Grundlagen</b>, Gudrun Laimer
-                                  </li>
-                                </ul>
+                                <div class="text-center">
+                                  <img class="float-half max300"
+                                    src="assets/Üm 1b.jpeg" alt="Sabine Krenn">
+                                </div>
+                                Seit vielen Jahren bin ich als <b>Dipl. Gesundheits- und Krankenpflegerin</b> 
+                                in verschiedensten Einrichtungen und Richtungen tätig. 
+                                Schon immer intressierten mich Möglichkeiten, den Pflegealltag mit allen Sinnen 👀👂🏻👃🏻👅👐🏻 erlebbar zu machen.
                                 <br>
-                                <b>
-                                  2024</b>
-                                <ul>
-                                  <li>
-                                    Kongress <b>Aroma Botanica </b> in Eppan mit zahlreichen Aroma- und Phytoexperten  
-                                  </li>
-                                  <li>Der magische Küchentisch - Destillations-Aufbaukurs 
-                                    </b>, Susanne Fischer-Rizzi</li>
-                                  <li>Bildungsreise in die Provence</li>
-                                  <li>
-                                    Seminar <b>Aromabotanik - die Kunst der Destillation</b>, Susanne Fischer-Rizzi
-                                  </li>
-                                  <li>
-                                    <b>Schattenarbeit mit Aromatherapie</b>, Sandra Ananda 
-                                  </li>
-                                  <li>
-                                    Fortbildung <b>Biologische Hautpflege</b>, Ruth von Braunschweig
-                                  </li>
-                                </ul>
+                                <br>Das Verfassen einer Fachbereichsarbeit im Rahmen meiner Ausbildung zur 
+                                <b>Dipl. Aromapraktikerin / Komplementäre Aromapflege</b> veranlasste mich zu reflektieren, wann ich den ersten 
+                                „Kontakt“ mit ätherischen Ölen hatte und was sich daraus entwickelte.
+                                Mitte 1997 erwarb ich so ein schönes Fläschchen, dessen Duftmischung mir gefiel. Es nannte sich <b>"Inspiration"</b>!
+                                Das erste <b>Eintauchen ins Reich der naturreinen Düfte</b> begann, ich wurde immer neugieriger und begann zu hinterfragen,
+                                was da denn alles so drin sei und warum es so duftet wie es duftet. Ausbildungen begannen, Bücher um Bücher folgten. 
+                                Aber nicht nur neue Literatur füllt mein Regal. Auch vergangenes Wissen in antiquarischen Büchern finde ich sehr spannend, 
+                                vor allem im Kontext zu heutigen Studien!💡
                                 <br>
-                                <b>2023</b>
-                                <ul>
-                                  <li>
-                                    <b>Vom Zauber des Duftes</b>, Ingrid Kleindienst-John
-                                  </li>
-                                  <li>
-                                    Lehrgang <b>Gewerbliche Kosmetikerzeugung</b>, DGKP Thomas Schlager, Mag.a. Sabine Hönig
-                                  </li>
-                                  <li>
-                                    Lehrgang <b>Kinesiologie & Aromatherapie</b>, Mag. Christian Dillinger und DGKP Eva Liebmann
-                                  </li></ul>
                                 <br>
-                                <b>2021</b>
-                                <ul>
-                                  <li>
-                                    Ausbildung <b>Praktikerin für dialogisch aktive Duftkommunikation</b>, Dipl.-Ing.in (FH) Christine Lamontain
-                                  </li>
-                                </ul>
+                                Bei meinen <b>Körperpflegeprodukten</b> achte ich sehr auf die verwendeten Inhaltsstoffe.
+                                Parfums, Körperöle und Gesichtspflege mische und rühre ich selbst zusammen. 
+                                Damit kann ich bei den Zutaten bestimmen, was rein darf und was nicht.
+                                <br>Wenn mir geeignetes Pflanzenmaterial zur Verfügung steht, setze ich damit auch Mazerate an oder 
+                                destilliere duftende Pflanzenwässerchen.
+                                Mittlerweile kann ich schon auf einige Stationen meiner <b>DuftReise</b> blicken, 
+                                wo ich auf besondere Menschen im Rahmen meiner Ausbildungen traf,
+                                die mir Ihr Wissen vermittelten, mich inspirierten und Neues erfahren ließen.
+                                <br>Sehr schätze ich das Zusammentreffen mit Personen, deren Weg in meine Praxis führt. 
+                                Denen wiederum darf ich meine Erfahrung vermitteln und nachhaltige Wohlfühlmomente für den Alltag
+                                mitgeben.
                                 <br>
-                                <b>2017-2019</b>
-                                <ul>
-                                  <li>
-                                    Lehrgang <b>Dipl. Aromapraktikerin</b> - MAScent® PROFESSIONAL - Master of Aromapractice
-                                  </li>
-                                  <li>
-                                    Lehrgang <b>Komplimentäre Aromaflege</b> - NurScent® PROFESSIONAL, Weiterbildung gemäß § 64 Abs. 3 GuKG, aromainfo
-                                  </li>
-                                  <li>
-                                    Seminar <b>Rhythmisches Körperbalancing</b>
-                                  </li>
-                                  <li>
-                                    Seminar <b>Duftmarkting & AirDesign</b>, Mag.a. Ingrid Karner
-                                  </li>
-                                </ul>
                                 <br>
-                                <b>2015-2018</b>
-                                <ul>
-                                  <li>
-                                    Seminar <b>Aromapflege</b>
-                                    Einführung und Fortsetzung, DGKP Evelyn Deutsch-Grasl</li>
-                                  <li>
-                                    Seminar <b>Palliative care</b>,
-                                    DKKS Alexandra Stampf</li>
-                                  <li>
-                                    Seminar <b>Niemand riecht so gut wie du</b>, Prof. Dr. Dr. Hatt 
-                                  </li>
-                                </ul>
-                                <br>
-                                <b>2013-2014</b>
-                                <ul>
-                                  <li>
-                                    Fortbildungen <b>Ätherische Öle und deren Verwendung</b>
-                                    und <b>Naturparfum</b>, Andrea Bregar
-                                  </li></ul>
-                                <br>
-                                <b>2000</b>
-                                <ul>
-                                  <li>
-                                    Fortbildung <b>Alles was ist wirkt</b> (ÖKV)
-                                  </li>
-                                </ul>
-                                <br>
-                                <b>1998</b>
-                                <ul>
-                                  <li>
-                                    Seminar <b>Alternativen in der Pflege</b> (Institut Rosenberger)
-                                  </li>
-                                </ul>
-                                <br>
-                                <img style="vertical-align:top;height:190px;padding-top:20px;padding-bottom:20px;" src="assets/aromainfo-Guetesiegel2023.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a target="_blank" href="https://www.aromapraktiker.eu/">
-                                  <img style="padding-right:20px;padding-bottom:70px;" src="assets/VAGA-CertifiedMember-2027.png">
-                                </a>
-                                <img style="height:250px;padding-top:16px;padding-bottom:54px;" src="assets/Üm 7.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <br>
-                                1993-1996 Ausbildung zur <b>Dipl. Gesundheits- und Krankenschwester</b>, Wien
-                                <br>
-                                2000-2003 <b>Kinaesthetics Trainerin Stufe 2 / Pflege</b>, Dr. Hatch/Dr. Maietta (European Institute für Human Developement - Research GmbH)
-                                <br>
-                                2010 <b>Gebärdensprachkurse</b>, Reinhold Töglhofer
-                                <br>
-                                2012 <b>Basale Stimulation® in der Pflege</b>, DKKS Christa Stelzl
-                                <br>
-                                2019 <b>Einführung in die Reflexzohnenlehre</b>, Michael Haudej
-                                </p>
+                                Das Erlernen der <b>Biochemie</b>
+                                und das Zusammenspiel von <b>Duft & Psyche</b> eröffneten 
+                                mir umfassende Perspektiven im achtsamen Umgang mit ätherischen Ölen. Damit kann ich die <b>physische 
+                                  und psychische Wirkung</b> dieser kostbaren Essencen gezielt bei Beratungen einsetzen.
                               </v-card-text>
                             </v-card>
                           </v-flex>
                         </v-layout>
-                      </v-container>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
+                      </v-card-text>
+
+
+
+                      <!--<v-row align="start">
+                        <v-col cols="12" sm="4">
+                        <v-img
+                        src="assets/Üm 1b.jpeg" alt="Sabine Krenn"></v-img>
+                        <small></small>
+                        </v-col>
+                            
+                        </v-row>
+
+
+                        ...seit vielen Jahren als 
+                        <br>
+                        <b>Dipl. Gesundheits- und Krankenpflegerin</b> in verschiedensten Einrichtungen und Richtungen tätig. 
+                        Schon immer intressierten mich Möglichkeiten, den Pflegealltag mit allen Sinnen 👀👂🏻👃🏻👅👐🏻 erlebbar zu machen.
+                        <br>
+                        <br>Das Verfassen einer Fachbereichsarbeit im Rahmen meiner Ausbildung zur 
+                        <b>Dipl. Aromapraktikerin / Komplementäre Aromapflege</b> veranlasste mich zu reflektieren, wann ich den ersten 
+                        „Kontakt“ mit ätherischen Ölen hatte und was sich daraus entwickelte.
+                        Mitte 1997 erwarb ich so ein schönes Fläschchen, dessen Duftmischung mir gefiel. Es nannte sich <b>"Inspiration"</b>!
+                        Das erste <b>Eintauchen ins Reich der naturreinen Düfte</b> begann, ich wurde immer neugieriger und begann zu hinterfragen,
+                        was da denn alles so drin sei und warum es so duftet wie es duftet. Ausbildungen begannen, Bücher um Bücher folgten. 
+                        Aber nicht nur neue Literatur füllt mein Regal. Auch vergangenes Wissen in antiquarischen Büchern finde ich sehr spannend, 
+                        vor allem im Kontext zu heutigen Studien!💡
+                        <br>
+                        <br>
+                        Bei meinen <b>Körperpflegeprodukten</b> achte ich sehr auf die verwendeten Inhaltsstoffe.
+                        Parfums, Körperöle und Gesichtspflege mische und rühre ich selbst zusammen. 
+                        Damit kann ich bei den Zutaten bestimmen, was rein darf und was nicht.
+                        <br>Wenn mir geeignetes Pflanzenmaterial zur Verfügung steht, setze ich damit auch Mazerate an oder 
+                        destilliere duftende Pflanzenwässerchen.
+                        <img class="fill-width" src="assets/Üm 2.jpg" alt="Bücher">
+                        Mittlerweile kann ich schon auf einige Stationen meiner <b>DuftReise</b> blicken, 
+                        wo ich auf besondere Menschen im Rahmen meiner Ausbildungen traf,
+                        die mir Ihr Wissen vermittelten, mich inspirierten und Neues erfahren ließen.
+                        <br>Sehr schätze ich das Zusammentreffen mit Personen, deren Weg in meine Praxis führt. 
+                        Denen wiederum darf ich meine Erfahrung vermitteln und nachhaltige Wohlfühlmomente für den Alltag
+                        mitgeben.
+                        <br>
+                        <br>
+                        Das Erlernen der <b>Biochemie</b>
+                        und das Zusammenspiel von <b>Duft & Psyche</b> eröffneten 
+                        mir umfassende Perspektiven im achtsamen Umgang mit ätherischen Ölen. Damit kann ich die <b>physische 
+                        und psychische Wirkung</b> dieser kostbaren Essencen gezielt bei Beratungen einsetzen.
+                        </v-card-text>
+                        </v-card>
+                        </v-flex>-->
+
+
+                      <!--<v-flex xs12 md6>
+                        <v-card height="100%" class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                        <div class="text-center" style="font-family: Ms Madi; font-size: 24px;">Mit großer Leidenschaft mische ich Essenzen, 
+                        <br>um eine neue Komposition zu kreieren
+                        </div>
+                        </v-card-title>
+                        <v-card-text>
+                        <div class="text-center">
+                        <img class="fill-width" src="assets/Üm 3.jpeg" alt="Praxis">
+                        </div>
+                        <p>Im Herzen von Graz befindet sich meine Praxisräumlichkeit, in der ich Ihnen dieses 
+                        wunderbar wirkende und duftende Reich näherbringen kann.</p>
+                        </v-card-text>
+                        <v-card-title primary-title class="layout justify-center">
+                        <div class="headline text-center">Entspannen, ausspannen, eine Auszeit vom Alltag nehmen und gleichzeitig etwas für die eigene Gesundheit tun</div>
+                        </v-card-title>
+                        <v-card-text>
+                        <div class="text-center">
+                        <img class="fill-width" src="assets/Üm 4.jpeg" alt="Schmetterlinge">
+                        </div> 
+                        <p>
+                        <br>
+                        Ich würde mich freuen, auch <b>Sie</b> in meiner Praxis begrüßen zu dürfen!
+                        <br>Herzlichst
+                        <br>
+                        <img src="assets/Sabine.png" style="padding-left:100px; height: 40px;">
+                        </p> 
+                        </v-card-text>   
+                        </v-card>
+                        </v-flex>-->
+
+
+
+                      <!--<v-flex xs12 md12>
+                        <h2 class="headline text-center">Was KundInnen sagen</h2>
+                        <br>
+                        <v-container grid-list-xl>
+                        <v-layout row wrap>
+                              
+                        <v-flex xs12 md6>
+                        <v-card class="mx-auto" color="deep-purple lighten-5">
+                        <v-card-text>
+                        <p>
+                        "Liebe Sabine, es ist schon lange her, als du mir dein Vorhaben erzähltest und schon 
+                        damals wusste ich, dass du etwas sehr schönes, einfühlsames und bleibendes daraus machen 
+                        wirst. Die Sitzungen bei dir waren sehr entspannend, da du zum Erleben, Fühlen und Genießen 
+                        freien Raum lässt. Die Düfte und Einreibungen bringen viele Erinnerungen hoch. 
+                        Sehr kompetent stehst du mit Rat und Tat zur Seite. Auch halfst du meinen Kids bei der Wahl 
+                        der Düfte, bei jedem Test nehmen sie dich und deinen Duft in der Nase mit , und es hilft ihnen 
+                        nicht so aufgeregt zu sein. Du kannst mit Leuten sehr gut umgehen und kannst dich in vieles 
+                        reinversetzen, welches die Zusammenarbeit um einiges einfacher macht. Ich freue mich schon sehr 
+                        auf die nächsten Düfte von dir. Alles Liebe"
+                        </p>
+                        <i>Uschi</i>
+                        </v-card-text>
+                        </v-card>
+                        <v-card class="mt-4" color="deep-purple lighten-5">
+                        <v-card-text>
+                        <p>
+                        "Sabine Krenn ist kompetent, Sie ging stets empathisch auf meine Anliegen ein. 
+                        Bei den Beratungsgesprächen habe ich mich gut aufgehoben gefühlt. 
+                        Ich werde bei Bedarf die Leistungen von Sabine Krenn bestimmt wieder in Anspruch nehmen! 
+                        Ich kann Sabine Krenn mit gutem Gewissen weiter empfehlen. Schöner Therapieraum - der Parkplatz in unmittelbarer Praxisnähe 
+                        ist für eine nicht Grazerin positiv hervorzuheben!"
+                        </p>
+                        <i>Silvia</i> 
+                        </v-card-text>
+                        </v-card>
+                        <v-card class="mt-4" color="deep-purple lighten-5">
+                        <v-card-text>
+                        <p>
+                        "Sehr kompetente Beratung, nettes Ambiente 😊 💐"
+                        </p>
+                        <i>Esther</i> 
+                        </v-card-text>
+                        </v-card>
+                        </v-flex>
+                        <v-flex xs12 md6>
+                        <v-card color="deep-purple lighten-5">
+                        <v-card-text>
+                        <p>
+                        "Liebe Sabine, ich möchte mich nochmals herzlich für deine Zeit und dein Engagement, mir die Welt der Düfte zu eröffnen, 
+                        bedanken. Wie wichtig und einflussreich der Geruchssinn ist, merkt man oft erst, wenn man etwas nicht riechen kann und dadurch 
+                        negative Emotionen ausgelöst werden. Bei der Duftreise in deiner Praxis wird einem aber auch bewusst, wie mächtig ein "guter" Duft 
+                        sein kann. Deine hochwertigen Öle und Essenzen öffnen Türen in die Gefühlswelt, welche man nicht für möglich hält. 
+                        Durch deine Empathie, deine Fähigkeit zuzuhören, deine Fachkompetenz und deine Liebe zu den Düften hast du mir geholfen, 
+                        MEINEN Duft zu finden, der mich täglich durch den Alltag begleitet. Ich bin überaus dankbar und glücklich diese Reise 
+                        in die Welt der Düfte mit dir gemacht zu haben und hoffe, dass noch viele andere Menschen dieses Erlebnis mit mir teilen dürfen. 
+                        Ich wünsche dir noch viel Freude und Erfüllung bei deiner Tätigkeit und bedanke mich nochmals ganz herzlich bei dir 🙂 glg"
+                        </p>
+                        <i>Gaby</i>
+                        </v-card-text>
+                        </v-card>
+                        <v-card class="mt-4" color="deep-purple lighten-5">
+                        <v-card-text>
+                        <p>
+                        "Ich habe Sabine als DGKP kennenlernen dürfen, und kann sagen, dass Sie eine sehr 
+                        gewissenhafte Person ist! Ich bin mit meinen Kindern bei Ihr. Meine Jungs sind von 
+                        ihr begeistert! Sie hat eine sehr liebevolle Art und kann mit Kindern sehr gut umgehen! 
+                        Sie hört sehr gut zu, ist immer voll und ganz bei meinen Jungs wenn wir bei ihr sind! 
+                        Die Kinder freuen sich immer, wenn wir zu ihr fahren! Ich kann Sabine mit sehr gutem 
+                        Gewissen weiterempfehlen! Sie macht eine tolle Aromafachberatung! LG"
+                        </p>
+                        <i>Romana</i> 
+                        </v-card-text>
+                        </v-card>
+                        </v-flex>-->
+
+
+                      <v-flex xs12 md12>
+                        <h2 class="headline text-center">Ausbildungen</h2>
+                        <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                          <div class="text-center">Stets liebäugle ich mit Seminaren, Duftreisen, Fort- und Weiterbildungen. 
+                            <br>
+                            Daher steht laufend so einiges auf meiner <b>Horizonterweiterungsliste</b>! 🤩
+                          </div>
+                        </v-card-title>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <b>2025</b>
+                            <ul>
+                              <li>
+                                Seminar <b>Astromedizin Grundlagen</b>, Gudrun Laimer
+                              </li>
+                            </ul>
+                            <br>
+                            <b>
+                              2024</b>
+                            <ul>
+                              <li>
+                                Kongress <b>Aroma Botanica </b> in Eppan mit zahlreichen Aroma- und Phytoexperten  
+                              </li>
+                              <li>Der magische Küchentisch - Destillations-Aufbaukurs 
+                                </b>, Susanne Fischer-Rizzi</li>
+                              <li>Bildungsreise in die Provence</li>
+                              <li>
+                                Seminar <b>Aromabotanik - die Kunst der Destillation</b>, Susanne Fischer-Rizzi
+                              </li>
+                              <li>
+                                <b>Schattenarbeit mit Aromatherapie</b>, Sandra Ananda 
+                              </li>
+                              <li>
+                                Fortbildung <b>Biologische Hautpflege</b>, Ruth von Braunschweig
+                              </li>
+                            </ul>
+                            <br>
+                            <b>2023</b>
+                            <ul>
+                              <li>
+                                <b>Vom Zauber des Duftes</b>, Ingrid Kleindienst-John
+                              </li>
+                              <li>
+                                Lehrgang <b>Gewerbliche Kosmetikerzeugung</b>, DGKP Thomas Schlager, Mag.a. Sabine Hönig
+                              </li>
+                              <li>
+                                Lehrgang <b>Kinesiologie & Aromatherapie</b>, Mag. Christian Dillinger und DGKP Eva Liebmann
+                              </li></ul>
+                            <br>
+                            <b>2021</b>
+                            <ul>
+                              <li>
+                                Ausbildung <b>Praktikerin für dialogisch aktive Duftkommunikation</b>, Dipl.-Ing.in (FH) Christine Lamontain
+                              </li>
+                            </ul>
+                            <br>
+                            <b>2017-2019</b>
+                            <ul>
+                              <li>
+                                Lehrgang <b>Dipl. Aromapraktikerin</b> - MAScent® PROFESSIONAL - Master of Aromapractice
+                              </li>
+                              <li>
+                                Lehrgang <b>Komplimentäre Aromaflege</b> - NurScent® PROFESSIONAL, Weiterbildung gemäß § 64 Abs. 3 GuKG, aromainfo
+                              </li>
+                              <li>
+                                Seminar <b>Rhythmisches Körperbalancing</b>
+                              </li>
+                              <li>
+                                Seminar <b>Duftmarkting & AirDesign</b>, Mag.a. Ingrid Karner
+                              </li>
+                            </ul>
+                            <br>
+                            <b>2015-2018</b>
+                            <ul>
+                              <li>
+                                Seminar <b>Aromapflege</b>
+                                Einführung und Fortsetzung, DGKP Evelyn Deutsch-Grasl</li>
+                              <li>
+                                Seminar <b>Palliative care</b>,
+                                DKKS Alexandra Stampf</li>
+                              <li>
+                                Seminar <b>Niemand riecht so gut wie du</b>, Prof. Dr. Dr. Hatt 
+                              </li>
+                            </ul>
+                            <br>
+                            <b>2013-2014</b>
+                            <ul>
+                              <li>
+                                Fortbildungen <b>Ätherische Öle und deren Verwendung</b>
+                                und <b>Naturparfum</b>, Andrea Bregar
+                              </li></ul>
+                            <br>
+                            <b>2000</b>
+                            <ul>
+                              <li>
+                                Fortbildung <b>Alles was ist wirkt</b> (ÖKV)
+                              </li>
+                            </ul>
+                            <br>
+                            <b>1998</b>
+                            <ul>
+                              <li>
+                                Seminar <b>Alternativen in der Pflege</b> (Institut Rosenberger)
+                              </li>
+                            </ul>
+                            <br>
+                            <img style="vertical-align:top;height:190px;padding-top:20px;padding-bottom:20px;" src="assets/aromainfo-Guetesiegel2023.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a target="_blank" href="https://www.aromapraktiker.eu/">
+                              <img style="padding-right:20px;padding-bottom:70px;" src="assets/VAGA-CertifiedMember-2027.png">
+                            </a>
+                            <img style="height:250px;padding-top:16px;padding-bottom:54px;" src="assets/Üm 7.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>
+                            1993-1996 Ausbildung zur <b>Dipl. Gesundheits- und Krankenschwester</b>, Wien
+                            <br>
+                            2000-2003 <b>Kinaesthetics Trainerin Stufe 2 / Pflege</b>, Dr. Hatch/Dr. Maietta (European Institute für Human Developement - Research GmbH)
+                            <br>
+                            2010 <b>Gebärdensprachkurse</b>, Reinhold Töglhofer
+                            <br>
+                            2012 <b>Basale Stimulation® in der Pflege</b>, DKKS Christa Stelzl
+                            <br>
+                            2019 <b>Einführung in die Reflexzohnenlehre</b>, Michael Haudej
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
               </v-flex>
             </v-layout>
+          </v-layout>
           </section>
           
           <section>
@@ -2033,9 +2060,21 @@
 
           <section id="galerie">
             <v-layout column wrap class="my-12" align-center>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Duftgalerie</div>
+                        </v-card-title>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
               <v-flex xs12 sm4 class="my-4">
                 <v-card class="text-center">
-                  <h2 class="headline">Duftgalerie</h2>
                   <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">Bilder einiger Pflanzen, 
                     deren Düfte und Wirkungen ich in ätherischen Ölen, fetten Ölen sowie Hydrolaten sehr schätze!
                   </v-card-title>
@@ -2172,6 +2211,335 @@
           </section>
 
           <section>
+            <v-parallax src="assets/Pa 3.jpeg" height="380">
+              <v-layout column align-center justify-center>
+                <div class="shadow headline white--text mb-4 text-center">„Der Rose süßer Duft genügt, man braucht sie
+                  nicht zu brechen, und wer sich mit dem Duft begnügt, den wird ihr Dorn nicht stechen“</div>
+                <em class="shadow">Friedrich von Bodenstedt</em>
+              </v-layout>
+            </v-parallax>
+          </section>
+
+          <section id="Praxis und mehr">
+            <v-layout column wrap class="my-12" align-center> 
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Meine Praxis</div>
+                        </v-card-title>
+                        <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                          <div class="text-center">Im Herzen von Graz befindet sich meine Praxisräumlichkeit, in der ich Ihnen dieses
+                            wunderbar wirkende und duftende Reich näherbringen kann 💜
+                          </div>
+                        </v-card-title>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap align-center>
+                    <v-flex xs12 md4 v-for="serviceItem in serviceItems" :key="serviceItem.dialog">
+                      <v-card :href="'#' + serviceItem.dialog">
+                        <v-card-text>
+                          <div class="d-flex flex-row mb-2">
+                            <v-card flat width="50%">
+                              <v-img :src="serviceItem.titelbild"></v-img>
+                            </v-card>
+                            <v-card flat class="pl-1" width="50%">
+                              <div class="service-thumb-title" v-html="serviceItem.titel"></div> 
+                              <hr>
+                              <div v-html="serviceItem.summary"></div>
+                            </v-card>
+                          </div>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+               
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Üm 3.jpeg"
+                v-model="leistungen_0"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('Leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Meine Praxis</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Informationen rund um meine ...
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              <br>Ankommen - Ausspannen - Entspannen
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Üm 3.jpeg" alt="Praxis">
+                            </div>
+                            Nehmen Sie sich eine Auszeit vom Alltag und tun gleichzeitig etwas für Ihre Gesundheit.
+                            <br> 
+                            <br>
+                            <b>Beratungen</b>:
+                            Aus einer Vielzahl an ätherischen Ölen wird eine Mischung erstellt, die zu Ihren 
+                            Anliegen passt. Meine unterschiedlichen Zugänge zur Biochemie von ätherischen Ölen oder der Duftkommunikation, 
+                            fließen in die Mischungen ein und lassen eine individuelle Kreationen entstehen, 
+                            die Sie in einem Riechstift mit nach Hause nehmen können.
+                            <br>Mit großer Leidenschaft mische ich Essenzen, um eine neue Komposition zu kreieren.
+                            <br>Kosten: 120€, Dauer ca. 1 1/2 Stunden
+                            <br>
+                            <br>
+                            <b>Körperanwendungen</b>: Zum Entspannen steht eine extra große/lange Massageliege zur Verfügung, um Streichungen & Einreibungen
+                            vollstens genießen zu können. 
+                            <br>
+                            Ebenfalls können <b>Wickel & Auflagen </b>zur Erstdurchführung angelegt werden. Weiteren Anwendungen können 
+                            gemütlich zu Hause durchgeführt werden. Dazu besprechen wir mögliche ätherische Öle und Pflanzenöle.
+                            <br>Kosten: 50€, Dauer ca. 45 Minuten
+                            <br>
+                            <br>
+                            <b>Workshop</b>: 
+                            In gemütlicher Atmosphäre bei Kekse und Getränke, gebe ich einen Einblick ins duftende Reich 
+                            rund um <b>Ätherischer Öle, Hydrolate und Pflanzenöle</b>. 
+                            <br>
+                            Je nach gewünschten Thema, können einfache <b>Salben</b>
+                            oder <b>Emulsionen</b> unter Anleitung gerührt werden. 
+                            <br>
+                            Auch wäre es möglich, einer <b>Destillation</b> auf der Terasse mit Kräutern, Blüten, Blätter beizuwohnen, 
+                            um zu erleben, wie ein <b>Hydrolat</b> entsteht. 
+                            <br>Kosten richten sich je nach Aufwand und Rohstoffe, Dauer ca. 2-3 Stunden
+                            <br>
+                            <br>
+                            Ich würde mich freuen, auch <b>Sie</b> in meiner Praxis begrüßen zu dürfen! 
+                            <br>Herzlichst
+                            <br>
+                            <img src="assets/Sabine.png" style="padding-left:100px; height: 40px;">
+                            <v-card-actions class="justify-center">
+                              <v-btn color="rgb(68,0,72)" dark href="#kontakt">Zum Kontaktformular</v-btn>
+                            </v-card-actions>
+                            <br>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Le 1.jpeg"
+                v-model="leistungen_7"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('Leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Allgemeines</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Informationen & Tipps
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              <br>Informationen & Tipps
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half max300"
+                                src="assets/Le 4.jpeg" alt="Workshop">
+                            </div>
+                            <b>Aromafachberatungen</b>
+                            sowie <b>Körperanwendungen</b> führe ich im Rahmen meiner Tätigkeit als 
+                            <b>Humanenergetikerin</b>
+                            nach dem <a class="text-no-wrap" target="_blank"
+                              href="https://www.humanenergetiker.co.at/berufsbild/3-ebenen-modell/">3 Ebenen Modell</a> der WKO durch.
+                            <br>
+                            <br>
+                            Die Zusatzausbildung <b>Komplementäre Pflege - Aromapflege</b> befähigt mich zusätzlich,
+                            <b>Auflagen & Wickel</b> in meiner Praxis anzulegen.
+                            <br>
+                            <br>
+                            <b>Weitere Möglichkeiten</b>, um duftende Wohlfühlmomente in Ihr Leben zu bringen:
+                            <ul>
+                              <li>
+                                Erstellen eines <b>individuellen Naturparfums</b>, weil Düfte zu Menschen, deren Umgebung und Stimmung passen sollten
+                              </li>
+                              <li>
+                                <b>Workshops</b> zum Thema Ätherische Öle, Hydrolate und Aromakosmetik 
+                              </li>
+                              <li>
+                                <b>Duftmarketing & AirDesign</b> um Ihren Wiedererkennungswert zu steigern
+                              </li>
+                              <li>
+                                <b>Düfte-Coaching</b> damit sie Ihrer persönlichen DuftSpur folgen können 
+                              </li>
+                            </ul>
+                            <v-flex xs12 md12>
+                              <v-card flat class="transparent">
+                                <v-card-text>
+                                  <div class="text-center">
+                                    <v-img class="float-half-right max300"
+                                      src="assets/Le 0a.jpeg" alt="Österreich"/>
+                                  </div> 
+                                  <p>
+                                    Zur Anwendung kommen ausschließlich <b>100 % naturreine ätherische Öle, hochwertige Pflanzenöle, Buttern, Wachse 
+                                      und Hydrolate</b>
+                                    . Vorzugsweise in <b>Bio Qualität</b> (nach Verfügbarkeit) von Firmen in und um Österreich,
+                                    z.B. Bergila, farfalla, feeling, Primavera, SANDICCA, SENSOLEO oder Wadi.
+                                    <br>Es sind Produkte, mit denen ich gute 
+                                    Erfahrungen gemacht habe und von deren Wirkung ich überzeugt bin. 
+                                    <br>Vielleicht inspiriere ich damit auch den einen oder anderen, die so wie ich, Wert auf heimische 
+                                    Betriebe, Produkte und Nachhaltigkeit legen!
+                                    <br>
+                                    <br>In meiner Praxis ist für Neukunden nur Barzahlung möglich, bei bestehenden Kunden auch Überweisung. 
+                                    <br>Bei einer Gutscheinbestellung erfolgt die Zahlung 
+                                    mittels Überweisung. Die Rechnung ist aufgrund der Kleinunternehmerregelung umsatzsteuerfrei!
+                                  <div class="text-center" style="font-family: Ms Madi; font-size: 20px; font-weight: 700;">
+                                    Hinweis</div>
+                                  Viele Zusatzversicherungen übernehmen teilweise die Kosten für 
+                                  ganzheitsmedizinische Behandlungsmethoden. Informieren Sie sich!</p>
+                                  <br>
+                                </v-card-text>
+                              </v-card>
+                            </v-flex>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+
+              <v-dialog
+                class="service"
+                data-titelbild="assets/Le 8.jpeg"
+                v-model="leistungen_6"
+        
+                transition="dialog-bottom-transition"
+                scrollable
+              >
+                <v-card grid-list-xl>
+                  <v-toolbar elevate-on-scroll dense>
+                    <v-btn icon @click="closeDialog('leistungen')">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-toolbar-title>Gutscheine</v-toolbar-title>
+                  </v-toolbar>
+                  <div class="summary">
+                    Die Geschenksidee für alle Duftbegeisterte
+                  </div>
+                  <v-card-text>
+                    <v-layout row wrap>
+                      <v-flex xs12 md12>
+                        <v-card flat class="transparent">
+                          <v-card-title primary-title class="layout justify-center">
+                            <div style="font-family: Ms Madi; font-size: 28px;" class="justify-center">
+                              <br>Die Geschenksidee für alle Duftbegeisterte
+                            </v-card-title>
+                            </div>
+                          </v-card-title>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md8>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <div class="text-center">
+                              <img class="float-half-right max300"
+                                src="assets/Le 8.jpeg" alt="Gutscheine">
+                            </div>
+                            <p>
+                              Überraschen Sie Ihre Liebsten mit einer <b>dufterfüllten Auszeit</b> in meiner Praxis.
+                              <br>
+                              <br>Eine besondere Aufmerksamkeit, passend zu einem besonderen Anlaß oder einfach so, um Freude zu bereiten.
+                              <br>
+                              <br>
+                              Momente zum<b> Genießen, Wohlfühlen, Entspannen, Entschleunigen, Verwöhnen lassen. </b>
+                              <br>
+                              <br>Auf Wunsch kann der Gutschein auch mit einer persönlichen Widmung als Geschenk von mir versendet werden.
+                            </p>
+                            <!--<div class="text-center" style="font-family: Ms Madi; font-size: 20px; font-weight: 700;">
+                              Gutschein - Aktion“</div>
+                              <p>Alljährlich im November, BEVOR der Weihnachtstrubel beginnt, 
+                              erhöhe ich beim Kauf von einem Gutschein den gewählten Betrag um "Plus 20%". 
+                              Damit können Sie entspannt ein Geschenk für sich selbst oder seine Liebsten besorgen! 💝-->  
+                            </p>
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex xs12 md4>
+                        <v-card flat class="transparent">
+                          <v-card-text>
+                            <v-simple-table>
+                              <template v-slot:default>
+                                <tbody>
+                                  <tr>
+                                    <td>Kosten</td>
+                                    <td align="right">Betrag frei wählbar</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">Anrechenbar auf Beratungen, Körperanwendungen und Workshop. 
+                                      Ausgenommen Naturparfum, Duftmarkteing & Airdesign sowie Workshop-Kooperationen!</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <br>zzgl. Verpackungs- und Versandspesen von 5 € (entfallen bei einem Gutscheinwert ab 50 €)
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </template>
+                            </v-simple-table>
+                          </v-card-text>
+                          <v-card-actions class="justify-center">
+                            <v-btn color="rgb(68,0,72)" dark @click="gutschein_dialog = true">
+                              <v-icon left>mdi-cash-multiple</v-icon>
+                              <span>Jetzt bestellen</span>
+                            </v-btn>
+                          </v-card-actions>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+            </v-layout>
+          </section>
+          
+          <section>
             <v-parallax src="assets/Pa 5a.jpg" height="380">
               <v-layout column align-center justify-center>
                 <div class="shadow headline white--text mb-4 text-center">„Und plötzlich weißt du: Es ist Zeit, etwas
@@ -2201,7 +2569,7 @@
                         <div class="subheading text-center">Dipl. Aromapraktikerin</div>
                         <div class="text-center">DGKP - Aromapflege</div>
                         <div class="text-center">Praktikerin für dialogisch aktive Duftkommunikation©</div>
-                        <div class="text-center">Gewerbliche Kosmetikerzeugung</div>
+                        <div class="text-center">Aromakosmetik</div>
                       </v-card-text>
                       <v-card-text>
                         <div class="text-center">
@@ -10839,7 +11207,7 @@
     const menuItems = [];
     menu.forEach(function (item) {
       menuItems.push({
-        title: item.innerText.replace('{{ leistung.titel }}', ''),
+        title: item.innerText.replace('{{ leistung.titel }}', 'Praxis'),
         path: item.parentElement.getAttribute('href')
       });
     });

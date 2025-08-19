@@ -11978,7 +11978,7 @@ Vue.component('titelbild', {
     window.addEventListener('popstate', function(e) {
       app.closeDialog()
       const target = decodeURIComponent(location.hash);
-      if (target && target.endsWith('_dialog') || target.startsWith('#diary_') || target.startsWith('#leistungen_') || target.startsWith('#galerie_')) {
+      if (target && target.endsWith('_dialog') || target.startsWith('#diary_') || target.startsWith('#leistungen_') || target.startsWith('#galerie_') || target === '#impressum') {
         app.goto(target);
       }
     });

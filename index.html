@@ -3023,532 +3023,527 @@
           </v-card-text>-->
 
 
-        <!-- Winter 2025
-          <v-dialog
+        <!-- Winter 2025-->
+        <v-dialog
           class="diary"
           data-titelbild="assets/Wi 2025 1.jpeg"
           v-model="diary_winter2025"
           
           transition="dialog-bottom-transition"
           scrollable
-          >
+        >
           <v-card>
-          <v-toolbar elevate-on-scroll dense>
-          <v-btn icon @click="closeDialog('zeitqualitaeten')">
-          <v-icon>mdi-close</v-icon>
-          </v-btn>
-          <v-toolbar-title>
-          <b>AKTUELL</b> Sommer 2025
-          </v-toolbar-title>
-          </v-toolbar>
-          <v-card-text>
-          <div class="summary">
-          Überseeträume 🌴 <b>Cistrose</b>
-          </div>
-          <v-container grid-list-xl>
-          <v-layout row wrap>
-          <v-flex xs12 md12>
-          <v-card flat class="transparent">
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          <b>"Sich verwirrt zu fühlen, ist der Anfang des Wissens"</b>
-          </v-card-title>
-          <v-card-text>
-          Sommer – wie bitte? Riesige Baumfarne in freier Natur, statt Winterlandschaft? 
-          Ob ich mich bei der Auswahl von Titelbild und Text vertan habe?
-          <br>
-          Keineswegs, denn auch ich backe Kekse, gestalte Weihnachtsgeschenke, brau einen Punsch und 
-          beginne zur <b>Thomasnacht</b> mit meinem Räucherritualen. 
-          Ich bin mir der Jahreszeit sehr wohl bewusst, obwohl die Temperaturen frühlingshafter nicht sein könnten. 
-          Und dennoch schlagen seit mehreren Wochen zwei Herzen in meiner Brust. 
-          Eines nördlich und eines südlich vom Äquator, wo gerade der Sommer beginnt. 💞
-          <br>
-          <br>
-          Als ich mich im <a href="#diary_herbst2023">Herbst 2023</a> mit der 
-          <b>Rosengeranie</b> intensiv beschäftigte, 
-          wuchs zeitgleich meine Interesse an <b>La Réunion</b>. Ein Ort, wo sie in freien Natur wächst und 
-          aus der <a href="#galerie_Rosengeranie">Pelargonium x asperum</a> ein 
-          wunderschön duftendes ätherisches Ölproduziert wird. 
-          Die Insel zog mich mehr und mehr in ihrem Bann, fortan begann ich zu träumen, 
-          dieses Stückchen Erde irgendwann einmal besuchen zu dürfen. 
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          <b>"Finde dich und deine Träume werden fliegen"</b> 
-          </v-card-title>
-          <v-card-text>
-          Geflogen bin ich sehr lange, bis ich vor ein paar Wochen im subtropischen Frühling auf <b>La Réunion</b> gelandet bin. 
-          <br>Östlich von Madagaskar inmitten vom Indischen Ozean, stieg durch Vulkaneruptionen vor Millionen 
-          von Jahren die heutige Insel aus dem Meer. Auch heute noch ist ein Vulkan, 
-          der <b>Piton de la Fournaise</b>
-          aktiv und formt das Land weiter. Die Kirche <b>Notre Dame des Laves</b> wurde 1977 von 
-          von einem der letzten größeren Ausbrüche mit Lavastrom umgeben. 2007 erfolgte nochmals ein Jahrhundertausbruch.
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 2.jpeg" alt="Nationaltheater"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 3.jpeg" alt="Sofia"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 4.jpeg" alt="Warmwasserquellen"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 5.jpeg" alt="Marteniza"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          <br>
-          Die ersten Menschen begannen vor über 400 Jahren diese Insel zu besiedeln. 
-          Obwohl heute unterschiedliche Religionen und vielen Nationen friedlich im südlichsten 
-          Teil Europas zusammenleben, war es zu Beginn nicht immer leicht für alle. 
-          Ausgebrochene Sklaven trugen zur Namensgebung vieler Täler und Orte bei, 
-          in denen sie sich niederließen. Die drei bekannten Talkessel <b>Mafate</b>,
-          <b>Salazie</b>
-          und <b>Cilaos</b> erinnern noch heute an diese Zeit. . 
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 6.jpeg" alt="Sophienkirche"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 7.jpeg" alt="Sophienkirche"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 8.jpeg" alt="Alexander-Newski-Kathedrale"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 9.jpeg" alt="Römischer Thermenbau"></v-img>
-          <small></small>
-          </v-col></v-row>
-          <br>
-          In der einzigartigen Landschaft haben auch unzählige Pflanzen einen Platz 
-          gefunden. Darunter viele, die mir nur als Zimmerpflanzen bekannt sind. <b>Weihnachtssterne</b> in Hülle und Fülle,
-          <b>Orchideen</b>
-          die Bäume umschlingen, <b>Frangipanis</b>
-          zu Bäumen gewachsen oder üppig blühende <b>Drillingsblumen</b>.
-          <br>Von den meisten Düften meiner ätherischen Öle und Extrakte, habe ich schnell ein Bild der Herkunftspflanze im Kopf. 
-          Ich war mehrmals überwältigt, diese nun in freier Natur bewundern zu dürfen, daran zu riechen, sie zu begreifen. 
-          Was für ein Geschenk, welch Kostbarkeit!
-          <b>Ylang-Ylang, Muskatnuss, Zimt, Kakaoschoten, Vetiver</b>
-          und natürlich <b>Vanille</b>! 
-          Bilder dazu finden sich irgendwann in meiner <a href="#galerie">Duftgalerie</a>, wenn die Zeit dafür gekommen ist!
-          Inzwischen blühen und gedeihen sie in den schönsten Gärten auf <b>La Réunion.</b>
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 10.jpeg" alt="Kalofer"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 11.jpeg" alt="Kalofer"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 12.jpeg" alt="Kalofer"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 13.jpeg" alt="Kalofer"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          Endemisch - Exotisch - Exklusiv
-          </v-card-title>
-          <v-card-text>
-          Nicht immer ist ganz geklärt, wie, wann und warum so manche Entwicklungen stattgefunden haben.
-          Wer war schon hier, wer ist zugezogen, wer hat sich im Laufe der Jahrhunderte zu einer eigenen Art weiterentwickelt.
-          Viele bunte, schrille Vöge tummeln sich auf der Insel, ihr Gezwitscher ist allgegenwärtig. 
-          Ob <b>Tec Tec, Kardinal, Webervogel</b>
-          oder <b>Hirtenmaina</b>. 
-          Seltener bekommt man den <b>Weißschwanztropikvogel</b> zu Gesicht. 
-          Ich erspähte ihn nur zweimal im Süden des Landes.
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 14.jpeg" alt="Tec Tec"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 15.jpeg" alt="Kardinal"></v-img">
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 16.jpeg" alt="Webervogel"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 17.jpeg" alt="Hirtenmaina"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          <br>
-          Auch <b>Chamäleon, Schmetterling, Gecko</b> und viele andere Tiere finden hier 
-          einen der begehrten Plätze. Leider verdrängen viele "Neuankömmlinge" endemische Arten, 
-          wie es u.a. beim Gecko der Fall ist. Der aus Madagaskar zugezogene <b>Tenrek</b>
-          zeigte sich während einer Wanderung durch den <b>Nebelwald von Bélouve</b>.
-          Das angeblich sehr stachelige Säugetier ähnelt unserem Igel, 
-          ist nachtaktiv &ndash; und schwupp war er auch schon wieder weg.
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 18.jpeg" alt="Rosenschokolade"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 19.jpeg" alt="Rosencreme"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 20.jpeg" alt="Fluidi"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 21.jpeg" alt="Rosengeschenke"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          <br>
-          Es gab viel zu erschnuppern und zu entdecken, wozu ich sonst kaum Gelegenheit habe. Sei es 
-          frisches <b>Rosenholz</b>
-          oder frei wachsende <b>Engelstrompeten</b>. Allerdings tröpfelte kein Hydrolat aus der 
-          Geranien-Schaudestille im <b>Jardin de l‘Etat</b>, dem größten botanischem Garten auf La Reunion, 
-          und die <b>Bougainvillea</b> duftet auch hier nicht, sorgt aber für einen exklusiven Farbenrausch! 😉
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 22.jpeg" alt="Rosenernte"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 23.jpeg" alt="Rosenbad"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 24.jpeg" alt="Rosenfotografie"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 25.jpeg" alt="Rosenfotografie"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          <b>"Leben heißt, die seltensten Dinge zu genießen und 
-          Reisen gehört zu den kostbarsten davon"</b>
-          </v-card-title>
-          <v-card-text>
-          Kreolische Speisen sind etwas, das ich noch nie zuvor auf den Teller bekam. Mit voller Hingabe
-          pustete der Koch das Feuer an, auf dem die Kessel brodelten. 
-          Auch das gemeinsame Essen eines Palmherzes mit meinem Lieblingsmenschen, ist etwas ganz Einzigartiges!  
-          Auch das Dodo Bier und ein Tamarindeneis wurden verkostet! 😋
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 26.jpeg" alt="Vogel"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 27.jpeg" alt="Katzenbabys"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 28.jpeg" alt="Rosenkäfer"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 29.jpeg" alt="Rosenpferd"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          <br>
-          Im <b>Cirque de Salazie</b>
-          liegt das Dorf <b>Hell-Bourg</b>.
-          Viele kreolische Häuser stammen noch aus der Zeit, als Thermalquellen Kurgäste
-          und Touristen anlockten, bevor ein Zyklon Mitte des 20. Jahrhunderts alles zerstörte.
-          In dieser regenreichsten Region auf La Réunion befindet sich auch der Garten von
-          <b>Madame Solange Folio</b>. Dort findet man Zitronen, Süßgräser, Geranien,
-          verschiedenste Orchideen und noch viel mehr.
-          In der liebevoll restaurierten Villa, die auch ein Museum mit vielen alten Möbeln beherbergt, 
-          lebt die 98 jährige Hausherrin noch immer und ist Besuchern gegenüber sehr aufgeschlossen.<br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 30.jpeg" alt="Ätherische Öle"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 31.jpeg" alt="Rosengeranie"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 32.jpeg" alt="Kupferdestille"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 33.jpeg" alt="Geschenke"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          <br>
-          Natürlich stand auch der Besuch einer Destillerie am Programm, in der Hydrolate und ätherische Öle 
-          der <a href="#galerie_Rosengeranie">Rosengeranie</a> produziert werden. Ebenso erzeugt die Familie 
-          köstliche Produkte daraus, wie Sirup, Gelee,.....
-          <br>Beim Warten auf eine freie Telefonzelle*, erspähte ich beim angrenzenden Laden büschelweise Vetiver.
-          Er duftet besonders intensiv und wird im kommenden Jahr von mir destilliert.<br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 34.jpeg" alt="Dschungel"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 35.jpeg" alt="Mafate"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 36.jpeg" alt="Brautschleier"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 37.jpeg" alt="Südseeträume"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          <b>"Genieße den Moment, bevor er zur Erinnerung wird"</b>
-          </v-card-title>
-          <v-card-text>
-          Abschließend noch ein paar Eindrücke der unbeschreiblichen Landschaft, von Feuer, Wasser, 
-          Luft und Erde, die das Land in der Vergangenheit und auch heute noch immer formen! 
-          Durch den Dschungel ins Landesinnere, vom Talkessel ans Meer blickend, im Primärwald durchatmen, 
-          vorbei an Tamarindenwäldern, die zahlreichen Baumfarne bestaunen! 
-          Ach, ist das ein schönen Plätzchen auf dieser Erde, ich wurde überwältigt von dieser Üppigkeit!
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 38.jpeg" alt="Rosen"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 39.jpeg" alt="Rosen"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 40.jpeg" alt="Rosen"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/Wi 2025 41.jpeg" alt="Rosen"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          <br>
-          Es war die Qual der Wahl, welche Bilder ich in meinen Beitrag unterbringe. So viele Augenblicke der 
-          Faszination, des Glücks und der Zufriedenheit finden sich in meiner Bildergalerie und noch viel mehr
-          in meinem Herzen! Danke an die vielen Naturerlebnisse, den Tiere und den Menschen, die ich in dieser Zeit 
-          begegnen durfte. Sie bereichern und erfüllen mich tagtäglich. Am letzten Abend dieser Reise bekam ich 
-          noch den Sonnenuntergang serviert - was für ein außergewöhnlicher Moment!<br>
-          <br>
-          <div align="center">
-          <v-img max-width="600" src="assets/Wi 2025 42.jpeg" alt="Sonnenuntergang"></v-img>
-          <small></small>
-          </div> 
-          </v-card-text>
-                      
-          <cistrose></cistrose>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('zeitqualitaeten')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>
+                <b>AKTUELL</b> Winter-Sommer-Sonnenwende 2025
+              </v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <div class="summary">
+                Überseeträume 🌴 <b>Cistrose</b>
+              </div>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        <b>"Sich verwirrt zu fühlen, ist der Anfang des Wissens"</b>
+                      </v-card-title>
+                      <v-card-text>
+                        Im aktuellen Beitrag <b>Winter</b>
+                        auch den <b>"Sommer"</b>
+                        im Text und <b>Baumfarne</b>
+                        anstatt <b>Winterlandschaft</b> als Titelbild? 
+                        Ob ich mich bei der Auswahl von Wort und Bild vertan habe?
+                        <br>
+                        Keineswegs, ich bin mir der Jahreszeit sehr wohl bewusst. Auch ich backe Kekse, gestalte Weihnachtsgeschenke 
+                        und braue Punsch. Und in der <b>Thomasnacht</b>
+                        starte ich mit meinen <b>Räucherritualen</b>. 
+                        In diesem Jahr, so kurz nach Neumond, besonders kraftvoll für (m)eine Neuausrichtung! 
+                        <br>
+                        Die Antwort liegt weiter südlich, im Indischen Ozean, wo zu unserer <b>Wintersonnenwende</b>
+                        die <b>Sommersonnenwende</b>
+                        stattfindet. Denn seit ich Tage in dieser Region verbringen durfte, schlagen zwei Herzen in meiner 
+                        Brust - eines nördlich und eines südlich vom Äquator. 💞
+                        <br>
+                        <br>
+                        Seinen Anfang nahm alles vor über 2 Jahren, als ich mich im Beitrag zum <a href="#diary_herbst2023">Herbst 2023</a> 
+                        mit der <b>Rosengeranie</b> intensiver beschäftigte.
+                        Auf dem ätherischen Öl Fläschchen der <a href="#galerie_Rosengeranie">Pelargonium x asperum</a> 
+                        stand als Herkunftsland <b>La Réunion</b>. Einem Ort, wo sie in freier Natur wächst.
+                        Fortan zog mich die Insel mehr und mehr in ihrem Bann, ich begann zu träumen, 
+                        dieses Stückchen Erde irgendwann einmal besuchen zu dürfen. 
+                       
+                        <palme></palme>
                      
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          Schau genau - das Zeitqualitäträtsel
-          </v-card-title>
-          <v-card-text>
-          🔎 Haben Sie die beiden Blüten erkannt? 
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="6">
-          <v-img
-          src="assets/He 2025 22.jpeg" alt="-rose"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="6">
-          <v-img
-          src="assets/He 2025 23.jpeg" alt="-rose"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          <br>
-          Ein dufter Hinweis: Die "Andere" ist botanisch gesehen KEINE Rose, 
-          obwohl das Wort -rose im gebräuchlichen Namen vorkommt. 😉
-          </v-card-text>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        <b>"Finde dich und deine Träume werden fliegen"</b> 
+                      </v-card-title>
+                      <v-card-text>
+                        Nach einem Nachtflug landete ich vor ein paar Wochen im subtropischen Frühling auf <b>La Réunion</b>. 
+                        <br>Östlich von Madagaskar stieg durch Vulkaneruptionen vor Millionen 
+                        von Jahren die Insel aus dem Meer. Auch heute noch ist ein Vulkan, 
+                        der <b>Piton de la Fournaise</b>
+                        aktiv und formt das Land ständig weiter. Neben zahlreichen kleineren Ausbrüchen, 
+                        finden auch immer wieder größere statt.
+                        1977 wurde die Kirche <b>Notre Dame des Laves</b> mit Lava umgeben und 
+                        2007 erreichte ein Lavastrom das Meer.
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 2.jpeg" alt="Nationaltheater"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 3.jpeg" alt="Sofia"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 4.jpeg" alt="Warmwasserquellen"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 5.jpeg" alt="Marteniza"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                        <br>
+                        Die ersten Menschen begannen vor über 400 Jahren diese Insel zu besiedeln. 
+                        Obwohl heute unterschiedliche Religionen und vielen Nationen friedlich im südlichsten 
+                        Teil Europas zusammenleben, war es zu Beginn nicht immer für alle leicht. 
+                        Ausgebrochene Sklaven trugen zur Namensgebung vieler Täler und Orte bei, 
+                        in denen sie sich niederließen. Die drei bekannten Talkessel <b>Mafate</b>,
+                        <b>Salazie</b>
+                        und <b>Cilaos</b> erinnern noch heute an diese Zeit.
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 6.jpeg" alt="Sophienkirche"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 7.jpeg" alt="Sophienkirche"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 8.jpeg" alt="Alexander-Newski-Kathedrale"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 9.jpeg" alt="Römischer Thermenbau"></v-img>
+                            <small></small>
+                          </v-col></v-row>
+                        <br>
+                        In dieser einzigartigen Landschaft haben unzählige Pflanzen ihren Platz 
+                        gefunden. Darunter viele, die mir nur als Zimmerpflanzen bekannt sind. <b>Weihnachtssterne</b> 
+                        in Hülle und Fülle, <b>Orchideen</b>
+                        die Bäume umschlingen, <b>Frangipanis</b>
+                        zu Bäumen gewachsen oder üppig blühende <b>Drillingsblumen</b>.
+                        <br>Von den meisten meiner ätherischen Öle und Extrakte, habe ich schnell ein Bild 
+                        der Herkunftspflanze im Kopf. 
+                        Nun durfte ich viele in freier Natur bewundern, daran riechen, sie begreifen. 
+                        Was für ein Geschenk, welch Kostbarkeit, ich war mehr als überwältigt!
+                        <b>Ylang-Ylang, Muskatnuss, Zimt, Kakaoschoten, Vetiver</b>
+                        <b>Vanille</b> und noch viel mehr, kamen mir vor die Linse. 
+                        Bilder dazu, finden sich irgendwann in meiner <a href="#galerie">Duftgalerie</a>, 
+                        wenn ihre Zeit dafür gekommen ist!
+                        Inzwischen blühen und gedeihen sie in den schönsten Gärten auf <b>La Réunion.</b>
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 10.jpeg" alt="Kalofer"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 11.jpeg" alt="Kalofer"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 12.jpeg" alt="Kalofer"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 13.jpeg" alt="Kalofer"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Endemisch - Exotisch - Exklusiv
+                      </v-card-title>
+                      <v-card-text>
+                        Nicht immer ist ganz geklärt, wie, wann und warum so manche Entwicklungen stattgefunden haben.
+                        Wer war schon hier, wer ist zugezogen, wer hat sich im Laufe der Jahrhunderte zu einer eigenen Art weiterentwickelt.
+                        Viele bunte, schrille Vöge, tummeln sich auf der ganzen Insel, ihr Gezwitscher ist allgegenwärtig. 
+                        <b>Tec Tec, Kardinal, Webervogel</b>
+                        oder <b>Hirtenmaina</b> flatterten mir mehrmals vor die Linse. 
+                        Nur zwei mal entdeckte ich den <b>Weißschwanztropikvogel</b> am Himmel. Er ist 
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 14.jpeg" alt="Tec Tec"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 15.jpeg" alt="Kardinal"></v-img">
+                              <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 16.jpeg" alt="Webervogel"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 17.jpeg" alt="Hirtenmaina"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                        <br>
+                        Auch <b>Chamäleon, Schmetterling, Gecko</b> und viele andere Tiere haben auf der Insel 
+                        einen der begehrten Plätze gefunden. Leider verdrängen viele "Neuankömmlinge" endemische Arten, 
+                        wie es u.a. beim Gecko der Fall ist. Der aus Madagaskar zugezogene <b>Tenrek</b>
+                        zeigte sich während einer Wanderung durch den <b>Nebelwald von Bélouve</b>.
+                        Das angeblich sehr stachelige Säugetier ähnelt unserem Igel, 
+                        ist nachtaktiv und schwupp war er auch schon wieder im Grün untergetaucht.
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 18.jpeg" alt="Rosenhole"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 19.jpeg" alt="Rosengeranie"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 20.jpeg" alt="Engelstrompete"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 21.jpeg" alt="Drillingsblume"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                        <br>
+                        Es gab viel zu erschnuppern und zu entdecken, wozu ich sonst kaum Gelegenheit habe. Sei es 
+                        frisches <b>Rosenholz</b>
+                        oder frei wachsende <b>Engelstrompeten</b>. Allerdings tröpfelte kein Hydrolat aus der 
+                        Geranien-Schaudestille im <b>Jardin de l‘Etat</b>, dem größten botanischem Garten auf La Reunion, 
+                        und die <b>Bougainvillea</b> duftet auch hier nicht, sorgt aber für einen exklusiven Farbenrausch! 😉
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 22.jpeg" alt="Koch"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 23.jpeg" alt="Palmherzen"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 24.jpeg" alt="Radler"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 25.jpeg" alt="Tamarindeneis"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        <b>"Leben heißt, die seltensten Dinge zu genießen und 
+                          Reisen gehört zu den kostbarsten davon"</b>
+                      </v-card-title>
+                      <v-card-text>
+                        <b>Kreolische Speisen</b> sind etwas, das ich noch nie zuvor auf den Teller bekam. Mit voller Hingabe
+                        pustete der Koch das Feuer an, auf dem die Kessel brodelten. 
+                        Auch das gemeinsame Essen eines <b>Palmherzes</b> mit meinem Lieblingsmenschen, war etwas Einzigartiges! 🌴🤍 
+                        Ebenso wurde <b>Dodo</b>
+                        Bier und Radler, sowie einheimisch gerösteter Kaffee, Kuchen und <b>Tamarindeneis</b> verkostet! 😋
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 26.jpeg" alt="Koch"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 27.jpeg" alt="Palmherzen"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 28.jpeg" alt="Dodo"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 29.jpeg" alt="Tamarinde"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                        <br>
+                        Eine der Unterkünfte auf dieser Reise lag in <b>Hell-Bourg</b>
+                        , einem Dorf im <b>Cirque de Salazie</b>.
+                        Viele kreolische Häuser stammen dort noch aus der Zeit, als Thermalquellen viele Kurgäste
+                        und Touristen anlockten, bevor ein Zyklon Mitte des 20. Jahrhunderts alles zu nichte machte.
+                        In dieser regenreichsten Region auf La Réunion befindet sich auch der Garten von
+                        <b>Madame Solange Folio</b>. Zwischen Zitronen, Süßgräser, Geranien,
+                        verschiedenste Orchideen, einem Pavillion und einem Springbrunnen steht die 
+                        liebevoll restaurierte Villa, die auch ein Museum mit vielen alten Möbeln beherbergt. 
+                        In dieser lebt die 98 jährige Hausherrin noch immer und ist Besuchern gegenüber sehr aufgeschlossen.
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 30.jpeg" alt="Garten"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 31.jpeg" alt="MadameSolangeFolio"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 32.jpeg" alt="Springbrunnen"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 33.jpeg" alt="Therme"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                        <br>
+                        Natürlich stand auch der Besuch einer <b>Destillerie</b>
+                        am Programm*, in der <b>Hydrolate & ätherische Öle</b> 
+                        produziert werden. Aus der <a href="#galerie_Rosengeranie">Rosengeranie</a> erzeugt die Familie weitere
+                        köstliche Produkte, wie Sirup, Gelee,.. Aber auch andere Pflanzen finden dort ihren Weg in die 
+                        alte Kupferdestille. Darunter der Vetiver, den die Familie in einem nahegelegenem Feld anpflanzt.
+                        <br>
+                        Zwei prächtige Büscheln vom <b>Vetiver</b> durften neben anderen Kostbarkeiten mit mir nach Hause reisen.
+                        Er duftet besonders intensiv und wird im kommenden Jahr von mir destilliert.
+                        Diese wunderschönen, getrockneten Wurzeln erspähte in einem Laden, als ich mir die Wartezeit auf eine 
+                        freie Telefonzelle* verkürzen wollte. 
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 34.jpeg" alt="Ätherische Öle"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 35.jpeg" alt="Rosengeranien"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 36.jpeg" alt="Destille"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 37.jpeg" alt="Geschenke"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        <b>"Genieße den Moment, bevor er zur Erinnerung wird"</b>
+                      </v-card-title>
+                      <v-card-text>
+                        Viele Eindrücke der unbeschreiblichen Landschaft von Feuer, Wasser, 
+                        Luft und Erde, die das Land in der Vergangenheit und auch heute noch immer formen! 
+                        Durch den Dschungel ins Landesinnere, vom Talkessel ans Meer blickend, im Primärwald durchatmen, 
+                        vorbei an Tamarindenwäldern, zahlreichen Baumfarne bestaunen, an korallenriff gesäumte Strände schlendern,...! 
+                        Ach, ist das ein schönen Plätzchen auf dieser Erde, ich wurde überwältigt von dieser Üppigkeit!
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 38.jpeg" alt="Wasserfall"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 39.jpeg" alt="Nebelwald"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 40.jpeg" alt="Strand"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 41.jpeg" alt="Dschungel"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                        <br>
+
+                        <palme></palme>
+                     
+                        <br>
+                        Es war die Qual der Wahl, welche Bilder ich in meinen Beitrag unterbringe. So viele Augenblicke der 
+                        Faszination, des Glücks und der Zufriedenheit finden sich in meiner Bildergalerie und noch viel mehr
+                        in meinem Herzen! Danke an die vielen Naturerlebnisse, den Tiere und den Menschen, die ich in dieser Zeit 
+                        begegnen durfte. Sie bereichern und erfüllen mich tagtäglich. Am letzten Abend dieser Reise bekam ich 
+                        noch den Sonnenuntergang serviert - was für ein außergewöhnlicher Moment!<br>
+                        <br>
+                        <div align="center">
+                          <v-img max-width="600" src="assets/Wi 2025 42.jpeg" alt="Sonnenuntergang"></v-img>
+                          <small></small>
+                        </div> 
+                      </v-card-text>
                       
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          <b>"Die Zeit heilt alle Wunden"</b>
-          </v-card-title>
-          <v-card-text>
-          Eigentlich habe ich einen anderen Text an dieser Stelle vorbereitet gehabt, aber 
-          Manchmal, schneller als man denken kann, ereignen sich Zusammenkünfte, die man eigentlich 
-          so gar nicht braucht und trotzdem sind sie plötzlich da.
-          So ist es mir kurz nach meiner Überseereise ergangen. und wie so schön fügen sich so manche Dinge
-          und ich erkenne rasch (nicht immer) einen Sinn dahinter. 
-          <br>
-          Allerdings muß ich im Nachhinein mir auch eingestehen, dass es viel und noch schlimmer hätte 
-          ausgehen können und es mein erster Kontakt als Fahrradfahrer mit mittlerweile >15.000 km auf meiner
-          <b>Stella</b> mit einem Auto gekommen ist. Und glücklicher Weise auch am Hinterheck, sodass ich 
-
-          <br>
-          Ihre besondere Wirkung beschrieb bereits <b>Tabernaemontanus</b>
-          oder <b>Hildegard von Bingen</b>. Seit jeher wird sie als 
-          <b>Heilmittel</b> beschrieben.
-          <br>
-          Selbst ist sie genügsam und blüht zur Vollkommenheit, wenn ihre Zeit gekommen ist. Keine Blume wird so oft erwähnt wie 
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
-          Meine Zeitqualitätspflanze - die Cistrose
-          </v-card-title>
-          <v-card-text>
-          Hunderte von Arten gibt es zu züchten, setzten, pflücken und bewundern. 
-          Sie trägt den Namen vieler berühmte Menschen, Orte und anderen Pflanzen.
-          <br>Auch in meinem Garten wachsen einige von ihnen und lassen beim „Nase in die Blütenköpfe steckend“, 
-          meine Fantasien zur Hochblüte erwachen.
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/So 2025 39.jpeg" alt="Rose"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/So 2025 40.jpeg" alt="Rose"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/So 2025 41.jpeg" alt="Rose"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/So 2025 42.jpeg" alt="Rose"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          <br>
-          Das Phänomen der <b>FÜNF</b> findet sich auch in der Rose und wird in einem Rätsel folgend beschrieben: 
-          "Fünf Brüder sind es, zwei von ihnen sind bärtig, zwei sind ohne Bart geboren.
-          Einer der Fünfe hat den Bart nur auf einer Seite" 
-          <br>
-          Des Rätsel Lösung sind die 5 <b>Kelchblätter</b>, die eine Knospe umgeben und sich öffnen, damit sich die Blüten entfalten können.
-          <br>
-          Ich hörte von dieser Erkenntnis zum ersten Mal während der <b>Duftkommunikationsausbildung</b>. 
-          Martin Henglein plazierte die Rose seinerseits im Mittelpunkt aller Düfte, 
-          <a class="text-no-wrap" target="_blank" href="https://www.christinelamontain.de">Christine Lamontain</a>
-          hat diesen <b>Duftkreises</b> weiterentwickelt. 
-          Die Rose aber hat weiterhin ihren Platz im Zentrum aller Pflanzen.
-          <br>
-          <br>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/So 2025 43.jpeg" alt="Kelchblätter"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/So 2025 44.jpeg" alt="Kelchblätter"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/So 2025 45.jpeg" alt="Kelchblätter"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/So 2025 46.jpeg" alt="Kelchblätter"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          <br>
-          Ein kurzes <b>Pflanzenportrait</b>
-          und weitere <b>Informationen</b> zum Ätherischem Öl, sind beim Duftgaleriebild
-          <a href="#galerie_Cistrose">Cistrose</a> nachzulesen.
-          </v-card-text> 
+                      <cistrose></cistrose>
+                     
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        Meine Zeitqualitätspflanze - die Cistrose
+                      </v-card-title>
+                      <v-card-text>
+                        Als ich mich vor über einem Jahr erstmals Gedanken über die Duftportraits 2025 machte, war schnell klar,
+                        dass die <b>Cistrose</b> einen würdigen Abschluss meines Rosenjahres macht. Zwar keine Rose im 
+                        botanischem Sinn, trotzdem passt sie als bildlicher <b>Wundverschluss</b> nach den stacheligen Rosenstöcken.
+                        Nicht klar war mir allerdings, dass sie in dieser Zeit so ein wichtiger Anker für mich werden wird.
+                        <br>
+                        <br>
+                        Nur wenige Tage nach meiner Ankunft aus dem Traumland, landete ich schmerzvoll und traumatisch 
+                        mit dem Rücken auf dem Boden der Realität (Asphalt). Nach >15.000 Radkilometer auf meiner <b>Stella</b>, 
+                        kam es zu einem PKW Zusammenstoß, dessen Lenker mich übersehen hatte. 
+                        Daraus resultierten Prellungen an Becken und Schulter, sowie einer Rissquetschwunde am Ellbogen, 
+                        die einige Zeit ärztlich versorgt werden musste.
+                        <br>
+                        <br>
+                        Ich begann Mischungen aus ätherischen Ölen und Pflanzenölen herzustellen, um eine 
+                        begleitende Maßnahme für die kommende Zeit zu setzen. Nicht immer ging es ohne Medikamente, 
+                        aber deren Einsatz konnte damit überschaubar gehalten werden. 
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
+                        <b>"Die Zeit heilt alle Wunden"</b>
+                      </v-card-title>
+                      <v-card-text>
+                        Und so blicke ich Wochen später auf ein paar neue und einige bewährte Mischungen, die mich in dieser
+                        Zeit begleiteten und noch immer begleiten. Etwas für die Prellungen, 
+                        den Nervenschmerz und die Wund- / Narbenbehandlung.
+                        Die <b>Cistrose</b> war fast überall dabei, ihr starker Duft schenkte mir rasch Geborgenheit, 
+                        Schutz und gleichzeitig Kraft.
+                        Ihre <b>Wundheilende Eigenschaft</b>
+                        auf <b>physischer & psychischer Ebene</b>  war mir ein 
+                        hilfreicher Anker.
+                        Aber auch in Form von Tee tat sie mir gut, quasi die <b>innere Reinigung</b> der Verletzungen.
+                        <br>
+                        <br>
+                        Viele unterschiedliche Arten und Sorten gedeihen 
+                        nahezu im gesamten mediterranen  Mittelmeerraum, Nordafrika und den kanarischen Inseln.
+                        Aber nur die <b>Lackcistrose</b>
+                        <i>Cistus ladanifer</i>, liefert das wertvolle ätherische Öl, das besonders auf den harzigen Blätter vorkommt.
+                        Vielleicht haben sie auch die <b>Weißliche Cistrose</b>
+                        , <i>Cistus albidus</i> erkannt, die ich 
+                        als Zeitqualitäträtsel mit der Wildrose gegenüberstellte.
+                        Beide wachsen seit ein paar Jahren in meinem Garten. Einige weitere entdeckte ich in botanischen Gärten.
+                        <br>
+                        <br>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 43.jpeg" alt="Kelchblätter"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 44.jpeg" alt="Kelchblätter"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 45.jpeg" alt="Kelchblätter"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/Wi 2025 46.jpeg" alt="Kelchblätter"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                        <br>
+                        Auch wenn sie sich in Farbe und Form der Blätter unterscheiden, haben sie doch eines gemeinsam: 
+                        ihre zerknitterten Blütenblätter, die fragiler nicht sein könnten. Nachvollziehbar daher der 
+                        Umstand, den sich auch hinsichtlich der Duftkommunikation vermitteln: <b>Unterstützung der zerknitterten Seelchen</b>!
+                        Aber auch die Signatur, dunkelrote Flecken auf weißem Untergrund, geben Hinweis auf ihre Eigenschaften.
+                        <br>
+                        <br>
+                        Pur ist es ein sehr mächtiger Duft, der nicht jeder Nase bekommt, auch keiner Kindernase!
+                        Erst in starker Verdünnung offenbart sie ihre Kraft und Stärke.
+                        <br>
+                        Ein kurzes <b>Pflanzenportrait</b>
+                        und weitere <b>Informationen</b> zum Ätherischem Öl, sind beim Duftgaleriebild
+                        <a href="#galerie_Cistrose">Cistrose</a> nachzulesen.
+                      </v-card-text> 
                         
-          <cistrose></cistrose>
+                      <cistrose></cistrose>
 
-          <v-card-text>
-          * Auf dieser Reise würde außergewöhnlich viel "botanisiert" und "telefoniert". 
-          Das lag an den beiden Reiseleitern, die auf dieselben Gebieten hervorragend vorbereitet waren und
-          stets wussten, warum die Pflanzen so heißen wie sie heißen und wo sich die besten Telefonzellen 
-          auf der Insel befinden! Insider Wissen dazu, gebe ich ausschließlich bei Kaffee & Kuchen bekannt! 😉 
-          </v-card-text>
-          </v-card>
-          </v-flex>
-          </v-layout>
-          </v-container>
-          </v-card-text>
+                      <v-card-text>
+                        *Auf dieser <b>Gartenreise</b>
+                        , organisiert von <a href="https://olivareisen.at">
+                          Oliver Reisen</a>
+                        , wurde viel "<b>botanisiert</b>
+                        ", zudem hatten wir auch ausreichend Gelegenheit zum "<b>Telefonieren</b>". 
+                        Dies ermöglichten unsere beide Reiseleiter, <b>Veronika & Djamel</b>, die sich hervorragend 
+                        auf diesen Gebieten vorbereitet haben und stets wussten,<b>warum die Pflanzen so heißen, wie sie heißen</b> 
+                        und wo sich die besten <b>Telefonzellen</b> auf der Insel befinden! 
+                        Meine lieben Reisekolleg:innen vermögen meine Wortwahl zu folgen, für alle andereren gilt:
+                        Dieses Insider Wissen erkläre ich ausschließlich bei Kaffee & Kuchen und vielen weiteren 
+                        wunderschönen Bilder von dieser Reise! 😉 
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
           </v-card> 
-          </v-dialog>-->
+        </v-dialog>
 
         <!-- Herbst 2025-->
         <v-dialog
@@ -9576,170 +9571,173 @@
           </v-card>
         </v-dialog>
 
-        <!-- GALERIE - Cistrose
-          <v-dialog
+        <!-- GALERIE - Cistrose-->
+        <v-dialog
           class="galerie"
           data-titelbild="assets/lightbox/Cistrose.jpeg"
           v-model="galerie_Cistrose"
           transition="dialog-bottom-transition"
           scrollable
-          >
+        >
           <v-card>
-          <v-toolbar elevate-on-scroll dense>
-          <v-btn icon @click="closeDialog('galerie')">
-          <v-icon>mdi-close</v-icon>
-          </v-btn>
-          <v-toolbar-title>Cistrose</v-toolbar-title>
-          </v-toolbar>
-          <v-card-text>
-          <v-container grid-list-xl>
-          <v-layout row wrap>
-          <v-flex xs12 md12>
-          <v-card flat class="transparent">
-          <v-card-text>
-          <v-row align="start">
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/DG Cistrose 1.jpeg" alt="Cistrose"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/DG Cistrose 2.jpeg" alt="Cistrose"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/DG Cistrose 3.jpeg" alt="Cistrose"></v-img>
-          <small></small>
-          </v-col>
-          <v-col cols="12" sm="3">
-          <v-img
-          src="assets/DG Cistrose 4.jpeg" alt="Cistrose"></v-img>
-          <small></small>
-          </v-col>
-          </v-row>
-          </v-card-text>
-          <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center pb-1">
-          Cistrose – <i>Cistus ladanifer</i> 
-          </v-card-title>
-          <v-card-title class="justify-center pt-0">
-          Ätherisches Öl & Hydrolat
-          </v-card-title>
-          <v-card-text>
-          🪴 <b>PFLANZENPORTRAIT</b> 
-          <ul>
-          <li>
-          <b>Pflanzenfamilie:</b>
-          Cistrosengewächs - <i>Cistaceae</i>
-          </li> 
-          <li>
-          <b>Vorkommen:</b>
-          nahezu im geamten mediteranen Mittelmeerraum, häufig in <b>Kreta</b>, Korsika, Portugal, Spanien, Griechenland
-          </li>
-          <li>
-          <b>Gewinnung / Ertrag:</b>
-          Destillation von <b>Blüten/Blätter/Zweige</b>
-          17 : 1
-          </li>
-          </ul>
-          <br>
-          🌿 <b>ALLGEMEINES</b>
-          <ul>
-          <li>
-          das Harz der Cistrose wird als <b>Labdanum</b> bezeichnet
-          </li> 
-          <li>es gilt als einen, bereits sehr lange, verwenden Duft</li>
-          <li>in der Parfumerzeugung findest es als Fixativ Verwendung (= besonders gute Haftung)</li>
-          </ul>
-          <br>
-          🟢 <b>Wirkungen und Eigenschaften</b>
-          aus der <b>FACHLITERATUR</b>
-          <ul>
-          <li>antibakteriell</li>
-          <li>adstringierend - zusammenziehend</li>
-          <li>blutstillend</li>
-          <li>hautregenerierend</li>
-          <li>ausgleichend</li>
-          <li>erwärmend</li>
-          <li>
-          <b>regulierend</b> auf das vegetative Nervensystem
-          </li>
-          </ul>
-          <br>
-          ⚪️ <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
-          mit dem <b>ätherischen Öl</b>
-          <ul>
-          <li>
-          <b>Duftwahrnehmung:</b> balsamisch, meditativ, rauchig, schwer, sinnlich, warm
-          </li>
-          <li>
-          je nach <b>Grundstimmung</b> fördere ich damit anregende oder beruhigende Aspekte
-          </li>
-          <li>
-          für <b>Verletzungen</b>
-          aller Art sowie <b>Hämatome</b>
-          nutze ich die bewährte <b>Mischung</b>
-          <i>(=Notfallmischung von Monika Werner)</i>
-          , zusätzlich mit <a href="#galerie_Lavendel">Lavendel</a>
-          und <b>Immortelle</b> im Gleichklang 
-          </li>
-          <li>
-          <b>punktuell</b>
-          auf <b>kleinste Wunden</b>
-          aufgetragen, um die blutstillende Eigenschaft zu nutzen 
-          </li>
-          </ul>
-          <br>Die geleerten Fläschchen entsorge ich nicht gleich, da die am Flaschenrand 
-          befindlichen Tropfen sehr lange ihren Duft bewahren und mit der Zeit immer intesiver und tiefgründiger werden.
-          Immer wieder nehme ich mir so ein Fläschchen und genieße einfach nur diesen Duftraum.
-          <br>
-          <br>
-          🔵 <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
-          mit dem <b>Hydrolat</b>
-          <ul>
-          <li>
-          als Spray gegen Hämatome, wenn ein sanftere Effekt der blutstillenden Eigenschaft gewünscht ist
-          </li>
-          <li>
-          zur <b>Befeuchtung</b> der Haut vor der Ölanwendung
-          </li>
-          <li>
-          dank der wundheilenden Eigenschaft hervorragend nach der <b>Rasur</b> ⚤ für winzige Läsuren geeignet
-          </li>
-          <li>
-          <b>punktuell</b> trage ich es auf kleinste Wunden auf, um eine rasche Blutstillung zu ermöglichen
-          </li>
-          </ul>
-          Mein selbst destilliertes <b>Hydrolat</b> der Cistrose ist ein besonderer Schatz. Es duftet sehr rauchig und gleichzeitig klar.
-          Ich  verwende es ausschließlich für edle Parfums und tropfenweise im Gesichtswasser.
-          <br>
-          <br>
-          🟠  Geräuchert ♨︎ habe ich die Blätter noch nicht, da meine Pflanze noch recht bescheiden im Wuchs ist. 
-          Falls ich irgendwann Erfahrungen damit mache, wede ich diese Zeilen natürlich mit meiner Erfahrung ergänzen! 
-          <br>
-          <br>
-          💡 Zu beachten wäre: Das pure ätherische Öl der Cistrose hat einen sehr intensiven Duft. 
-          Es ist kein ätherisches Öl, das man pur in eine Duftlampe gibt. 
-          Daher empfehle ich erstmals eine Verdünnung zu erwerben, da auch diese sehr ausgiebig in der Anwendung ist.
-          <br>
-          Oder sich entscheiden sich zum Kennenlernen für das wunderbare Hydrolat. 
-          Dieses ermöglicht ein erstes Herantasten und verringert außerdem die Gefahr einer Überdosierung.
-          <br>
-          <br>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Cistrose</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md12>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <v-row align="start">
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/DG Cistrose 1.jpeg" alt="Cistrose"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/DG Cistrose 2.jpeg" alt="Cistrose"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/DG Cistrose 3.jpeg" alt="Cistrose"></v-img>
+                            <small></small>
+                          </v-col>
+                          <v-col cols="12" sm="3">
+                            <v-img
+                              src="assets/DG Cistrose 4.jpeg" alt="Cistrose"></v-img>
+                            <small></small>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                      <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center pb-1">
+                        Cistrose – <i>Cistus ladanifer</i> 
+                      </v-card-title>
+                      <v-card-title class="justify-center pt-0">
+                        Ätherisches Öl & Hydrolat
+                      </v-card-title>
+                      <v-card-text>
+                        🪴 <b>PFLANZENPORTRAIT</b> 
+                        <ul>
+                          <li>
+                            <b>Pflanzenfamilie:</b>
+                            Cistrosengewächs - <i>Cistaceae</i>
+                          </li> 
+                          <li>
+                            <b>Vorkommen:</b>
+                            Griechenland, Korsika, <b>Kreta</b>, 
+                            Portugal, Spanien
+                          </li>
+                          <li>
+                            <b>Gewinnung / Ertrag:</b>
+                            Destillation von <b>Blüten/Blätter/Zweige</b>
+                            17 : 1
+                          </li>
+                        </ul>
+                        <br>
+                        🌿 <b>ALLGEMEINES</b>
+                        <ul>
+                          <li>
+                            das Harz der Cistrose wird als <b>Labdanum</b> bezeichnet
+                          </li> 
+                          <li>bereits seit der Antike in Gebrauch</li>
+                          <li>in der Parfumerzeugung als Fixativ verwendet (= besonders gute Haftung)</li>
+                        </ul>
+                        <br>
+                        🟢 <b>Wirkungen und Eigenschaften</b>
+                        aus der <b>FACHLITERATUR</b>
+                        <ul>
+                          <li>antibakteriell</li>
+                          <li>adstringierend - zusammenziehend</li>
+                          <li>blutstillend</li>
+                          <li>hautregenerierend</li>
+                          <li>wundheilend</li>
+                          <li>ausgleichend</li>
+                          <li>erwärmend</li>
+                          <li>
+                            <b>regulierend</b> auf das vegetative Nervensystem
+                          </li>
+                        </ul>
+                        <br>
+                        ⚪️ <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
+                        mit dem <b>ätherischen Öl</b>
+                        <ul>
+                          <li>
+                            <b>Duftwahrnehmung:</b> balsamisch, meditativ, rauchig, schwer, sinnlich, warm
+                          </li>
+                          <li>
+                            je nach <b>Grundstimmung</b>
+                            fördere ich mit dem vielschichtigem Duft <b>anregende</b>
+                            oder <b>beruhigende</b> Aspekte
+                          </li>
+                          <li>
+                            für <b>Verletzungen</b>
+                            aller Art sowie <b>Hämatome</b>
+                            nutze ich die bewährte <b>Mischung</b>
+                            <i>(=Notfallmischung von Monika Werner)</i>
+                            , zusätzlich mit <a href="#galerie_Lavendel">Lavendel</a>
+                            und <b>Immortelle</b> im Gleichklang 
+                          </li>
+                          <li>
+                            <b>punktuell</b>
+                            auf <b>kleinste Wunden</b>
+                            aufgetragen, um die blutstillende Eigenschaft zu nutzen 
+                          </li>
+                        </ul>
+                        <br>Die geleerten Fläschchen entsorge ich nicht gleich, da die am Flaschenrand 
+                        befindlichen Tropfen sehr lange ihren Duft bewahren und mit der Zeit immer <b>tiefgründiger</b> werden.
+                        Immer wieder nehme ich mir so ein Fläschchen und genieße einfach nur diesen intensiven Duftraum.
+                        <br>
+                        <br>
+                        🔵 <b>Meine Erfahrungen/Anwendungen/Empfehlungen</b>
+                        mit dem <b>Hydrolat</b>
+                        <ul>
+                          <li>
+                            als Spray gegen <b>Hämatome</b>, wenn ein sanfterer Begleiter gewünscht ist
+                          </li>
+                          <li>
+                            zur <b>Befeuchtung</b> der Haut vor einer Ölanwendung
+                          </li>
+                          <li>
+                            dank der wundheilenden Eigenschaft hervorragend nach der <b>Rasur</b> ⚤ für winzige Läsuren geeignet
+                          </li>
+                        </ul>
+                        <br>
+                        <br>
+                        Mein selbst destilliertes <b>Cistrosenhydrolat</b> ist ein besonderer Schatz. Es duftet sehr rauchig und gleichzeitig klar.
+                        Ich verwende es ausschließlich für edle Parfums und tropfenweise im Gesichtswasser.
+                        <br>
+                        <br>
+                        🟠  Geräuchert ♨︎ habe ich die Blätter noch nicht, da meine Pflanze noch recht bescheiden im Wuchs ist. 
+                        Falls ich irgendwann Erfahrungen damit mache, werde ich diese Zeilen natürlich mit meiner Erfahrung ergänzen! 
+                        <br>
+                        <br>
+                        💡 Zu beachten wäre: Das pure ätherische Öl der Cistrose hat einen sehr <b>intensiven</b> Duft. 
+                        Es ist kein ätherisches Öl, das man pur in eine Duftlampe gibt. 
+                        Daher empfehle ich erstmals eine <b>Verdünnung</b> zu erwerben, da auch diese sehr ausgiebig in der Anwendung ist.
+                        <br>
+                        Zum Kennenlernen eignet sich auch das wunderbare Hydrolat. 
+                        Dieses ermöglicht ein erstes Herantasten an den Duft und verringert außerdem die Gefahr einer Überdosierung.
+                        <br>
+                        <br>
 
-          <cistrose></cistrose>
+                        <cistrose></cistrose>
                     
-          <br>Was ich sonst noch mit der Cistrose verbinde, kann in meinem Beitrag zur Zeitqualität
-          <a href="#diary_winter2025">Winter 2025</a> nachgelesen werden.
-          </v-card-text>
+                        <br>Was ich sonst noch mit der Cistrose verbinde, kann in meinem Beitrag zur Zeitqualität
+                        <a href="#diary_winter2025">Winter-Sommer-Sonnenwende 2025</a> nachgelesen werden.
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
           </v-card>
-          </v-flex>
-          </v-layout>
-          </v-container>
-          </v-card-text>
-          </v-card>
-          </v-dialog>-->
+        </v-dialog>
 
         <!-- GALERIE - Douglasie-->
         <v-dialog
@@ -11815,15 +11813,18 @@
                           </li> 
                           <li>
                             wenn behauptet wird, dass das recht preisgünstige atherische Öl aus Blüten gewonnen wurde, 
-                            ist Achtsamkeit geboten, da die aromatischen Blätter verwendet werden
+                            ist Achtsamkeit geboten, da die aromatischen Blätter und Stängel verwendet werden
                           </li>
                           <li>der Umstand, dass der Duft an Rosen erinnern lässt, verleitete bereits Anfang des 
                             vorigen Jahrhunderts und auch heute noch dazu, echtes Rosenöl damit zu strecken, um den Preis zu senken.
                             Was natürlich verboten ist, wenn es nicht ausdrücklich am Etikett vermerkt wird!</li>
                           <li>
-                            das ätherische Öl der Rosengeranie Bourbon <i>Pelargonium x asperum</i>, das auf 
-                            Madagaskar vorkommt, duftet etwas feiner und lieblicher als das Öl der Rosengeranie, 
-                            die meist in Ägypten angebaut wird. Vorsicht ist jedoch bei Epileptikern und Schwangeren geboten und 
+                            das ätherische Öl der <b>Rosengeranie Bourbon</b>
+                            <i>Pelargonium x asperum</i>, die auf 
+                            <b>Madagaskar/La Réunion</b>
+                            wächst, duftet etwas feiner und lieblicher als das Öl der <b>Rosengeranie</b>
+                            <i>Pelargonium graveolens</i>, 
+                            die vorwiegend in <b>Ägypten</b> angebaut wird. Vorsicht ist jedoch bei Epileptikern und Schwangeren geboten und 
                             der Rat einer geschulten Person empfehlenswert!</li>
                         </ul>
                         <br>
@@ -11831,13 +11832,22 @@
                         aus der <b>FACHLITERATUR</b>
                         <ul>
                           <li>
-                            epithelisierend, entstauend
+                            epithelisierend
+                          </li> 
+                          <li>
+                            entstauend
                           </li> 
                           <li>
                             antimykotisch, antiviral
                           </li>
                           <li>
-                            hormonmodulierend, ausgleichend, stimmungsaufhellend
+                            ausgleichend
+                          </li>
+                          <li>
+                            hormonmodulierend
+                          </li>
+                          <li>
+                            stimmungsaufhellend
                           </li>
                         </ul>
                         <br>
@@ -13058,6 +13068,20 @@
             <div class="divider-container">
               <div class="divider"></div>
               <img src="./assets/Trennzeile Iris.png" width="120">
+              <div class="divider"></div>
+            </div>
+          </div>
+        </iris>`
+    });
+
+
+    Vue.component('palme', {
+      template: `
+        <rose inline-template>
+          <div class="divider-wrapper">
+            <div class="divider-container">
+              <div class="divider"></div>
+              <img src="./assets/Trennzeile Palme.png" width="120">
               <div class="divider"></div>
             </div>
           </div>

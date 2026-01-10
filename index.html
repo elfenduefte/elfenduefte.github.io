@@ -7141,7 +7141,7 @@
                         <br>
                       </v-card-text>
                        
-                      <titelbild></titelbild>
+                      <rosengeranie></rosengeranie>
                           
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
                         Meine Zeitqualitätpflanze, die Rosengeranie 
@@ -7189,7 +7189,7 @@
                         <br>
                         <br>
                   
-                        <titelbild></titelbild>
+                        <rosengeranie></rosengeranie>
 
                         <br>
                         *Dazu möchte ich keineswegs unbetont lassen, dass nicht alle Krankheiten im Vorfeld 
@@ -7373,7 +7373,7 @@
                         <br>
                       </v-card-text>
   
-                      <titelbild></titelbild>
+                      <bergamotte></bergamotte>
 
                       <br>
                       <v-card-title style="font-family: Ms Madi; font-size: 32px;" class="justify-center">
@@ -7414,8 +7414,9 @@
                           und weitere <b>Informationen</b> zum Ätherischem Öl, sind beim Duftgaleriebild
                           <a href="#galerie_Bergamotte">Bergamotte</a> nachzulesen.
                           <br>
+                          <br>
   
-                          <titelbild></titelbild>
+                          <bergamotte></bergamotte>
                         
                           <br> 
                           Auch wenn die Bräune im Gesicht langsam verblasst, sind die Erinnerungen an diese 
@@ -10074,7 +10075,7 @@
                         <br>
                         <br>
   
-                        <titelbild></titelbild>
+                        <bergamotte></bergamotte>
                         
                         <br>Was ich sonst noch mit der Bergamotte verbinde, kann in meinem Beitrag zur Zeitqualität
                         <a href="#diary_sommer2023">Sommer 2023</a> nachgelesen werden.
@@ -12424,7 +12425,7 @@
                         <br>
                         <br>
 
-                        <titelbild></titelbild>
+                        <rosengeranie></rosengeranie>
                       
                         <br>Was ich sonst noch mit dem Rosengeranie verbinde, kann in meinem Beitrag zur Zeitqualität
                         <a href="#diary_herbst2023">Herbst 2023</a> nachgelesen werden.
@@ -13563,6 +13564,19 @@
         </plumeria>`
     });
 
+    Vue.component('bergamotte', {
+      template: `
+        <rose inline-template>
+          <div class="divider-wrapper">
+            <div class="divider-container">
+              <div class="divider"></div>
+              <img src="./assets/Trennzeile Bergamotte.png" width="120">
+              <div class="divider"></div>
+            </div>
+          </div>
+        </bergamotte>`
+    });
+
     Vue.component('cistrose', {
       template: `
         <rose inline-template>
@@ -13581,9 +13595,9 @@
         <rose inline-template>
           <div class="divider-wrapper">
             <div class="divider-container">
-              <div class="divider"></div>
-              <img src="./assets/Trennzeile Iris.png" width="120">
-              <div class="divider"></div>
+              <div class="divider portrait"></div>
+              <img src="./assets/Trennzeile Iris.png" width="60">
+              <div class="divider portrait"></div>
             </div>
           </div>
         </iris>`
@@ -13599,7 +13613,7 @@
               <div class="divider"></div>
             </div>
           </div>
-        </iris>`
+        </palme>`
     });
 
     Vue.component('mandel', {
@@ -13612,7 +13626,20 @@
               <div class="divider"></div>
             </div>
           </div>
-        </iris>`
+        </mandel>`
+    });
+
+    Vue.component('rosengeranie', {
+      template: `
+        <rose inline-template>
+          <div class="divider-wrapper">
+            <div class="divider-container">
+              <div class="divider"></div>
+              <img src="./assets/Trennzeile Rosengeranie.png" width="60">
+              <div class="divider"></div>
+            </div>
+          </div>
+        </rosengeranie>`
     });
 
     Vue.component('sanddorn', {
@@ -13625,7 +13652,7 @@
               <div class="divider"></div>
             </div>
           </div>
-        </iris>`
+        </sanddorn>`
     });
     
     const karlklammer = '@';

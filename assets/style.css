@@ -127,6 +127,14 @@ div.summary {
   border-top: 1px solid #ebebeb;
 }
 
+.divider.portrait {
+  height: 48px;
+}
+
 .divider-image {
   width: 120px;
+}
+
+header.v-toolbar {
+  background-color: #a88842 !important;
 }

@@ -757,7 +757,8 @@
                             von <b>Blüten, Blätter</b>
                             und <b>Kraut</b> (Lavendel, Melisse, Orangenblüte, Pfefferminze, Rose, Rosmarin)
                             sowie <b>Hölzer</b>
-                            (Palo Santo, Zirbe), <b>Harzen</b>
+                            (Palo Santo, <a href="#galerie_Cistrose">Zirbe</a>
+                            ), <b>Harzen</b>
                             (Weihrauch) oder <b>Wurzeln</b> (Angelikawurzel), sind besonders 
                             mild und hautverträglich. Im Gegensatz zum ätherischen Öl, braucht ein Hydrolat bei der Anwendung
                             nicht verdünnt werden und ist <b>pur</b> anzuwenden. Spuren von flüchtigen ätherischen Ölen werden in guten 
@@ -3848,7 +3849,8 @@
                         Viele kreolische Häuser stammen dort noch aus der Zeit, als Thermalquellen viele Kurgäste
                         und Touristen anlockten, bevor ein Zyklon Mitte des 20. Jahrhunderts alles zu nichte machte.
                         In dieser regenreichsten Region auf La Réunion befindet sich auch der Garten von
-                        <b>Madame Solange Folio</b>. Zwischen Zitronen, Süßgräser, Geranien,
+                        <b>Madame Solange Folio</b>
+                        . Zwischen <a href="#galerie_Cistrose">Zitronen</a>, Süßgräser, Geranien,
                         verschiedenste Orchideen, einem Pavillion und einem Springbrunnen steht die 
                         liebevoll restaurierte Villa, die auch ein Museum mit vielen alten Möbeln beherbergt. 
                         In dieser lebt die 98 jährige Hausherrin noch immer und ist Besuchern gegenüber sehr aufgeschlossen.
@@ -3881,7 +3883,7 @@
                         am Programm*, in der <b>Hydrolate & ätherische Öle</b> 
                         produziert werden. Aus der <a href="#galerie_Rosengeranie">Rosengeranie</a> erzeugt die Familie weitere
                         köstliche Produkte, wie Sirup, Gelee,.. Aber auch andere Pflanzen finden dort ihren Weg in die 
-                        alte Kupferdestille. Darunter der Vetiver, den die Familie in einem nahegelegenem Feld anpflanzt.
+                        alte Kupferdestille. Darunter der <a href="#galerie_Cistrose">Vetiver</a>, den die Familie in einem nahegelegenem Feld anpflanzt.
                         <br>
                         Zwei prächtige Büscheln vom <b>Vetiver</b> durften neben anderen Kostbarkeiten mit mir nach Hause reisen.
                         Er duftet besonders intensiv und wird im kommenden Jahr von mir destilliert.
@@ -9524,7 +9526,9 @@
                         <img class="float-half-right" src="assets/Wi 2020 6.jpeg" alt="Produktanregungen">
                         <p>Selbstgemachtes für liebe Menschen, die mich das ganze Jahr begleitet haben 🤩</p>
                         <ul>
-                          <li>Zirbenhydrolat verwandelt schlaflose Nächte in süße Träume</li>
+                          <li>
+                            <a href="#galerie_Cistrose">Zirbenhydrolat</a> verwandelt schlaflose Nächte in süße Träume
+                          </li>
                           <li>Badesalz macht müde Füße standhafter</li>
                           <li>Körperbutter für streichelweiche, samtige Haut</li>
                           <li>Johanniskrautmazerat, wohltuend bei körperliche und seelischen Wehwehchen 🤕</li>
@@ -13436,6 +13440,47 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - ZITRONE-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Zitrone.jpeg"
+          v-model="galerie_Zitrone"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Zitrone</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Zitrone.jpeg"></div>
+                        <p>Citrus lemon
+                          <br>
+                          <b>PFLANZENPORTRAIT</b> folgt...
+
+                          <zitrone></zitrone>
+
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+      
+
         <!-- GUTSCHEINBESTELLUNG -->
         <v-dialog
           v-model="gutschein_dialog"
@@ -13668,6 +13713,19 @@
             </div>
           </div>
         </sanddorn>`
+    });
+
+    Vue.component('zitrone', {
+      template: `
+        <rose inline-template>
+          <div class="divider-wrapper">
+            <div class="divider-container">
+              <div class="divider"></div>
+              <img src="./assets/Trennzeile Zitrone.png" width="120">
+              <div class="divider"></div>
+            </div>
+          </div>
+        </zitrone>`
     });
     
     const karlklammer = '@';

@@ -33,7 +33,7 @@ section {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif !important;
 }
 div.v-application a {
-  color: #800080;
+  color: #BC9848 ;
 }
 a.subheading {
   text-decoration: none;
@@ -78,7 +78,7 @@ a.subheading {
   word-break: normal;
 }
 .v-card__title b {
-  color: #555
+  color: #54472F
 }
 .impressum h1, .impressum h2, .impressum h3 {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;

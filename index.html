@@ -13719,7 +13719,7 @@
     services.forEach(function (item) {
       serviceItems.push({
         dialog: item.getAttribute('v-model'),
-        titel: item.querySelector('v-toolbar-title').innerText.split(/\s/g).join(''),
+        titel: item.querySelector('v-toolbar-title').innerText,
         titelbild: item.getAttribute('data-titelbild'),
         summary: item.querySelector('div.summary')?.innerHTML,
       });
@@ -13730,7 +13730,7 @@
     diary.forEach(function (item) {
       allDiaryItems.push({
         dialog: item.getAttribute('v-model'),
-        titel: item.querySelector('v-toolbar-title').innerText.split(/\s/g).join(''),
+        titel: item.querySelector('v-toolbar-title').innerHTML,
         titelbild: item.getAttribute('data-titelbild'),
         summary: item.querySelector('div.summary')?.innerHTML,
       });
@@ -13745,7 +13745,7 @@
     galerie.forEach(function (item) {
       galerieItems.push({
         dialog: item.getAttribute('v-model'),
-        titel: item.querySelector('v-toolbar-title').innerText.split(/\s/g).join(''),
+        titel: item.querySelector('v-toolbar-title').innerHTML,
         titelbild: item.getAttribute('data-titelbild'),
       });
     });

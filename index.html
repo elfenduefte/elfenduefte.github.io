@@ -2029,11 +2029,11 @@
                     <v-layout row wrap align-center>
                       <v-flex xs12 md3 v-for="(image, imageIndex) in galerieItems" :key="image.titelbild">
                         <v-card flat>
-                          <v-card-text class="text-center image" @click="goto(`#galerie_${image.titel}`)"
+                          <v-card-text class="text-center image" @click="goto(`#galerie_${image.titel.replace(/\s/g, '')}`)"
                             :style="{ backgroundImage: 'url(' + image.titelbild + ')' }" :title="image.titel"
                             :alt="image.titel"></v-card-text>
                           <v-card-actions class="justify-center">
-                            <v-btn text :href="`#galerie_${image.titel}`">{{image.titel}}</v-btn>
+                            <v-btn text :href="`#galerie_${image.titel.replace(/\s/g, '')}`">{{image.titel}}</v-btn>
                           </v-card-actions>
                         </v-card>
                       </v-flex>
@@ -4114,7 +4114,7 @@
                         <br>
                         Um meine Gedanken zu sortieren und im Kopf liegengebliebenes aufzuarbeiten, begab ich mich
                         vergangene Woche für ein paar Tage ins Semmering Gebiet, um vieles davon niederzuschreiben. ✍🏻
-                        Zurück an einem Platz, wo ich vor 5 Jahren unerwartet einem Meer an <a href="#galerie_WildeKarotte">Wilden Karotten</a>
+                        Zurück an einem Platz, wo ich vor 5 Jahren unerwartet einem Meer an <a href="#galerie">Wilden Karotten</a>
                         in ihrem Herbstkleid begegnet bin.
                         Ich erinnere mich noch ganz genau an dieses <b>unvergesslicher Hochgefühl</b>, 
                         als ich meinen Rucksack mit eingetrockneten Dolden befüllte.

@@ -93,17 +93,17 @@ a.subheading {
   padding-right: 5px;
 }
 a {
-  color: purple
+  color: #BC9848
 }
 div.summary {
   display: none;
 }
 .diary-thumb-title {
-  color: purple;
+  color: #BC9848;
   padding-bottom: 10px;
 }
 .services-thumb-title {
-  color: purple;
+  color: #BC9848;
   padding-bottom: 10px;
 }
 

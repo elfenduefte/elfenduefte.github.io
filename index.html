@@ -11397,6 +11397,46 @@
           </v-card>
         </v-dialog>
 
+        <!-- GALERIE - MANDEL-->
+        <v-dialog
+          class="galerie"
+          data-titelbild="assets/lightbox/Mandel.jpeg"
+          v-model="galerie_Mandel"
+          transition="dialog-bottom-transition"
+          scrollable
+        >
+          <v-card>
+            <v-toolbar elevate-on-scroll dense>
+              <v-btn icon @click="closeDialog('galerie')">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Mandel</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+              <v-container grid-list-xl>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-card flat class="transparent">
+                      <v-card-text>
+                        <div style="line-height: 0.8rem" class="small float-half">
+                          <img style="width: 100%"
+                            src="assets/lightbox/Mandel.jpeg"></div>
+                        <p>Prunus dulcis
+                          <br>
+                          <b>PFLANZENPORTRAIT</b> folgt...
+
+                          <mandel></mandel>
+
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+
         <!-- GALERIE - MELISSE-->
         <v-dialog
           class="galerie"

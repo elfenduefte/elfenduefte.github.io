@@ -50,10 +50,6 @@
                 <v-list-item-content class="pl-3">{{ leistung.titel }}</v-list-item-content>
               </v-list-item>
             </v-list-group>
-            <v-list-item href="#aetherische-oele"
-              @click="sidebar = false">
-              <v-list-item-content>Ätherische Öle & mehr</v-list-item-content>
-            </v-list-item>
             <v-list-item href="#galerie"
               @click="sidebar = false">
               <v-list-item-content>Duftgalerie
@@ -62,6 +58,10 @@
             <v-list-item href="#zeitqualitaeten"
               @click="sidebar = false">
               <v-list-item-content>Zeitqualitäten</v-list-item-content>
+            </v-list-item>
+            <v-list-item href="#aetherische-oele"
+              @click="sidebar = false">
+              <v-list-item-content>Ätherische Öle & mehr</v-list-item-content>
             </v-list-item>
             <v-list-item href="#newsletter"
               @click="sidebar = false">
@@ -130,20 +130,6 @@
               </v-carousel-item>
 
               <v-carousel-item>
-                <v-img class="fill-height" src="assets/WK1.jpeg">
-                  <v-layout column fill-height align-center justify-center class="white--text">
-                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">
-                      Einblicke in ein duftendes Reich voller Blüten, Blätter, Früchten, Gräser, Harzen, Hölzern, Samen und Wurzeln
-                      <br>"Ätherische Öle & mehr"
-                    </div>
-                    <v-btn elevation="2" fab href="#aetherische-oele">
-                      <v-icon>mdi-arrow-down</v-icon>
-                    </v-btn>
-                  </v-layout>
-                </v-img>
-              </v-carousel-item>
-              
-              <v-carousel-item>
                 <v-img class="fill-height" src="assets/WK5.jpeg">
                   <v-layout column fill-height align-center justify-center class="white--text">
                     <div class="shadow headline mb-4 ci text-center pl-5 pr-5">Seien Sie bei der Auswahl von Düften wachsam, 
@@ -164,6 +150,20 @@
                       <br>"Zeitqualitäten"
                     </div>
                     <v-btn elevation="2" fab href="#zeitqualitaeten">
+                      <v-icon>mdi-arrow-down</v-icon>
+                    </v-btn>
+                  </v-layout>
+                </v-img>
+              </v-carousel-item>
+
+              <v-carousel-item>
+                <v-img class="fill-height" src="assets/WK1.jpeg">
+                  <v-layout column fill-height align-center justify-center class="white--text">
+                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">
+                      Einblicke in ein duftendes Reich voller Blüten, Blätter, Früchten, Gräser, Harzen, Hölzern, Samen und Wurzeln
+                      <br>"Ätherische Öle & mehr"
+                    </div>
+                    <v-btn elevation="2" fab href="#aetherische-oele">
                       <v-icon>mdi-arrow-down</v-icon>
                     </v-btn>
                   </v-layout>
@@ -446,447 +446,6 @@
                 <div class="shadow headline white--text mb-4 text-center">"Wenn es einen Glauben gibt, der Berge versetzen
                   kann, dann ist es der Glaube an die eigene Kraft“</div>
                 <em class="shadow">Marie von Ebner-Eschenbach</em>
-              </v-layout>
-            </v-parallax>
-          </section>
-
-          <section id="aetherische-oele">
-            <v-layout column wrap class="my-12" align-center> 
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md12>
-                      <v-card flat class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Ätherische Öle & mehr</div>
-                        </v-card-title>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md12>
-                      <v-card class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">
-                            Ätherische Öle, Absolues, <span
-                              style="white-space: nowrap;">CO<sub>2</sub>
-                            </span> Extrakte
-                          </div>
-                        </v-card-title>
-                        <v-card-text>
-                          Schon lange beschäftigt sich der Mensch mit dem Duft und der Wirkung von <b>Blüten, Blätter, 
-                            Früchten, Gräser, Harzen, Hölzern, Samen</b>
-                          und <b>Wurzeln</b>, was alte Bücher und Ausgrabungen bestätigen. 
-                          <v-expansion-panels flat>
-                            <v-expansion-panel flat>
-                              <v-expansion-panel-header flat>
-                                <a>Weiterlesen...</a>
-                              </v-expansion-panel-header>
-                              <v-expansion-panel-content flat>
-                                <v-card flat class="transparent">
-                                  <v-card-text>
-                                    Unterschiedliche Methoden (Destillation, Extraktion, Pressung,...) ermöglichen die Gewinnung 
-                                    ätherischer Öle, Absolues und Extrakte.
-                                    <br>
-                                    <br>
-                                    Die geballte Kraft (teilweise über 400 Inhaltsstoffe) in jedem Tropfen kann eingesetzt werden, 
-                                    um Gesundheit zu unterstützen, Krankheiten zu lindern und Wohlbefinden zu erlangen.
-                                    Denn nicht nur der Duft einer Pflanze ist von Bedeutung, auch die biochemische 
-                                    Zusammensetzung kann eine sinnvolle Unterstützung zur Schulmedizin sein.
-                                    Zahlreiche Studien, die in der heutigen Zeit eingefordert werden, belegen 
-                                    diese therapeutische Wirksamkeit.
-                                    <br>
-                                    <br>
-                                    <div class="subheading text-center">
-                                      <b>Unterschiedliche Anwendungsmöglichkeiten, zahlreiche Wirkungen</b>
-                                    </div>
-                                    <br>
-                                    Atmet man einen Duft aus der <b>Raumluft</b>
-                                    durch die Nase ein, gelangt dieser direkt ins <b>Limbische System</b>.
-                                    Das Zentrum, wo u.a. Gefühle gesteuert und verarbeitet werden.
-                                    Diese nahezu direkte Verbindung, löst verschiedene <b>Erinnerungen und Emotionen</b> aus,
-                                    die rascher geweckt werden, als der Verstand reagieren kann.
-                                    Ein bekanntes Beispiel ist wohl der "Echte Lavendel". 
-                                    Hat man mit diesem Duft eine positive, schöne Erfahrung gemacht hat, liebt man ihn und kann die 
-                                    beruhigenden und hautpflegenden Eigenschaften nutzen.
-                                    Verknüpft man allerdings keine positiven Gedanken damit, wird man damit wohl kaum entspannt in den Schlaf finden.
-                                    <br>Ätherische Öle gelangen z.B. mittels Aromalampe, 
-                                    Diffusor, Spray oder beim Sauna-Aufguss ♨︎ in die Atemluft und können, lt. Studien innerhalb 
-                                    kürzester Zeit, in der Blutbahn nachgewiesen werden.
-                                    <br>
-                                    <br>
-                                    Durch eine Anwendung auf der <b>Haut</b>,
-                                    entfalten ätherische Öle ebenfalls ihre Wirkung, indem sie in den <b>Stoffwechselvorgang</b> des Menschen 
-                                    gelangen. In einer angemessenen Verdünnung können diese einem Körperöl, Duschgel oder Badeöl zugesetzt werden. 
-                                    Auch das Anlegen von Auflagen & Wickel mit geeigneten Ölen ist eine wohltuende Anwendungsmöglichkeit.
-                                    <br>
-                                    <br>
-                                    Das <b>Wirkungsspektrum</b> 
-                                    der ätherischen Öle reicht von A wie <b>aufmunternd, aphrodisierend</b> über E
-                                    wie <b>entspannend, erfrischend, entzündungshemmend</b>
-                                    , hin zum H wie <b>harmonisierend</b>
-                                    bis zum Z wie <b>zentrierend</b>.
-                                    Fast zu jedem Buchstaben findet man ein Wort, mit dem man die Eigenschaften der ätherischen Öle beschreiben kann. 
-                                    So vielfältig wie die <b>unzähligen Inhaltsstoffe</b>.
-                                    <br>
-                                    <br>
-                                    Um die <b>Wirkung auf Leib, Geist & Seele</b> in vollen Zügen genießen zu können, ist bei der
-                                    Menge an benötigtem Pflanzenmaterial (für 1 kg Melissenöl werden bis zu 8000 kg Blätter destilliert) auch an 
-                                    <b>Kontraindikationen und Vorsichtsgebote</b> zu denken, damit es zu keinen 
-                                    unerwünschten Nebenwirkungen kommt.
-                                  </v-card-text>
-                                </v-card>
-                              </v-expansion-panel-content>
-                            </v-expansion-panel>
-                          </v-expansion-panels>
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                    <v-flex xs12 md12>
-                      <v-card height="100%" class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Pflanzliche Öle, Fette und Wachse</div>
-                        </v-card-title>
-                        <v-card-text>
-                          Aus Früchten, Kernen, Nüssen, Pflanzen und Samen werden mittels Pressung oder Mazeration <b>fette Öle</b>
-                          (z.B. Johanniskraut- Mohnblütenmazerat, 
-                          <a href="#galerie_Hanf">Hanfsamen-</a>, Kokos-, 
-                          <a href="#galerie_Mandel">Mandel-</a>, 
-                          <a href="#galerie_Sanddorn">Sanddorn-</a>, Schwarzkümmel-, Sesam-,
-                          <a href="#galerie_Hagebutte">Wildrosenöl</a>) 
-                          und <b>Wachse</b> (Jojoba) gewonnen.
-                          <v-expansion-panels flat>
-                            <v-expansion-panel flat>
-                              <v-expansion-panel-header flat>
-                                <a>Weiterlesen...</a>
-                              </v-expansion-panel-header>
-                              <v-expansion-panel-content flat>
-                                <v-card flat class="transparent">
-                                  <v-card-text>
-                                    <v-row align="start">
-                                      <v-col cols="12" sm="6">
-                                        <v-img
-                                          src="assets/ÄÖ 2.jpeg" alt="Johanniskrautmazerat"></v-img>
-                                        <small></small>
-                                      </v-col>
-                                      <v-col cols="12" sm="6">
-                                        Die besonders <b>hautfreundlichen Eigenschaften</b> sind bei der Gesichts- und Körperpflege eine Wohltat. 
-                                        Je nach <b>Wirkstoffzusammensetzung</b> gibt es für jeden Hauttyp das passende Öl.
-                                        Auch die Verwendung <b>hochwertiger Pflanzenöle</b>
-                                        in der Küche oder die pure Anwendung bei einer <b>Ölkur</b> sind empfehlenswert.
-                                        <br>
-                                        <br>
-                                        Zu beachten sind die <b>verschiedenen Anwendungsmöglichkeiten</b>, da sich nicht jedes Öl/Wachs für alle Bereiche eignet!
-                                      </v-col>
-                                    </v-row>
-                                  </v-card-text>
-                                </v-card>
-                              </v-expansion-panel-content>
-                            </v-expansion-panel>
-                          </v-expansion-panels>
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                    <v-flex xs12 md12>
-                      <v-card height="100%" class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Hydrolate</div>
-                        </v-card-title>
-                        <v-card-text>
-                          Eine wundervolle Wirkung haben <b>
-                            <a href="#diary_frühling2025">Hydrolate</a>
-                          </b>. Lange als "Nebenprodukt" bei der Herstellung 
-                          von ätherischen Ölen bezeichnet,
-                          sind diese mittlerweile ein fester Bestandteil im Bereich der Aromatherapie und Aromakosmetik.
-                          <v-expansion-panels flat>
-                            <v-expansion-panel flat>
-                              <v-expansion-panel-header flat>
-                                <a>Weiterlesen...</a>
-                              </v-expansion-panel-header>
-                              <v-expansion-panel-content flat>
-                                <v-card flat class="transparent">
-                                  <v-card-text>
-                                    <v-row align="start">
-                                      <v-col cols="12" sm="6">
-                                        <v-img
-                                          src="assets/ÄÖ 3.jpeg" alt="Destille"></v-img>
-                                        <small></small>
-                                      </v-col>
-                                      <v-col cols="12" sm="6">
-                                        Die in den Destillaten enthaltenen <b>wasserlöslichen Substanzen</b>
-                                        von <b>Blüten, Blätter</b>
-                                        und <b>Kraut</b>
-                                        (<a href="#galerie_Lavendel">Lavendel</a>, 
-                                        <a href="#galerie_Melisse">Melisse</a>, 
-                                        <a href="#galerie_Neroli">Neroli</a>, 
-                                        <a href="#galerie_Pfefferminze">Pfefferminze</a>, 
-                                        <a href="#galerie_Rose">Rose</a>, 
-                                        <a href="#galerie_Rosmarin">Rosmarin</a>)
-                                        sowie <b>Hölzer</b>
-                                        (Palo Santo, <a href="#galerie_Zirbe">Zirbe</a>)
-                                        , <b>Harzen</b>
-                                        (Weihrauch) oder <b>Wurzeln</b>
-                                        (<a href="#galerie_Angelikawurzel">Angelikawurzel</a>), sind besonders 
-                                        mild und hautverträglich. Im Gegensatz zum ätherischen Öl, braucht ein <a href="#diary_frühling2025">Hydrolat</a> bei der Anwendung
-                                        nicht verdünnt werden und ist <b>pur</b> anzuwenden. Spuren von flüchtigen ätherischen Ölen werden in guten 
-                                        Destillaten belassen. Allgemein betrachtet, sind Pflanzenwässer nach der Öffnung rasch 
-                                        zu verbrauchen und nicht allzu lange haltbar. Auf gute Qualität und richtige Lagerung ist zu achten.
-                                        <br>
-                                        Sie finden Verwendung in <b>Körperpflegeprodukten</b>
-                                        , als zarte <b>Raumbeduftung</b>
-                                        oder als <b>Erfrischung</b> direkt auf die Haut gesprüht. Ebenso ist der Einsatz in der 
-                                        <b>Aromaküche</b> möglich: Getränke, Süßspeisen und pikante Speisen können mit passenden Hydrolaten 
-                                        aufgepeppt werden und erhalten dadurch eine spezielle Note.
-                                      </v-col>
-                                    </v-row>
-                                  </v-card-text>
-                                </v-card>
-                              </v-expansion-panel-content>
-                            </v-expansion-panel>
-                          </v-expansion-panels>
-                        </v-card-text>
-                      </v-card>
-                    </v-flex> 
-                    <v-flex xs12 md12>
-                      <v-card height="100%" class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Qualitätsmerkmale / Haltbarkeit / Lagerung</div>
-                        </v-card-title>
-                        <v-card-text>
-                          Beim Erwerb von Ätherischen Ölen, Hydrolaten sowie Pflanzenölen ist es ein Qualitätsmerkmal, wenn bestimmte Hinweise 
-                          am <b>Etikett</b> vermerkt sind. 
-                          <v-expansion-panels flat>
-                            <v-expansion-panel flat>
-                              <v-expansion-panel-header flat>
-                                <a>Weiterlesen...</a>
-                              </v-expansion-panel-header>
-                              <v-expansion-panel-content flat>
-                                <v-card flat class="transparent">
-                                  <v-card-text>
-                                    Deutscher und Botanischer Name, Herkunftsland, Pflanzenteil, Gewinnungsart (siehe oben), 
-                                    Verwendungszweck, Chargennummer und Füllmenge sollten nachzulesen sein. 
-                                    <b>Pflanzenöle</b>
-                                    mit dem Vermerk <b>"nativ"</b> sind hochwertiger, als durch Raffination gewonnene Öle und 
-                                    <b>Hydrolate</b>
-                                    sollten, wenn möglich, <b>ohne Konservierung</b> angeboten werden.
-                                    <br>Zusätzliche Angaben beim ätherischen Öl: 
-                                    100% <b>naturreines</b> ätherisches Öl oder die % Verdünnung mit Jojoba/Ethanol,
-                                    wenn notwendig der Chemotyp (selbe Pflanze, unterschiedliche Inhaltsstoffe) sowie
-                                    je nach Deklaration Gefahrenpiktogramme (Bedarfsgegenstand) oder Verdünnungshinweise (Kosmetika, Lebensmittel).
-                                    <br>
-                                    <br>
-                                    <b>Ablaufdatum/Haltbarkeit</b>: Nicht jede Firma kennzeichnet diese aus, außer der Inhalt ist 
-                                    für kosmetische Zwecke deklariert. Zu beachten wäre jedenfalls, 
-                                    dass ätherische Öle nach dem Öffnen, je nach biochemischer Zusammensetzung, unterschiedlich 
-                                    lange haltbar sind. Bedingt durch die Entnahme jedes Tropfens, kommt stattdessen Sauerstoff 
-                                    in die Flasche  und das Öl beginnt zu reagieren. 
-                                    Zitrusöle, Nadelöle verändern z.B. mit der Zeit Ihr Duftverhalten. Ein Verbrauch innerhalb von 1 1/2  Jahren wäre empfehlenswert.
-                                    Danach sind sie jedoch noch zur Entfernung von Kleberesten gut zu gebrauchen. Besonders Teebaumöl
-                                    hat die Eigenschaft, nach dem Öffnen rasch zu oxidieren und sollte stets frisch zur Anwendung kommen! Holz- und Blütenöle sind 
-                                    wiederum sehr lange haltbar und werden teilweise mit der Zeit sogar intensiver/(wert)voller.
-                                    <br>
-                                    <br>
-                                    Bei der <b>Lagerung</b> sind Temperaturschwankungen zu vermeiden, dunkle Flaschen mit 
-                                    Sicherheitsverschlüssen (oder bei Hydrolaten ein Sprühaufsatz) sind Klarglas Flaschen/Kunststoffflaschen vorzuziehen.
-                                    <br>
-                                    <br>
-                                    <b>Allgemeines</b>: Verarbeitete Rohstoffe in Bio-Qualität sind empfehlenswerter, da diese 
-                                    im Kreislauf der Natur heranwachsen dürfen.
-                                    Denn nur dann tragen sie die natürliche Entwicklung von Stoffen 
-                                    (z.B. Nützlinge anlocken und Fressfeinde abwehren) und die gewünschte Balance bereits in sich.
-                                    Damit schließt sich der Kreis!
-                                  </v-card-text>
-                                </v-card>
-                              </v-expansion-panel-content>
-                            </v-expansion-panel>
-                          </v-expansion-panels>
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
-            </v-layout>
-          </section>
-          
-          <section>
-            <v-parallax src="assets/Pa 4.jpg" height="380">
-              <v-layout column align-center justify-center>
-                <div class="shadow headline white--text mb-4 text-center">"Das Äußere einer Pflanze ist nur die Hälfte
-                  ihrer Wirklichkeit“</div>
-                <em class="shadow">Johann Wolfgang von Goethe</em>
-              </v-layout>
-            </v-parallax>
-          </section>
-
-          <section id="galerie">
-            <v-layout column wrap class="my-12" align-center>
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md12>
-                      <v-card flat class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Duftgalerie</div>
-                        </v-card-title>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
-              <v-flex xs12 sm4 class="my-4">
-                <v-card class="text-center">
-                  <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">Bilder einiger Pflanzen, 
-                    deren Düfte und Wirkungen ich in ätherischen Ölen, Hydrolaten sowie fetten Ölen sehr schätze!
-                  </v-card-title>
-                  <v-card-text>Hinter (fast) jedem Bild verbirgt sich ein kurzes Pflanzenportrait</v-card-text>
-                  <v-container grid-list-xl>
-                    <v-layout row wrap align-center>
-                      <v-flex xs12 md3 v-for="(image, imageIndex) in galerieItems" :key="image.titelbild">
-                        <v-card flat>
-                          <v-card-text class="text-center image" @click="goto(`#galerie_${image.titel.replace(/\s/g, '')}`)"
-                            :style="{ backgroundImage: 'url(' + image.titelbild + ')' }" :title="image.titel"
-                            :alt="image.titel"></v-card-text>
-                          <v-card-actions class="justify-center">
-                            <v-btn text :href="`#galerie_${image.titel.replace(/\s/g, '')}`">{{image.titel}}</v-btn>
-                          </v-card-actions>
-                        </v-card>
-                      </v-flex>
-                    </v-layout>
-                  </v-container>
-                </v-card>
-              </v-flex>
-            
-              <titelbild></titelbild>
-          
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md12>
-                      <v-card flat class="transparent">
-                        <v-card-text>
-                          <p>🌿 Zahlreiche Literatur sowie Seminare, Fort- und Weiterbildungen
-                            welche ich laufend absolviere, ermöglichen es mir auf einen großen Schatz an Wissen zurückzugreifen, 
-                            das ich seit vielen vielen Jahren sammlen darf!
-                            <br>
-                            <br>🌿 Alle Zahlen, die ich mit "%"versehen habe, sind Mengenverhältnisse, die ich aus der Fachliteratur
-                            entnehme. Sie sollen einen ungefähren Überblick verschaffen und sind als "ca." Angaben zu verstehen.
-                            Wer tiefer eintauchen will, dem möchte ich eine Weiterbildung bei einem 
-                            seriösen Ausbildungsinstitut ans Herz legen!!!
-                            <br> 
-                            <br>🌿 Da es mir verboten ist Heilwirkungen auszusprechen, möchte ich darauf verweisen, 
-                            dass alle getroffenen Aussagen auf Erfahrungen beruhen, die ICH mit den beschriebenen Produkten 
-                            gemacht habe. Sie sind aussschließlich zur allgemeinen Information und stellen keine
-                            Empfehlung dar. Zur Diagnosestellung wenden Sie sich bitte an einen fachkundigen Arzt.
-                            <br>
-                            <br>🌿 Für DIY Produkte gibt es bereits viele Rezepten von namhaften 
-                            Firmen und Aromafachleute in Bücher oder im Internet nachzulesen. 
-                            Achten Sie bei Ihrere Suche auf seriöse Artikel und Mengenangaben! 
-                            Natürlich stehe ich gerne beratend zur Seite, falls Unklarheiten bei der Umsetzung von 
-                            Anwendungsmöglichkeiten oder sonstige Fragen auftreten! 
-                            <br>
-                            <br>
-                            💡 Für die Verarbeitung von Selbstgepflückten wäre zu bedenken: Nur Pflanzen ernten, 
-                            die man auch gut kennt und nur die Menge an Pflanzenmaterial an verschiedenen Plätzen entnehmen, 
-                            die man auch tatsächlich für den Eigenbedarf/DIY-Produkte benötigt. 
-                            Schließlich wollen sich viele an den Pflanzen, deren Anblick sowie den Inhaltsstoffen erfreuen.
-                          </p>
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
-            </v-layout>
-          </section>
-
-          <section>
-            <v-parallax src="assets/Pa 1.jpg" height="380">
-              <v-layout column align-center justify-center>
-                <div class="shadow headline white--text mb-4 text-center">"Die größte heilende Kraft liegt darin,
-                  in Harmonie mit dem universellen Rhythmus zu sein“</div>
-                <em class="shadow">Paracelsus</em>
-              </v-layout>
-            </v-parallax>
-          </section>
-          
-          <section id="zeitqualitaeten">
-            <v-layout column wrap class="my-12" align-center>
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md12>
-                      <v-card flat class="transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline text-center">Zeitqualitäten</div>
-                        </v-card-title>
-                        <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
-                          <div class="text-center">Die Texte hinter jedem Bildchen, beinhalten Kurzgeschichten meiner Pflanzenreisen 
-                            und Einblicke in Tätigkeiten, die ich mit all 
-                            meinen Sinnen im Zusammenhang mit meiner 💛ensarbeit im Jahreskreislauf erlebe. 
-                            <br>Eigene Fotos und Zeichnungen ermöglicht es, mein Beiträge auch bildlich zu gestalten!
-                          </div>
-                        </v-card-title>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap align-center>
-                    <v-flex xs12 md4 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
-                      <v-card flat class="d-flex" :href="diaryItem.more ? '' : '#' + diaryItem.dialog" @click="diaryItem.more && showAllDiaryItems()">
-                        <v-card-text class="fill-height">
-                          <template v-if="!diaryItem.more">
-                            <div style="line-height: 0.8rem" class="small float-half">
-                              <v-img
-                                :src="diaryItem.titelbild"/></div>
-                            <div class="diary-thumb-title" v-html="diaryItem.titel"></div>
-                            <hr>
-                            <div v-html="diaryItem.summary">
-                            </div>
-                          </template>
-                          <template v-else>
-                            <div class="diary-thumb-title">Weitere Beiträge anzeigen...</div>
-                          </template>
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
-
-              <titelbild></titelbild>
-          
-              <v-flex xs12>
-                <v-container grid-list-xl>
-                  <v-layout row wrap>
-                    <v-flex xs12 md12>
-                      <v-card flat class="transparent">
-                        <v-card-text>
-                          <p>Gerne lade ich Sie ein, mich zu kontaktieren, falls Sie ein Produkt besonders interessiert oder 
-                            Fragen/Anregungen zu Ihren persönlichen Zeitqualitäten auftauchen.
-                          </p>
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-flex>
-            </v-layout>
-          </section>
-
-          <section>
-            <v-parallax src="assets/Pa 3.jpeg" height="380">
-              <v-layout column align-center justify-center>
-                <div class="shadow headline white--text mb-4 text-center">"Der Rose süßer Duft genügt, man braucht sie
-                  nicht zu brechen, und wer sich mit dem Duft begnügt, den wird ihr Dorn nicht stechen“</div>
-                <em class="shadow">Friedrich von Bodenstedt</em>
               </v-layout>
             </v-parallax>
           </section>
@@ -1360,7 +919,448 @@
               </v-dialog>
             </v-layout>
           </section>
+          
+          <section>
+            <v-parallax src="assets/Pa 4.jpg" height="380">
+              <v-layout column align-center justify-center>
+                <div class="shadow headline white--text mb-4 text-center">"Das Äußere einer Pflanze ist nur die Hälfte
+                  ihrer Wirklichkeit“</div>
+                <em class="shadow">Johann Wolfgang von Goethe</em>
+              </v-layout>
+            </v-parallax>
+          </section>
 
+          <section id="galerie">
+            <v-layout column wrap class="my-12" align-center>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Duftgalerie</div>
+                        </v-card-title>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+              <v-flex xs12 sm4 class="my-4">
+                <v-card class="text-center">
+                  <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">Bilder einiger Pflanzen, 
+                    deren Düfte und Wirkungen ich in ätherischen Ölen, Hydrolaten sowie fetten Ölen sehr schätze!
+                  </v-card-title>
+                  <v-card-text>Hinter (fast) jedem Bild verbirgt sich ein kurzes Pflanzenportrait</v-card-text>
+                  <v-container grid-list-xl>
+                    <v-layout row wrap align-center>
+                      <v-flex xs12 md3 v-for="(image, imageIndex) in galerieItems" :key="image.titelbild">
+                        <v-card flat>
+                          <v-card-text class="text-center image" @click="goto(`#galerie_${image.titel.replace(/\s/g, '')}`)"
+                            :style="{ backgroundImage: 'url(' + image.titelbild + ')' }" :title="image.titel"
+                            :alt="image.titel"></v-card-text>
+                          <v-card-actions class="justify-center">
+                            <v-btn text :href="`#galerie_${image.titel.replace(/\s/g, '')}`">{{image.titel}}</v-btn>
+                          </v-card-actions>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-card>
+              </v-flex>
+            
+              <titelbild></titelbild>
+          
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-text>
+                          <p>🌿 Zahlreiche Literatur sowie Seminare, Fort- und Weiterbildungen
+                            welche ich laufend absolviere, ermöglichen es mir auf einen großen Schatz an Wissen zurückzugreifen, 
+                            das ich seit vielen vielen Jahren sammlen darf!
+                            <br>
+                            <br>🌿 Alle Zahlen, die ich mit "%"versehen habe, sind Mengenverhältnisse, die ich aus der Fachliteratur
+                            entnehme. Sie sollen einen ungefähren Überblick verschaffen und sind als "ca." Angaben zu verstehen.
+                            Wer tiefer eintauchen will, dem möchte ich eine Weiterbildung bei einem 
+                            seriösen Ausbildungsinstitut ans Herz legen!!!
+                            <br> 
+                            <br>🌿 Da es mir verboten ist Heilwirkungen auszusprechen, möchte ich darauf verweisen, 
+                            dass alle getroffenen Aussagen auf Erfahrungen beruhen, die ICH mit den beschriebenen Produkten 
+                            gemacht habe. Sie sind aussschließlich zur allgemeinen Information und stellen keine
+                            Empfehlung dar. Zur Diagnosestellung wenden Sie sich bitte an einen fachkundigen Arzt.
+                            <br>
+                            <br>🌿 Für DIY Produkte gibt es bereits viele Rezepten von namhaften 
+                            Firmen und Aromafachleute in Bücher oder im Internet nachzulesen. 
+                            Achten Sie bei Ihrere Suche auf seriöse Artikel und Mengenangaben! 
+                            Natürlich stehe ich gerne beratend zur Seite, falls Unklarheiten bei der Umsetzung von 
+                            Anwendungsmöglichkeiten oder sonstige Fragen auftreten! 
+                            <br>
+                            <br>
+                            💡 Für die Verarbeitung von Selbstgepflückten wäre zu bedenken: Nur Pflanzen ernten, 
+                            die man auch gut kennt und nur die Menge an Pflanzenmaterial an verschiedenen Plätzen entnehmen, 
+                            die man auch tatsächlich für den Eigenbedarf/DIY-Produkte benötigt. 
+                            Schließlich wollen sich viele an den Pflanzen, deren Anblick sowie den Inhaltsstoffen erfreuen.
+                          </p>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+            </v-layout>
+          </section>
+
+          <section>
+            <v-parallax src="assets/Pa 1.jpg" height="380">
+              <v-layout column align-center justify-center>
+                <div class="shadow headline white--text mb-4 text-center">"Die größte heilende Kraft liegt darin,
+                  in Harmonie mit dem universellen Rhythmus zu sein“</div>
+                <em class="shadow">Paracelsus</em>
+              </v-layout>
+            </v-parallax>
+          </section>
+          
+          <section id="zeitqualitaeten">
+            <v-layout column wrap class="my-12" align-center>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Zeitqualitäten</div>
+                        </v-card-title>
+                        <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
+                          <div class="text-center">Die Texte hinter jedem Bildchen, beinhalten Kurzgeschichten meiner Pflanzenreisen 
+                            und Einblicke in Tätigkeiten, die ich mit all 
+                            meinen Sinnen im Zusammenhang mit meiner 💛ensarbeit im Jahreskreislauf erlebe. 
+                            <br>Eigene Fotos und Zeichnungen ermöglicht es, mein Beiträge auch bildlich zu gestalten!
+                          </div>
+                        </v-card-title>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap align-center>
+                    <v-flex xs12 md4 v-for="diaryItem in diaryItems" :key="diaryItem.dialog">
+                      <v-card flat class="d-flex" :href="diaryItem.more ? '' : '#' + diaryItem.dialog" @click="diaryItem.more && showAllDiaryItems()">
+                        <v-card-text class="fill-height">
+                          <template v-if="!diaryItem.more">
+                            <div style="line-height: 0.8rem" class="small float-half">
+                              <v-img
+                                :src="diaryItem.titelbild"/></div>
+                            <div class="diary-thumb-title" v-html="diaryItem.titel"></div>
+                            <hr>
+                            <div v-html="diaryItem.summary">
+                            </div>
+                          </template>
+                          <template v-else>
+                            <div class="diary-thumb-title">Weitere Beiträge anzeigen...</div>
+                          </template>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+
+              <titelbild></titelbild>
+          
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-text>
+                          <p>Gerne lade ich Sie ein, mich zu kontaktieren, falls Sie ein Produkt besonders interessiert oder 
+                            Fragen/Anregungen zu Ihren persönlichen Zeitqualitäten auftauchen.
+                          </p>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+            </v-layout>
+          </section>
+
+          <section>
+            <v-parallax src="assets/Pa 3.jpeg" height="380">
+              <v-layout column align-center justify-center>
+                <div class="shadow headline white--text mb-4 text-center">"Der Rose süßer Duft genügt, man braucht sie
+                  nicht zu brechen, und wer sich mit dem Duft begnügt, den wird ihr Dorn nicht stechen“</div>
+                <em class="shadow">Friedrich von Bodenstedt</em>
+              </v-layout>
+            </v-parallax>
+          </section>
+
+          <section id="aetherische-oele">
+            <v-layout column wrap class="my-12" align-center> 
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card flat class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Ätherische Öle & mehr</div>
+                        </v-card-title>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+              <v-flex xs12>
+                <v-container grid-list-xl>
+                  <v-layout row wrap>
+                    <v-flex xs12 md12>
+                      <v-card class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">
+                            Ätherische Öle, Absolues, <span
+                              style="white-space: nowrap;">CO<sub>2</sub>
+                            </span> Extrakte
+                          </div>
+                        </v-card-title>
+                        <v-card-text>
+                          Schon lange beschäftigt sich der Mensch mit dem Duft und der Wirkung von <b>Blüten, Blätter, 
+                            Früchten, Gräser, Harzen, Hölzern, Samen</b>
+                          und <b>Wurzeln</b>, was alte Bücher und Ausgrabungen bestätigen. 
+                          <v-expansion-panels flat>
+                            <v-expansion-panel flat>
+                              <v-expansion-panel-header flat>
+                                <a>Weiterlesen...</a>
+                              </v-expansion-panel-header>
+                              <v-expansion-panel-content flat>
+                                <v-card flat class="transparent">
+                                  <v-card-text>
+                                    Unterschiedliche Methoden (Destillation, Extraktion, Pressung,...) ermöglichen die Gewinnung 
+                                    ätherischer Öle, Absolues und Extrakte.
+                                    <br>
+                                    <br>
+                                    Die geballte Kraft (teilweise über 400 Inhaltsstoffe) in jedem Tropfen kann eingesetzt werden, 
+                                    um Gesundheit zu unterstützen, Krankheiten zu lindern und Wohlbefinden zu erlangen.
+                                    Denn nicht nur der Duft einer Pflanze ist von Bedeutung, auch die biochemische 
+                                    Zusammensetzung kann eine sinnvolle Unterstützung zur Schulmedizin sein.
+                                    Zahlreiche Studien, die in der heutigen Zeit eingefordert werden, belegen 
+                                    diese therapeutische Wirksamkeit.
+                                    <br>
+                                    <br>
+                                    <div class="subheading text-center">
+                                      <b>Unterschiedliche Anwendungsmöglichkeiten, zahlreiche Wirkungen</b>
+                                    </div>
+                                    <br>
+                                    Atmet man einen Duft aus der <b>Raumluft</b>
+                                    durch die Nase ein, gelangt dieser direkt ins <b>Limbische System</b>.
+                                    Das Zentrum, wo u.a. Gefühle gesteuert und verarbeitet werden.
+                                    Diese nahezu direkte Verbindung, löst verschiedene <b>Erinnerungen und Emotionen</b> aus,
+                                    die rascher geweckt werden, als der Verstand reagieren kann.
+                                    Ein bekanntes Beispiel ist wohl der "Echte Lavendel". 
+                                    Hat man mit diesem Duft eine positive, schöne Erfahrung gemacht hat, liebt man ihn und kann die 
+                                    beruhigenden und hautpflegenden Eigenschaften nutzen.
+                                    Verknüpft man allerdings keine positiven Gedanken damit, wird man damit wohl kaum entspannt in den Schlaf finden.
+                                    <br>Ätherische Öle gelangen z.B. mittels Aromalampe, 
+                                    Diffusor, Spray oder beim Sauna-Aufguss ♨︎ in die Atemluft und können, lt. Studien innerhalb 
+                                    kürzester Zeit, in der Blutbahn nachgewiesen werden.
+                                    <br>
+                                    <br>
+                                    Durch eine Anwendung auf der <b>Haut</b>,
+                                    entfalten ätherische Öle ebenfalls ihre Wirkung, indem sie in den <b>Stoffwechselvorgang</b> des Menschen 
+                                    gelangen. In einer angemessenen Verdünnung können diese einem Körperöl, Duschgel oder Badeöl zugesetzt werden. 
+                                    Auch das Anlegen von Auflagen & Wickel mit geeigneten Ölen ist eine wohltuende Anwendungsmöglichkeit.
+                                    <br>
+                                    <br>
+                                    Das <b>Wirkungsspektrum</b> 
+                                    der ätherischen Öle reicht von A wie <b>aufmunternd, aphrodisierend</b> über E
+                                    wie <b>entspannend, erfrischend, entzündungshemmend</b>
+                                    , hin zum H wie <b>harmonisierend</b>
+                                    bis zum Z wie <b>zentrierend</b>.
+                                    Fast zu jedem Buchstaben findet man ein Wort, mit dem man die Eigenschaften der ätherischen Öle beschreiben kann. 
+                                    So vielfältig wie die <b>unzähligen Inhaltsstoffe</b>.
+                                    <br>
+                                    <br>
+                                    Um die <b>Wirkung auf Leib, Geist & Seele</b> in vollen Zügen genießen zu können, ist bei der
+                                    Menge an benötigtem Pflanzenmaterial (für 1 kg Melissenöl werden bis zu 8000 kg Blätter destilliert) auch an 
+                                    <b>Kontraindikationen und Vorsichtsgebote</b> zu denken, damit es zu keinen 
+                                    unerwünschten Nebenwirkungen kommt.
+                                  </v-card-text>
+                                </v-card>
+                              </v-expansion-panel-content>
+                            </v-expansion-panel>
+                          </v-expansion-panels>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex>
+                    <v-flex xs12 md12>
+                      <v-card height="100%" class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Pflanzliche Öle, Fette und Wachse</div>
+                        </v-card-title>
+                        <v-card-text>
+                          Aus Früchten, Kernen, Nüssen, Pflanzen und Samen werden mittels Pressung oder Mazeration <b>fette Öle</b>
+                          (z.B. Johanniskraut- Mohnblütenmazerat, 
+                          <a href="#galerie_Hanf">Hanfsamen-</a>, Kokos-, 
+                          <a href="#galerie_Mandel">Mandel-</a>, 
+                          <a href="#galerie_Sanddorn">Sanddorn-</a>, Schwarzkümmel-, Sesam-,
+                          <a href="#galerie_Hagebutte">Wildrosenöl</a>) 
+                          und <b>Wachse</b> (Jojoba) gewonnen.
+                          <v-expansion-panels flat>
+                            <v-expansion-panel flat>
+                              <v-expansion-panel-header flat>
+                                <a>Weiterlesen...</a>
+                              </v-expansion-panel-header>
+                              <v-expansion-panel-content flat>
+                                <v-card flat class="transparent">
+                                  <v-card-text>
+                                    <v-row align="start">
+                                      <v-col cols="12" sm="6">
+                                        <v-img
+                                          src="assets/ÄÖ 2.jpeg" alt="Johanniskrautmazerat"></v-img>
+                                        <small></small>
+                                      </v-col>
+                                      <v-col cols="12" sm="6">
+                                        Die besonders <b>hautfreundlichen Eigenschaften</b> sind bei der Gesichts- und Körperpflege eine Wohltat. 
+                                        Je nach <b>Wirkstoffzusammensetzung</b> gibt es für jeden Hauttyp das passende Öl.
+                                        Auch die Verwendung <b>hochwertiger Pflanzenöle</b>
+                                        in der Küche oder die pure Anwendung bei einer <b>Ölkur</b> sind empfehlenswert.
+                                        <br>
+                                        <br>
+                                        Zu beachten sind die <b>verschiedenen Anwendungsmöglichkeiten</b>, da sich nicht jedes Öl/Wachs für alle Bereiche eignet!
+                                      </v-col>
+                                    </v-row>
+                                  </v-card-text>
+                                </v-card>
+                              </v-expansion-panel-content>
+                            </v-expansion-panel>
+                          </v-expansion-panels>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex>
+                    <v-flex xs12 md12>
+                      <v-card height="100%" class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Hydrolate</div>
+                        </v-card-title>
+                        <v-card-text>
+                          Eine wundervolle Wirkung haben <b>
+                            <a href="#diary_frühling2025">Hydrolate</a>
+                          </b>. Lange als "Nebenprodukt" bei der Herstellung 
+                          von ätherischen Ölen bezeichnet,
+                          sind diese mittlerweile ein fester Bestandteil im Bereich der Aromatherapie und Aromakosmetik.
+                          <v-expansion-panels flat>
+                            <v-expansion-panel flat>
+                              <v-expansion-panel-header flat>
+                                <a>Weiterlesen...</a>
+                              </v-expansion-panel-header>
+                              <v-expansion-panel-content flat>
+                                <v-card flat class="transparent">
+                                  <v-card-text>
+                                    <v-row align="start">
+                                      <v-col cols="12" sm="6">
+                                        <v-img
+                                          src="assets/ÄÖ 3.jpeg" alt="Destille"></v-img>
+                                        <small></small>
+                                      </v-col>
+                                      <v-col cols="12" sm="6">
+                                        Die in den Destillaten enthaltenen <b>wasserlöslichen Substanzen</b>
+                                        von <b>Blüten, Blätter</b>
+                                        und <b>Kraut</b>
+                                        (<a href="#galerie_Lavendel">Lavendel</a>, 
+                                        <a href="#galerie_Melisse">Melisse</a>, 
+                                        <a href="#galerie_Neroli">Neroli</a>, 
+                                        <a href="#galerie_Pfefferminze">Pfefferminze</a>, 
+                                        <a href="#galerie_Rose">Rose</a>, 
+                                        <a href="#galerie_Rosmarin">Rosmarin</a>)
+                                        sowie <b>Hölzer</b>
+                                        (Palo Santo, <a href="#galerie_Zirbe">Zirbe</a>)
+                                        , <b>Harzen</b>
+                                        (Weihrauch) oder <b>Wurzeln</b>
+                                        (<a href="#galerie_Angelikawurzel">Angelikawurzel</a>), sind besonders 
+                                        mild und hautverträglich. Im Gegensatz zum ätherischen Öl, braucht ein <a href="#diary_frühling2025">Hydrolat</a> bei der Anwendung
+                                        nicht verdünnt werden und ist <b>pur</b> anzuwenden. Spuren von flüchtigen ätherischen Ölen werden in guten 
+                                        Destillaten belassen. Allgemein betrachtet, sind Pflanzenwässer nach der Öffnung rasch 
+                                        zu verbrauchen und nicht allzu lange haltbar. Auf gute Qualität und richtige Lagerung ist zu achten.
+                                        <br>
+                                        Sie finden Verwendung in <b>Körperpflegeprodukten</b>
+                                        , als zarte <b>Raumbeduftung</b>
+                                        oder als <b>Erfrischung</b> direkt auf die Haut gesprüht. Ebenso ist der Einsatz in der 
+                                        <b>Aromaküche</b> möglich: Getränke, Süßspeisen und pikante Speisen können mit passenden Hydrolaten 
+                                        aufgepeppt werden und erhalten dadurch eine spezielle Note.
+                                      </v-col>
+                                    </v-row>
+                                  </v-card-text>
+                                </v-card>
+                              </v-expansion-panel-content>
+                            </v-expansion-panel>
+                          </v-expansion-panels>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex> 
+                    <v-flex xs12 md12>
+                      <v-card height="100%" class="transparent">
+                        <v-card-title primary-title class="layout justify-center">
+                          <div class="headline text-center">Qualitätsmerkmale / Haltbarkeit / Lagerung</div>
+                        </v-card-title>
+                        <v-card-text>
+                          Beim Erwerb von Ätherischen Ölen, Hydrolaten sowie Pflanzenölen ist es ein Qualitätsmerkmal, wenn bestimmte Hinweise 
+                          am <b>Etikett</b> vermerkt sind. 
+                          <v-expansion-panels flat>
+                            <v-expansion-panel flat>
+                              <v-expansion-panel-header flat>
+                                <a>Weiterlesen...</a>
+                              </v-expansion-panel-header>
+                              <v-expansion-panel-content flat>
+                                <v-card flat class="transparent">
+                                  <v-card-text>
+                                    Deutscher und Botanischer Name, Herkunftsland, Pflanzenteil, Gewinnungsart (siehe oben), 
+                                    Verwendungszweck, Chargennummer und Füllmenge sollten nachzulesen sein. 
+                                    <b>Pflanzenöle</b>
+                                    mit dem Vermerk <b>"nativ"</b> sind hochwertiger, als durch Raffination gewonnene Öle und 
+                                    <b>Hydrolate</b>
+                                    sollten, wenn möglich, <b>ohne Konservierung</b> angeboten werden.
+                                    <br>Zusätzliche Angaben beim ätherischen Öl: 
+                                    100% <b>naturreines</b> ätherisches Öl oder die % Verdünnung mit Jojoba/Ethanol,
+                                    wenn notwendig der Chemotyp (selbe Pflanze, unterschiedliche Inhaltsstoffe) sowie
+                                    je nach Deklaration Gefahrenpiktogramme (Bedarfsgegenstand) oder Verdünnungshinweise (Kosmetika, Lebensmittel).
+                                    <br>
+                                    <br>
+                                    <b>Ablaufdatum/Haltbarkeit</b>: Nicht jede Firma kennzeichnet diese aus, außer der Inhalt ist 
+                                    für kosmetische Zwecke deklariert. Zu beachten wäre jedenfalls, 
+                                    dass ätherische Öle nach dem Öffnen, je nach biochemischer Zusammensetzung, unterschiedlich 
+                                    lange haltbar sind. Bedingt durch die Entnahme jedes Tropfens, kommt stattdessen Sauerstoff 
+                                    in die Flasche  und das Öl beginnt zu reagieren. 
+                                    Zitrusöle, Nadelöle verändern z.B. mit der Zeit Ihr Duftverhalten. Ein Verbrauch innerhalb von 1 1/2  Jahren wäre empfehlenswert.
+                                    Danach sind sie jedoch noch zur Entfernung von Kleberesten gut zu gebrauchen. Besonders Teebaumöl
+                                    hat die Eigenschaft, nach dem Öffnen rasch zu oxidieren und sollte stets frisch zur Anwendung kommen! Holz- und Blütenöle sind 
+                                    wiederum sehr lange haltbar und werden teilweise mit der Zeit sogar intensiver/(wert)voller.
+                                    <br>
+                                    <br>
+                                    Bei der <b>Lagerung</b> sind Temperaturschwankungen zu vermeiden, dunkle Flaschen mit 
+                                    Sicherheitsverschlüssen (oder bei Hydrolaten ein Sprühaufsatz) sind Klarglas Flaschen/Kunststoffflaschen vorzuziehen.
+                                    <br>
+                                    <br>
+                                    <b>Allgemeines</b>: Verarbeitete Rohstoffe in Bio-Qualität sind empfehlenswerter, da diese 
+                                    im Kreislauf der Natur heranwachsen dürfen.
+                                    Denn nur dann tragen sie die natürliche Entwicklung von Stoffen 
+                                    (z.B. Nützlinge anlocken und Fressfeinde abwehren) und die gewünschte Balance bereits in sich.
+                                    Damit schließt sich der Kreis!
+                                  </v-card-text>
+                                </v-card>
+                              </v-expansion-panel-content>
+                            </v-expansion-panel>
+                          </v-expansion-panels>
+                        </v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+            </v-layout>
+          </section>
+          
           <section>
             <v-parallax src="assets/Pa 0b.jpeg" height="380">
               <v-layout column align-center justify-center>

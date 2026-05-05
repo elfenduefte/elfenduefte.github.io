@@ -41,10 +41,15 @@
               @click="sidebar = false">
               <v-list-item-content>Ich bin...</v-list-item-content>
             </v-list-item>
-            <v-list-item href="#newsletter"
-              @click="sidebar = false">
-              <v-list-item-content>Newsletter</v-list-item-content>
-            </v-list-item>
+            <v-list-group :value="true">
+              <template v-slot:activator>
+                <v-list-item-title></v-list-item-title>
+              </template>
+              <v-list-item v-for="(leistung,index) in serviceItems" :key="`${leistung}${index}`"
+                @click="sidebar=false" :href="`#${leistung.dialog}`">
+                <v-list-item-content class="pl-3">{{ leistung.titel }}</v-list-item-content>
+              </v-list-item>
+            </v-list-group>
             <v-list-item href="#aetherische-oele"
               @click="sidebar = false">
               <v-list-item-content>Ätherische Öle & mehr</v-list-item-content>
@@ -58,15 +63,10 @@
               @click="sidebar = false">
               <v-list-item-content>Zeitqualitäten</v-list-item-content>
             </v-list-item>
-            <v-list-group :value="true">
-              <template v-slot:activator>
-                <v-list-item-title></v-list-item-title>
-              </template>
-              <v-list-item v-for="(leistung,index) in serviceItems" :key="`${leistung}${index}`"
-                @click="sidebar=false" :href="`#${leistung.dialog}`">
-                <v-list-item-content class="pl-3">{{ leistung.titel }}</v-list-item-content>
-              </v-list-item>
-            </v-list-group>
+            <v-list-item href="#newsletter"
+              @click="sidebar = false">
+              <v-list-item-content>Newsletter</v-list-item-content>
+            </v-list-item>
             <v-list-item href="#kontakt"
               @click="sidebar = false">
               <v-list-item-content>Kontakt</v-list-item-content>
@@ -114,21 +114,23 @@
                   </v-layout>
                 </v-img>
               </v-carousel-item>
+
               <v-carousel-item>
-                <v-img class="fill-height" src="assets/WK0.jpeg" alt="Wassertropfen">
+                <v-img class="fill-height" src="assets/WK2.jpeg">
                   <v-layout column fill-height align-center justify-center class="white--text">
-                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">
-                      Elfendüfte-News
-                      <br>"Newsletter"
+                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">Kräutertee, Bohnenkaffee, 
+                      Lupinenkaffee oder Wasser zu Wohlfühlmomente genießen
+                      <br>"Mein Duft-Kreativ-Raum"
                     </div>
-                    <v-btn elevation="2" fab href="#newsletter">
+                    <v-btn elevation="2" fab href="#leistung">
                       <v-icon>mdi-arrow-down</v-icon>
                     </v-btn>
                   </v-layout>
                 </v-img>
               </v-carousel-item>
+
               <v-carousel-item>
-                <v-img class="fill-height" src="assets/WK1.jpeg" alt="Aroma">
+                <v-img class="fill-height" src="assets/WK1.jpeg">
                   <v-layout column fill-height align-center justify-center class="white--text">
                     <div class="shadow headline mb-4 ci text-center pl-5 pr-5">
                       Einblicke in ein duftendes Reich voller Blüten, Blätter, Früchten, Gräser, Harzen, Hölzern, Samen und Wurzeln
@@ -169,13 +171,13 @@
               </v-carousel-item>
 
               <v-carousel-item>
-                <v-img class="fill-height" src="assets/WK2.jpeg" alt="Aromapflege">
+                <v-img class="fill-height" src="assets/WK0.jpeg" alt="Wassertropfen">
                   <v-layout column fill-height align-center justify-center class="white--text">
-                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">Kräutertee, Bohnenkaffee, 
-                      Lupinenkaffee oder Wasser zu Wohlfühlmomente genießen
-                      <br>"Meine Duft-Kreativ-Räumlichkeit"
+                    <div class="shadow headline mb-4 ci text-center pl-5 pr-5">
+                      Elfendüfte-News
+                      <br>"Newsletter"
                     </div>
-                    <v-btn elevation="2" fab href="#DUFT">
+                    <v-btn elevation="2" fab href="#newsletter">
                       <v-icon>mdi-arrow-down</v-icon>
                     </v-btn>
                   </v-layout>
@@ -264,7 +266,7 @@
                                 <br>Vor einiger Zeit erwachte auch wieder meine Begeisterung zum Schreiben und Malen, 
                                 was ich lange vernachlässigt habe. Nun hat es wieder Platz in meinem Leben gefunden. 
                                 Nahezu täglich entstehen neue Texte und Zeichnungen, dabei lasse ich meiner Fantasie und Inspiration 
-                                freien Lauf. Einiges davon kann ich auf diesen Seiten unterbringen,
+                                freien Lauf. Dabei bin ich im durchprobieren verschiedener Techniken und Materalien. Einiges davon kann ich auf diesen Seiten unterbringen,
                                 vieles bleibt noch unveröffentlicht. Aber wer weiß, was das Leben noch mit mir vorhat. 
                                 Ich bin bereit und offen für so einiges.
                                 <br>
@@ -941,7 +943,7 @@
             </v-parallax>
           </section>
 
-          <section id="Praxis und mehr">
+          <section id="Duft-Kreativ-Raum">
             <v-layout column wrap class="my-12" align-center> 
               <v-flex xs12>
                 <v-container grid-list-xl>
@@ -953,7 +955,7 @@
                         </v-card-title>
                         <v-card-title style="font-family: Ms Madi; font-size: 24px;" class="justify-center">
                           <div class="text-center">
-                            Im Herzen von Graz kann ich in dieser Räumlichkeit meiner Kreativität freien Lauf lassen. 
+                            Im Herzen von Graz kann ich in diesen 4 Wänden meiner Kreativität freien Lauf lassen. 
                           </div>
                         </v-card-title>
                       </v-card>
@@ -1082,7 +1084,7 @@
                             </div>
                             <ul>
                               <li>
-                                Überraschen Sie Ihre Liebsten mit einer <b>dufterfüllten Auszeit</b> in meiner Praxis
+                                Überraschen Sie Ihre Liebsten mit einer <b>dufterfüllten Auszeit</b> 
                               </li>
                               <li>Anrechenbar auf Beratungen, Körperanwendungen und Workshop</li>
                               <li>Eine besondere Aufmerksamkeit, passend zu einem besonderen Anlass oder einfach so, um Freude zu bereiten</li>
@@ -1099,7 +1101,7 @@
                             </v-card-actions>
                             <br>
                             Auf Anfrage sende ich Ihnen gerne eine Kostenaufstellung. 
-                            Ich würde mich freuen, auch <b>Sie</b> in meiner Praxis begrüßen zu dürfen! 
+                            Ich würde mich freuen, auch <b>Sie</b> in meinem Duft-Kreativ-Raum begrüßen zu dürfen! 
                             <br>Herzlichst
                             <br>
                             <img src="assets/Sabine.png" style="padding-left:100px; height: 40px;">
@@ -1176,10 +1178,10 @@
                           <v-card-text>
                             <b>Gemalt</b>
                             habe ich schon immer gerne, vorwiegend mit Bleistift und Buntstift. Aber irgendwann habe ich mir immer
-                            seltener dazu Zeit genommen.
+                            seltener dazu Zeit genommen. Nun aber ist sie wieder erwacht, meine schlummernde Leidenschaft. 
+                            Nun probiere ich mich in unterschiedlichen Techniken und Materalien und lasse meiner Kreativität freien Lauf.
                             <br>
-                            <br>Mit dem Schreiben der Zeitqualitäten kam der Wunsch nach selbstgestalteten Trennlinien, 
-                            was mich wieder zum Stift greifen ließ.
+                            <br>Mit dem Schreiben der Zeitqualitäten kam der Wunsch auf, selbstgestalteten Trennlinien zu verwenden.
                             <br>Was mit einer Idee begann, ist mittlerweile zum festen Bestandteil geworden. Denn jede Zeitqualität
                             bekommt je nach Thema ihre passende Trennlinie und jede Zeitqualitäts-Pflanze ein gemaltes Portrait. 
                             Aufgrund der minimalistischen Darbietung, verwende ich den Bleistift für diese Motive.
@@ -1209,8 +1211,9 @@
                               </v-col>
                             </v-row>
                             <br>
-                            Am liebsten greife ich zu den Buntstifte. Von den anfänglichen 30 Stück, habe ich mittlerweile alle erhältlichen
-                            Farben dieser Serie, mit denen es einfach unheimlich Spaß macht, Motive in allen Schattierungen auszuprobieren.<br>
+                            Gerne greife ich zu meinen Buntstifte. Von den anfänglichen 30 Stück, die ich mir anfangs gönnte, 
+                            habe ich mittlerweile alle erhältlichen Farben dieser Serie, 
+                            mit denen es einfach unheimlich Spaß macht, Motive in allen Schattierungen auszuprobieren.<br>
                             <br>
                             <v-row align="start">
                               <v-col cols="12" sm="3">
@@ -1236,8 +1239,8 @@
                             </v-row>
                             <br>
                             Als ich im Vorjahr einen alten Aquarellkasten geschenkt bekam, wuchs auch das Interesse an dieser Technik. 
-                            Aber es ist nicht die Lavurmalerei, die mir steht, sondern die feinen Pinselstriche, 
-                            die man von der botanischen Illustration her kennt. 
+                            Aber es ist nicht die Lavurmalerei, die mir vorschwebt, vielmehr ist es die detailierte Darstellung, 
+                            die man von der <b>botanischen Illustration</b> her kennt. 
                             Seither vertiefe ich mit jedem Pinselstrich mein Wissen im Umgang mit den Farben und probiere mich gerne aus. 
                             Lavieren, lasieren und granulieren.
                             <br>
@@ -1265,9 +1268,9 @@
                               </v-col>
                             </v-row>
                             <br>
-                            Bei meiner Reise nach Südtirol versuchte ich es mit Urban Sketching. Voll entspannend und doch konzentriert,
+                            Bei meiner Reise nach Südtirol versuchte ich es erstmals mit Urban Sketching. Voll entspannend und doch konzentriert,
                             skizzierte ich so manche Station auf meinen Wanderungen. Dabei kommen meine wasservermalbaren Buntstifte zum Einsatz.
-                            Damit verbinde ich meine beiden Lieblingstechniken zu einem Bild mit dem Charme von Klarheit und Verschwommenem.
+                            Damit verbinde ich meine beiden Lieblingstechniken zu einem Bild mit dem Charme einer verschwommemen Klarheit.
                             <br>
                             <br>
                             <v-row align="start">
@@ -12372,7 +12375,7 @@
     const menuItems = [];
     menu.forEach(function (item) {
       menuItems.push({
-        title: item.innerText.replace('{{ leistung.titel }}', 'Praxis'),
+        title: item.innerText.replace('{{ leistung.titel }}', 'Duft-Kreativ-Raum'),
         path: item.parentElement.getAttribute('href')
       });
     });

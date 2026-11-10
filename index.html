@@ -12996,6 +12996,42 @@
           </v-card>
         </v-dialog>
 
+        <!-- Newsletter-Anmelde-Popup -->
+        <v-dialog v-model="newsPopup" max-width="560px">
+          <v-card>
+            <v-card-title primary-title class="layout justify-center">
+              <v-icon left class="54472F--text text--lighten-2">mdi-email-newsletter</v-icon>
+              <div class="headline">Elfendüfte-News</div>
+              <v-spacer></v-spacer>
+              <v-btn icon @click="newsPopup = false">
+                <v-icon class="54472F--text text--lighten-2">mdi-close</v-icon>
+              </v-btn>
+            </v-card-title>
+            <v-card-text>
+              <div class="subheading">Bleib auf dem Laufenden!</div>
+              <div class="body-2">
+                Ich entsende immer dann eine Mail, wenn sich was Neues auf meiner Webseite tut:
+                <b>vierteljährlich</b> zur neuen Zeitqualität, <b>sporadisch</b> wenn ich ein
+                Pflanzenporträt fertiggestellt habe oder <b>gelegentlich</b> wenn sich etwas
+                Duftiges in meinem duftigen Leben tut! 💛
+              </div>
+              <div class="body-2">
+                Du wirst mit einem Klick zu unserer sicheren Anmeldung weitergeleitet, wo du
+                deine E-Mail-Adresse eingibst und dein Einverständnis bestätigst. Weitere Infos
+                findest du in der
+                <a @click.stop href="assets/datenschutz.pdf" target="_blank">Datenschutzrichtlinie</a>
+                und den
+                <a @click.stop href="assets/AGB.pdf" target="_blank">AGB</a>.
+              </div>
+            </v-card-text>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn text @click="newsPopup = false">Schließen</v-btn>
+              <v-btn color="54472F" @click="subscribeNewsletter">Jetzt anmelden</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+
       </v-app>
     </div>
     <script>
@@ -13395,13 +13431,17 @@ Vue.component('granatapfel', {
           gutschein_ename: '',
           gutschein_eadresse: '',
           gutschein_amount: 50,
-          gutschein_widmung: ''
+          gutschein_widmung: '',
+            newsPopup: false,
         }
       },
       async mounted() {
         await this.$nextTick();
         if (location.hash) {
          this.goto(decodeURIComponent(location.hash));
+        }
+        if (!localStorage.getItem('eld_newsletter_subscribed')) {
+          setTimeout(() => { this.newsPopup = true; }, 10000);
         }
       },
       methods: {
@@ -13464,7 +13504,20 @@ Vue.component('granatapfel', {
         },
         showAllDiaryItems() {
           this.diaryItems.pop();
+          this.diaryItems.pop();
           this.diaryItems.push.apply(diaryItems, allDiaryItems.slice(3));
+        },
+        newsletterUrl() {
+          return 'https://1aa34b35.sibforms.com/serve/MUIFADeDdt2Rz9dTUQXqKXSFjYutHanqglproefHtalPtYnOKqUmiqAjn2AJVDtTRmn8ab2CW62uDMGphbXp2O7szHHqVAT0_7sCSoz-r46TWJXmO5Ky-gupbsg86kNiW1UMDj5gb42hOtXX0S9ZKTFMJ1wDn4jTFWL_ivyUv1tLpWU-sJv-YOqhJLPpEU5q1EucwW4Bz_s9swg5';
+        },
+        subscribeNewsletter() {
+          // Pure CTA: the local dialog no longer collects the email, because the external
+          // Brevo/Sib-Forms target ignores ?email= query params (field stayed empty in
+          // testing). We only hand off to their secure signup page; the persistent flag
+          // "eld_newsletter_subscribed" tells future visits the user has already acted.
+          window.open(this.newsletterUrl(), '_blank', 'noopener,noreferrer');
+          localStorage.setItem('eld_newsletter_subscribed', '1');
+          this.newsPopup = false;
         }
       }
     });

@@ -15,6 +15,13 @@
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="2ddf6aed-7007-4c94-9f4c-97873c0aaa6f"></script>
+    <script>
+      window.addEventListener('hashchange', () => {
+        if (window.umami) {
+          window.umami.track();
+        }
+      });
+    </script>
   </head>
 
   <body>
@@ -13011,7 +13018,8 @@
               <div class="subheading">Bleib auf dem Laufenden!</div>
               <div class="body-2">
                 Ich entsende immer dann eine Mail, wenn sich was Neues auf meiner Webseite tut:
-                <b>vierteljährlich</b> zur neuen Zeitqualität, <b>sporadisch</b> wenn ich ein
+                <b>vierteljährlich</b>
+                zur neuen Zeitqualität, <b>sporadisch</b> wenn ich ein
                 Pflanzenporträt fertiggestellt habe oder <b>gelegentlich</b> wenn sich etwas
                 Duftiges in meinem duftigen Leben tut! 💛
               </div>
